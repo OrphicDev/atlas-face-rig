@@ -322,7 +322,7 @@ faible, contre-jour discret, transformation de vue `Standard`, exposition
 sous la saturation, facteur 7,2204, identique pour toutes les vues).
 
 Histogrammes publiés dans `renders/f0/histogrammes.json` :
-**0,000 % de noirs bouchés et au plus 0,073 % de blancs brûlés** sur les dix vues.
+**0,000 % de noirs bouchés et au plus 0,084 % de blancs brûlés** sur les dix vues.
 
 Un premier jeu de rendus a été jeté : il brûlait jusqu'à **95,5 %** de l'image.
 C'est l'histogramme qui l'a dit, pas l'œil.

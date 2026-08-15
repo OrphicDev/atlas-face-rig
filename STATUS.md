@@ -1,16 +1,16 @@
-STATUS: F0 TERMINÉE — AUCUN RIG, AUCUNE SHAPE KEY
+STATUS: F0 INCOMPLET — le raccord corps ne passe pas les seuils
 
 | | |
 | --- | --- |
-| **statut global** | **F0 terminée et mesurée** ; F1 non commencée |
+| **statut global** | **F0 INCOMPLET** — voir `reports/f0-correction/RAPPORT_F0_CORRECTION.md` |
 | dernière étape terminée | audit topologique, décision multires, décision de topologie, base verrouillée |
-| étape suivante | **F1 — mâchoire et regard** (travail d'os, sans shape key) |
+| étape suivante | **finir la correction F0** : trancher le raccord corps, banc multires anatomique. **F1 ne commence pas.** |
 | branche active | `face/chat-3-caucasian-v1` |
 | commit de départ | `4c6a4dbfbaddc52fbf1222afd7e07b65de915b96` |
 | géométrie faciale | **verrouillée** : `source/FACE_BASE_LOCKED.blend` |
 | shape keys | **aucune** — c'est voulu, F1 n'en demande pas |
 | rig facial | **inexistant** |
-| sondes vérifiées / total | **19 / 19** (15 en audit, 4 au banc multires) |
+| sondes vérifiées / total | comptées par registre, plus à la main : 5/5 préflight, 11/11 scellement, 15/15 raccord (dont 2 seuils en échec assumés) |
 | processus actifs | **aucun** |
 
 ## Ce qui existe maintenant
@@ -25,7 +25,7 @@ STATUS: F0 TERMINÉE — AUCUN RIG, AUCUNE SHAPE KEY
 - `tests/rendus-neutre.py` — rendus de référence à exposition calibrée puis
   verrouillée, histogramme publié pour chaque vue ;
 - `reports/f0/RAPPORT_F0.md` et les deux JSON de mesures ;
-- `renders/f0/` — 10 vues neutres, 0 % de noirs bouchés, ≤ 0,073 % de blancs
+- `renders/f0/` — 10 vues neutres, 0 % de noirs bouchés, ≤ 0,084 % de blancs
   brûlés ;
 - `docs/DENTS_ET_LANGUE.md`, `docs/FACS_MATRIX.md`.
 

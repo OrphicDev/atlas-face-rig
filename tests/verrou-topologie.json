@@ -1,329 +1,475 @@
 {
-  "asset": "human_base_meshes_bundle.blend",
-  "collection": "Head (Animation) - Realistic",
+  "fichier": "FACE_BASE_LOCKED.blend",
   "blender": "5.1.2",
-  "avant": {
-    "GEO-head_animation_realistic": {
-      "scale": [
-        0.9,
-        0.9,
-        0.9
-      ],
-      "rotation_euler": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "location": [
-        1.462572,
-        -0.021928,
-        0.487662
-      ]
-    },
-    "GEO-head_animation_realistic.iris.L": {
-      "scale": [
-        0.9,
-        0.9,
-        0.9
-      ],
-      "rotation_euler": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "location": [
-        1.494184,
-        -0.120202,
-        0.766695
-      ]
-    },
-    "GEO-head_animation_realistic.iris.R": {
-      "scale": [
-        0.639556,
-        0.639556,
-        0.639556
-      ],
-      "rotation_euler": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "location": [
-        1.430959,
-        -0.120202,
-        0.766695
-      ]
-    },
-    "GEO-head_animation_realistic.sclera.L": {
-      "scale": [
-        0.639556,
-        0.639556,
-        0.639556
-      ],
-      "rotation_euler": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "location": [
-        1.494861,
-        -0.125771,
-        0.766695
-      ]
-    },
-    "GEO-head_animation_realistic.sclera.R": {
-      "scale": [
-        0.639556,
-        0.639556,
-        0.639556
-      ],
-      "rotation_euler": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "location": [
-        1.430283,
-        -0.125771,
-        0.766695
-      ]
-    }
-  },
-  "application_echelle": {
-    "ecart_max_mm": 0.001212867,
-    "tolerance_mm": 0.01,
-    "origine_de_la_tolerance": "docs/SCOPE_V1.md, critere de retour au neutre",
-    "decision": "APPLIQUEE — echelle 1, rotation nulle, surface inchangee"
-  },
-  "apres": {
-    "GEO-head_animation_realistic": {
-      "scale": [
-        1.0,
-        1.0,
-        1.0
-      ],
-      "rotation_euler": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "location": [
-        1.462572,
-        -0.021928,
-        0.487662
-      ]
-    },
-    "GEO-head_animation_realistic.iris.L": {
-      "scale": [
-        1.0,
-        1.0,
-        1.0
-      ],
-      "rotation_euler": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "location": [
-        1.494861,
-        -0.125771,
-        0.766695
-      ]
-    },
-    "GEO-head_animation_realistic.iris.R": {
-      "scale": [
-        1.0,
-        1.0,
-        1.0
-      ],
-      "rotation_euler": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "location": [
-        1.430283,
-        -0.125771,
-        0.766695
-      ]
-    },
-    "GEO-head_animation_realistic.sclera.L": {
-      "scale": [
-        1.0,
-        1.0,
-        1.0
-      ],
-      "rotation_euler": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "location": [
-        1.494861,
-        -0.125771,
-        0.766695
-      ]
-    },
-    "GEO-head_animation_realistic.sclera.R": {
-      "scale": [
-        1.0,
-        1.0,
-        1.0
-      ],
-      "rotation_euler": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "location": [
-        1.430283,
-        -0.125771,
-        0.766695
-      ]
-    }
-  },
-  "signature_topologie": "d29e2af3ef67aec5bad705c5e5a4b72428f906f01af94c33880c85a47722e5ae",
-  "signature_neutre": "9246d8acb2d68a38a6f355db90df967e8f6e71907343ce1cf028549bed20c324",
+  "signature_topologie": "a3476f7a09faad775129abd5eb0b8bc66c39b32a2a252404b0935d5109f4fd45",
+  "signature_neutre_basis": "235b15cd0f8aca4be7c8ef6600bd9734ac5862905b3e9178a6551b5b82d81986",
+  "signature_uv": "31694f627545bcff9b61ead0b5851c4a8acd5539a0a3f6e1fa6924b08f973424",
+  "signature_configuration": "0e7ca6d3db8e2453a5d6d652a00a78725baf636b285b5606a3ba6a9a7601b7d5",
+  "signature_inventaire_scene": "aa192618c04d4ce9244a8f4458fc227733cecb1be4153dce438d872adea0b00e",
   "objets": [
     {
       "objet": "GEO-head_animation_realistic",
+      "datablock": "GEO-head_animation_realistic",
+      "type": "MESH",
       "sommets": 3242,
       "aretes": 6474,
       "faces": 3234,
+      "loops": 12948,
+      "shape_keys": 0,
+      "modificateurs": [
+        {
+          "nom": "Multires",
+          "type": "MULTIRES",
+          "show_viewport": true,
+          "show_render": true,
+          "levels": 1,
+          "sculpt_levels": 1,
+          "render_levels": 1,
+          "total_levels": 1,
+          "show_in_editmode": false,
+          "use_custom_normals": false,
+          "quality": 4,
+          "uv_smooth": "PRESERVE_BOUNDARIES",
+          "boundary_smooth": "ALL",
+          "use_creases": true,
+          "use_sculpt_base_mesh": false
+        }
+      ],
+      "contraintes": [],
       "uv": [
         "UVMap"
       ],
-      "modificateurs": [
-        "MULTIRES"
+      "materiaux": [],
+      "vertex_groups": [],
+      "lock_location": [
+        true,
+        true,
+        true
       ],
-      "location": [
-        1.462572,
-        -0.021928,
-        0.487662
+      "lock_rotation": [
+        true,
+        true,
+        true
       ],
-      "rotation_euler": [
-        0.0,
-        0.0,
-        0.0
+      "lock_scale": [
+        true,
+        true,
+        true
       ],
-      "scale": [
-        1.0,
-        1.0,
-        1.0
-      ],
-      "shape_keys": 0
+      "parent": null,
+      "animation": false,
+      "drivers": 0
     },
     {
       "objet": "GEO-head_animation_realistic.iris.L",
+      "datablock": "GEO-head_animation_realistic.iris.L",
+      "type": "MESH",
       "sommets": 400,
       "aretes": 800,
       "faces": 400,
+      "loops": 1600,
+      "shape_keys": 0,
+      "modificateurs": [],
+      "contraintes": [],
       "uv": [
         "UVMap"
       ],
-      "modificateurs": [],
-      "location": [
-        1.494861,
-        -0.125771,
-        0.766695
+      "materiaux": [],
+      "vertex_groups": [],
+      "lock_location": [
+        true,
+        true,
+        true
       ],
-      "rotation_euler": [
-        0.0,
-        0.0,
-        0.0
+      "lock_rotation": [
+        true,
+        true,
+        true
       ],
-      "scale": [
-        1.0,
-        1.0,
-        1.0
+      "lock_scale": [
+        true,
+        true,
+        true
       ],
-      "shape_keys": 0
+      "parent": "GEO-head_animation_realistic.sclera.L",
+      "animation": false,
+      "drivers": 0
     },
     {
       "objet": "GEO-head_animation_realistic.iris.R",
+      "datablock": "GEO-head_animation_realistic.iris.R",
+      "type": "MESH",
       "sommets": 400,
       "aretes": 800,
       "faces": 400,
+      "loops": 1600,
+      "shape_keys": 0,
+      "modificateurs": [],
+      "contraintes": [],
       "uv": [
         "UVMap"
       ],
-      "modificateurs": [],
-      "location": [
-        1.430283,
-        -0.125771,
-        0.766695
+      "materiaux": [],
+      "vertex_groups": [],
+      "lock_location": [
+        true,
+        true,
+        true
       ],
-      "rotation_euler": [
-        0.0,
-        0.0,
-        0.0
+      "lock_rotation": [
+        true,
+        true,
+        true
       ],
-      "scale": [
-        1.0,
-        1.0,
-        1.0
+      "lock_scale": [
+        true,
+        true,
+        true
       ],
-      "shape_keys": 0
+      "parent": "GEO-head_animation_realistic.sclera.R",
+      "animation": false,
+      "drivers": 0
     },
     {
       "objet": "GEO-head_animation_realistic.sclera.L",
+      "datablock": "GEO-head_animation_realistic.sclera.L",
+      "type": "MESH",
       "sommets": 546,
       "aretes": 1088,
       "faces": 544,
+      "loops": 2176,
+      "shape_keys": 0,
+      "modificateurs": [],
+      "contraintes": [],
       "uv": [
         "UVMap"
       ],
-      "modificateurs": [],
-      "location": [
-        1.494861,
-        -0.125771,
-        0.766695
+      "materiaux": [],
+      "vertex_groups": [],
+      "lock_location": [
+        true,
+        true,
+        true
       ],
-      "rotation_euler": [
-        0.0,
-        0.0,
-        0.0
+      "lock_rotation": [
+        true,
+        true,
+        true
       ],
-      "scale": [
-        1.0,
-        1.0,
-        1.0
+      "lock_scale": [
+        true,
+        true,
+        true
       ],
-      "shape_keys": 0
+      "parent": "GEO-head_animation_realistic",
+      "animation": false,
+      "drivers": 0
     },
     {
       "objet": "GEO-head_animation_realistic.sclera.R",
+      "datablock": "GEO-head_animation_realistic.sclera.R",
+      "type": "MESH",
       "sommets": 546,
       "aretes": 1088,
       "faces": 544,
+      "loops": 2176,
+      "shape_keys": 0,
+      "modificateurs": [],
+      "contraintes": [],
       "uv": [
         "UVMap"
       ],
-      "modificateurs": [],
-      "location": [
-        1.430283,
-        -0.125771,
-        0.766695
+      "materiaux": [],
+      "vertex_groups": [],
+      "lock_location": [
+        true,
+        true,
+        true
       ],
-      "rotation_euler": [
-        0.0,
-        0.0,
-        0.0
+      "lock_rotation": [
+        true,
+        true,
+        true
       ],
-      "scale": [
-        1.0,
-        1.0,
-        1.0
+      "lock_scale": [
+        true,
+        true,
+        true
       ],
-      "shape_keys": 0
+      "parent": "GEO-head_animation_realistic",
+      "animation": false,
+      "drivers": 0
     }
   ],
+  "uv": {
+    "GEO-head_animation_realistic": {
+      "couches": [
+        "UVMap"
+      ],
+      "active": "UVMap",
+      "index_actif": 0,
+      "loops": 12948,
+      "donnees_par_couche": [
+        12948
+      ]
+    },
+    "GEO-head_animation_realistic.iris.L": {
+      "couches": [
+        "UVMap"
+      ],
+      "active": "UVMap",
+      "index_actif": 0,
+      "loops": 1600,
+      "donnees_par_couche": [
+        1600
+      ]
+    },
+    "GEO-head_animation_realistic.iris.R": {
+      "couches": [
+        "UVMap"
+      ],
+      "active": "UVMap",
+      "index_actif": 0,
+      "loops": 1600,
+      "donnees_par_couche": [
+        1600
+      ]
+    },
+    "GEO-head_animation_realistic.sclera.L": {
+      "couches": [
+        "UVMap"
+      ],
+      "active": "UVMap",
+      "index_actif": 0,
+      "loops": 2176,
+      "donnees_par_couche": [
+        2176
+      ]
+    },
+    "GEO-head_animation_realistic.sclera.R": {
+      "couches": [
+        "UVMap"
+      ],
+      "active": "UVMap",
+      "index_actif": 0,
+      "loops": 2176,
+      "donnees_par_couche": [
+        2176
+      ]
+    }
+  },
+  "inventaire_scene": {
+    "objets": [
+      {
+        "nom": "GEO-head_animation_realistic",
+        "type": "MESH",
+        "collections": [
+          "Head (Animation) - Realistic"
+        ]
+      },
+      {
+        "nom": "GEO-head_animation_realistic.iris.L",
+        "type": "MESH",
+        "collections": [
+          "Head (Animation) - Realistic"
+        ]
+      },
+      {
+        "nom": "GEO-head_animation_realistic.iris.R",
+        "type": "MESH",
+        "collections": [
+          "Head (Animation) - Realistic"
+        ]
+      },
+      {
+        "nom": "GEO-head_animation_realistic.sclera.L",
+        "type": "MESH",
+        "collections": [
+          "Head (Animation) - Realistic"
+        ]
+      },
+      {
+        "nom": "GEO-head_animation_realistic.sclera.R",
+        "type": "MESH",
+        "collections": [
+          "Head (Animation) - Realistic"
+        ]
+      }
+    ],
+    "nombre_objets": 5,
+    "par_type": {
+      "MESH": 5
+    },
+    "collections": [
+      "Head (Animation) - Realistic"
+    ],
+    "armatures": [],
+    "actions": [],
+    "cameras": [],
+    "lumieres": [],
+    "materiaux": [],
+    "images": [],
+    "textes": [],
+    "bibliotheques": []
+  },
+  "objets_retires_au_scellement": [],
   "totaux": {
     "objets": 5,
     "sommets": 5134,
-    "faces": 5122
+    "faces": 5122,
+    "loops": 20500
   },
-  "fichier": "FACE_BASE_LOCKED.blend",
+  "registre_du_scellement": {
+    "registre": "sceller-face-base",
+    "total": 11,
+    "reussies": 11,
+    "echecs": 0,
+    "sautees": 0,
+    "sondes": [
+      {
+        "id": "scellement.neutre_intact",
+        "description": "la purge et les verrous ne deplacent rien",
+        "configuration_connue": "meme fichier rouvert, purge + verrous",
+        "expected": "0.0 mm",
+        "measured": "0.000000000 mm",
+        "status": "PASS"
+      },
+      {
+        "id": "scellement.cinq_meshes",
+        "description": "exactement les cinq meshes autorises",
+        "configuration_connue": "base rouverte apres purge",
+        "expected": [
+          "GEO-head_animation_realistic",
+          "GEO-head_animation_realistic.iris.L",
+          "GEO-head_animation_realistic.iris.R",
+          "GEO-head_animation_realistic.sclera.L",
+          "GEO-head_animation_realistic.sclera.R"
+        ],
+        "measured": [
+          "GEO-head_animation_realistic",
+          "GEO-head_animation_realistic.iris.L",
+          "GEO-head_animation_realistic.iris.R",
+          "GEO-head_animation_realistic.sclera.L",
+          "GEO-head_animation_realistic.sclera.R"
+        ],
+        "status": "PASS"
+      },
+      {
+        "id": "scellement.zero_shape_key",
+        "description": "aucune shape key sur la source",
+        "configuration_connue": "base rouverte apres purge",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "scellement.zero_armature",
+        "description": "aucune armature, objet ou modificateur",
+        "configuration_connue": "base rouverte apres purge",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "scellement.zero_driver",
+        "description": "aucun driver, aucune animation",
+        "configuration_connue": "base rouverte apres purge",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "scellement.zero_contrainte",
+        "description": "aucune contrainte",
+        "configuration_connue": "base rouverte apres purge",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "scellement.verrous_axes",
+        "description": "neuf drapeaux verrouilles par objet",
+        "configuration_connue": "lock_location/rotation/scale poses sur les 3 axes",
+        "expected": 45,
+        "measured": 45,
+        "status": "PASS"
+      },
+      {
+        "id": "scellement.uv_presente",
+        "description": "UVMap sur les cinq objets",
+        "configuration_connue": "base rouverte apres purge",
+        "expected": 5,
+        "measured": 5,
+        "status": "PASS"
+      },
+      {
+        "id": "scellement.multires_non_applique",
+        "description": "un multires, sur la tete seule",
+        "configuration_connue": "base rouverte apres purge",
+        "expected": 1,
+        "measured": 1,
+        "status": "PASS"
+      },
+      {
+        "id": "scellement.echelle_unite",
+        "description": "echelle 1 et rotation nulle sur les cinq objets",
+        "configuration_connue": "base rouverte apres purge",
+        "expected": "{(1.0, 1.0, 1.0)}",
+        "measured": "[(1.0, 1.0, 1.0)]",
+        "status": "PASS"
+      },
+      {
+        "id": "scellement.parentage_conserve",
+        "description": "le parentage des yeux survit a la purge",
+        "configuration_connue": "yeux parentes a la tete dans la base d'origine",
+        "expected": [
+          [
+            "GEO-head_animation_realistic",
+            null
+          ],
+          [
+            "GEO-head_animation_realistic.iris.L",
+            "GEO-head_animation_realistic.sclera.L"
+          ],
+          [
+            "GEO-head_animation_realistic.iris.R",
+            "GEO-head_animation_realistic.sclera.R"
+          ],
+          [
+            "GEO-head_animation_realistic.sclera.L",
+            "GEO-head_animation_realistic"
+          ],
+          [
+            "GEO-head_animation_realistic.sclera.R",
+            "GEO-head_animation_realistic"
+          ]
+        ],
+        "measured": [
+          [
+            "GEO-head_animation_realistic",
+            null
+          ],
+          [
+            "GEO-head_animation_realistic.iris.L",
+            "GEO-head_animation_realistic.sclera.L"
+          ],
+          [
+            "GEO-head_animation_realistic.iris.R",
+            "GEO-head_animation_realistic.sclera.R"
+          ],
+          [
+            "GEO-head_animation_realistic.sclera.L",
+            "GEO-head_animation_realistic"
+          ],
+          [
+            "GEO-head_animation_realistic.sclera.R",
+            "GEO-head_animation_realistic"
+          ]
+        ],
+        "status": "PASS"
+      }
+    ]
+  },
   "octets": 980099,
-  "sha256_du_blend": "669ccdb7858adea2e3091218bdfeed4fe1b4d955d866497ad20e8559c95e55bd"
+  "sha256_du_blend": "cc9e55a47b1496fa81ed42deee6ee3a6f498c309d5b86610e5cd2407831f2bd8"
 }

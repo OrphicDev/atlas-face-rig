@@ -51,7 +51,7 @@ multires qui ne marquait pas le graphe de dépendances.
 
 `source/FACE_BASE_LOCKED.blend` (5 objets, 5 134 sommets, 5 122 faces), son
 verrou de topologie et de pose neutre, dix rendus neutres à exposition calibrée
-puis verrouillée (0 % de noirs bouchés, ≤ 0,073 % de blancs brûlés).
+puis verrouillée (0 % de noirs bouchés, ≤ 0,084 % de blancs brûlés).
 
 ### Corrigé
 

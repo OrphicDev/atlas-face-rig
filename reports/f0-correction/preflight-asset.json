@@ -1,0 +1,60 @@
+{
+  "size_expected": 49420489,
+  "sha256_expected": "3c121505651140ceb4d69fd1d8923f7788ffadd81672f5be14845a5f2c75c137",
+  "paquet": "Human Base Meshes bundle v1.4.1",
+  "licence": "CC0",
+  "path_basename": "human_base_meshes_bundle.blend",
+  "size_measured": 49420489,
+  "sha256_measured": "3c121505651140ceb4d69fd1d8923f7788ffadd81672f5be14845a5f2c75c137",
+  "basename_conforme": true,
+  "status": "OK",
+  "registre_de_la_sonde": {
+    "registre": "asset-preflight",
+    "total": 5,
+    "reussies": 5,
+    "echecs": 0,
+    "sautees": 0,
+    "sondes": [
+      {
+        "id": "preflight.fichier_conforme",
+        "description": "taille et SHA exacts",
+        "configuration_connue": "fichier de 252 octets, SHA connu",
+        "expected": "OK",
+        "measured": "OK",
+        "status": "PASS"
+      },
+      {
+        "id": "preflight.meme_taille_contenu_modifie",
+        "description": "un octet retourne, taille identique",
+        "configuration_connue": "meme taille, un octet different",
+        "expected": "ECHEC / SHA-256 faux",
+        "measured": "ECHEC / SHA-256 faux",
+        "status": "PASS"
+      },
+      {
+        "id": "preflight.taille_attendue_fausse",
+        "description": "bon contenu, taille attendue fausse",
+        "configuration_connue": "taille attendue decalee de 1",
+        "expected": "ECHEC / taille fausse",
+        "measured": "ECHEC / taille fausse",
+        "status": "PASS"
+      },
+      {
+        "id": "preflight.sha_flux_sans_taille_absente",
+        "description": "le SHA en flux ne charge pas tout",
+        "configuration_connue": "fichier de 252 octets",
+        "expected": "65537d4599059931",
+        "measured": "65537d4599059931",
+        "status": "PASS"
+      },
+      {
+        "id": "preflight.fichier_absent",
+        "description": "chemin qui n'existe pas",
+        "configuration_connue": "chemin inexistant",
+        "expected": "ECHEC",
+        "measured": "ECHEC",
+        "status": "PASS"
+      }
+    ]
+  }
+}
