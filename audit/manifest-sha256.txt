@@ -1,0 +1,15 @@
+6aa6a2dee196c722a75ee892a4fde278a7c4e6d74e4573b8d8d1a4b6ade2785f  ./CHANGELOG.md
+643a6504781b523c67a29f96f461eafb2b72a5083204c61056b1434dfd9cd75a  ./README.md
+c8174fc34fc58beeda9725d803968967a58917448c243fe52cc29edcb9215f34  ./STATUS.md
+8d2fbb78eb04eafef5d73cc1b9ee75a1f1fc9d8d8c4daa5a3dbeb328236e4f59  ./audit/inspection-asset-corps.json
+556eb52ee460a55c772d052ec68296b3e71ddb656e7e6fbe85dacd215be104e2  ./audit/inspection-asset-tetes.json
+673eed0c09b8432fe979d8e779e808c1ced552c2d105e7b1a19032b06473dccd  ./audit/manifest-sha256.txt
+ac7eb3f9a2c41346282a90e8c17517d3dcdf88c2236796f3e7034b7ba387e33b  ./docs/SCOPE_V1.md
+ce4df937b1299354bfc264adfb60275de647b94d6397120bda6ad1428a9b9e81  ./handoffs/BOOTSTRAP_CHAT_3_FACE.md
+422ed51e3d006788b5ceca5761c370702f452cffbba472d4c2314e1f9728223f  ./renders/.gitkeep
+422ed51e3d006788b5ceca5761c370702f452cffbba472d4c2314e1f9728223f  ./reports/.gitkeep
+422ed51e3d006788b5ceca5761c370702f452cffbba472d4c2314e1f9728223f  ./rig/.gitkeep
+422ed51e3d006788b5ceca5761c370702f452cffbba472d4c2314e1f9728223f  ./source/.gitkeep
+a6b7259d10c2e84d3580108839a4adf0f1ee68fcc7bfa4b56719d6c067b49063  ./tests/inspecter-asset-corps.py
+fdccfe8057b040e1b24302f170d2282af425a089d0b937d4bf5fbd6e8a5ee5da  ./tests/inspecter-asset-tetes.py
+422ed51e3d006788b5ceca5761c370702f452cffbba472d4c2314e1f9728223f  ./videos/.gitkeep
