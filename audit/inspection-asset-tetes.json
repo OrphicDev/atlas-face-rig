@@ -1,0 +1,140 @@
+{
+  "Head (Animation) - Realistic": {
+    "objets": [
+      [
+        "GEO-head_animation_realistic",
+        3242,
+        3234
+      ],
+      [
+        "GEO-head_animation_realistic.iris.L",
+        400,
+        400
+      ],
+      [
+        "GEO-head_animation_realistic.iris.R",
+        400,
+        400
+      ],
+      [
+        "GEO-head_animation_realistic.sclera.L",
+        546,
+        544
+      ],
+      [
+        "GEO-head_animation_realistic.sclera.R",
+        546,
+        544
+      ]
+    ],
+    "sommets_total": 5134,
+    "faces_total": 5122,
+    "quads": 5094,
+    "triangles": 18,
+    "ngons": 10,
+    "part_de_quads": 0.9945,
+    "yeux": [],
+    "dents": [],
+    "langue": [],
+    "shape_keys": {
+      "GEO-head_animation_realistic": 0,
+      "GEO-head_animation_realistic.iris.L": 0,
+      "GEO-head_animation_realistic.iris.R": 0,
+      "GEO-head_animation_realistic.sclera.L": 0,
+      "GEO-head_animation_realistic.sclera.R": 0
+    },
+    "uv": {
+      "GEO-head_animation_realistic": [
+        "UVMap"
+      ],
+      "GEO-head_animation_realistic.iris.L": [
+        "UVMap"
+      ],
+      "GEO-head_animation_realistic.iris.R": [
+        "UVMap"
+      ],
+      "GEO-head_animation_realistic.sclera.L": [
+        "UVMap"
+      ],
+      "GEO-head_animation_realistic.sclera.R": [
+        "UVMap"
+      ]
+    },
+    "modificateurs": {
+      "GEO-head_animation_realistic": [
+        "MULTIRES"
+      ]
+    },
+    "hauteur_m": 0.3709,
+    "largeur_m": 0.2737
+  },
+  "Head (Sculpting) - Realistic": {
+    "objets": [
+      [
+        "GEO-head_sculpting_realistic",
+        3307,
+        3300
+      ],
+      [
+        "GEO-head_sculpting_realistic.iris.R",
+        400,
+        400
+      ],
+      [
+        "GEO-head_sculpting_realistic.sclera.L",
+        546,
+        544
+      ],
+      [
+        "GEO-head_sculpting_realistic.sclera.R",
+        546,
+        544
+      ],
+      [
+        "GEO-head_sculpting_realistic.iris.L",
+        400,
+        400
+      ]
+    ],
+    "sommets_total": 5199,
+    "faces_total": 5188,
+    "quads": 5156,
+    "triangles": 20,
+    "ngons": 12,
+    "part_de_quads": 0.9938,
+    "yeux": [],
+    "dents": [],
+    "langue": [],
+    "shape_keys": {
+      "GEO-head_sculpting_realistic": 0,
+      "GEO-head_sculpting_realistic.iris.R": 0,
+      "GEO-head_sculpting_realistic.sclera.L": 0,
+      "GEO-head_sculpting_realistic.sclera.R": 0,
+      "GEO-head_sculpting_realistic.iris.L": 0
+    },
+    "uv": {
+      "GEO-head_sculpting_realistic": [
+        "UVMap"
+      ],
+      "GEO-head_sculpting_realistic.iris.R": [
+        "UVMap"
+      ],
+      "GEO-head_sculpting_realistic.sclera.L": [
+        "UVMap"
+      ],
+      "GEO-head_sculpting_realistic.sclera.R": [
+        "UVMap"
+      ],
+      "GEO-head_sculpting_realistic.iris.L": [
+        "UVMap"
+      ]
+    },
+    "modificateurs": {
+      "GEO-head_sculpting_realistic": [
+        "MULTIRES"
+      ]
+    },
+    "hauteur_m": 0.3638,
+    "largeur_m": 0.2637
+  }
+}

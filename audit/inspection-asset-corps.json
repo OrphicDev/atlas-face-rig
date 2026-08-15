@@ -1,0 +1,107 @@
+{
+  "asset": "human_base_meshes_bundle.blend",
+  "collection": "Body Male - Realistic",
+  "blender": "5.1.2",
+  "taille_octets": 49420489,
+  "sha256": "3c121505651140ceb4d69fd1d8923f7788ffadd81672f5be14845a5f2c75c137",
+  "collections_du_paquet": [
+    "Body Female - Primitive (Stylized)",
+    "Body Female - Primitve (Realistic)",
+    "Body Female - Realistic",
+    "Body Female - Stylized",
+    "Body Male - Primitve (Realistic)",
+    "Body Male - Primitve (Stylized)",
+    "Body Male - Realistic",
+    "Body Male - Stylized",
+    "Head (Animation) - Realistic",
+    "Head (Sculpting) - Realistic",
+    "Head - Primitives",
+    "Head - Stylized",
+    "Human Base Meshes",
+    "Planar",
+    "Primitves",
+    "Realistic",
+    "Skeleton - Realistic",
+    "Stylized",
+    "cams"
+  ],
+  "objets": [
+    {
+      "nom": "GEO-body_male_realistic",
+      "type": "MESH",
+      "sommets": 10582,
+      "faces": 10590,
+      "materiaux": []
+    },
+    {
+      "nom": "GEO-body_male_realistic.eye.L",
+      "type": "MESH",
+      "sommets": 546,
+      "faces": 544,
+      "materiaux": []
+    },
+    {
+      "nom": "GEO-body_male_realistic.eye.R",
+      "type": "MESH",
+      "sommets": 546,
+      "faces": 544,
+      "materiaux": []
+    }
+  ],
+  "nombre_objets": 3,
+  "nombre_mailles": 3,
+  "sommets_total": 11674,
+  "faces_total": 11678,
+  "materiaux": [],
+  "yeux": [
+    "GEO-body_male_realistic.eye.L",
+    "GEO-body_male_realistic.eye.R"
+  ],
+  "dents": [],
+  "langue": [],
+  "cils_sourcils": [],
+  "maillage_principal": "GEO-body_male_realistic",
+  "hauteur_brute_m": 1.69,
+  "echelle_objet": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "hauteur_epaules_m": 1.2704,
+  "base_du_cou_m": 1.4309,
+  "sommets_de_la_tete": 3612,
+  "part_de_la_tete": 0.3413,
+  "hauteur_des_yeux_m": 1.5737,
+  "sommets_dans_30mm_autour_d_un_oeil": 458,
+  "armatures": [],
+  "shape_keys": {
+    "GEO-body_male_realistic": 0,
+    "GEO-body_male_realistic.eye.L": 0,
+    "GEO-body_male_realistic.eye.R": 0
+  },
+  "modificateurs": {
+    "GEO-body_male_realistic": [
+      "MULTIRES"
+    ]
+  },
+  "uv": {
+    "GEO-body_male_realistic": [
+      "UVMap"
+    ],
+    "GEO-body_male_realistic.eye.L": [
+      "UVMap"
+    ],
+    "GEO-body_male_realistic.eye.R": [
+      "UVMap"
+    ]
+  },
+  "multires": {
+    "GEO-body_male_realistic": [
+      3
+    ]
+  },
+  "faces_quads": 11658,
+  "faces_triangles": 20,
+  "faces_ngons": 0,
+  "part_de_quads": 0.9983
+}
