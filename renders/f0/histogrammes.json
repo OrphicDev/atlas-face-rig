@@ -1,0 +1,289 @@
+{
+  "calibrage": {
+    "cible_centile_99_5": 0.92,
+    "facteur_retenu": 7.22037,
+    "journal": [
+      {
+        "essai": 0,
+        "facteur": 4.0,
+        "centile_99_5": 0.6944
+      },
+      {
+        "essai": 1,
+        "facteur": 5.00959,
+        "centile_99_5": 0.7686
+      },
+      {
+        "essai": 2,
+        "facteur": 5.78442,
+        "centile_99_5": 0.8196
+      },
+      {
+        "essai": 3,
+        "facteur": 6.34461,
+        "centile_99_5": 0.851
+      },
+      {
+        "essai": 4,
+        "facteur": 6.75304,
+        "centile_99_5": 0.8745
+      },
+      {
+        "essai": 5,
+        "facteur": 7.03263,
+        "centile_99_5": 0.8902
+      },
+      {
+        "essai": 6,
+        "facteur": 7.22037,
+        "centile_99_5": 0.902
+      }
+    ],
+    "energies_W": {
+      "KEY": 7.2204,
+      "FILL": 0.9386,
+      "RIM": 1.8051
+    }
+  },
+  "fichier": "FACE_BASE_LOCKED.blend",
+  "blender": "5.1.2",
+  "moteur": "BLENDER_EEVEE",
+  "transformation_de_vue": "Standard",
+  "faces_lissees_pour_le_rendu": 3234,
+  "resolution": [
+    1600,
+    1600
+  ],
+  "vues": {
+    "neutre_face": {
+      "noirs_bouches_pct": 0.0,
+      "blancs_brules_pct": 0.0,
+      "moyenne": 0.3722,
+      "histogramme_16": [
+        0,
+        0,
+        276504,
+        1218775,
+        276305,
+        38857,
+        36990,
+        46524,
+        66393,
+        61294,
+        81775,
+        111842,
+        126868,
+        134019,
+        83854,
+        0
+      ]
+    },
+    "neutre_profil_L": {
+      "noirs_bouches_pct": 0.0,
+      "blancs_brules_pct": 0.0,
+      "moyenne": 0.5425,
+      "histogramme_16": [
+        0,
+        0,
+        3767,
+        678618,
+        230940,
+        78196,
+        65778,
+        85747,
+        110552,
+        130955,
+        168950,
+        245635,
+        252546,
+        271512,
+        229916,
+        6888
+      ]
+    },
+    "neutre_profil_R": {
+      "noirs_bouches_pct": 0.0,
+      "blancs_brules_pct": 0.084,
+      "moyenne": 0.236,
+      "histogramme_16": [
+        0,
+        0,
+        471317,
+        1401546,
+        539781,
+        116043,
+        7912,
+        5377,
+        3906,
+        3008,
+        2357,
+        1904,
+        1559,
+        1297,
+        1005,
+        2988
+      ]
+    },
+    "neutre_trq_L": {
+      "noirs_bouches_pct": 0.0,
+      "blancs_brules_pct": 0.0,
+      "moyenne": 0.5273,
+      "histogramme_16": [
+        0,
+        0,
+        13296,
+        859207,
+        216091,
+        24085,
+        31232,
+        48877,
+        81786,
+        105350,
+        161525,
+        243580,
+        298118,
+        264630,
+        200206,
+        12017
+      ]
+    },
+    "neutre_trq_R": {
+      "noirs_bouches_pct": 0.0,
+      "blancs_brules_pct": 0.0,
+      "moyenne": 0.2538,
+      "histogramme_16": [
+        0,
+        0,
+        587749,
+        1409229,
+        313282,
+        51602,
+        24655,
+        25782,
+        30277,
+        29548,
+        21747,
+        19077,
+        15773,
+        13365,
+        10173,
+        7741
+      ]
+    },
+    "neutre_plongee": {
+      "noirs_bouches_pct": 0.0,
+      "blancs_brules_pct": 0.0,
+      "moyenne": 0.4025,
+      "histogramme_16": [
+        0,
+        0,
+        273883,
+        1044931,
+        261087,
+        65341,
+        45521,
+        54251,
+        72022,
+        72741,
+        96349,
+        132164,
+        217962,
+        144802,
+        78946,
+        0
+      ]
+    },
+    "neutre_contreplongee": {
+      "noirs_bouches_pct": 0.0,
+      "blancs_brules_pct": 0.0,
+      "moyenne": 0.3443,
+      "histogramme_16": [
+        0,
+        0,
+        385727,
+        1232292,
+        279025,
+        30451,
+        33680,
+        44567,
+        61691,
+        58048,
+        67875,
+        98659,
+        128403,
+        95602,
+        43980,
+        0
+      ]
+    },
+    "gros_plan_oeil_L": {
+      "noirs_bouches_pct": 0.0,
+      "blancs_brules_pct": 0.0,
+      "moyenne": 0.7073,
+      "histogramme_16": [
+        0,
+        0,
+        28757,
+        8623,
+        14301,
+        21967,
+        41688,
+        83349,
+        274545,
+        231115,
+        286964,
+        404238,
+        380387,
+        610399,
+        173667,
+        0
+      ]
+    },
+    "gros_plan_bouche": {
+      "noirs_bouches_pct": 0.0,
+      "blancs_brules_pct": 0.0,
+      "moyenne": 0.4244,
+      "histogramme_16": [
+        0,
+        0,
+        868889,
+        314626,
+        68690,
+        61302,
+        64547,
+        85342,
+        118252,
+        117739,
+        259087,
+        298123,
+        191308,
+        112095,
+        0,
+        0
+      ]
+    },
+    "gros_plan_nez": {
+      "noirs_bouches_pct": 0.0,
+      "blancs_brules_pct": 0.0,
+      "moyenne": 0.4388,
+      "histogramme_16": [
+        0,
+        0,
+        582951,
+        550404,
+        95342,
+        74806,
+        78854,
+        90261,
+        113019,
+        110997,
+        171862,
+        191773,
+        256071,
+        243660,
+        0,
+        0
+      ]
+    }
+  }
+}

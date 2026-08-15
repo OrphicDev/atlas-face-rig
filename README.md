@@ -3,16 +3,35 @@
 Rig facial construit **par la mesure** : géométrie, shape keys et rig maître
 d'un visage humain, sur l'asset CC0 de Blender Studio.
 
-> ## Rien n'est encore fait
+> ## F0 est faite. Le rig ne l'est pas.
 >
-> Ce dépôt est un **bootstrap**. Il ne contient pas de rig, pas de shape key,
-> pas de rendu. Il contient la **mesure de l'asset source** et les conventions
-> à respecter, pour que le travail commence sur des chiffres et non sur des
-> suppositions.
+> La géométrie est mesurée, décidée et **verrouillée**
+> (`source/FACE_BASE_LOCKED.blend`). Il n'y a **aucun os, aucune shape key,
+> aucun visème** — F0 ne devait pas en produire, et rien ne prétend le contraire.
 
 ## Par où commencer
 
-**→ [`handoffs/BOOTSTRAP_CHAT_3_FACE.md`](handoffs/BOOTSTRAP_CHAT_3_FACE.md)**
+**→ [`reports/f0/RAPPORT_F0.md`](reports/f0/RAPPORT_F0.md)** — ce qui est mesuré
+et pourquoi les décisions sont celles-là.
+
+**→ [`handoffs/HANDOFF_FACE_NEXT.md`](handoffs/HANDOFF_FACE_NEXT.md)** — pour
+reprendre le travail à F1.
+
+Le bootstrap d'origine reste dans
+[`handoffs/BOOTSTRAP_CHAT_3_FACE.md`](handoffs/BOOTSTRAP_CHAT_3_FACE.md).
+
+## Ce que F0 a établi
+
+- **topologie exactement symétrique** — démontré, pas supposé : le miroir
+  `.L`/`.R` se fait par indice de sommet ;
+- **sept ouvertures anatomiques** et pas une de plus, dont une **vraie cavité
+  orale** ;
+- **cage de 3 242 sommets conservée** ; shape keys sur la cage, **multires gardé
+  et jamais appliqué** ;
+- **les dents étaient dans l'asset source** : `Jaw - Realistic`, 28 dents +
+  mandibule, CC0. La langue reste à construire ;
+- **19 sondes vérifiées sur 19** avant tout verdict — et trois d'entre elles
+  étaient fausses, prises par leurs propres auto-tests.
 
 ## L'asset source
 
@@ -39,10 +58,16 @@ cheveux, barbe, pilosité.
 ```bash
 export ATLAS_BASE_MESH=/chemin/vers/human_base_meshes_bundle.blend
 blender --background --factory-startup --python-exit-code 1 \
-  --python tests/inspecter-asset-tetes.py -- ./tetes.json
+  --python tests/f0-audit-topologie.py -- ./f0.json
+blender --background --factory-startup --python-exit-code 1 \
+  --python tests/verrou-topologie.py -- source/FACE_BASE_LOCKED.blend tests/verrou-topologie.json
 ```
 
-Référence : [`audit/inspection-asset-tetes.json`](audit/inspection-asset-tetes.json).
+Le premier refuse de publier un chiffre si une seule de ses 15 sondes échoue ; le
+second échoue si la topologie ou la pose neutre a bougé.
+
+Références : [`reports/f0/`](reports/f0/) et
+[`audit/inspection-asset-tetes.json`](audit/inspection-asset-tetes.json).
 
 ## Dépôt frère
 

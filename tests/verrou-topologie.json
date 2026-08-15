@@ -1,0 +1,329 @@
+{
+  "asset": "human_base_meshes_bundle.blend",
+  "collection": "Head (Animation) - Realistic",
+  "blender": "5.1.2",
+  "avant": {
+    "GEO-head_animation_realistic": {
+      "scale": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        1.462572,
+        -0.021928,
+        0.487662
+      ]
+    },
+    "GEO-head_animation_realistic.iris.L": {
+      "scale": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        1.494184,
+        -0.120202,
+        0.766695
+      ]
+    },
+    "GEO-head_animation_realistic.iris.R": {
+      "scale": [
+        0.639556,
+        0.639556,
+        0.639556
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        1.430959,
+        -0.120202,
+        0.766695
+      ]
+    },
+    "GEO-head_animation_realistic.sclera.L": {
+      "scale": [
+        0.639556,
+        0.639556,
+        0.639556
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        1.494861,
+        -0.125771,
+        0.766695
+      ]
+    },
+    "GEO-head_animation_realistic.sclera.R": {
+      "scale": [
+        0.639556,
+        0.639556,
+        0.639556
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        1.430283,
+        -0.125771,
+        0.766695
+      ]
+    }
+  },
+  "application_echelle": {
+    "ecart_max_mm": 0.001212867,
+    "tolerance_mm": 0.01,
+    "origine_de_la_tolerance": "docs/SCOPE_V1.md, critere de retour au neutre",
+    "decision": "APPLIQUEE — echelle 1, rotation nulle, surface inchangee"
+  },
+  "apres": {
+    "GEO-head_animation_realistic": {
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        1.462572,
+        -0.021928,
+        0.487662
+      ]
+    },
+    "GEO-head_animation_realistic.iris.L": {
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        1.494861,
+        -0.125771,
+        0.766695
+      ]
+    },
+    "GEO-head_animation_realistic.iris.R": {
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        1.430283,
+        -0.125771,
+        0.766695
+      ]
+    },
+    "GEO-head_animation_realistic.sclera.L": {
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        1.494861,
+        -0.125771,
+        0.766695
+      ]
+    },
+    "GEO-head_animation_realistic.sclera.R": {
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "location": [
+        1.430283,
+        -0.125771,
+        0.766695
+      ]
+    }
+  },
+  "signature_topologie": "d29e2af3ef67aec5bad705c5e5a4b72428f906f01af94c33880c85a47722e5ae",
+  "signature_neutre": "9246d8acb2d68a38a6f355db90df967e8f6e71907343ce1cf028549bed20c324",
+  "objets": [
+    {
+      "objet": "GEO-head_animation_realistic",
+      "sommets": 3242,
+      "aretes": 6474,
+      "faces": 3234,
+      "uv": [
+        "UVMap"
+      ],
+      "modificateurs": [
+        "MULTIRES"
+      ],
+      "location": [
+        1.462572,
+        -0.021928,
+        0.487662
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "shape_keys": 0
+    },
+    {
+      "objet": "GEO-head_animation_realistic.iris.L",
+      "sommets": 400,
+      "aretes": 800,
+      "faces": 400,
+      "uv": [
+        "UVMap"
+      ],
+      "modificateurs": [],
+      "location": [
+        1.494861,
+        -0.125771,
+        0.766695
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "shape_keys": 0
+    },
+    {
+      "objet": "GEO-head_animation_realistic.iris.R",
+      "sommets": 400,
+      "aretes": 800,
+      "faces": 400,
+      "uv": [
+        "UVMap"
+      ],
+      "modificateurs": [],
+      "location": [
+        1.430283,
+        -0.125771,
+        0.766695
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "shape_keys": 0
+    },
+    {
+      "objet": "GEO-head_animation_realistic.sclera.L",
+      "sommets": 546,
+      "aretes": 1088,
+      "faces": 544,
+      "uv": [
+        "UVMap"
+      ],
+      "modificateurs": [],
+      "location": [
+        1.494861,
+        -0.125771,
+        0.766695
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "shape_keys": 0
+    },
+    {
+      "objet": "GEO-head_animation_realistic.sclera.R",
+      "sommets": 546,
+      "aretes": 1088,
+      "faces": 544,
+      "uv": [
+        "UVMap"
+      ],
+      "modificateurs": [],
+      "location": [
+        1.430283,
+        -0.125771,
+        0.766695
+      ],
+      "rotation_euler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "shape_keys": 0
+    }
+  ],
+  "totaux": {
+    "objets": 5,
+    "sommets": 5134,
+    "faces": 5122
+  },
+  "fichier": "FACE_BASE_LOCKED.blend",
+  "octets": 980099,
+  "sha256_du_blend": "669ccdb7858adea2e3091218bdfeed4fe1b4d955d866497ad20e8559c95e55bd"
+}

@@ -1,0 +1,2077 @@
+{
+  "asset": "human_base_meshes_bundle.blend",
+  "collection": "Head (Animation) - Realistic",
+  "blender": "5.1.2",
+  "objet": "GEO-head_animation_realistic",
+  "rayons_par_sommet": 48,
+  "seuil_degagement": 0.15,
+  "transformations": {
+    "location": [
+      1.462572,
+      -0.021928,
+      0.487662
+    ],
+    "rotation_euler": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      0.9,
+      0.9,
+      0.9
+    ]
+  },
+  "volume_signe_m3": 0.00827167,
+  "faces": {
+    "quads": 3206,
+    "triangles": 18,
+    "ngons": 10,
+    "total": 3234,
+    "part_de_quads": 0.99134
+  },
+  "bbox_monde": {
+    "min": [
+      1.32586,
+      -0.16903,
+      0.50941
+    ],
+    "max": [
+      1.59952,
+      0.07756,
+      0.88031
+    ],
+    "dimensions_mm": [
+      273.66,
+      246.59,
+      370.9
+    ]
+  },
+  "symetrie_topologique": {
+    "plan_x_local_m": 0.0,
+    "propagation": {
+      "ecart_propagation_max_mm": 1.87671
+    },
+    "bijection": true,
+    "involutive": true,
+    "aretes_sans_image": 0,
+    "faces_sans_image": 0,
+    "sommets_sur_l_axe": 112
+  },
+  "symetrie_geometrique": {
+    "methode": "carte miroir combinatoire",
+    "unite": "mm dans le repere MONDE (echelle objet 0.900 appliquee)",
+    "max_mm": 1.68904,
+    "moy_mm": 0.14034,
+    "median_mm": 0.08254,
+    "p99_mm": 0.87159,
+    "sommets_hors_0_01mm": 3226,
+    "sommets_hors_0_1mm": 1352,
+    "sommets_hors_1mm": 22
+  },
+  "integrite": {
+    "bords_ouverts": 0,
+    "aretes_non_manifold": 0,
+    "aretes_sans_face": 0,
+    "sommets_laches": 0,
+    "faces_degenerees": 0,
+    "paires_doublons_10um": 0,
+    "faces_normale_incoherente": 0
+  },
+  "degagement_histogramme_par_0_05": [
+    697,
+    42,
+    45,
+    36,
+    38,
+    49,
+    47,
+    71,
+    30,
+    39,
+    49,
+    40,
+    105,
+    78,
+    129,
+    234,
+    186,
+    297,
+    249,
+    781
+  ],
+  "exterieur_interieur": {
+    "exterieur": 2458,
+    "interieur": 784
+  },
+  "stabilite_du_seuil": {
+    "0.02": {
+      "interieur": 370,
+      "anneaux": 30
+    },
+    "0.05": {
+      "interieur": 697,
+      "anneaux": 4
+    },
+    "0.10": {
+      "interieur": 739,
+      "anneaux": 5
+    },
+    "0.15": {
+      "interieur": 784,
+      "anneaux": 7
+    },
+    "0.20": {
+      "interieur": 820,
+      "anneaux": 8
+    },
+    "0.30": {
+      "interieur": 907,
+      "anneaux": 10
+    }
+  },
+  "ouvertures": [
+    {
+      "aretes": 44,
+      "sommets": 76,
+      "sommets_cote_peau": 38,
+      "indices_peau": [
+        238,
+        247,
+        250,
+        343,
+        364,
+        377,
+        591,
+        592,
+        593,
+        594,
+        595,
+        946,
+        947,
+        948,
+        949,
+        950,
+        1141,
+        1152,
+        1780,
+        1789,
+        1792,
+        1885,
+        1906,
+        1919,
+        2133,
+        2134,
+        2135,
+        2136,
+        2137,
+        2488,
+        2489,
+        2490,
+        2491,
+        2492,
+        2681,
+        2682,
+        3082,
+        3101
+      ],
+      "perimetre_mm": 146.75,
+      "centre": [
+        1.46258,
+        -0.14593,
+        0.69424
+      ],
+      "bbox_min": [
+        1.43866,
+        -0.15411,
+        0.69156
+      ],
+      "bbox_max": [
+        1.48639,
+        -0.13876,
+        0.69745
+      ],
+      "largeur_mm": 47.73,
+      "hauteur_mm": 5.88,
+      "indices": [
+        216,
+        217,
+        218,
+        238,
+        239,
+        240,
+        241,
+        244,
+        245,
+        246,
+        247,
+        249,
+        250,
+        258,
+        343,
+        351,
+        364,
+        374,
+        377,
+        590,
+        591,
+        592,
+        593,
+        594,
+        595,
+        640,
+        770,
+        946,
+        947,
+        948,
+        949,
+        950,
+        1132,
+        1141,
+        1152,
+        1153,
+        1758,
+        1759,
+        1760,
+        1780,
+        1781,
+        1782,
+        1783,
+        1786,
+        1787,
+        1788,
+        1789,
+        1791,
+        1792,
+        1800,
+        1885,
+        1893,
+        1906,
+        1916,
+        1919,
+        2132,
+        2133,
+        2134,
+        2135,
+        2136,
+        2137,
+        2182,
+        2312,
+        2488,
+        2489,
+        2490,
+        2491,
+        2492,
+        2681,
+        2682,
+        2693,
+        2694,
+        3082,
+        3083,
+        3100,
+        3101
+      ],
+      "nom": "fente_labiale",
+      "ecart_axe_mm": -0.11,
+      "cavite": {
+        "sommets": 293,
+        "profondeur_max_mm": 99.85,
+        "surface_mm2": 27086.5
+      }
+    },
+    {
+      "aretes": 24,
+      "sommets": 40,
+      "sommets_cote_peau": 20,
+      "indices_peau": [
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289,
+        291,
+        865,
+        867,
+        1203,
+        1468,
+        1478,
+        1522,
+        1523,
+        1535,
+        1541
+      ],
+      "perimetre_mm": 65.03,
+      "centre": [
+        1.42807,
+        -0.1308,
+        0.76507
+      ],
+      "bbox_min": [
+        1.41804,
+        -0.13621,
+        0.75856
+      ],
+      "bbox_max": [
+        1.44131,
+        -0.12549,
+        0.7749
+      ],
+      "largeur_mm": 23.27,
+      "hauteur_mm": 16.34,
+      "indices": [
+        13,
+        43,
+        54,
+        65,
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289,
+        291,
+        865,
+        867,
+        1203,
+        1468,
+        1478,
+        1522,
+        1523,
+        1524,
+        1525,
+        1526,
+        1527,
+        1528,
+        1529,
+        1530,
+        1531,
+        1532,
+        1533,
+        1534,
+        1535,
+        1536,
+        1537,
+        1538,
+        1539,
+        1540,
+        1541
+      ],
+      "nom": "fente_palpebrale.R",
+      "ecart_axe_mm": -34.62,
+      "cavite": {
+        "sommets": 232,
+        "profondeur_max_mm": 37.8,
+        "surface_mm2": 5494.2
+      }
+    },
+    {
+      "aretes": 24,
+      "sommets": 40,
+      "sommets_cote_peau": 20,
+      "indices_peau": [
+        1822,
+        1823,
+        1824,
+        1825,
+        1828,
+        1829,
+        1830,
+        1831,
+        2405,
+        2407,
+        2409,
+        2744,
+        3009,
+        3019,
+        3167,
+        3168,
+        3173,
+        3174,
+        3179,
+        3186
+      ],
+      "perimetre_mm": 73.99,
+      "centre": [
+        1.497,
+        -0.13061,
+        0.7653
+      ],
+      "bbox_min": [
+        1.48379,
+        -0.13621,
+        0.75857
+      ],
+      "bbox_max": [
+        1.50714,
+        -0.12545,
+        0.77696
+      ],
+      "largeur_mm": 23.34,
+      "hauteur_mm": 18.38,
+      "indices": [
+        1565,
+        1575,
+        1585,
+        1596,
+        1607,
+        1750,
+        1822,
+        1823,
+        1824,
+        1825,
+        1828,
+        1829,
+        1830,
+        1831,
+        2405,
+        2407,
+        2409,
+        2744,
+        3009,
+        3019,
+        3167,
+        3168,
+        3169,
+        3170,
+        3171,
+        3172,
+        3173,
+        3174,
+        3175,
+        3176,
+        3177,
+        3178,
+        3179,
+        3180,
+        3181,
+        3182,
+        3183,
+        3184,
+        3185,
+        3186
+      ],
+      "nom": "fente_palpebrale.L",
+      "ecart_axe_mm": 34.31,
+      "cavite": {
+        "sommets": 230,
+        "profondeur_max_mm": 37.57,
+        "surface_mm2": 5436.1
+      }
+    },
+    {
+      "aretes": 17,
+      "sommets": 22,
+      "sommets_cote_peau": 13,
+      "indices_peau": [
+        2899,
+        2900,
+        2907,
+        2908,
+        2910,
+        2926,
+        2929,
+        2932,
+        2934,
+        2943,
+        2952,
+        2953,
+        2971
+      ],
+      "perimetre_mm": 78.54,
+      "centre": [
+        1.53226,
+        -0.05038,
+        0.73917
+      ],
+      "bbox_min": [
+        1.52642,
+        -0.05471,
+        0.73299
+      ],
+      "bbox_max": [
+        1.53632,
+        -0.04144,
+        0.7473
+      ],
+      "largeur_mm": 9.89,
+      "hauteur_mm": 14.31,
+      "indices": [
+        2899,
+        2900,
+        2907,
+        2908,
+        2910,
+        2926,
+        2928,
+        2929,
+        2930,
+        2932,
+        2933,
+        2934,
+        2943,
+        2949,
+        2952,
+        2953,
+        2954,
+        2955,
+        2956,
+        2969,
+        2971,
+        2973
+      ],
+      "nom": "conduit_auditif.L",
+      "ecart_axe_mm": 69.57,
+      "cavite": {
+        "sommets": 12,
+        "profondeur_max_mm": 7.65,
+        "surface_mm2": 52.6
+      }
+    },
+    {
+      "aretes": 11,
+      "sommets": 19,
+      "sommets_cote_peau": 11,
+      "indices_peau": [
+        1359,
+        1366,
+        1367,
+        1369,
+        1385,
+        1388,
+        1393,
+        1409,
+        1412,
+        1414,
+        1450
+      ],
+      "perimetre_mm": 49.61,
+      "centre": [
+        1.39371,
+        -0.05156,
+        0.74089
+      ],
+      "bbox_min": [
+        1.38882,
+        -0.0547,
+        0.73357
+      ],
+      "bbox_max": [
+        1.39868,
+        -0.04648,
+        0.74725
+      ],
+      "largeur_mm": 9.86,
+      "hauteur_mm": 13.68,
+      "indices": [
+        1359,
+        1366,
+        1367,
+        1369,
+        1385,
+        1387,
+        1388,
+        1389,
+        1392,
+        1393,
+        1408,
+        1409,
+        1412,
+        1414,
+        1428,
+        1430,
+        1431,
+        1432,
+        1450
+      ],
+      "nom": "conduit_auditif.R",
+      "ecart_axe_mm": -68.98,
+      "cavite": {
+        "sommets": 10,
+        "profondeur_max_mm": 6.18,
+        "surface_mm2": 83.3
+      }
+    },
+    {
+      "aretes": 9,
+      "sommets": 11,
+      "sommets_cote_peau": 7,
+      "indices_peau": [
+        1852,
+        1853,
+        1854,
+        1856,
+        1857,
+        2363,
+        2410
+      ],
+      "perimetre_mm": 35.8,
+      "centre": [
+        1.47097,
+        -0.15456,
+        0.7271
+      ],
+      "bbox_min": [
+        1.46637,
+        -0.15952,
+        0.72404
+      ],
+      "bbox_max": [
+        1.47481,
+        -0.14978,
+        0.72943
+      ],
+      "largeur_mm": 8.45,
+      "hauteur_mm": 5.39,
+      "indices": [
+        1852,
+        1853,
+        1854,
+        1856,
+        1857,
+        2363,
+        2364,
+        2365,
+        2410,
+        2412,
+        2413
+      ],
+      "nom": "narine.L",
+      "ecart_axe_mm": 8.28,
+      "cavite": {
+        "sommets": 4,
+        "profondeur_max_mm": 4.69,
+        "surface_mm2": 0.0
+      }
+    },
+    {
+      "aretes": 8,
+      "sommets": 11,
+      "sommets_cote_peau": 8,
+      "indices_peau": [
+        310,
+        311,
+        312,
+        314,
+        315,
+        821,
+        823,
+        868
+      ],
+      "perimetre_mm": 31.6,
+      "centre": [
+        1.4544,
+        -0.15464,
+        0.72717
+      ],
+      "bbox_min": [
+        1.45051,
+        -0.15958,
+        0.72427
+      ],
+      "bbox_max": [
+        1.45888,
+        -0.14954,
+        0.72961
+      ],
+      "largeur_mm": 8.38,
+      "hauteur_mm": 5.34,
+      "indices": [
+        310,
+        311,
+        312,
+        314,
+        315,
+        821,
+        822,
+        823,
+        868,
+        870,
+        871
+      ],
+      "nom": "narine.R",
+      "ecart_axe_mm": -8.29,
+      "cavite": {
+        "sommets": 3,
+        "profondeur_max_mm": 4.69,
+        "surface_mm2": 0.0
+      }
+    }
+  ],
+  "globes_oculaires": {
+    "GEO-head_animation_realistic.sclera.L": {
+      "centre": [
+        1.49486,
+        -0.12619,
+        0.76669
+      ],
+      "rayon_mm": 11.702
+    },
+    "GEO-head_animation_realistic.sclera.R": {
+      "centre": [
+        1.43028,
+        -0.12619,
+        0.76669
+      ],
+      "rayon_mm": 11.702
+    }
+  },
+  "pointe_du_nez": [
+    1.46263,
+    -0.16903,
+    0.72933
+  ],
+  "ouvertures_attendues": [
+    "conduit_auditif.L",
+    "conduit_auditif.R",
+    "fente_labiale",
+    "fente_palpebrale.L",
+    "fente_palpebrale.R",
+    "narine.L",
+    "narine.R"
+  ],
+  "ouvertures_trouvees": [
+    "conduit_auditif.L",
+    "conduit_auditif.R",
+    "fente_labiale",
+    "fente_palpebrale.L",
+    "fente_palpebrale.R",
+    "narine.L",
+    "narine.R"
+  ],
+  "compte_des_ouvertures_conforme": true,
+  "cavites_communes": [],
+  "boucles": {
+    "fente_labiale": {
+      "anneau_0_sommets": 38,
+      "profil": [
+        {
+          "anneau": 1,
+          "sommets": 38,
+          "distance_moy_mm": 2.77
+        },
+        {
+          "anneau": 2,
+          "sommets": 38,
+          "distance_moy_mm": 5.58
+        },
+        {
+          "anneau": 3,
+          "sommets": 38,
+          "distance_moy_mm": 8.69
+        },
+        {
+          "anneau": 4,
+          "sommets": 38,
+          "distance_moy_mm": 12.16
+        },
+        {
+          "anneau": 5,
+          "sommets": 38,
+          "distance_moy_mm": 16.49
+        },
+        {
+          "anneau": 6,
+          "sommets": 40,
+          "distance_moy_mm": 21.34
+        },
+        {
+          "anneau": 7,
+          "sommets": 48,
+          "distance_moy_mm": 26.02
+        },
+        {
+          "anneau": 8,
+          "sommets": 58,
+          "distance_moy_mm": 30.22
+        },
+        {
+          "anneau": 9,
+          "sommets": 61,
+          "distance_moy_mm": 33.89
+        },
+        {
+          "anneau": 10,
+          "sommets": 60,
+          "distance_moy_mm": 38.27
+        },
+        {
+          "anneau": 11,
+          "sommets": 60,
+          "distance_moy_mm": 42.9
+        },
+        {
+          "anneau": 12,
+          "sommets": 56,
+          "distance_moy_mm": 48.59
+        }
+      ]
+    },
+    "fente_palpebrale.R": {
+      "anneau_0_sommets": 20,
+      "profil": [
+        {
+          "anneau": 1,
+          "sommets": 21,
+          "distance_moy_mm": 1.64
+        },
+        {
+          "anneau": 2,
+          "sommets": 23,
+          "distance_moy_mm": 3.0
+        },
+        {
+          "anneau": 3,
+          "sommets": 25,
+          "distance_moy_mm": 4.14
+        },
+        {
+          "anneau": 4,
+          "sommets": 26,
+          "distance_moy_mm": 5.49
+        },
+        {
+          "anneau": 5,
+          "sommets": 25,
+          "distance_moy_mm": 7.92
+        },
+        {
+          "anneau": 6,
+          "sommets": 25,
+          "distance_moy_mm": 11.24
+        },
+        {
+          "anneau": 7,
+          "sommets": 26,
+          "distance_moy_mm": 15.3
+        },
+        {
+          "anneau": 8,
+          "sommets": 28,
+          "distance_moy_mm": 19.73
+        },
+        {
+          "anneau": 9,
+          "sommets": 30,
+          "distance_moy_mm": 24.66
+        },
+        {
+          "anneau": 10,
+          "sommets": 34,
+          "distance_moy_mm": 29.7
+        },
+        {
+          "anneau": 11,
+          "sommets": 38,
+          "distance_moy_mm": 34.62
+        },
+        {
+          "anneau": 12,
+          "sommets": 45,
+          "distance_moy_mm": 39.96
+        }
+      ]
+    },
+    "fente_palpebrale.L": {
+      "anneau_0_sommets": 20,
+      "profil": [
+        {
+          "anneau": 1,
+          "sommets": 20,
+          "distance_moy_mm": 1.59
+        },
+        {
+          "anneau": 2,
+          "sommets": 22,
+          "distance_moy_mm": 2.96
+        },
+        {
+          "anneau": 3,
+          "sommets": 25,
+          "distance_moy_mm": 4.16
+        },
+        {
+          "anneau": 4,
+          "sommets": 26,
+          "distance_moy_mm": 5.48
+        },
+        {
+          "anneau": 5,
+          "sommets": 26,
+          "distance_moy_mm": 7.65
+        },
+        {
+          "anneau": 6,
+          "sommets": 25,
+          "distance_moy_mm": 10.9
+        },
+        {
+          "anneau": 7,
+          "sommets": 27,
+          "distance_moy_mm": 14.63
+        },
+        {
+          "anneau": 8,
+          "sommets": 29,
+          "distance_moy_mm": 19.11
+        },
+        {
+          "anneau": 9,
+          "sommets": 31,
+          "distance_moy_mm": 24.12
+        },
+        {
+          "anneau": 10,
+          "sommets": 34,
+          "distance_moy_mm": 29.42
+        },
+        {
+          "anneau": 11,
+          "sommets": 38,
+          "distance_moy_mm": 34.35
+        },
+        {
+          "anneau": 12,
+          "sommets": 43,
+          "distance_moy_mm": 40.1
+        }
+      ]
+    },
+    "conduit_auditif.L": {
+      "anneau_0_sommets": 13,
+      "profil": [
+        {
+          "anneau": 1,
+          "sommets": 16,
+          "distance_moy_mm": 3.12
+        },
+        {
+          "anneau": 2,
+          "sommets": 17,
+          "distance_moy_mm": 5.59
+        },
+        {
+          "anneau": 3,
+          "sommets": 20,
+          "distance_moy_mm": 8.57
+        },
+        {
+          "anneau": 4,
+          "sommets": 22,
+          "distance_moy_mm": 11.75
+        },
+        {
+          "anneau": 5,
+          "sommets": 24,
+          "distance_moy_mm": 15.02
+        },
+        {
+          "anneau": 6,
+          "sommets": 23,
+          "distance_moy_mm": 18.7
+        },
+        {
+          "anneau": 7,
+          "sommets": 25,
+          "distance_moy_mm": 23.62
+        },
+        {
+          "anneau": 8,
+          "sommets": 28,
+          "distance_moy_mm": 30.77
+        },
+        {
+          "anneau": 9,
+          "sommets": 32,
+          "distance_moy_mm": 39.26
+        },
+        {
+          "anneau": 10,
+          "sommets": 33,
+          "distance_moy_mm": 49.59
+        },
+        {
+          "anneau": 11,
+          "sommets": 35,
+          "distance_moy_mm": 62.11
+        },
+        {
+          "anneau": 12,
+          "sommets": 41,
+          "distance_moy_mm": 72.19
+        }
+      ]
+    },
+    "conduit_auditif.R": {
+      "anneau_0_sommets": 11,
+      "profil": [
+        {
+          "anneau": 1,
+          "sommets": 14,
+          "distance_moy_mm": 2.96
+        },
+        {
+          "anneau": 2,
+          "sommets": 15,
+          "distance_moy_mm": 5.49
+        },
+        {
+          "anneau": 3,
+          "sommets": 18,
+          "distance_moy_mm": 8.21
+        },
+        {
+          "anneau": 4,
+          "sommets": 21,
+          "distance_moy_mm": 11.39
+        },
+        {
+          "anneau": 5,
+          "sommets": 22,
+          "distance_moy_mm": 14.99
+        },
+        {
+          "anneau": 6,
+          "sommets": 24,
+          "distance_moy_mm": 18.85
+        },
+        {
+          "anneau": 7,
+          "sommets": 26,
+          "distance_moy_mm": 23.69
+        },
+        {
+          "anneau": 8,
+          "sommets": 30,
+          "distance_moy_mm": 30.19
+        },
+        {
+          "anneau": 9,
+          "sommets": 34,
+          "distance_moy_mm": 38.3
+        },
+        {
+          "anneau": 10,
+          "sommets": 36,
+          "distance_moy_mm": 48.02
+        },
+        {
+          "anneau": 11,
+          "sommets": 39,
+          "distance_moy_mm": 58.82
+        },
+        {
+          "anneau": 12,
+          "sommets": 41,
+          "distance_moy_mm": 72.73
+        }
+      ]
+    },
+    "narine.L": {
+      "anneau_0_sommets": 7,
+      "profil": [
+        {
+          "anneau": 1,
+          "sommets": 10,
+          "distance_moy_mm": 2.78
+        },
+        {
+          "anneau": 2,
+          "sommets": 10,
+          "distance_moy_mm": 4.9
+        },
+        {
+          "anneau": 3,
+          "sommets": 13,
+          "distance_moy_mm": 7.77
+        },
+        {
+          "anneau": 4,
+          "sommets": 17,
+          "distance_moy_mm": 11.25
+        },
+        {
+          "anneau": 5,
+          "sommets": 22,
+          "distance_moy_mm": 14.73
+        },
+        {
+          "anneau": 6,
+          "sommets": 27,
+          "distance_moy_mm": 17.98
+        },
+        {
+          "anneau": 7,
+          "sommets": 32,
+          "distance_moy_mm": 21.63
+        },
+        {
+          "anneau": 8,
+          "sommets": 36,
+          "distance_moy_mm": 25.62
+        },
+        {
+          "anneau": 9,
+          "sommets": 38,
+          "distance_moy_mm": 28.46
+        },
+        {
+          "anneau": 10,
+          "sommets": 38,
+          "distance_moy_mm": 32.11
+        },
+        {
+          "anneau": 11,
+          "sommets": 38,
+          "distance_moy_mm": 36.19
+        },
+        {
+          "anneau": 12,
+          "sommets": 42,
+          "distance_moy_mm": 39.76
+        }
+      ]
+    },
+    "narine.R": {
+      "anneau_0_sommets": 8,
+      "profil": [
+        {
+          "anneau": 1,
+          "sommets": 10,
+          "distance_moy_mm": 2.79
+        },
+        {
+          "anneau": 2,
+          "sommets": 10,
+          "distance_moy_mm": 4.89
+        },
+        {
+          "anneau": 3,
+          "sommets": 13,
+          "distance_moy_mm": 7.76
+        },
+        {
+          "anneau": 4,
+          "sommets": 17,
+          "distance_moy_mm": 11.26
+        },
+        {
+          "anneau": 5,
+          "sommets": 22,
+          "distance_moy_mm": 14.7
+        },
+        {
+          "anneau": 6,
+          "sommets": 27,
+          "distance_moy_mm": 17.94
+        },
+        {
+          "anneau": 7,
+          "sommets": 31,
+          "distance_moy_mm": 21.99
+        },
+        {
+          "anneau": 8,
+          "sommets": 36,
+          "distance_moy_mm": 25.61
+        },
+        {
+          "anneau": 9,
+          "sommets": 38,
+          "distance_moy_mm": 28.44
+        },
+        {
+          "anneau": 10,
+          "sommets": 38,
+          "distance_moy_mm": 32.07
+        },
+        {
+          "anneau": 11,
+          "sommets": 39,
+          "distance_moy_mm": 36.01
+        },
+        {
+          "anneau": 12,
+          "sommets": 42,
+          "distance_moy_mm": 39.61
+        }
+      ]
+    }
+  },
+  "densites": {
+    "commissure.L": {
+      "sommets": 42,
+      "aretes": 68,
+      "faces": 27,
+      "arete_moy_mm": 2.685,
+      "arete_med_mm": 2.69,
+      "arete_min_mm": 0.294,
+      "arete_max_mm": 4.611,
+      "surface_mm2": 187.4,
+      "sommets_par_cm2": 22.42
+    },
+    "commissure.R": {
+      "sommets": 42,
+      "aretes": 68,
+      "faces": 27,
+      "arete_moy_mm": 2.679,
+      "arete_med_mm": 2.659,
+      "arete_min_mm": 0.285,
+      "arete_max_mm": 4.578,
+      "surface_mm2": 186.0,
+      "sommets_par_cm2": 22.58
+    },
+    "levres_10mm": {
+      "sommets": 36,
+      "aretes": 50,
+      "faces": 16,
+      "arete_moy_mm": 4.378,
+      "arete_med_mm": 4.163,
+      "arete_min_mm": 3.408,
+      "arete_max_mm": 7.531,
+      "surface_mm2": 304.7,
+      "sommets_par_cm2": 11.81
+    },
+    "levres_20mm": {
+      "sommets": 185,
+      "aretes": 326,
+      "faces": 143,
+      "arete_moy_mm": 4.619,
+      "arete_med_mm": 4.353,
+      "arete_min_mm": 2.401,
+      "arete_max_mm": 10.009,
+      "surface_mm2": 2898.2,
+      "sommets_par_cm2": 6.38
+    },
+    "oeil_L_10mm": {
+      "sommets": 37,
+      "aretes": 55,
+      "faces": 20,
+      "arete_moy_mm": 3.27,
+      "arete_med_mm": 2.873,
+      "arete_min_mm": 1.274,
+      "arete_max_mm": 6.387,
+      "surface_mm2": 174.9,
+      "sommets_par_cm2": 21.15
+    },
+    "oeil_L_20mm": {
+      "sommets": 220,
+      "aretes": 414,
+      "faces": 194,
+      "arete_moy_mm": 3.546,
+      "arete_med_mm": 3.248,
+      "arete_min_mm": 0.627,
+      "arete_max_mm": 10.567,
+      "surface_mm2": 2219.1,
+      "sommets_par_cm2": 9.91
+    },
+    "sourcil_front_L": {
+      "sommets": 95,
+      "aretes": 159,
+      "faces": 66,
+      "arete_moy_mm": 6.742,
+      "arete_med_mm": 6.924,
+      "arete_min_mm": 2.573,
+      "arete_max_mm": 10.567,
+      "surface_mm2": 2857.7,
+      "sommets_par_cm2": 3.32
+    },
+    "oeil_R_10mm": {
+      "sommets": 37,
+      "aretes": 55,
+      "faces": 20,
+      "arete_moy_mm": 3.273,
+      "arete_med_mm": 2.877,
+      "arete_min_mm": 1.277,
+      "arete_max_mm": 6.406,
+      "surface_mm2": 175.0,
+      "sommets_par_cm2": 21.14
+    },
+    "oeil_R_20mm": {
+      "sommets": 219,
+      "aretes": 412,
+      "faces": 193,
+      "arete_moy_mm": 3.532,
+      "arete_med_mm": 3.222,
+      "arete_min_mm": 0.633,
+      "arete_max_mm": 10.591,
+      "surface_mm2": 2188.7,
+      "sommets_par_cm2": 10.01
+    },
+    "sourcil_front_R": {
+      "sommets": 97,
+      "aretes": 162,
+      "faces": 67,
+      "arete_moy_mm": 6.668,
+      "arete_med_mm": 6.911,
+      "arete_min_mm": 1.008,
+      "arete_max_mm": 10.591,
+      "surface_mm2": 2852.3,
+      "sommets_par_cm2": 3.4
+    },
+    "sillon_nasogenien.L": {
+      "sommets": 171,
+      "aretes": 302,
+      "faces": 132,
+      "arete_moy_mm": 4.255,
+      "arete_med_mm": 3.99,
+      "arete_min_mm": 0.294,
+      "arete_max_mm": 13.717,
+      "surface_mm2": 2483.1,
+      "sommets_par_cm2": 6.89
+    },
+    "sillon_nasogenien.R": {
+      "sommets": 171,
+      "aretes": 302,
+      "faces": 132,
+      "arete_moy_mm": 4.252,
+      "arete_med_mm": 4.036,
+      "arete_min_mm": 0.285,
+      "arete_max_mm": 13.722,
+      "surface_mm2": 2479.9,
+      "sommets_par_cm2": 6.9
+    },
+    "cou_sous_menton": {
+      "sommets": 95,
+      "aretes": 139,
+      "faces": 44,
+      "arete_moy_mm": 12.561,
+      "arete_med_mm": 10.605,
+      "arete_min_mm": 4.307,
+      "arete_max_mm": 24.816,
+      "surface_mm2": 7708.5,
+      "sommets_par_cm2": 1.23
+    }
+  },
+  "poles_face_avant": {
+    "sommets_de_la_zone": 1636,
+    "poles": 88,
+    "valences": {
+      "3": 36,
+      "5": 52
+    },
+    "positions": [
+      [
+        1.44145,
+        -0.1374,
+        0.6936
+      ],
+      [
+        1.442,
+        -0.13442,
+        0.69328
+      ],
+      [
+        1.44118,
+        -0.13623,
+        0.6939
+      ],
+      [
+        1.44102,
+        -0.13444,
+        0.6941
+      ],
+      [
+        1.43875,
+        -0.13339,
+        0.76174
+      ],
+      [
+        1.44392,
+        -0.13333,
+        0.7632
+      ],
+      [
+        1.44319,
+        -0.1335,
+        0.76145
+      ],
+      [
+        1.44027,
+        -0.1328,
+        0.76596
+      ],
+      [
+        1.41543,
+        -0.12682,
+        0.76475
+      ],
+      [
+        1.4553,
+        -0.15978,
+        0.72619
+      ],
+      [
+        1.45442,
+        -0.16156,
+        0.72588
+      ],
+      [
+        1.44444,
+        -0.1448,
+        0.7269
+      ],
+      [
+        1.41843,
+        -0.13027,
+        0.75321
+      ],
+      [
+        1.45534,
+        -0.14927,
+        0.7552
+      ],
+      [
+        1.43327,
+        -0.13954,
+        0.77497
+      ],
+      [
+        1.44611,
+        -0.13519,
+        0.7653
+      ],
+      [
+        1.4476,
+        -0.14821,
+        0.71391
+      ],
+      [
+        1.45498,
+        -0.14597,
+        0.77732
+      ],
+      [
+        1.4435,
+        -0.14178,
+        0.72629
+      ],
+      [
+        1.44356,
+        -0.13557,
+        0.75776
+      ],
+      [
+        1.41331,
+        -0.12613,
+        0.76604
+      ],
+      [
+        1.43911,
+        -0.14625,
+        0.78659
+      ],
+      [
+        1.4347,
+        -0.13612,
+        0.75615
+      ],
+      [
+        1.44937,
+        -0.14806,
+        0.71928
+      ],
+      [
+        1.45844,
+        -0.15409,
+        0.71969
+      ],
+      [
+        1.45729,
+        -0.1544,
+        0.72411
+      ],
+      [
+        1.43183,
+        -0.11693,
+        0.84447
+      ],
+      [
+        1.4506,
+        -0.15146,
+        0.72334
+      ],
+      [
+        1.45671,
+        -0.15402,
+        0.72927
+      ],
+      [
+        1.45946,
+        -0.15832,
+        0.72611
+      ],
+      [
+        1.4404,
+        -0.13617,
+        0.76975
+      ],
+      [
+        1.45443,
+        -0.14976,
+        0.72478
+      ],
+      [
+        1.43725,
+        -0.12801,
+        0.70247
+      ],
+      [
+        1.44675,
+        -0.14225,
+        0.70912
+      ],
+      [
+        1.45223,
+        -0.13536,
+        0.67496
+      ],
+      [
+        1.44165,
+        -0.12841,
+        0.68169
+      ],
+      [
+        1.45654,
+        -0.14659,
+        0.70964
+      ],
+      [
+        1.45119,
+        -0.14442,
+        0.7094
+      ],
+      [
+        1.43907,
+        -0.12626,
+        0.68948
+      ],
+      [
+        1.44616,
+        -0.13149,
+        0.67645
+      ],
+      [
+        1.43888,
+        -0.1295,
+        0.69775
+      ],
+      [
+        1.43993,
+        -0.12882,
+        0.69287
+      ],
+      [
+        1.45009,
+        -0.14533,
+        0.71529
+      ],
+      [
+        1.43583,
+        -0.12742,
+        0.71889
+      ],
+      [
+        1.48361,
+        -0.13743,
+        0.69361
+      ],
+      [
+        1.48308,
+        -0.13445,
+        0.69331
+      ],
+      [
+        1.48388,
+        -0.13628,
+        0.69389
+      ],
+      [
+        1.48404,
+        -0.13448,
+        0.69412
+      ],
+      [
+        1.48658,
+        -0.13337,
+        0.7617
+      ],
+      [
+        1.48108,
+        -0.13333,
+        0.76328
+      ],
+      [
+        1.48183,
+        -0.13352,
+        0.76148
+      ],
+      [
+        1.48488,
+        -0.13281,
+        0.76598
+      ],
+      [
+        1.50973,
+        -0.1268,
+        0.76475
+      ],
+      [
+        1.47002,
+        -0.15967,
+        0.72624
+      ],
+      [
+        1.47087,
+        -0.16151,
+        0.72592
+      ],
+      [
+        1.48072,
+        -0.14472,
+        0.72689
+      ],
+      [
+        1.50675,
+        -0.13028,
+        0.7532
+      ],
+      [
+        1.46983,
+        -0.14925,
+        0.7552
+      ],
+      [
+        1.49191,
+        -0.13955,
+        0.77495
+      ],
+      [
+        1.47905,
+        -0.13518,
+        0.76536
+      ],
+      [
+        1.47767,
+        -0.14823,
+        0.71389
+      ],
+      [
+        1.47021,
+        -0.14595,
+        0.77732
+      ],
+      [
+        1.48174,
+        -0.14173,
+        0.72629
+      ],
+      [
+        1.48161,
+        -0.13555,
+        0.75777
+      ],
+      [
+        1.51182,
+        -0.12611,
+        0.76605
+      ],
+      [
+        1.48607,
+        -0.14619,
+        0.78659
+      ],
+      [
+        1.49049,
+        -0.13613,
+        0.75613
+      ],
+      [
+        1.47591,
+        -0.148,
+        0.71926
+      ],
+      [
+        1.46686,
+        -0.15405,
+        0.71969
+      ],
+      [
+        1.46801,
+        -0.15425,
+        0.72419
+      ],
+      [
+        1.49337,
+        -0.11693,
+        0.84449
+      ],
+      [
+        1.47476,
+        -0.15156,
+        0.72314
+      ],
+      [
+        1.46876,
+        -0.15376,
+        0.72941
+      ],
+      [
+        1.46578,
+        -0.15823,
+        0.72625
+      ],
+      [
+        1.4848,
+        -0.13624,
+        0.76971
+      ],
+      [
+        1.47114,
+        -0.14967,
+        0.7246
+      ],
+      [
+        1.48782,
+        -0.12808,
+        0.70249
+      ],
+      [
+        1.47829,
+        -0.14234,
+        0.70913
+      ],
+      [
+        1.4729,
+        -0.13537,
+        0.67497
+      ],
+      [
+        1.48348,
+        -0.12845,
+        0.68171
+      ]
+    ]
+  },
+  "ngons": [
+    {
+      "index": 2847,
+      "cotes": 5,
+      "centre": [
+        1.39291,
+        -0.05175,
+        0.7465
+      ],
+      "aire_mm2": 16.367,
+      "region": "conduit_auditif.R"
+    },
+    {
+      "index": 3056,
+      "cotes": 5,
+      "centre": [
+        1.53218,
+        -0.05197,
+        0.74641
+      ],
+      "aire_mm2": 15.879,
+      "region": "conduit_auditif.L"
+    },
+    {
+      "index": 3186,
+      "cotes": 8,
+      "centre": [
+        1.3428,
+        0.00165,
+        0.56747
+      ],
+      "aire_mm2": 2910.363,
+      "region": "base_du_cou"
+    },
+    {
+      "index": 3227,
+      "cotes": 7,
+      "centre": [
+        1.51682,
+        0.03791,
+        0.55044
+      ],
+      "aire_mm2": 9958.104,
+      "region": "base_du_cou"
+    },
+    {
+      "index": 3228,
+      "cotes": 8,
+      "centre": [
+        1.55737,
+        -0.04561,
+        0.53816
+      ],
+      "aire_mm2": 1866.831,
+      "region": "base_du_cou"
+    },
+    {
+      "index": 3229,
+      "cotes": 8,
+      "centre": [
+        1.36769,
+        -0.04555,
+        0.53787
+      ],
+      "aire_mm2": 1867.581,
+      "region": "base_du_cou"
+    },
+    {
+      "index": 3230,
+      "cotes": 7,
+      "centre": [
+        1.40837,
+        0.03786,
+        0.55047
+      ],
+      "aire_mm2": 10044.458,
+      "region": "base_du_cou"
+    },
+    {
+      "index": 3231,
+      "cotes": 7,
+      "centre": [
+        1.42863,
+        -0.06013,
+        0.52173
+      ],
+      "aire_mm2": 6147.905,
+      "region": "base_du_cou"
+    },
+    {
+      "index": 3232,
+      "cotes": 8,
+      "centre": [
+        1.58215,
+        0.00198,
+        0.56734
+      ],
+      "aire_mm2": 2953.757,
+      "region": "base_du_cou"
+    },
+    {
+      "index": 3233,
+      "cotes": 7,
+      "centre": [
+        1.49645,
+        -0.06,
+        0.52198
+      ],
+      "aire_mm2": 6067.994,
+      "region": "base_du_cou"
+    }
+  ],
+  "triangles": [
+    {
+      "index": 641,
+      "cotes": 3,
+      "centre": [
+        1.4533,
+        -0.13832,
+        0.67955
+      ],
+      "aire_mm2": 14.086,
+      "region": "fente_labiale"
+    },
+    {
+      "index": 645,
+      "cotes": 3,
+      "centre": [
+        1.44326,
+        -0.13142,
+        0.68458
+      ],
+      "aire_mm2": 13.848,
+      "region": "fente_labiale"
+    },
+    {
+      "index": 740,
+      "cotes": 3,
+      "centre": [
+        1.44779,
+        -0.13481,
+        0.68049
+      ],
+      "aire_mm2": 13.447,
+      "region": "fente_labiale"
+    },
+    {
+      "index": 897,
+      "cotes": 3,
+      "centre": [
+        1.44707,
+        -0.14161,
+        0.70531
+      ],
+      "aire_mm2": 8.327,
+      "region": "fente_labiale"
+    },
+    {
+      "index": 898,
+      "cotes": 3,
+      "centre": [
+        1.4541,
+        -0.13092,
+        0.67286
+      ],
+      "aire_mm2": 44.239,
+      "region": "fente_labiale"
+    },
+    {
+      "index": 916,
+      "cotes": 3,
+      "centre": [
+        1.45171,
+        -0.14443,
+        0.70543
+      ],
+      "aire_mm2": 10.226,
+      "region": "fente_labiale"
+    },
+    {
+      "index": 937,
+      "cotes": 3,
+      "centre": [
+        1.45716,
+        -0.14686,
+        0.7055
+      ],
+      "aire_mm2": 11.182,
+      "region": "fente_labiale"
+    },
+    {
+      "index": 2015,
+      "cotes": 3,
+      "centre": [
+        1.47182,
+        -0.13832,
+        0.67957
+      ],
+      "aire_mm2": 14.081,
+      "region": "fente_labiale"
+    },
+    {
+      "index": 2019,
+      "cotes": 3,
+      "centre": [
+        1.48185,
+        -0.13144,
+        0.6846
+      ],
+      "aire_mm2": 13.82,
+      "region": "fente_labiale"
+    },
+    {
+      "index": 2114,
+      "cotes": 3,
+      "centre": [
+        1.47734,
+        -0.13481,
+        0.68052
+      ],
+      "aire_mm2": 13.412,
+      "region": "fente_labiale"
+    },
+    {
+      "index": 2271,
+      "cotes": 3,
+      "centre": [
+        1.47796,
+        -0.14171,
+        0.70531
+      ],
+      "aire_mm2": 8.346,
+      "region": "fente_labiale"
+    },
+    {
+      "index": 2272,
+      "cotes": 3,
+      "centre": [
+        1.47104,
+        -0.13093,
+        0.67287
+      ],
+      "aire_mm2": 44.215,
+      "region": "fente_labiale"
+    },
+    {
+      "index": 2290,
+      "cotes": 3,
+      "centre": [
+        1.47333,
+        -0.14455,
+        0.70543
+      ],
+      "aire_mm2": 10.224,
+      "region": "fente_labiale"
+    },
+    {
+      "index": 2311,
+      "cotes": 3,
+      "centre": [
+        1.46788,
+        -0.14694,
+        0.7055
+      ],
+      "aire_mm2": 11.172,
+      "region": "fente_labiale"
+    },
+    {
+      "index": 2772,
+      "cotes": 3,
+      "centre": [
+        1.38628,
+        -0.04473,
+        0.72074
+      ],
+      "aire_mm2": 10.264,
+      "region": "conduit_auditif.R"
+    },
+    {
+      "index": 2784,
+      "cotes": 3,
+      "centre": [
+        1.38853,
+        -0.05233,
+        0.74237
+      ],
+      "aire_mm2": 2.299,
+      "region": "conduit_auditif.R"
+    },
+    {
+      "index": 2981,
+      "cotes": 3,
+      "centre": [
+        1.53904,
+        -0.04476,
+        0.72081
+      ],
+      "aire_mm2": 10.139,
+      "region": "conduit_auditif.L"
+    },
+    {
+      "index": 2993,
+      "cotes": 3,
+      "centre": [
+        1.53656,
+        -0.05242,
+        0.74222
+      ],
+      "aire_mm2": 2.301,
+      "region": "conduit_auditif.L"
+    }
+  ],
+  "verification_des_sondes": "OK"
+}

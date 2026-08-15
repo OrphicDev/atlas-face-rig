@@ -1,0 +1,231 @@
+{
+  "multires": [
+    {
+      "nom": "Multires",
+      "levels": 1,
+      "sculpt_levels": 1,
+      "render_levels": 1,
+      "total_levels": 1
+    }
+  ],
+  "cage": {
+    "sommets": 3242,
+    "faces": 3234
+  },
+  "multires_evalue": {
+    "sommets": 12950,
+    "faces": 12948
+  },
+  "comparaisons": {
+    "raffinement_simple": {
+      "sommets": 12950,
+      "faces": 12948,
+      "par_indice": {
+        "comparable": true,
+        "max_mm": 7.251234,
+        "moy_mm": 0.457729,
+        "median_mm": 0.290095,
+        "p99_mm": 3.010106,
+        "sommets_hors_1um": 12950
+      },
+      "hausdorff_mm": 7.251234
+    },
+    "surface_limite": {
+      "sommets": 12950,
+      "faces": 12948,
+      "par_indice": {
+        "comparable": true,
+        "max_mm": 8.487918,
+        "moy_mm": 0.594091,
+        "median_mm": 0.379156,
+        "p99_mm": 3.955757,
+        "sommets_hors_1um": 12950
+      },
+      "hausdorff_mm": 8.487918
+    }
+  },
+  "subdivision_evaluee": {
+    "sommets": 12950,
+    "faces": 12948
+  },
+  "multires_porte_du_sculpt": true,
+  "schema_qui_reproduit_le_multires": "raffinement_simple",
+  "contre_epreuve": {
+    "decalage_impose_mm": 1.0,
+    "vu_par_indice": {
+      "comparable": true,
+      "max_mm": 1.000166,
+      "moy_mm": 1.000004,
+      "median_mm": 0.999987,
+      "p99_mm": 1.000047,
+      "sommets_hors_1um": 12950
+    },
+    "vs_multires_par_indice": {
+      "comparable": true,
+      "max_mm": 7.244511,
+      "moy_mm": 1.136254,
+      "median_mm": 1.046563,
+      "p99_mm": 3.463975,
+      "sommets_hors_1um": 12950
+    }
+  },
+  "bancs": {
+    "clignement": {
+      "cage_puis_subdivision": {
+        "points_de_controle_deplaces": 57,
+        "points_de_controle_total": 3242,
+        "octets_de_la_shape_key": 38904,
+        "sommets_evalues": 12950,
+        "faces_evaluees": 12948,
+        "amplitude_obtenue_mm": {
+          "comparable": true,
+          "max_mm": 1.514554,
+          "moy_mm": 0.007587,
+          "median_mm": 0.0,
+          "p99_mm": 0.22769,
+          "sommets_hors_1um": 357
+        },
+        "retour_au_neutre_mm": {
+          "comparable": true,
+          "max_mm": 0.0,
+          "moy_mm": 0.0,
+          "median_mm": 0.0,
+          "p99_mm": 0.0,
+          "sommets_hors_1um": 0
+        },
+        "secondes": 0.21,
+        "uv_conservee": true
+      },
+      "sur_maillage_subdivise": {
+        "points_de_controle_deplaces": 246,
+        "points_de_controle_total": 12950,
+        "octets_de_la_shape_key": 155400,
+        "sommets_evalues": 12950,
+        "faces_evaluees": 12948,
+        "amplitude_obtenue_mm": {
+          "comparable": true,
+          "max_mm": 1.729965,
+          "moy_mm": 0.007714,
+          "median_mm": 0.0,
+          "p99_mm": 0.199795,
+          "sommets_hors_1um": 237
+        },
+        "retour_au_neutre_mm": {
+          "comparable": true,
+          "max_mm": 0.0,
+          "moy_mm": 0.0,
+          "median_mm": 0.0,
+          "p99_mm": 0.0,
+          "sommets_hors_1um": 0
+        },
+        "secondes": 0.22,
+        "uv_conservee": true
+      }
+    },
+    "fermeture_labiale": {
+      "cage_puis_subdivision": {
+        "points_de_controle_deplaces": 36,
+        "points_de_controle_total": 3242,
+        "octets_de_la_shape_key": 38904,
+        "sommets_evalues": 12950,
+        "faces_evaluees": 12948,
+        "amplitude_obtenue_mm": {
+          "comparable": true,
+          "max_mm": 2.987087,
+          "moy_mm": 0.009469,
+          "median_mm": 0.0,
+          "p99_mm": 0.14776,
+          "sommets_hors_1um": 249
+        },
+        "retour_au_neutre_mm": {
+          "comparable": true,
+          "max_mm": 0.0,
+          "moy_mm": 0.0,
+          "median_mm": 0.0,
+          "p99_mm": 0.0,
+          "sommets_hors_1um": 0
+        },
+        "secondes": 0.21,
+        "uv_conservee": true
+      },
+      "sur_maillage_subdivise": {
+        "points_de_controle_deplaces": 135,
+        "points_de_controle_total": 12950,
+        "octets_de_la_shape_key": 155400,
+        "sommets_evalues": 12950,
+        "faces_evaluees": 12948,
+        "amplitude_obtenue_mm": {
+          "comparable": true,
+          "max_mm": 3.617227,
+          "moy_mm": 0.009039,
+          "median_mm": 0.0,
+          "p99_mm": 0.000834,
+          "sommets_hors_1um": 128
+        },
+        "retour_au_neutre_mm": {
+          "comparable": true,
+          "max_mm": 0.0,
+          "moy_mm": 0.0,
+          "median_mm": 0.0,
+          "p99_mm": 0.0,
+          "sommets_hors_1um": 0
+        },
+        "secondes": 0.22,
+        "uv_conservee": true
+      }
+    },
+    "ouverture_machoire": {
+      "cage_puis_subdivision": {
+        "points_de_controle_deplaces": 667,
+        "points_de_controle_total": 3242,
+        "octets_de_la_shape_key": 38904,
+        "sommets_evalues": 12950,
+        "faces_evaluees": 12948,
+        "amplitude_obtenue_mm": {
+          "comparable": true,
+          "max_mm": 3.9379,
+          "moy_mm": 0.324575,
+          "median_mm": 0.0,
+          "p99_mm": 3.501773,
+          "sommets_hors_1um": 2796
+        },
+        "retour_au_neutre_mm": {
+          "comparable": true,
+          "max_mm": 0.0,
+          "moy_mm": 0.0,
+          "median_mm": 0.0,
+          "p99_mm": 0.0,
+          "sommets_hors_1um": 0
+        },
+        "secondes": 0.21,
+        "uv_conservee": true
+      },
+      "sur_maillage_subdivise": {
+        "points_de_controle_deplaces": 2651,
+        "points_de_controle_total": 12950,
+        "octets_de_la_shape_key": 155400,
+        "sommets_evalues": 12950,
+        "faces_evaluees": 12948,
+        "amplitude_obtenue_mm": {
+          "comparable": true,
+          "max_mm": 3.980517,
+          "moy_mm": 0.32584,
+          "median_mm": 0.0,
+          "p99_mm": 3.540218,
+          "sommets_hors_1um": 2622
+        },
+        "retour_au_neutre_mm": {
+          "comparable": true,
+          "max_mm": 0.0,
+          "moy_mm": 0.0,
+          "median_mm": 0.0,
+          "p99_mm": 0.0,
+          "sommets_hors_1um": 0
+        },
+        "secondes": 0.22,
+        "uv_conservee": true
+      }
+    }
+  },
+  "verification_des_sondes": "OK"
+}
