@@ -1,0 +1,258 @@
+{
+  "protocole": "neutre",
+  "dossier_temporaire": "/var/folders/p8/x_wb5bgn7772x48qlx8kgfhw0000gn/T/hn-06qlxbsz",
+  "env_blender": {
+    "BLENDER_USER_CONFIG": "/var/folders/p8/x_wb5bgn7772x48qlx8kgfhw0000gn/T/tmp.VYHfyjRAk9/c",
+    "BLENDER_USER_SCRIPTS": "/var/folders/p8/x_wb5bgn7772x48qlx8kgfhw0000gn/T/tmp.VYHfyjRAk9/s",
+    "BLENDER_USER_DATAFILES": "/var/folders/p8/x_wb5bgn7772x48qlx8kgfhw0000gn/T/tmp.VYHfyjRAk9/d"
+  },
+  "sujet": {
+    "published": {
+      "sha256": "cc9e55a47b1496fa81ed42deee6ee3a6f498c309d5b86610e5cd2407831f2bd8",
+      "octets": 980099,
+      "users_mac": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "home_linux": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "windows": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "unix_absolu": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "asset_source": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "secret_apparent": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "courriel": {
+        "nombre": 0,
+        "exemples": []
+      }
+    },
+    "before_open": {
+      "sha256": "cc9e55a47b1496fa81ed42deee6ee3a6f498c309d5b86610e5cd2407831f2bd8",
+      "octets": 980099,
+      "users_mac": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "home_linux": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "windows": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "unix_absolu": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "asset_source": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "secret_apparent": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "courriel": {
+        "nombre": 0,
+        "exemples": []
+      }
+    },
+    "after_save": {
+      "sha256": "a1bf1190915365590e9c64d857fff2ac96585549aea48cc2301951b27540c5b4",
+      "octets": 2792315,
+      "users_mac": {
+        "nombre": 1,
+        "exemples": [
+          "/<utilisateur>"
+        ]
+      },
+      "home_linux": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "windows": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "unix_absolu": {
+        "nombre": 1,
+        "exemples": [
+          "/<utilisateur>"
+        ]
+      },
+      "asset_source": {
+        "nombre": 1,
+        "exemples": [
+          "human_base_meshes_bundle.blend"
+        ]
+      },
+      "secret_apparent": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "courriel": {
+        "nombre": 0,
+        "exemples": []
+      }
+    },
+    "filepath_vu_par_blender": "/var/folders/p8/x_wb5bgn7772x48qlx8kgfhw0000gn/T/hn-06qlxbsz/sujet.blend",
+    "copie_temporaire": "/var/folders/p8/x_wb5bgn7772x48qlx8kgfhw0000gn/T/hn-06qlxbsz/sujet.blend"
+  },
+  "control": {
+    "published": {
+      "sha256": "e37cb9ff2a0d1111efdac53d70aa27705e73a0d2347b7edc1d0b1543cd3c7c01",
+      "octets": 86066,
+      "users_mac": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "home_linux": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "windows": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "unix_absolu": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "asset_source": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "secret_apparent": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "courriel": {
+        "nombre": 0,
+        "exemples": []
+      }
+    },
+    "before_open": {
+      "sha256": "e37cb9ff2a0d1111efdac53d70aa27705e73a0d2347b7edc1d0b1543cd3c7c01",
+      "octets": 86066,
+      "users_mac": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "home_linux": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "windows": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "unix_absolu": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "asset_source": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "secret_apparent": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "courriel": {
+        "nombre": 0,
+        "exemples": []
+      }
+    },
+    "after_save": {
+      "sha256": "0f56298a5812d33d3a7e1102bc7d6bde805611a45b84a7aca9aeb09e21a6cde3",
+      "octets": 487562,
+      "users_mac": {
+        "nombre": 1,
+        "exemples": [
+          "/<utilisateur>"
+        ]
+      },
+      "home_linux": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "windows": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "unix_absolu": {
+        "nombre": 1,
+        "exemples": [
+          "/<utilisateur>"
+        ]
+      },
+      "asset_source": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "secret_apparent": {
+        "nombre": 0,
+        "exemples": []
+      },
+      "courriel": {
+        "nombre": 0,
+        "exemples": []
+      }
+    },
+    "filepath_vu_par_blender": "/var/folders/p8/x_wb5bgn7772x48qlx8kgfhw0000gn/T/hn-06qlxbsz/temoin.blend",
+    "copie_temporaire": "/var/folders/p8/x_wb5bgn7772x48qlx8kgfhw0000gn/T/hn-06qlxbsz/temoin.blend"
+  },
+  "chaines_users_dans_le_publie": 0,
+  "chaines_users_avant_ouverture": 0,
+  "chaines_users_apres_sauvegarde": 1,
+  "temoin_avant_ouverture": 0,
+  "temoin_apres_sauvegarde": 1,
+  "conclusion": "ARTEFACT DE PROTOCOLE — la chaine n'apparait pas avant ouverture, ou le temoin en produit aussi : le FAIL historique est un artefact de test.",
+  "registre": {
+    "registre": "f0-hygiene-neutral",
+    "total": 3,
+    "reussies": 2,
+    "echecs": 1,
+    "sautees": 0,
+    "sondes": [
+      {
+        "id": "neutre.temoin_sans_chemin_utilisateur",
+        "description": "un blend cree et sauvegarde dans le temporaire n'a aucun /Users",
+        "configuration_connue": "temoin fabrique dans le meme environnement",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "neutre.protocole_n_injecte_pas",
+        "description": "le protocole lui-meme n'ajoute pas de /Users",
+        "configuration_connue": "temoin apres ouverture puis sauvegarde",
+        "expected": 0,
+        "measured": 1,
+        "status": "FAIL"
+      },
+      {
+        "id": "neutre.sujet_avant_ouverture",
+        "description": "le blend publie contient-il la chaine AVANT toute ouverture ?",
+        "configuration_connue": "copie scannee avant open_mainfile",
+        "expected": "0 si propre",
+        "measured": 0,
+        "status": "PASS"
+      }
+    ]
+  }
+}

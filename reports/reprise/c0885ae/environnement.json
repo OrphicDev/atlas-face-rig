@@ -1,0 +1,12 @@
+{
+  "blender": "Blender 5.1.2 (hash ec6e62d40fa9, 2026-05-19)",
+  "systeme": "macOS, Darwin 25.5.0",
+  "depot_relatif": ".",
+  "commit": "c0885ae8c535b02925a217b1fb6ad4d0bbdf67b0",
+  "branche": "face/chat-3-caucasian-v1",
+  "asset_path": "<expurge>/human-base-meshes-bundle-v1.4.1/human_base_meshes_bundle.blend",
+  "asset_octets": 49420489,
+  "asset_sha256": "3c121505651140ceb4d69fd1d8923f7788ffadd81672f5be14845a5f2c75c137",
+  "blend_verrouille_sha256": "cc9e55a47b1496fa81ed42deee6ee3a6f498c309d5b86610e5cd2407831f2bd8",
+  "heure_utc": "2026-08-16T06:14:41+00:00"
+}

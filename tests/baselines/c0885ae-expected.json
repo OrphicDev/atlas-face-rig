@@ -1,0 +1,87 @@
+{
+  "commit": "c0885ae8c535b02925a217b1fb6ad4d0bbdf67b0",
+  "branche": "face/chat-3-caucasian-v1",
+  "blender": "5.1.2",
+  "note": "Etat MESURE du checkpoint c0885ae, pas un objectif. Le mode baseline n'accepte un echec que si son identifiant figure ici, a l'identique. Un FAIL nouveau doit faire echouer le runner meme si le TOTAL reste identique : la comparaison porte sur l'ENSEMBLE des identifiants, jamais sur leur nombre.",
+  "suites": {
+    "multires": {
+      "rapport": "reports/reprise/c0885ae/multires-ab-v2.json",
+      "code_shell_attendu": 2,
+      "fail": [
+        {
+          "id": "clignement.A_cage.gap_ferme_L",
+          "objet": "GEO-head_animation_realistic",
+          "cote": "L",
+          "metrique": "jour_max_colonne_mm",
+          "mesure": 2.3937,
+          "seuil": 0.2
+        },
+        {
+          "id": "clignement.A_cage.gap_ferme_R",
+          "objet": "GEO-head_animation_realistic",
+          "cote": "R",
+          "metrique": "jour_max_colonne_mm",
+          "mesure": 4.0046,
+          "seuil": 0.2
+        },
+        {
+          "id": "levres.A_cage.gap_max",
+          "objet": "GEO-head_animation_realistic",
+          "cote": "axial",
+          "metrique": "jour_max_colonne_mm",
+          "mesure": 0.9688,
+          "seuil": 0.3
+        }
+      ],
+      "skip": [
+        {
+          "id": "clignement.B_haute_resolution.gap",
+          "raison": "mesure definie sur la cage seulement"
+        },
+        {
+          "id": "levres.B_haute_resolution.gap",
+          "raison": "mesure definie sur la cage seulement"
+        }
+      ]
+    },
+    "raccord": {
+      "rapport": "reports/reprise/c0885ae/raccord-corps.json",
+      "code_shell_attendu": 2,
+      "fail": [
+        {
+          "id": "raccord.echelle_a_1_pct",
+          "objet": "GEO-head_animation_realistic vers GEO-body_male_realistic",
+          "cote": "axial",
+          "metrique": "ecart_a_1_pct",
+          "mesure": 3.34463,
+          "seuil": 1.0
+        },
+        {
+          "id": "raccord.residu_2mm",
+          "objet": "GEO-head_animation_realistic vers GEO-body_male_realistic",
+          "cote": "axial",
+          "metrique": "residu_max_mm",
+          "mesure": 4.0694,
+          "seuil": 2.0
+        }
+      ],
+      "skip": []
+    },
+    "hygiene": {
+      "rapport": "reports/reprise/c0885ae/hygiene-blend-raw.json",
+      "code_shell_attendu": 1,
+      "fail": [
+        {
+          "id": "blend.aucun_chemin_personnel",
+          "objet": "source/FACE_BASE_LOCKED.blend",
+          "cote": "axial",
+          "metrique": "chaines_users_mac",
+          "mesure": 1,
+          "seuil": 0,
+          "reserve": "protocole non neutre : le scan est fait depuis un chemin qui contient deja la chaine cherchee. F0-A.7 tranche."
+        }
+      ],
+      "skip": []
+    }
+  }
+}

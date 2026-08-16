@@ -1,0 +1,153 @@
+{
+  "mode": "baseline",
+  "blender": "/Applications/Blender.app/Contents/MacOS/Blender",
+  "racine": "/Users/orphicagency/Projet de développement/atlas-face-rig",
+  "status": "PASS",
+  "commandes": [
+    {
+      "suite": "verrou_positif",
+      "argv": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "--background",
+        "--factory-startup",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "/Users/orphicagency/Projet de développement/atlas-face-rig/tests/verrou-topologie.py",
+        "--",
+        "/Users/orphicagency/Projet de développement/atlas-face-rig/source/FACE_BASE_LOCKED.blend",
+        "/Users/orphicagency/Projet de développement/atlas-face-rig/tests/verrou-topologie.json"
+      ],
+      "code_brut": 0,
+      "secondes": 0.488,
+      "rapport": null,
+      "stdout_fin": "00:00.006  color_management | Using OCIO=/Applications/Blender.app/Contents/Resources/5.1/datafiles/colormanagement/config.ocio\n00:00.213  blend            | Read blend: \"/Users/orphicagency/Projet de développement/atlas-face-rig/source/FACE_BASE_LOCKED.blend\"\nVERROU sur FACE_BASE_LOCKED.blend\n  topologie                    OK\n  neutre_basis                 OK\n  uv                           OK\n  configuration                OK\n  inventaire_scene             OK\n  5 objet(s), 5134 sommets, 5122 faces\nVERROU_OK\nBlender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 01:30:33)\n\nBlender quit\n",
+      "stderr_fin": "",
+      "fail": [],
+      "skip": [],
+      "verdict": "PASS"
+    },
+    {
+      "suite": "verrou_negatif",
+      "argv": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "--background",
+        "--factory-startup",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "/Users/orphicagency/Projet de développement/atlas-face-rig/tests/verrou-topologie-negatif.py",
+        "--",
+        "/Users/orphicagency/Projet de développement/atlas-face-rig/source/FACE_BASE_LOCKED.blend",
+        "/Users/orphicagency/Projet de développement/atlas-face-rig/tests/verrou-topologie.json",
+        "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/reprise/c0885ae/verrou-negatif.json"
+      ],
+      "code_brut": 0,
+      "secondes": 1.546,
+      "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/reprise/c0885ae/verrou-negatif.json",
+      "stdout_fin": "00:00.006  color_management | Using OCIO=/Applications/Blender.app/Contents/Resources/5.1/datafiles/colormanagement/config.ocio\nCONTRE-EPREUVE DU VERROU\n00:00.223  blend            | Read blend: \"/Users/orphicagency/Projet de développement/atlas-face-rig/source/FACE_BASE_LOCKED.blend\"\n  original accepte : True \n00:00.333  blend            | Read blend: \"/Users/orphicagency/Projet de développement/atlas-face-rig/source/FACE_BASE_LOCKED.blend\"\n  [PASS] sommet_basis_1mm         refuse=True | attendue 'neutre_basis' dans ['neutre_basis']\n00:00.448  blend            | Read blend: \"/Users/orphicagency/Projet de développement/atlas-face-rig/source/FACE_BASE_LOCKED.blend\"\n  [PASS] topologie_sommet_ajoute  refuse=True | attendue 'topologie' dans ['configuration', 'neutre_basis', 'topologie']\n00:00.564  blend            | Read blend: \"/Users/orphicagency/Projet de développement/atlas-face-rig/source/FACE_BASE_LOCKED.blend\"\n  [PASS] objet_deplace_1mm        refuse=True | attendue 'neutre_basis' dans ['neutre_basis']\n00:00.667  blend            | Read blend: \"/Users/orphicagency/Projet de développement/atlas-face-rig/source/FACE_BASE_LOCKED.blend\"\n  [PASS] uv_decalee_0_01          refuse=True | attendue 'uv' dans ['uv']\n00:00.845  blend            | Read blend: \"/Users/orphicagency/Projet de développement/atlas-face-rig/source/FACE_BASE_LOCKED.blend\"\n  [PASS] shape_key_ajoutee        refuse=True | attendue 'configuration' dans ['configuration']\n00:00.959  blend            | Read blend: \"/Users/orphicagency/Projet de développement/atlas-face-rig/source/FACE_BASE_LOCKED.blend\"\n  [PASS] armature_ajoutee         refuse=True | attendue 'inventaire_scene' dans ['inventaire_scene']\n00:01.062  blend            | Read blend: \"/Users/orphicagency/Projet de développement/atlas-face-rig/source/FACE_BASE_LOCKED.blend\"\n  [PASS] multires_levels_change   refuse=True | attendue 'configuration' dans ['configuration']\n00:01.165  blend            | Read blend: \"/Users/orphicagency/Projet de développement/atlas-face-rig/source/FACE_BASE_LOCKED.blend\"\n  [PASS] axe_deverrouille         refuse=True | attendue 'configuration' dans ['configuration']\n00:01.267  blend            | Read blend: \"/Users/orphicagency/Projet de développement/atlas-face-rig/source/FACE_BASE_LOCKED.blend\"\n  [PASS] mesh_etranger_ajoute     refuse=True | attendue 'inventaire_scene' dans ['configuration', 'inventaire_scene', 'neutre_basis', 'topologie', 'uv']\n  maitre non modifie : True\nNEGATIF OK -> /Users/orphicagency/Projet de développement/atlas-face-rig/reports/reprise/c0885ae/verrou-negatif.json\nBlender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 01:30:33)\nError: Not freed memory blocks: 1, total unfreed memory 0.000046 MB\n",
+      "stderr_fin": "",
+      "fail": [],
+      "skip": [],
+      "verdict": "PASS"
+    },
+    {
+      "suite": "multires",
+      "argv": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "--background",
+        "--factory-startup",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "/Users/orphicagency/Projet de développement/atlas-face-rig/tests/f0-multires-v2.py",
+        "--",
+        "/Users/orphicagency/Projet de développement/atlas-face-rig/source/FACE_BASE_LOCKED.blend",
+        "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/reprise/c0885ae/multires-ab-v2.json"
+      ],
+      "code_brut": 2,
+      "secondes": 9.171,
+      "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/reprise/c0885ae/multires-ab-v2.json",
+      "stdout_fin": "yon_connu           | attendu 11.7 | obtenu 11.7\n  [PASS] sonde.sphere.centre_connu          | attendu [1.5, -0.2, 0.8] | obtenu [1.5, -0.2, 0.8]\n  [PASS] sonde.appartenance.centre_dedans   | attendu True | obtenu True\n  [PASS] sonde.appartenance.loin_dehors     | attendu False | obtenu False\n  [PASS] sonde.gap_ouverture.L              | attendu 18.38 | obtenu 18.3834\n  [PASS] sonde.gap_ouverture.R              | attendu 16.34 | obtenu 16.3367\n  [PASS] sonde.gap_levres.neutre_mesure     | attendu valeur finie | obtenu 5.6915\n  [PASS] sonde.penetration.mesuree_au_neutre | attendu valeur finie | obtenu {'anterieures': 193, 'posterieures': 15, 'total': 208}\n00:00.414  blend            | Read blend: \"/Users/orphicagency/Projet de développement/atlas-face-rig/source/FACE_BASE_LOCKED.blend\"\nInfo: Saved copy as \"b.blend\"\n  clignement           A_cage               ctrl= 3242  temps med=0.0386s  blend=1017227 o\n00:01.957  blend            | Read blend: \"/Users/orphicagency/Projet de développement/atlas-face-rig/source/FACE_BASE_LOCKED.blend\"\nInfo: Saved copy as \"b.blend\"\n  clignement           B_haute_resolution   ctrl=12950  temps med=0.0255s  blend=1774343 o\n00:03.497  blend            | Read blend: \"/Users/orphicagency/Projet de développement/atlas-face-rig/source/FACE_BASE_LOCKED.blend\"\nInfo: Saved copy as \"b.blend\"\n  fermeture_labiale    A_cage               ctrl= 3242  temps med=0.0373s  blend=1015902 o\n00:04.921  blend            | Read blend: \"/Users/orphicagency/Projet de développement/atlas-face-rig/source/FACE_BASE_LOCKED.blend\"\nInfo: Saved copy as \"b.blend\"\n  fermeture_labiale    B_haute_resolution   ctrl=12950  temps med=0.0255s  blend=1766022 o\n00:06.202  blend            | Read blend: \"/Users/orphicagency/Projet de développement/atlas-face-rig/source/FACE_BASE_LOCKED.blend\"\nInfo: Saved copy as \"b.blend\"\n  ouverture_machoire   A_cage               ctrl= 3242  temps med=0.0372s  blend=1019130 o\n00:07.747  blend            | Read blend: \"/Users/orphicagency/Projet de développement/atlas-face-rig/source/FACE_BASE_LOCKED.blend\"\nInfo: Saved copy as \"b.blend\"\n  ouverture_machoire   B_haute_resolution   ctrl=12950  temps med=0.0255s  blend=1778711 o\n  [PASS] clignement.A_cage.retour_neutre    | attendu <= 0,01 mm | obtenu 0.0\n  [PASS] clignement.A_cage.uv_intacte       | attendu identiques | obtenu True\n  [PASS] clignement.B_haute_resolution.retour_neutre | attendu <= 0,01 mm | obtenu 0.0\n  [PASS] clignement.B_haute_resolution.uv_intacte | attendu identiques | obtenu True\n  [PASS] fermeture_labiale.A_cage.retour_neutre | attendu <= 0,01 mm | obtenu 0.0\n  [PASS] fermeture_labiale.A_cage.uv_intacte | attendu identiques | obtenu True\n  [PASS] fermeture_labiale.B_haute_resolution.retour_neutre | attendu <= 0,01 mm | obtenu 0.0\n  [PASS] fermeture_labiale.B_haute_resolution.uv_intacte | attendu identiques | obtenu True\n  [PASS] clignement.A_cage.penetration_sans_aggravation | attendu <= 193 | obtenu 64\n  [FAIL] clignement.A_cage.gap_ferme_L      | attendu <= 0,20 mm | obtenu 2.3937\n  [FAIL] clignement.A_cage.gap_ferme_R      | attendu <= 0,20 mm | obtenu 4.0046\n  [PASS] clignement.B_haute_resolution.penetration_sans_aggravation | attendu <= 193 | obtenu 6\n  [SKIP] clignement.B_haute_resolution.gap  | mesure definie sur la cage seulement\n  [PASS] levres.A_cage.gap_reduit           | attendu < 5.691 mm | obtenu 0.9688\n  [FAIL] levres.A_cage.gap_max              | attendu <= 0,30 mm | obtenu 0.9688\n  [SKIP] levres.B_haute_resolution.gap      | mesure definie sur la cage seulement\n  [PASS] machoire.A_cage.zero_degre_est_le_neutre | attendu <= 0,01 mm | obtenu 0.0\n  [PASS] machoire.B_haute_resolution.zero_degre_est_le_neutre | attendu <= 0,01 mm | obtenu 0.0\nREGISTRE f0-multires-v2 : 21/26 reussies, 3 echec(s), 2 sautee(s)\nBANC_V2 -> /Users/orphicagency/Projet de développement/atlas-face-rig/reports/reprise/c0885ae/multires-ab-v2.json | SEUILS NON SATISFAITS\nRESULTAT_FINAL ECHEC\nBlender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 01:30:33)\n",
+      "stderr_fin": "",
+      "fail": [
+        "clignement.A_cage.gap_ferme_L",
+        "clignement.A_cage.gap_ferme_R",
+        "levres.A_cage.gap_max"
+      ],
+      "skip": [
+        "clignement.B_haute_resolution.gap",
+        "levres.B_haute_resolution.gap"
+      ],
+      "nouveaux_fail": [],
+      "fail_disparus": [],
+      "nouveaux_skip": [],
+      "skip_disparus": [],
+      "champs_divergents": [],
+      "code_attendu": 2,
+      "verdict": "PASS"
+    },
+    {
+      "suite": "raccord",
+      "argv": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "--background",
+        "--factory-startup",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "/Users/orphicagency/Projet de développement/atlas-face-rig/tests/f0-raccord-corps.py",
+        "--",
+        "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/reprise/c0885ae/raccord-corps.json"
+      ],
+      "code_brut": 2,
+      "secondes": 1.28,
+      "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/reprise/c0885ae/raccord-corps.json",
+      "stdout_fin": "00:00.006  color_management | Using OCIO=/Applications/Blender.app/Contents/Resources/5.1/datafiles/colormanagement/config.ocio\nAUTO-TESTS DU SOLVEUR\n  [PASS] similarite.echelle_retrouvee       | attendu 1.37 | obtenu 1.37\n  [PASS] similarite.residu_nul              | attendu 0.0 | obtenu 0.0\n  [PASS] similarite.rotation_retrouvee      | attendu 37.0 | obtenu 37.0000\n  [PASS] similarite.repond_a_son_entree     | attendu > 0.001 | obtenu 0.037879\n  [PASS] similarite.pas_de_reflexion        | attendu det = +1 | obtenu 1.0\nREGISTRE f0-raccord-corps : 5/5 reussies, 0 echec(s), 0 sautee(s)\nPREFLIGHT OK \n  [PASS] reperes.tete.yeux_anterieurs       | attendu > 0 | obtenu 16.327\n  [PASS] reperes.tete.saillie_du_nez        | attendu 20 a 90 mm | obtenu 56.85\n  [PASS] reperes.tete.chute_du_menton       | attendu 50 a 140 mm | obtenu 119.21\n  [PASS] reperes.tete.interoculaire_plausible | attendu 50 a 80 mm | obtenu 64.578\n  [PASS] reperes.corps.yeux_anterieurs      | attendu > 0 | obtenu 18.233\n  [PASS] reperes.corps.saillie_du_nez       | attendu 20 a 90 mm | obtenu 54.36\n  [PASS] reperes.corps.chute_du_menton      | attendu 50 a 140 mm | obtenu 124.88\n  [PASS] reperes.corps.interoculaire_plausible | attendu 50 a 80 mm | obtenu 65.855\n  [FAIL] raccord.echelle_a_1_pct            | attendu <= 1,0 % | obtenu 3.34463 %\n  [FAIL] raccord.residu_2mm                 | attendu <= 2,00 mm | obtenu 4.0694 mm\n\nRESULTAT\n  interoculaire tete  : 64.578 mm\n  interoculaire corps : 65.855 mm\n  facteur d'echelle   : 1.033446  (ecart a 1 : 3.3446 %)\n  residus (mm)        : {'oeil_L': 2.5844, 'oeil_R': 4.0694, 'nez': 3.437, 'menton': 2.339}\n  recouvrement brut   : [0.0, 0.246593, 0.370899]\nRACCORD -> /Users/orphicagency/Projet de développement/atlas-face-rig/reports/reprise/c0885ae/raccord-corps.json | NON SATISFAITS\nREGISTRE f0-raccord-corps : 13/15 reussies, 2 echec(s), 0 sautee(s)\nRESULTAT_FINAL ECHEC\nBlender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 01:30:33)\n",
+      "stderr_fin": "",
+      "fail": [
+        "raccord.echelle_a_1_pct",
+        "raccord.residu_2mm"
+      ],
+      "skip": [],
+      "nouveaux_fail": [],
+      "fail_disparus": [],
+      "nouveaux_skip": [],
+      "skip_disparus": [],
+      "champs_divergents": [],
+      "code_attendu": 2,
+      "verdict": "PASS"
+    },
+    {
+      "suite": "hygiene",
+      "argv": [
+        "/Applications/Blender.app/Contents/MacOS/Blender",
+        "--background",
+        "--factory-startup",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "/Users/orphicagency/Projet de développement/atlas-face-rig/tests/f0-hygiene-blend.py",
+        "--",
+        "/Users/orphicagency/Projet de développement/atlas-face-rig/source/FACE_BASE_LOCKED.blend",
+        "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/reprise/c0885ae/hygiene-blend-raw.json"
+      ],
+      "code_brut": 1,
+      "secondes": 0.557,
+      "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/reprise/c0885ae/hygiene-blend-raw.json",
+      "stdout_fin": "00:00.006  color_management | Using OCIO=/Applications/Blender.app/Contents/Resources/5.1/datafiles/colormanagement/config.ocio\n  [PASS] scanner.users_mac                  | attendu 1 | obtenu 1\n  [PASS] scanner.home_linux                 | attendu 1 | obtenu 1\n  [PASS] scanner.asset_source               | attendu 1 | obtenu 1\n  [PASS] scanner.courriel                   | attendu 1 | obtenu 1\n  [PASS] scanner.pas_de_faux_positif        | attendu 0 | obtenu 0\nREGISTRE f0-hygiene-blend : 5/5 reussies, 0 echec(s), 0 sautee(s)\n00:00.237  blend            | Read blend: \"/Users/orphicagency/Projet de développement/atlas-face-rig/source/FACE_BASE_LOCKED.blend\"\nInfo: Saved copy as \"clair.blend\"\n  [PASS] blend.aucun_secret                 | attendu 0 | obtenu 0\n  [PASS] blend.aucun_courriel               | attendu 0 | obtenu 0\n  [PASS] blend.aucune_bibliotheque_liee     | attendu 0 | obtenu 0\n  [PASS] blend.aucune_image_externe         | attendu 0 | obtenu 0\n  [PASS] blend.aucun_texte_embarque         | attendu 0 | obtenu 0\n  [FAIL] blend.aucun_chemin_personnel       | attendu 0 | obtenu 1\nREGISTRE f0-hygiene-blend : 10/11 reussies, 1 echec(s), 0 sautee(s)\nHYGIENE -> /Users/orphicagency/Projet de développement/atlas-face-rig/reports/reprise/c0885ae/hygiene-blend-raw.json | CHEMINS PERSONNELS PRESENTS — voir scan_du_fichier_non_compresse\nBlender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 01:30:33)\n",
+      "stderr_fin": "",
+      "fail": [
+        "blend.aucun_chemin_personnel"
+      ],
+      "skip": [],
+      "nouveaux_fail": [],
+      "fail_disparus": [],
+      "nouveaux_skip": [],
+      "skip_disparus": [],
+      "champs_divergents": [],
+      "code_attendu": 1,
+      "verdict": "PASS"
+    }
+  ]
+}

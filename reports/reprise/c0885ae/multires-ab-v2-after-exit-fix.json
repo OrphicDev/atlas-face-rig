@@ -1,0 +1,1473 @@
+{
+  "fichier": "FACE_BASE_LOCKED.blend",
+  "blender": "5.1.2",
+  "neutre": {
+    "cage_sommets": 3242,
+    "evalue": {
+      "sommets": 12950,
+      "faces": 12948,
+      "loops": 51792
+    },
+    "sha_uv_evalue": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+    "globes": {
+      "L": {
+        "centre": [
+          1.494856,
+          -0.125396,
+          0.766688
+        ],
+        "rayon_mm": 11.7449
+      },
+      "R": {
+        "centre": [
+          1.430278,
+          -0.125396,
+          0.766688
+        ],
+        "rayon_mm": 11.7449
+      },
+      "residus_ajustement_mm": {
+        "L": 0.6934,
+        "R": 0.6934
+      }
+    },
+    "gap_ouverture_mm": {
+      "R": {
+        "hauteur_bbox_mm": 16.3367,
+        "jour_max_colonne_mm": 11.49,
+        "sommets": 40
+      },
+      "L": {
+        "hauteur_bbox_mm": 18.3834,
+        "jour_max_colonne_mm": 17.519,
+        "sommets": 40
+      }
+    },
+    "gap_levres_mm": {
+      "hauteur_bbox_mm": 5.8832,
+      "jour_max_colonne_mm": 5.6915,
+      "sommets": 76
+    },
+    "penetrations_globe": {
+      "anterieures": 193,
+      "posterieures": 15,
+      "total": 208
+    },
+    "note_penetration": "L'asset livre intersecte deja ses globes au neutre : 193 sommets anterieurs et 15 posterieurs sont a l'interieur d'une sclere. Le seuil du cahier (0 penetration) est donc inatteignable par construction sur cette source ; le critere applique est differentiel — le clignement ne doit pas en ajouter."
+  },
+  "prototypes": {
+    "clignement": {
+      "voies": {
+        "A_cage": {
+          "points_de_controle": 3242,
+          "sha_uv_avant": "7d14e5436b29f4f9126d7d791a9252c244b886ecf978fa23cac083d1a195d22b",
+          "intensites": {
+            "0.25": {
+              "points_deplaces": 264,
+              "repere": {
+                "L": {
+                  "sommets_du_bord": 40,
+                  "sommets_concernes": 205,
+                  "portee_mm": 9.0,
+                  "h_contact": -0.003517
+                },
+                "R": {
+                  "sommets_du_bord": 40,
+                  "sommets_concernes": 201,
+                  "portee_mm": 9.0,
+                  "h_contact": -0.004043
+                }
+              },
+              "amplitude_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.735592,
+                "max": 4.09688,
+                "moyenne": 0.087908
+              },
+              "retour_au_neutre_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0,
+                "moyenne": 0.0
+              },
+              "penetrations_globe": {
+                "anterieures": 36,
+                "posterieures": 5,
+                "total": 41
+              },
+              "variation_volume_pct": -0.00735,
+              "sha_uv_apres_shape_key": "7d14e5436b29f4f9126d7d791a9252c244b886ecf978fa23cac083d1a195d22b",
+              "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "uv_cage_inchangee": true,
+              "uv_evaluee_inchangee": true,
+              "uv_inchangee": true,
+              "etirement_aretes": {
+                "min": 0.312245,
+                "median": 1.0,
+                "p95": 1.0,
+                "max": 3.09892,
+                "moyenne": 1.001564
+              },
+              "gap_ouverture_mm": {
+                "R": {
+                  "hauteur_bbox_mm": 12.874,
+                  "jour_max_colonne_mm": 9.8089,
+                  "sommets": 40
+                },
+                "L": {
+                  "hauteur_bbox_mm": 14.7169,
+                  "jour_max_colonne_mm": 9.82,
+                  "sommets": 40
+                }
+              }
+            },
+            "0.5": {
+              "points_deplaces": 264,
+              "repere": {
+                "L": {
+                  "sommets_du_bord": 40,
+                  "sommets_concernes": 205,
+                  "portee_mm": 9.0,
+                  "h_contact": -0.003517
+                },
+                "R": {
+                  "sommets_du_bord": 40,
+                  "sommets_concernes": 201,
+                  "portee_mm": 9.0,
+                  "h_contact": -0.004043
+                }
+              },
+              "amplitude_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 1.326677,
+                "max": 6.665883,
+                "moyenne": 0.156311
+              },
+              "retour_au_neutre_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0,
+                "moyenne": 0.0
+              },
+              "penetrations_globe": {
+                "anterieures": 58,
+                "posterieures": 11,
+                "total": 69
+              },
+              "variation_volume_pct": 0.00575,
+              "sha_uv_apres_shape_key": "7d14e5436b29f4f9126d7d791a9252c244b886ecf978fa23cac083d1a195d22b",
+              "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "uv_cage_inchangee": true,
+              "uv_evaluee_inchangee": true,
+              "uv_inchangee": true,
+              "etirement_aretes": {
+                "min": 0.273941,
+                "median": 1.0,
+                "p95": 1.002149,
+                "max": 4.029126,
+                "moyenne": 1.00452
+              },
+              "gap_ouverture_mm": {
+                "R": {
+                  "hauteur_bbox_mm": 8.6378,
+                  "jour_max_colonne_mm": 6.483,
+                  "sommets": 40
+                },
+                "L": {
+                  "hauteur_bbox_mm": 9.8292,
+                  "jour_max_colonne_mm": 6.4945,
+                  "sommets": 40
+                }
+              }
+            },
+            "1.0": {
+              "points_deplaces": 264,
+              "repere": {
+                "L": {
+                  "sommets_du_bord": 40,
+                  "sommets_concernes": 205,
+                  "portee_mm": 9.0,
+                  "h_contact": -0.003517
+                },
+                "R": {
+                  "sommets_du_bord": 40,
+                  "sommets_concernes": 201,
+                  "portee_mm": 9.0,
+                  "h_contact": -0.004043
+                }
+              },
+              "amplitude_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 2.4725,
+                "max": 11.12575,
+                "moyenne": 0.284625
+              },
+              "retour_au_neutre_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0,
+                "moyenne": 0.0
+              },
+              "penetrations_globe": {
+                "anterieures": 64,
+                "posterieures": 17,
+                "total": 81
+              },
+              "variation_volume_pct": 0.03927,
+              "sha_uv_apres_shape_key": "7d14e5436b29f4f9126d7d791a9252c244b886ecf978fa23cac083d1a195d22b",
+              "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "uv_cage_inchangee": true,
+              "uv_evaluee_inchangee": true,
+              "uv_inchangee": true,
+              "etirement_aretes": {
+                "min": 0.118511,
+                "median": 1.0,
+                "p95": 1.012535,
+                "max": 4.842776,
+                "moyenne": 1.014
+              },
+              "gap_ouverture_mm": {
+                "R": {
+                  "hauteur_bbox_mm": 4.782,
+                  "jour_max_colonne_mm": 4.0046,
+                  "sommets": 40
+                },
+                "L": {
+                  "hauteur_bbox_mm": 4.3163,
+                  "jour_max_colonne_mm": 2.3937,
+                  "sommets": 40
+                }
+              }
+            }
+          },
+          "temps_s": {
+            "min": 0.036708,
+            "median": 0.038048,
+            "p95": 0.038765,
+            "max": 0.038765,
+            "moyenne": 0.037757
+          },
+          "memoire": {
+            "sommets": 3242,
+            "octets_shape_key_theorique": 38904,
+            "octets_blend_compresse": 1017236
+          }
+        },
+        "B_haute_resolution": {
+          "points_de_controle": 12950,
+          "sha_uv_avant": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+          "intensites": {
+            "0.25": {
+              "points_deplaces": 1071,
+              "repere": {
+                "L": {
+                  "sommets_du_bord": 40,
+                  "sommets_concernes": 814,
+                  "portee_mm": 9.0,
+                  "h_contact": -0.003517
+                },
+                "R": {
+                  "sommets_du_bord": 40,
+                  "sommets_concernes": 802,
+                  "portee_mm": 9.0,
+                  "h_contact": -0.004043
+                }
+              },
+              "amplitude_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.772569,
+                "max": 7.429722,
+                "moyenne": 0.095289
+              },
+              "retour_au_neutre_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0,
+                "moyenne": 0.0
+              },
+              "penetrations_globe": {
+                "anterieures": 5,
+                "posterieures": 0,
+                "total": 5
+              },
+              "variation_volume_pct": null,
+              "sha_uv_apres_shape_key": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "uv_cage_inchangee": true,
+              "uv_evaluee_inchangee": true,
+              "uv_inchangee": true
+            },
+            "0.5": {
+              "points_deplaces": 1071,
+              "repere": {
+                "L": {
+                  "sommets_du_bord": 40,
+                  "sommets_concernes": 814,
+                  "portee_mm": 9.0,
+                  "h_contact": -0.003517
+                },
+                "R": {
+                  "sommets_du_bord": 40,
+                  "sommets_concernes": 802,
+                  "portee_mm": 9.0,
+                  "h_contact": -0.004043
+                }
+              },
+              "amplitude_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 1.374676,
+                "max": 10.989217,
+                "moyenne": 0.165724
+              },
+              "retour_au_neutre_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0,
+                "moyenne": 0.0
+              },
+              "penetrations_globe": {
+                "anterieures": 18,
+                "posterieures": 0,
+                "total": 18
+              },
+              "variation_volume_pct": null,
+              "sha_uv_apres_shape_key": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "uv_cage_inchangee": true,
+              "uv_evaluee_inchangee": true,
+              "uv_inchangee": true
+            },
+            "1.0": {
+              "points_deplaces": 1071,
+              "repere": {
+                "L": {
+                  "sommets_du_bord": 40,
+                  "sommets_concernes": 814,
+                  "portee_mm": 9.0,
+                  "h_contact": -0.003517
+                },
+                "R": {
+                  "sommets_du_bord": 40,
+                  "sommets_concernes": 802,
+                  "portee_mm": 9.0,
+                  "h_contact": -0.004043
+                }
+              },
+              "amplitude_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 2.527768,
+                "max": 16.327584,
+                "moyenne": 0.296444
+              },
+              "retour_au_neutre_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0,
+                "moyenne": 0.0
+              },
+              "penetrations_globe": {
+                "anterieures": 6,
+                "posterieures": 0,
+                "total": 6
+              },
+              "variation_volume_pct": null,
+              "sha_uv_apres_shape_key": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "uv_cage_inchangee": true,
+              "uv_evaluee_inchangee": true,
+              "uv_inchangee": true
+            }
+          },
+          "temps_s": {
+            "min": 0.024994,
+            "median": 0.025437,
+            "p95": 0.025837,
+            "max": 0.025837,
+            "moyenne": 0.025461
+          },
+          "memoire": {
+            "sommets": 12950,
+            "octets_shape_key_theorique": 155400,
+            "octets_blend_compresse": 1774327
+          }
+        }
+      }
+    },
+    "fermeture_labiale": {
+      "voies": {
+        "A_cage": {
+          "points_de_controle": 3242,
+          "sha_uv_avant": "7d14e5436b29f4f9126d7d791a9252c244b886ecf978fa23cac083d1a195d22b",
+          "intensites": {
+            "0.25": {
+              "points_deplaces": 257,
+              "repere": {
+                "sommets_du_bord": 76,
+                "demi_largeur_mm": 23.86,
+                "z_contact": 0.69424,
+                "centre_x": 1.46258
+              },
+              "amplitude_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.118916,
+                "max": 0.98753,
+                "moyenne": 0.021699
+              },
+              "retour_au_neutre_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0,
+                "moyenne": 0.0
+              },
+              "penetrations_globe": {
+                "anterieures": 193,
+                "posterieures": 15,
+                "total": 208
+              },
+              "variation_volume_pct": 0.00276,
+              "sha_uv_apres_shape_key": "7d14e5436b29f4f9126d7d791a9252c244b886ecf978fa23cac083d1a195d22b",
+              "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "uv_cage_inchangee": true,
+              "uv_evaluee_inchangee": true,
+              "uv_inchangee": true,
+              "etirement_aretes": {
+                "min": 0.830419,
+                "median": 1.0,
+                "p95": 1.0,
+                "max": 1.149987,
+                "moyenne": 0.999758
+              },
+              "gap_levres_mm": {
+                "hauteur_bbox_mm": 4.4125,
+                "jour_max_colonne_mm": 4.2687,
+                "sommets": 76
+              }
+            },
+            "0.5": {
+              "points_deplaces": 257,
+              "repere": {
+                "sommets_du_bord": 76,
+                "demi_largeur_mm": 23.86,
+                "z_contact": 0.69424,
+                "centre_x": 1.46258
+              },
+              "amplitude_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.23746,
+                "max": 1.975,
+                "moyenne": 0.043411
+              },
+              "retour_au_neutre_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0,
+                "moyenne": 0.0
+              },
+              "penetrations_globe": {
+                "anterieures": 193,
+                "posterieures": 15,
+                "total": 208
+              },
+              "variation_volume_pct": 0.0059,
+              "sha_uv_apres_shape_key": "7d14e5436b29f4f9126d7d791a9252c244b886ecf978fa23cac083d1a195d22b",
+              "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "uv_cage_inchangee": true,
+              "uv_evaluee_inchangee": true,
+              "uv_inchangee": true,
+              "etirement_aretes": {
+                "min": 0.671627,
+                "median": 1.0,
+                "p95": 1.0,
+                "max": 1.300053,
+                "moyenne": 0.999719
+              },
+              "gap_levres_mm": {
+                "hauteur_bbox_mm": 2.9417,
+                "jour_max_colonne_mm": 2.8458,
+                "sommets": 76
+              }
+            },
+            "1.0": {
+              "points_deplaces": 257,
+              "repere": {
+                "sommets_du_bord": 76,
+                "demi_largeur_mm": 23.86,
+                "z_contact": 0.69424,
+                "centre_x": 1.46258
+              },
+              "amplitude_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.472908,
+                "max": 3.95,
+                "moyenne": 0.086823
+              },
+              "retour_au_neutre_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0,
+                "moyenne": 0.0
+              },
+              "penetrations_globe": {
+                "anterieures": 193,
+                "posterieures": 15,
+                "total": 208
+              },
+              "variation_volume_pct": 0.01152,
+              "sha_uv_apres_shape_key": "7d14e5436b29f4f9126d7d791a9252c244b886ecf978fa23cac083d1a195d22b",
+              "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "uv_cage_inchangee": true,
+              "uv_evaluee_inchangee": true,
+              "uv_inchangee": true,
+              "etirement_aretes": {
+                "min": 0.392711,
+                "median": 1.0,
+                "p95": 1.0,
+                "max": 1.600335,
+                "moyenne": 1.000371
+              },
+              "gap_levres_mm": {
+                "hauteur_bbox_mm": 1.1107,
+                "jour_max_colonne_mm": 0.9688,
+                "sommets": 76
+              }
+            }
+          },
+          "temps_s": {
+            "min": 0.035487,
+            "median": 0.036035,
+            "p95": 0.036847,
+            "max": 0.036847,
+            "moyenne": 0.036064
+          },
+          "memoire": {
+            "sommets": 3242,
+            "octets_shape_key_theorique": 38904,
+            "octets_blend_compresse": 1015877
+          }
+        },
+        "B_haute_resolution": {
+          "points_de_controle": 12950,
+          "sha_uv_avant": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+          "intensites": {
+            "0.25": {
+              "points_deplaces": 1034,
+              "repere": {
+                "sommets_du_bord": 76,
+                "demi_largeur_mm": 23.86,
+                "z_contact": 0.69424,
+                "centre_x": 1.46258
+              },
+              "amplitude_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.109196,
+                "max": 1.233041,
+                "moyenne": 0.022036
+              },
+              "retour_au_neutre_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0,
+                "moyenne": 0.0
+              },
+              "penetrations_globe": {
+                "anterieures": 193,
+                "posterieures": 15,
+                "total": 208
+              },
+              "variation_volume_pct": null,
+              "sha_uv_apres_shape_key": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "uv_cage_inchangee": true,
+              "uv_evaluee_inchangee": true,
+              "uv_inchangee": true
+            },
+            "0.5": {
+              "points_deplaces": 1034,
+              "repere": {
+                "sommets_du_bord": 76,
+                "demi_largeur_mm": 23.86,
+                "z_contact": 0.69424,
+                "centre_x": 1.46258
+              },
+              "amplitude_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.218332,
+                "max": 2.466023,
+                "moyenne": 0.044071
+              },
+              "retour_au_neutre_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0,
+                "moyenne": 0.0
+              },
+              "penetrations_globe": {
+                "anterieures": 193,
+                "posterieures": 15,
+                "total": 208
+              },
+              "variation_volume_pct": null,
+              "sha_uv_apres_shape_key": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "uv_cage_inchangee": true,
+              "uv_evaluee_inchangee": true,
+              "uv_inchangee": true
+            },
+            "1.0": {
+              "points_deplaces": 1034,
+              "repere": {
+                "sommets_du_bord": 76,
+                "demi_largeur_mm": 23.86,
+                "z_contact": 0.69424,
+                "centre_x": 1.46258
+              },
+              "amplitude_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.436664,
+                "max": 4.932046,
+                "moyenne": 0.088142
+              },
+              "retour_au_neutre_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0,
+                "moyenne": 0.0
+              },
+              "penetrations_globe": {
+                "anterieures": 193,
+                "posterieures": 15,
+                "total": 208
+              },
+              "variation_volume_pct": null,
+              "sha_uv_apres_shape_key": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "uv_cage_inchangee": true,
+              "uv_evaluee_inchangee": true,
+              "uv_inchangee": true
+            }
+          },
+          "temps_s": {
+            "min": 0.025159,
+            "median": 0.025501,
+            "p95": 0.025982,
+            "max": 0.025982,
+            "moyenne": 0.025502
+          },
+          "memoire": {
+            "sommets": 12950,
+            "octets_shape_key_theorique": 155400,
+            "octets_blend_compresse": 1766009
+          }
+        }
+      }
+    },
+    "ouverture_machoire": {
+      "voies": {
+        "A_cage": {
+          "points_de_controle": 3242,
+          "sha_uv_avant": "7d14e5436b29f4f9126d7d791a9252c244b886ecf978fa23cac083d1a195d22b",
+          "intensites": {
+            "0.0": {
+              "points_deplaces": 0,
+              "repere": {
+                "pivot": [
+                  1.46257,
+                  -0.053,
+                  0.74
+                ],
+                "axe": [
+                  1,
+                  0,
+                  0
+                ],
+                "z_levre": 0.69424,
+                "z_menton": 0.648,
+                "y_arriere": -0.06,
+                "z_bas_cou": 0.61,
+                "degres": 0.0
+              },
+              "amplitude_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0,
+                "moyenne": 0.0
+              },
+              "retour_au_neutre_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0,
+                "moyenne": 0.0
+              },
+              "penetrations_globe": {
+                "anterieures": 193,
+                "posterieures": 15,
+                "total": 208
+              },
+              "variation_volume_pct": 0.0,
+              "sha_uv_apres_shape_key": "7d14e5436b29f4f9126d7d791a9252c244b886ecf978fa23cac083d1a195d22b",
+              "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "uv_cage_inchangee": true,
+              "uv_evaluee_inchangee": true,
+              "uv_inchangee": true,
+              "etirement_aretes": {
+                "min": 1.0,
+                "median": 1.0,
+                "p95": 1.0,
+                "max": 1.0,
+                "moyenne": 1.0
+              }
+            },
+            "5.0": {
+              "points_deplaces": 571,
+              "repere": {
+                "pivot": [
+                  1.46257,
+                  -0.053,
+                  0.74
+                ],
+                "axe": [
+                  1,
+                  0,
+                  0
+                ],
+                "z_levre": 0.69424,
+                "z_menton": 0.648,
+                "y_arriere": -0.06,
+                "z_bas_cou": 0.61,
+                "degres": 5.0
+              },
+              "amplitude_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 5.157727,
+                "max": 9.481716,
+                "moyenne": 0.54721
+              },
+              "retour_au_neutre_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0,
+                "moyenne": 0.0
+              },
+              "penetrations_globe": {
+                "anterieures": 193,
+                "posterieures": 15,
+                "total": 208
+              },
+              "variation_volume_pct": -0.18503,
+              "sha_uv_apres_shape_key": "7d14e5436b29f4f9126d7d791a9252c244b886ecf978fa23cac083d1a195d22b",
+              "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "uv_cage_inchangee": true,
+              "uv_evaluee_inchangee": true,
+              "uv_inchangee": true,
+              "etirement_aretes": {
+                "min": 0.822657,
+                "median": 1.0,
+                "p95": 1.043931,
+                "max": 1.283601,
+                "moyenne": 1.005808
+              }
+            },
+            "10.0": {
+              "points_deplaces": 572,
+              "repere": {
+                "pivot": [
+                  1.46257,
+                  -0.053,
+                  0.74
+                ],
+                "axe": [
+                  1,
+                  0,
+                  0
+                ],
+                "z_levre": 0.69424,
+                "z_menton": 0.648,
+                "y_arriere": -0.06,
+                "z_bas_cou": 0.61,
+                "degres": 10.0
+              },
+              "amplitude_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 10.25061,
+                "max": 18.832299,
+                "moyenne": 1.088688
+              },
+              "retour_au_neutre_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0,
+                "moyenne": 0.0
+              },
+              "penetrations_globe": {
+                "anterieures": 193,
+                "posterieures": 15,
+                "total": 208
+              },
+              "variation_volume_pct": -0.37902,
+              "sha_uv_apres_shape_key": "7d14e5436b29f4f9126d7d791a9252c244b886ecf978fa23cac083d1a195d22b",
+              "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "uv_cage_inchangee": true,
+              "uv_evaluee_inchangee": true,
+              "uv_inchangee": true,
+              "etirement_aretes": {
+                "min": 0.682386,
+                "median": 1.0,
+                "p95": 1.090664,
+                "max": 1.572313,
+                "moyenne": 1.012223
+              }
+            },
+            "20.0": {
+              "points_deplaces": 572,
+              "repere": {
+                "pivot": [
+                  1.46257,
+                  -0.053,
+                  0.74
+                ],
+                "axe": [
+                  1,
+                  0,
+                  0
+                ],
+                "z_levre": 0.69424,
+                "z_menton": 0.648,
+                "y_arriere": -0.06,
+                "z_bas_cou": 0.61,
+                "degres": 20.0
+              },
+              "amplitude_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 20.409036,
+                "max": 37.082075,
+                "moyenne": 2.152319
+              },
+              "retour_au_neutre_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0,
+                "moyenne": 0.0
+              },
+              "penetrations_globe": {
+                "anterieures": 193,
+                "posterieures": 15,
+                "total": 208
+              },
+              "variation_volume_pct": -0.78793,
+              "sha_uv_apres_shape_key": "7d14e5436b29f4f9126d7d791a9252c244b886ecf978fa23cac083d1a195d22b",
+              "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "uv_cage_inchangee": true,
+              "uv_evaluee_inchangee": true,
+              "uv_inchangee": true,
+              "etirement_aretes": {
+                "min": 0.521423,
+                "median": 1.0,
+                "p95": 1.192202,
+                "max": 2.148819,
+                "moyenne": 1.026665
+              }
+            },
+            "32.0": {
+              "points_deplaces": 572,
+              "repere": {
+                "pivot": [
+                  1.46257,
+                  -0.053,
+                  0.74
+                ],
+                "axe": [
+                  1,
+                  0,
+                  0
+                ],
+                "z_levre": 0.69424,
+                "z_menton": 0.648,
+                "y_arriere": -0.06,
+                "z_bas_cou": 0.61,
+                "degres": 32.0
+              },
+              "amplitude_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 32.103188,
+                "max": 58.058036,
+                "moyenne": 3.38776
+              },
+              "retour_au_neutre_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0,
+                "moyenne": 0.0
+              },
+              "penetrations_globe": {
+                "anterieures": 193,
+                "posterieures": 15,
+                "total": 208
+              },
+              "variation_volume_pct": -1.30609,
+              "sha_uv_apres_shape_key": "7d14e5436b29f4f9126d7d791a9252c244b886ecf978fa23cac083d1a195d22b",
+              "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "uv_cage_inchangee": true,
+              "uv_evaluee_inchangee": true,
+              "uv_inchangee": true,
+              "etirement_aretes": {
+                "min": 0.364378,
+                "median": 1.0,
+                "p95": 1.345598,
+                "max": 2.834024,
+                "moyenne": 1.046083
+              }
+            }
+          },
+          "temps_s": {
+            "min": 0.035499,
+            "median": 0.036167,
+            "p95": 0.036868,
+            "max": 0.036868,
+            "moyenne": 0.036167
+          },
+          "memoire": {
+            "sommets": 3242,
+            "octets_shape_key_theorique": 38904,
+            "octets_blend_compresse": 1019121
+          }
+        },
+        "B_haute_resolution": {
+          "points_de_controle": 12950,
+          "sha_uv_avant": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+          "intensites": {
+            "0.0": {
+              "points_deplaces": 0,
+              "repere": {
+                "pivot": [
+                  1.46257,
+                  -0.053,
+                  0.74
+                ],
+                "axe": [
+                  1,
+                  0,
+                  0
+                ],
+                "z_levre": 0.69424,
+                "z_menton": 0.648,
+                "y_arriere": -0.06,
+                "z_bas_cou": 0.61,
+                "degres": 0.0
+              },
+              "amplitude_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0,
+                "moyenne": 0.0
+              },
+              "retour_au_neutre_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0,
+                "moyenne": 0.0
+              },
+              "penetrations_globe": {
+                "anterieures": 193,
+                "posterieures": 15,
+                "total": 208
+              },
+              "variation_volume_pct": null,
+              "sha_uv_apres_shape_key": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "uv_cage_inchangee": true,
+              "uv_evaluee_inchangee": true,
+              "uv_inchangee": true
+            },
+            "5.0": {
+              "points_deplaces": 2274,
+              "repere": {
+                "pivot": [
+                  1.46257,
+                  -0.053,
+                  0.74
+                ],
+                "axe": [
+                  1,
+                  0,
+                  0
+                ],
+                "z_levre": 0.69424,
+                "z_menton": 0.648,
+                "y_arriere": -0.06,
+                "z_bas_cou": 0.61,
+                "degres": 5.0
+              },
+              "amplitude_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 5.302437,
+                "max": 9.556321,
+                "moyenne": 0.546605
+              },
+              "retour_au_neutre_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0,
+                "moyenne": 0.0
+              },
+              "penetrations_globe": {
+                "anterieures": 193,
+                "posterieures": 15,
+                "total": 208
+              },
+              "variation_volume_pct": null,
+              "sha_uv_apres_shape_key": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "uv_cage_inchangee": true,
+              "uv_evaluee_inchangee": true,
+              "uv_inchangee": true
+            },
+            "10.0": {
+              "points_deplaces": 2276,
+              "repere": {
+                "pivot": [
+                  1.46257,
+                  -0.053,
+                  0.74
+                ],
+                "axe": [
+                  1,
+                  0,
+                  0
+                ],
+                "z_levre": 0.69424,
+                "z_menton": 0.648,
+                "y_arriere": -0.06,
+                "z_bas_cou": 0.61,
+                "degres": 10.0
+              },
+              "amplitude_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 10.53487,
+                "max": 18.979151,
+                "moyenne": 1.087221
+              },
+              "retour_au_neutre_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0,
+                "moyenne": 0.0
+              },
+              "penetrations_globe": {
+                "anterieures": 193,
+                "posterieures": 15,
+                "total": 208
+              },
+              "variation_volume_pct": null,
+              "sha_uv_apres_shape_key": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "uv_cage_inchangee": true,
+              "uv_evaluee_inchangee": true,
+              "uv_inchangee": true
+            },
+            "20.0": {
+              "points_deplaces": 2279,
+              "repere": {
+                "pivot": [
+                  1.46257,
+                  -0.053,
+                  0.74
+                ],
+                "axe": [
+                  1,
+                  0,
+                  0
+                ],
+                "z_levre": 0.69424,
+                "z_menton": 0.648,
+                "y_arriere": -0.06,
+                "z_bas_cou": 0.61,
+                "degres": 20.0
+              },
+              "amplitude_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 20.836967,
+                "max": 37.365707,
+                "moyenne": 2.148547
+              },
+              "retour_au_neutre_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0,
+                "moyenne": 0.0
+              },
+              "penetrations_globe": {
+                "anterieures": 193,
+                "posterieures": 15,
+                "total": 208
+              },
+              "variation_volume_pct": null,
+              "sha_uv_apres_shape_key": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "uv_cage_inchangee": true,
+              "uv_evaluee_inchangee": true,
+              "uv_inchangee": true
+            },
+            "32.0": {
+              "points_deplaces": 2279,
+              "repere": {
+                "pivot": [
+                  1.46257,
+                  -0.053,
+                  0.74
+                ],
+                "axe": [
+                  1,
+                  0,
+                  0
+                ],
+                "z_levre": 0.69424,
+                "z_menton": 0.648,
+                "y_arriere": -0.06,
+                "z_bas_cou": 0.61,
+                "degres": 32.0
+              },
+              "amplitude_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 33.012927,
+                "max": 58.490294,
+                "moyenne": 3.382808
+              },
+              "retour_au_neutre_mm": {
+                "min": 0.0,
+                "median": 0.0,
+                "p95": 0.0,
+                "max": 0.0,
+                "moyenne": 0.0
+              },
+              "penetrations_globe": {
+                "anterieures": 193,
+                "posterieures": 15,
+                "total": 208
+              },
+              "variation_volume_pct": null,
+              "sha_uv_apres_shape_key": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+              "uv_cage_inchangee": true,
+              "uv_evaluee_inchangee": true,
+              "uv_inchangee": true
+            }
+          },
+          "temps_s": {
+            "min": 0.025224,
+            "median": 0.025531,
+            "p95": 0.025817,
+            "max": 0.025817,
+            "moyenne": 0.025525
+          },
+          "memoire": {
+            "sommets": 12950,
+            "octets_shape_key_theorique": 155400,
+            "octets_blend_compresse": 1778701
+          }
+        }
+      }
+    }
+  },
+  "registre": {
+    "registre": "f0-multires-v2",
+    "total": 26,
+    "reussies": 21,
+    "echecs": 3,
+    "sautees": 2,
+    "sondes": [
+      {
+        "id": "sonde.sphere.rayon_connu",
+        "description": "ajustement sur une calotte de rayon connu",
+        "configuration_connue": "24 points sur une sphere de 11,7 mm",
+        "expected": 11.7,
+        "measured": 11.7,
+        "status": "PASS",
+        "tolerance": 1e-06
+      },
+      {
+        "id": "sonde.sphere.centre_connu",
+        "description": "centre retrouve",
+        "configuration_connue": "meme calotte",
+        "expected": [
+          1.5,
+          -0.2,
+          0.8
+        ],
+        "measured": [
+          1.5,
+          -0.2,
+          0.8
+        ],
+        "status": "PASS"
+      },
+      {
+        "id": "sonde.appartenance.centre_dedans",
+        "description": "le centre du globe est interieur",
+        "configuration_connue": "maillage de la sclere gauche",
+        "expected": true,
+        "measured": true,
+        "status": "PASS"
+      },
+      {
+        "id": "sonde.appartenance.loin_dehors",
+        "description": "un point a 300 mm est exterieur",
+        "configuration_connue": "maillage de la sclere gauche",
+        "expected": false,
+        "measured": false,
+        "status": "PASS"
+      },
+      {
+        "id": "sonde.gap_ouverture.L",
+        "description": "la sonde retrouve EXACTEMENT la fente publiee en F0",
+        "configuration_connue": "cage NEUTRE, indices de bord de reports/f0",
+        "expected": 18.38,
+        "measured": 18.3834,
+        "status": "PASS",
+        "tolerance": 0.02
+      },
+      {
+        "id": "sonde.gap_ouverture.R",
+        "description": "la sonde retrouve EXACTEMENT la fente publiee en F0",
+        "configuration_connue": "cage NEUTRE, indices de bord de reports/f0",
+        "expected": 16.34,
+        "measured": 16.3367,
+        "status": "PASS",
+        "tolerance": 0.02
+      },
+      {
+        "id": "sonde.gap_levres.neutre_mesure",
+        "description": "la sonde rend une valeur finie au neutre",
+        "configuration_connue": "maillage NEUTRE",
+        "expected": "valeur finie",
+        "measured": 5.6915,
+        "status": "PASS"
+      },
+      {
+        "id": "sonde.penetration.mesuree_au_neutre",
+        "description": "la sonde rend une valeur exploitable au neutre",
+        "configuration_connue": "maillage NEUTRE, test d'appartenance verifie",
+        "expected": "valeur finie",
+        "measured": {
+          "anterieures": 193,
+          "posterieures": 15,
+          "total": 208
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "clignement.A_cage.retour_neutre",
+        "description": "commande a 0 apres un geste a 100 %",
+        "configuration_connue": "prototype anatomique, intensite 1,0",
+        "expected": "<= 0,01 mm",
+        "measured": 0.0,
+        "status": "PASS",
+        "tolerance": 0.01
+      },
+      {
+        "id": "clignement.A_cage.uv_intacte",
+        "description": "SHA-256 des UV avant / apres shape key / apres evaluation",
+        "configuration_connue": "meme topologie",
+        "expected": "identiques",
+        "measured": true,
+        "status": "PASS"
+      },
+      {
+        "id": "clignement.B_haute_resolution.retour_neutre",
+        "description": "commande a 0 apres un geste a 100 %",
+        "configuration_connue": "prototype anatomique, intensite 1,0",
+        "expected": "<= 0,01 mm",
+        "measured": 0.0,
+        "status": "PASS",
+        "tolerance": 0.01
+      },
+      {
+        "id": "clignement.B_haute_resolution.uv_intacte",
+        "description": "SHA-256 des UV avant / apres shape key / apres evaluation",
+        "configuration_connue": "meme topologie",
+        "expected": "identiques",
+        "measured": true,
+        "status": "PASS"
+      },
+      {
+        "id": "fermeture_labiale.A_cage.retour_neutre",
+        "description": "commande a 0 apres un geste a 100 %",
+        "configuration_connue": "prototype anatomique, intensite 1,0",
+        "expected": "<= 0,01 mm",
+        "measured": 0.0,
+        "status": "PASS",
+        "tolerance": 0.01
+      },
+      {
+        "id": "fermeture_labiale.A_cage.uv_intacte",
+        "description": "SHA-256 des UV avant / apres shape key / apres evaluation",
+        "configuration_connue": "meme topologie",
+        "expected": "identiques",
+        "measured": true,
+        "status": "PASS"
+      },
+      {
+        "id": "fermeture_labiale.B_haute_resolution.retour_neutre",
+        "description": "commande a 0 apres un geste a 100 %",
+        "configuration_connue": "prototype anatomique, intensite 1,0",
+        "expected": "<= 0,01 mm",
+        "measured": 0.0,
+        "status": "PASS",
+        "tolerance": 0.01
+      },
+      {
+        "id": "fermeture_labiale.B_haute_resolution.uv_intacte",
+        "description": "SHA-256 des UV avant / apres shape key / apres evaluation",
+        "configuration_connue": "meme topologie",
+        "expected": "identiques",
+        "measured": true,
+        "status": "PASS"
+      },
+      {
+        "id": "clignement.A_cage.penetration_sans_aggravation",
+        "description": "le clignement n'ajoute aucune penetration anterieure",
+        "configuration_connue": "neutre a 193 penetrations anterieures",
+        "expected": "<= 193",
+        "measured": 64,
+        "status": "PASS"
+      },
+      {
+        "id": "clignement.A_cage.gap_ferme_L",
+        "description": "le clignement referme l'ouverture publiee en F0",
+        "configuration_connue": "neutre a 17.519 mm",
+        "expected": "<= 0,20 mm",
+        "measured": 2.3937,
+        "status": "FAIL",
+        "tolerance": 0.2
+      },
+      {
+        "id": "clignement.A_cage.gap_ferme_R",
+        "description": "le clignement referme l'ouverture publiee en F0",
+        "configuration_connue": "neutre a 11.490 mm",
+        "expected": "<= 0,20 mm",
+        "measured": 4.0046,
+        "status": "FAIL",
+        "tolerance": 0.2
+      },
+      {
+        "id": "clignement.B_haute_resolution.penetration_sans_aggravation",
+        "description": "le clignement n'ajoute aucune penetration anterieure",
+        "configuration_connue": "neutre a 193 penetrations anterieures",
+        "expected": "<= 193",
+        "measured": 6,
+        "status": "PASS"
+      },
+      {
+        "id": "clignement.B_haute_resolution.gap",
+        "description": "jour restant a 100 %",
+        "status": "SKIP",
+        "raison": "mesure definie sur la cage seulement"
+      },
+      {
+        "id": "levres.A_cage.gap_reduit",
+        "description": "la fermeture reduit la fente mesuree au neutre",
+        "configuration_connue": "neutre a 5.691 mm",
+        "expected": "< 5.691 mm",
+        "measured": 0.9688,
+        "status": "PASS"
+      },
+      {
+        "id": "levres.A_cage.gap_max",
+        "description": "pire jour le long du bord publie en F0",
+        "configuration_connue": "fermeture a 100 %",
+        "expected": "<= 0,30 mm",
+        "measured": 0.9688,
+        "status": "FAIL",
+        "tolerance": 0.3
+      },
+      {
+        "id": "levres.B_haute_resolution.gap",
+        "description": "jour labial restant",
+        "status": "SKIP",
+        "raison": "mesure definie sur la cage seulement"
+      },
+      {
+        "id": "machoire.A_cage.zero_degre_est_le_neutre",
+        "description": "0 degre doit rendre exactement le neutre",
+        "configuration_connue": "mandibule a 0 degre",
+        "expected": "<= 0,01 mm",
+        "measured": 0.0,
+        "status": "PASS",
+        "tolerance": 0.01
+      },
+      {
+        "id": "machoire.B_haute_resolution.zero_degre_est_le_neutre",
+        "description": "0 degre doit rendre exactement le neutre",
+        "configuration_connue": "mandibule a 0 degre",
+        "expected": "<= 0,01 mm",
+        "measured": 0.0,
+        "status": "PASS",
+        "tolerance": 0.01
+      }
+    ]
+  }
+}

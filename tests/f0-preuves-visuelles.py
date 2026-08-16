@@ -64,15 +64,98 @@ def scene_clay(k=7.22):
     return sc, cam, cd, mn, mx, C
 
 
+# Manifeste des vues : chaque rendu inscrit sa camera signee. La validation
+# ne se fait plus sur une impression inconditionnelle mais sur ces donnees.
+MANIFESTE = {}
+
+
 def vue(sc, cam, cd, nom, direction, ortho, cible):
     d = Vector(direction).normalized()
     cam.location = Vector(cible) + d * 1.5
     cd.ortho_scale = ortho
     cam.rotation_mode = "QUATERNION"
     cam.rotation_quaternion = (-d).to_track_quat("-Z", "Y")
-    sc.render.filepath = os.path.join(SORTIE, nom + ".png")
+    chemin = os.path.join(SORTIE, nom + ".png")
+    sc.render.filepath = chemin
     bpy.ops.render.render(write_still=True)
+    MANIFESTE[nom] = {
+        "fichier": os.path.relpath(chemin, os.path.dirname(os.path.dirname(
+            os.path.abspath(__file__)))),
+        "matrice_camera": [[round(float(x), 9) for x in l] for l in cam.matrix_world],
+        "ortho_scale": round(float(cd.ortho_scale), 9),
+        "cible": [round(float(x), 9) for x in cible],
+        "direction": [round(float(x), 9) for x in d],
+        "resolution": [sc.render.resolution_x, sc.render.resolution_y],
+    }
     print("VUE", nom)
+
+
+def cote_attendu(nom):
+    """Cote anatomique deduit du NOM, ou None. +X = gauche du personnage."""
+    for marque, cote in (("_L_", "L"), ("_R_", "R"), ("_L.", "L"), ("_R.", "R")):
+        if marque in nom + ".":
+            return cote
+    if nom.endswith("_L") or nom.endswith(".L"): return "L"
+    if nom.endswith("_R") or nom.endswith(".R"): return "R"
+    return None
+
+
+def valider(sortie, axe_sagittal, rapport):
+    """Chaque image doit exister, avoir une taille, plus d'une couleur, une
+    camera signee, et un cote conforme a son nom."""
+    familles, resultats, pannes = {}, {}, []
+    for nom, info in sorted(MANIFESTE.items()):
+        chemin = os.path.join(sortie, nom + ".png")
+        r = {"existe": os.path.isfile(chemin)}
+        if not r["existe"]:
+            pannes.append("%s : fichier absent" % nom)
+            resultats[nom] = r; continue
+        im = bpy.data.images.load(chemin)
+        w, h = im.size
+        px = list(im.pixels)
+        couleurs = len({tuple(px[i:i + 3]) for i in range(0, min(len(px), 4 * 40000), 4)})
+        bpy.data.images.remove(im)
+        r.update(largeur=w, hauteur=h, couleurs_echantillonnees=couleurs,
+                 octets=os.path.getsize(chemin))
+        if w <= 0 or h <= 0:
+            pannes.append("%s : dimensions nulles" % nom)
+        if couleurs <= 1:
+            pannes.append("%s : image d'une seule couleur" % nom)
+        if not info.get("matrice_camera"):
+            pannes.append("%s : camera non signee" % nom)
+        c = cote_attendu(nom)
+        if c:
+            dx = info["cible"][0] - axe_sagittal
+            r["ecart_axe_mm"] = round(dx * 1000, 3)
+            bon = (dx > 0) if c == "L" else (dx < 0)
+            r["cote_conforme"] = bon
+            if not bon:
+                pannes.append("%s : cote %s mais cible du mauvais cote de l'axe"
+                              % (nom, c))
+        # Une FAMILLE, ce sont les intensites d'un meme prototype : le dernier
+        # segment du nom est alors un nombre (000/050/100, 00/10/20/32). Deux
+        # cadrages differents — vue generale, gros plan bouche, gros plan oeil —
+        # ne forment pas une famille et n'ont aucune raison de partager une
+        # camera. Grouper sur le dernier underscore les confondait.
+        segments = nom.rsplit("_", 1)
+        if len(segments) == 2 and segments[1].isdigit():
+            familles.setdefault(segments[0], []).append(
+                (nom, info["matrice_camera"], info["ortho_scale"]))
+        resultats[nom] = r
+    for famille, vues in sorted(familles.items()):
+        if len(vues) < 2: continue
+        ref_nom, ref_mat, ref_ortho = vues[0]
+        for nom, mat, ortho in vues[1:]:
+            if mat != ref_mat or ortho != ref_ortho:
+                pannes.append("%s : camera differente de %s dans la meme famille"
+                              % (nom, ref_nom))
+    R = {"vues": len(MANIFESTE), "manifeste": MANIFESTE, "controles": resultats,
+         "pannes": pannes, "status": "PASS" if not pannes else "FAIL"}
+    os.makedirs(os.path.dirname(rapport) or ".", exist_ok=True)
+    json.dump(R, open(rapport, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+    for p in pannes: print("  !", p)
+    print("PREUVES", R["status"], "->", rapport)
+    return not pannes
 
 
 def poser(ob, deltas):
@@ -203,4 +286,8 @@ if __name__ == "__main__":
         Vector((CX, mn.y + 0.045, 0.692)))
     vue(sc, cam, cd, "coupe_sagittale_oeil", (1, 0.001, 0), 0.070,
         Vector((CX, mn.y + 0.045, 0.767)))
-    print("PREUVES_OK ->", SORTIE)
+    axe = (min(c.x for c in co) + max(c.x for c in co)) / 2
+    ok = valider(SORTIE, axe, os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+        "reports", "f0-final", "preuves-visuelles.json"))
+    sys.exit(0 if ok else 2)

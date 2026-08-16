@@ -606,3 +606,8 @@ if __name__ == "__main__":
     json.dump(R, open(SORTIE, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     ok = reg.conclure()
     print("BANC_V2 ->", SORTIE, "|", "OK" if ok else "SEUILS NON SATISFAITS")
+    # Le JSON disait ECHEC et le shell rendait 0 : les deux racontaient des
+    # choses differentes. Aucun seuil n'est touche ici, seulement le code de
+    # sortie. 2 = echec metier ; 1 reste l'echec technique de Blender.
+    print("RESULTAT_FINAL", "OK" if ok else "ECHEC")
+    sys.exit(0 if ok else 2)

@@ -1,0 +1,115 @@
+{
+  "original_accepté": true,
+  "mutations": [
+    {
+      "nom": "sommet_basis_1mm",
+      "description": "un sommet Basis deplace de 1 mm",
+      "verrou_a_refuse": true,
+      "empreinte": "neutre_basis",
+      "empreintes_fautives": [
+        "neutre_basis"
+      ],
+      "empreinte_attendue_presente": true,
+      "premiere_panne": "signature_neutre_basis : 235b15cd0f8aca4b attendu, 8cfe86452e78dda7 obtenu"
+    },
+    {
+      "nom": "topologie_sommet_ajoute",
+      "description": "un sommet ajoute au maillage",
+      "verrou_a_refuse": true,
+      "empreinte": "topologie",
+      "empreintes_fautives": [
+        "configuration",
+        "neutre_basis",
+        "topologie"
+      ],
+      "empreinte_attendue_presente": true,
+      "premiere_panne": "signature_topologie : a3476f7a09faad77 attendu, 03f32768bf2f8cbb obtenu"
+    },
+    {
+      "nom": "objet_deplace_1mm",
+      "description": "un objet deplace de 1 mm",
+      "verrou_a_refuse": true,
+      "empreinte": "neutre_basis",
+      "empreintes_fautives": [
+        "neutre_basis"
+      ],
+      "empreinte_attendue_presente": true,
+      "premiere_panne": "signature_neutre_basis : 235b15cd0f8aca4b attendu, c1a7a52433090cdc obtenu"
+    },
+    {
+      "nom": "uv_decalee_0_01",
+      "description": "une coordonnee UV decalee de 0,01",
+      "verrou_a_refuse": true,
+      "empreinte": "uv",
+      "empreintes_fautives": [
+        "uv"
+      ],
+      "empreinte_attendue_presente": true,
+      "premiere_panne": "signature_uv : 31694f627545bcff attendu, 42ecbfc781549911 obtenu"
+    },
+    {
+      "nom": "shape_key_ajoutee",
+      "description": "une shape key TEST_INTERDITE",
+      "verrou_a_refuse": true,
+      "empreinte": "configuration",
+      "empreintes_fautives": [
+        "configuration"
+      ],
+      "empreinte_attendue_presente": true,
+      "premiere_panne": "signature_configuration : 0e7ca6d3db8e2453 attendu, 58fe4ea3a5e3fe31 obtenu"
+    },
+    {
+      "nom": "armature_ajoutee",
+      "description": "un objet Armature ajoute",
+      "verrou_a_refuse": true,
+      "empreinte": "inventaire_scene",
+      "empreintes_fautives": [
+        "inventaire_scene"
+      ],
+      "empreinte_attendue_presente": true,
+      "premiere_panne": "signature_inventaire_scene : aa192618c04d4ce9 attendu, 5c84e9f22249c36f obtenu"
+    },
+    {
+      "nom": "multires_levels_change",
+      "description": "Multires.levels passe a 0",
+      "verrou_a_refuse": true,
+      "empreinte": "configuration",
+      "empreintes_fautives": [
+        "configuration"
+      ],
+      "empreinte_attendue_presente": true,
+      "premiere_panne": "signature_configuration : 0e7ca6d3db8e2453 attendu, b4d4dc9bdf28882d obtenu"
+    },
+    {
+      "nom": "axe_deverrouille",
+      "description": "lock_location.x remis a False",
+      "verrou_a_refuse": true,
+      "empreinte": "configuration",
+      "empreintes_fautives": [
+        "configuration"
+      ],
+      "empreinte_attendue_presente": true,
+      "premiere_panne": "signature_configuration : 0e7ca6d3db8e2453 attendu, ab112b9f879a46c7 obtenu"
+    },
+    {
+      "nom": "mesh_etranger_ajoute",
+      "description": "un mesh etranger ajoute",
+      "verrou_a_refuse": true,
+      "empreinte": "inventaire_scene",
+      "empreintes_fautives": [
+        "configuration",
+        "inventaire_scene",
+        "neutre_basis",
+        "topologie",
+        "uv"
+      ],
+      "empreinte_attendue_presente": true,
+      "premiere_panne": "signature_topologie : a3476f7a09faad77 attendu, 0226ca3beaf51b86 obtenu"
+    }
+  ],
+  "toutes_les_mutations_detectees": true,
+  "nombre_de_mutations": 9,
+  "maitre_non_modifie": true,
+  "sha256_du_blend_avant": "cc9e55a47b1496fa81ed42deee6ee3a6f498c309d5b86610e5cd2407831f2bd8",
+  "sha256_du_blend_apres": "cc9e55a47b1496fa81ed42deee6ee3a6f498c309d5b86610e5cd2407831f2bd8"
+}

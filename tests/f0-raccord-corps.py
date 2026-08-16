@@ -282,4 +282,8 @@ if __name__ == "__main__":
     print("  residus (mm)        :", R["similarite_tete_vers_corps"]["residus_mm"])
     print("  recouvrement brut   :", R["recouvrement_boites_sans_transformation_m"])
     print("RACCORD ->", sortie, "|", R["conclusion_seuils"])
-    reg.conclure()
+    ok = reg.conclure()
+    # Meme correction qu'au banc multires : le registre disait NON SATISFAITS
+    # et le shell rendait 0. Aucun seuil n'est modifie.
+    print("RESULTAT_FINAL", "OK" if ok else "ECHEC")
+    sys.exit(0 if ok else 2)

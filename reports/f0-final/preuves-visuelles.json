@@ -1,0 +1,723 @@
+{
+  "vues": 14,
+  "manifeste": {
+    "multires_clignement_A_000": {
+      "fichier": "renders/f0-correction/multires_clignement_A_000.png",
+      "matrice_camera": [
+        [
+          0.934783578,
+          -0.039597865,
+          0.35300383,
+          2.02649641
+        ],
+        [
+          0.355217814,
+          0.104204684,
+          -0.928957403,
+          -1.547469139
+        ],
+        [
+          4.6e-08,
+          0.993767381,
+          0.111474685,
+          0.932512283
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.055,
+      "cible": [
+        1.496990681,
+        -0.154033154,
+        0.765299976
+      ],
+      "direction": [
+        0.35300377,
+        -0.928957283,
+        0.111474872
+      ],
+      "resolution": [
+        1000,
+        1000
+      ]
+    },
+    "multires_clignement_A_050": {
+      "fichier": "renders/f0-correction/multires_clignement_A_050.png",
+      "matrice_camera": [
+        [
+          0.934783578,
+          -0.039597865,
+          0.35300383,
+          2.02649641
+        ],
+        [
+          0.355217814,
+          0.104204684,
+          -0.928957403,
+          -1.547469139
+        ],
+        [
+          4.6e-08,
+          0.993767381,
+          0.111474685,
+          0.932512283
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.055,
+      "cible": [
+        1.496990681,
+        -0.154033154,
+        0.765299976
+      ],
+      "direction": [
+        0.35300377,
+        -0.928957283,
+        0.111474872
+      ],
+      "resolution": [
+        1000,
+        1000
+      ]
+    },
+    "multires_clignement_A_100": {
+      "fichier": "renders/f0-correction/multires_clignement_A_100.png",
+      "matrice_camera": [
+        [
+          0.934783578,
+          -0.039597865,
+          0.35300383,
+          2.02649641
+        ],
+        [
+          0.355217814,
+          0.104204684,
+          -0.928957403,
+          -1.547469139
+        ],
+        [
+          4.6e-08,
+          0.993767381,
+          0.111474685,
+          0.932512283
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.055,
+      "cible": [
+        1.496990681,
+        -0.154033154,
+        0.765299976
+      ],
+      "direction": [
+        0.35300377,
+        -0.928957283,
+        0.111474872
+      ],
+      "resolution": [
+        1000,
+        1000
+      ]
+    },
+    "multires_clignement_B_100": {
+      "fichier": "renders/f0-correction/multires_clignement_B_100.png",
+      "matrice_camera": [
+        [
+          0.934783578,
+          -0.039597865,
+          0.35300383,
+          2.02649641
+        ],
+        [
+          0.355217814,
+          0.104204684,
+          -0.928957403,
+          -1.547469139
+        ],
+        [
+          4.6e-08,
+          0.993767381,
+          0.111474685,
+          0.932512283
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.055,
+      "cible": [
+        1.496990681,
+        -0.154033154,
+        0.765299976
+      ],
+      "direction": [
+        0.35300377,
+        -0.928957283,
+        0.111474872
+      ],
+      "resolution": [
+        1000,
+        1000
+      ]
+    },
+    "multires_levres_A_000": {
+      "fichier": "renders/f0-correction/multires_levres_A_000.png",
+      "matrice_camera": [
+        [
+          0.995037198,
+          0.011797383,
+          0.098801911,
+          1.610893488
+        ],
+        [
+          0.099503748,
+          -0.117973983,
+          -0.98801893,
+          -1.641061425
+        ],
+        [
+          3e-09,
+          0.992946744,
+          -0.118562385,
+          0.516356587
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.075000003,
+      "cible": [
+        1.462690711,
+        -0.159033149,
+        0.694199979
+      ],
+      "direction": [
+        0.098801889,
+        -0.98801887,
+        -0.118562259
+      ],
+      "resolution": [
+        1000,
+        1000
+      ]
+    },
+    "multires_levres_A_100": {
+      "fichier": "renders/f0-correction/multires_levres_A_100.png",
+      "matrice_camera": [
+        [
+          0.995037198,
+          0.011797383,
+          0.098801911,
+          1.610893488
+        ],
+        [
+          0.099503748,
+          -0.117973983,
+          -0.98801893,
+          -1.641061425
+        ],
+        [
+          3e-09,
+          0.992946744,
+          -0.118562385,
+          0.516356587
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.075000003,
+      "cible": [
+        1.462690711,
+        -0.159033149,
+        0.694199979
+      ],
+      "direction": [
+        0.098801889,
+        -0.98801887,
+        -0.118562259
+      ],
+      "resolution": [
+        1000,
+        1000
+      ]
+    },
+    "multires_levres_B_100": {
+      "fichier": "renders/f0-correction/multires_levres_B_100.png",
+      "matrice_camera": [
+        [
+          0.995037198,
+          0.011797383,
+          0.098801911,
+          1.610893488
+        ],
+        [
+          0.099503748,
+          -0.117973983,
+          -0.98801893,
+          -1.641061425
+        ],
+        [
+          3e-09,
+          0.992946744,
+          -0.118562385,
+          0.516356587
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.075000003,
+      "cible": [
+        1.462690711,
+        -0.159033149,
+        0.694199979
+      ],
+      "direction": [
+        0.098801889,
+        -0.98801887,
+        -0.118562259
+      ],
+      "resolution": [
+        1000,
+        1000
+      ]
+    },
+    "multires_machoire_A_00": {
+      "fichier": "renders/f0-correction/multires_machoire_A_00.png",
+      "matrice_camera": [
+        [
+          0.839570224,
+          0.05339868,
+          0.540620446,
+          2.273621559
+        ],
+        [
+          0.543251216,
+          -0.08252538,
+          -0.835504591,
+          -1.392289877
+        ],
+        [
+          8e-09,
+          0.99515748,
+          -0.098294765,
+          0.552558064
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.150000006,
+      "cible": [
+        1.462690711,
+        -0.139033154,
+        0.699999988
+      ],
+      "direction": [
+        0.540620506,
+        -0.835504472,
+        -0.098294638
+      ],
+      "resolution": [
+        1000,
+        1000
+      ]
+    },
+    "multires_machoire_A_10": {
+      "fichier": "renders/f0-correction/multires_machoire_A_10.png",
+      "matrice_camera": [
+        [
+          0.839570224,
+          0.05339868,
+          0.540620446,
+          2.273621559
+        ],
+        [
+          0.543251216,
+          -0.08252538,
+          -0.835504591,
+          -1.392289877
+        ],
+        [
+          8e-09,
+          0.99515748,
+          -0.098294765,
+          0.552558064
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.150000006,
+      "cible": [
+        1.462690711,
+        -0.139033154,
+        0.699999988
+      ],
+      "direction": [
+        0.540620506,
+        -0.835504472,
+        -0.098294638
+      ],
+      "resolution": [
+        1000,
+        1000
+      ]
+    },
+    "multires_machoire_A_20": {
+      "fichier": "renders/f0-correction/multires_machoire_A_20.png",
+      "matrice_camera": [
+        [
+          0.839570224,
+          0.05339868,
+          0.540620446,
+          2.273621559
+        ],
+        [
+          0.543251216,
+          -0.08252538,
+          -0.835504591,
+          -1.392289877
+        ],
+        [
+          8e-09,
+          0.99515748,
+          -0.098294765,
+          0.552558064
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.150000006,
+      "cible": [
+        1.462690711,
+        -0.139033154,
+        0.699999988
+      ],
+      "direction": [
+        0.540620506,
+        -0.835504472,
+        -0.098294638
+      ],
+      "resolution": [
+        1000,
+        1000
+      ]
+    },
+    "multires_machoire_A_32": {
+      "fichier": "renders/f0-correction/multires_machoire_A_32.png",
+      "matrice_camera": [
+        [
+          0.839570224,
+          0.05339868,
+          0.540620446,
+          2.273621559
+        ],
+        [
+          0.543251216,
+          -0.08252538,
+          -0.835504591,
+          -1.392289877
+        ],
+        [
+          8e-09,
+          0.99515748,
+          -0.098294765,
+          0.552558064
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.150000006,
+      "cible": [
+        1.462690711,
+        -0.139033154,
+        0.699999988
+      ],
+      "direction": [
+        0.540620506,
+        -0.835504472,
+        -0.098294638
+      ],
+      "resolution": [
+        1000,
+        1000
+      ]
+    },
+    "coupe_sagittale_generale": {
+      "fichier": "renders/f0-correction/coupe_sagittale_generale.png",
+      "matrice_camera": [
+        [
+          -0.001000058,
+          8.9e-08,
+          0.999999583,
+          2.962689877
+        ],
+        [
+          0.999999583,
+          -7.1e-08,
+          0.000999957,
+          -0.054236557
+        ],
+        [
+          -3e-08,
+          1.000000119,
+          -1.9e-07,
+          0.776455641
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.25999999,
+      "cible": [
+        1.462690711,
+        -0.055736557,
+        0.776455641
+      ],
+      "direction": [
+        0.999999523,
+        0.001,
+        0.0
+      ],
+      "resolution": [
+        1000,
+        1000
+      ]
+    },
+    "coupe_sagittale_bouche": {
+      "fichier": "renders/f0-correction/coupe_sagittale_bouche.png",
+      "matrice_camera": [
+        [
+          -0.001000058,
+          8.9e-08,
+          0.999999583,
+          2.962689877
+        ],
+        [
+          0.999999583,
+          -7.1e-08,
+          0.000999957,
+          -0.122533157
+        ],
+        [
+          -3e-08,
+          1.000000119,
+          -1.9e-07,
+          0.691999972
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.090000004,
+      "cible": [
+        1.462690711,
+        -0.124033153,
+        0.691999972
+      ],
+      "direction": [
+        0.999999523,
+        0.001,
+        0.0
+      ],
+      "resolution": [
+        1000,
+        1000
+      ]
+    },
+    "coupe_sagittale_oeil": {
+      "fichier": "renders/f0-correction/coupe_sagittale_oeil.png",
+      "matrice_camera": [
+        [
+          -0.001000058,
+          8.9e-08,
+          0.999999583,
+          2.962689877
+        ],
+        [
+          0.999999583,
+          -7.1e-08,
+          0.000999957,
+          -0.122533157
+        ],
+        [
+          -3e-08,
+          1.000000119,
+          -1.9e-07,
+          0.76700002
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.07,
+      "cible": [
+        1.462690711,
+        -0.124033153,
+        0.76700002
+      ],
+      "direction": [
+        0.999999523,
+        0.001,
+        0.0
+      ],
+      "resolution": [
+        1000,
+        1000
+      ]
+    }
+  },
+  "controles": {
+    "coupe_sagittale_bouche": {
+      "existe": true,
+      "largeur": 1000,
+      "hauteur": 1000,
+      "couleurs_echantillonnees": 183,
+      "octets": 910320
+    },
+    "coupe_sagittale_generale": {
+      "existe": true,
+      "largeur": 1000,
+      "hauteur": 1000,
+      "couleurs_echantillonnees": 231,
+      "octets": 877063
+    },
+    "coupe_sagittale_oeil": {
+      "existe": true,
+      "largeur": 1000,
+      "hauteur": 1000,
+      "couleurs_echantillonnees": 273,
+      "octets": 947794
+    },
+    "multires_clignement_A_000": {
+      "existe": true,
+      "largeur": 1000,
+      "hauteur": 1000,
+      "couleurs_echantillonnees": 99,
+      "octets": 873818
+    },
+    "multires_clignement_A_050": {
+      "existe": true,
+      "largeur": 1000,
+      "hauteur": 1000,
+      "couleurs_echantillonnees": 99,
+      "octets": 857659
+    },
+    "multires_clignement_A_100": {
+      "existe": true,
+      "largeur": 1000,
+      "hauteur": 1000,
+      "couleurs_echantillonnees": 99,
+      "octets": 847045
+    },
+    "multires_clignement_B_100": {
+      "existe": true,
+      "largeur": 1000,
+      "hauteur": 1000,
+      "couleurs_echantillonnees": 99,
+      "octets": 862082
+    },
+    "multires_levres_A_000": {
+      "existe": true,
+      "largeur": 1000,
+      "hauteur": 1000,
+      "couleurs_echantillonnees": 279,
+      "octets": 798100
+    },
+    "multires_levres_A_100": {
+      "existe": true,
+      "largeur": 1000,
+      "hauteur": 1000,
+      "couleurs_echantillonnees": 279,
+      "octets": 796605
+    },
+    "multires_levres_B_100": {
+      "existe": true,
+      "largeur": 1000,
+      "hauteur": 1000,
+      "couleurs_echantillonnees": 279,
+      "octets": 797712
+    },
+    "multires_machoire_A_00": {
+      "existe": true,
+      "largeur": 1000,
+      "hauteur": 1000,
+      "couleurs_echantillonnees": 299,
+      "octets": 827386
+    },
+    "multires_machoire_A_10": {
+      "existe": true,
+      "largeur": 1000,
+      "hauteur": 1000,
+      "couleurs_echantillonnees": 325,
+      "octets": 826245
+    },
+    "multires_machoire_A_20": {
+      "existe": true,
+      "largeur": 1000,
+      "hauteur": 1000,
+      "couleurs_echantillonnees": 343,
+      "octets": 827025
+    },
+    "multires_machoire_A_32": {
+      "existe": true,
+      "largeur": 1000,
+      "hauteur": 1000,
+      "couleurs_echantillonnees": 328,
+      "octets": 825909
+    }
+  },
+  "pannes": [],
+  "status": "PASS"
+}
