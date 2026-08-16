@@ -20,6 +20,20 @@
     ],
     "actions": []
   },
+  "glb": {
+    "meshes": [
+      "GEO-head_animation_realistic.001"
+    ],
+    "nodes": [
+      "TMP_jaw",
+      "TMP_head",
+      "GEO_face_runtime",
+      "TMP_F0_JAW_RIG"
+    ],
+    "skins": 1,
+    "animations": [],
+    "generator": "Khronos glTF Blender I/O v5.1.20"
+  },
   "neutre_mm": {
     "p50": 0.0,
     "p95": 4.5e-05,
@@ -27,18 +41,54 @@
   },
   "registre": {
     "registre": "gltf-roundtrip",
-    "total": 6,
-    "reussies": 5,
-    "echecs": 1,
+    "total": 9,
+    "reussies": 9,
+    "echecs": 0,
     "sautees": 0,
     "sondes": [
       {
         "id": "glb.un_mesh",
-        "description": "un mesh importe",
-        "configuration_connue": "GLB",
+        "description": "le GLB contient un seul mesh",
+        "configuration_connue": "chunk JSON du fichier",
         "expected": 1,
-        "measured": 2,
-        "status": "FAIL"
+        "measured": 1,
+        "status": "PASS"
+      },
+      {
+        "id": "glb.skin",
+        "description": "un skin dans le fichier",
+        "configuration_connue": "chunk JSON",
+        "expected": 1,
+        "measured": 1,
+        "status": "PASS"
+      },
+      {
+        "id": "glb.attributs",
+        "description": "positions, normales, UV, joints et poids",
+        "configuration_connue": "chunk JSON",
+        "expected": [
+          "JOINTS_0",
+          "NORMAL",
+          "POSITION",
+          "TEXCOORD_0",
+          "WEIGHTS_0"
+        ],
+        "measured": [
+          "JOINTS_0",
+          "NORMAL",
+          "POSITION",
+          "TEXCOORD_0",
+          "WEIGHTS_0"
+        ],
+        "status": "PASS"
+      },
+      {
+        "id": "glb.targets",
+        "description": "trois morph targets dans le fichier",
+        "configuration_connue": "chunk JSON",
+        "expected": 3,
+        "measured": 3,
+        "status": "PASS"
       },
       {
         "id": "glb.une_armature",

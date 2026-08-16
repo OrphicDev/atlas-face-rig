@@ -27,7 +27,7 @@ déjà ses morph targets.
 
 `exports/atlas-face-spike.glb` — **3 630 880 octets**.
 
-## Aller-retour — 5/6
+## Aller-retour — 9/9
 
 | contrôle | résultat |
 | --- | ---: |
@@ -42,14 +42,28 @@ triangule, dédouble les coutures UV et réordonne. Les 12 950 sommets deviennen
 51 791 coins dédupliqués — c'est le comportement normal du format, et c'est
 pourquoi comparer les indices n'aurait rien voulu dire.
 
-## Le point ouvert, et il l'est
+## Le point ouvert est levé — et c'était mon test qui était faux
 
-Le test compte **2 meshes** dans le GLB au lieu d'un. Le blend runtime ne
-contient pourtant que `GEO_face_runtime` et `TMP_F0_JAW_RIG`, et l'export est
-fait sur sélection explicite. **Je n'ai pas identifié l'origine du second mesh**,
-et je ne la devine pas ici. Tant qu'elle n'est pas nommée, ce chemin d'export
-n'est pas validé — même si la géométrie, les morphs et les os traversent
-l'aller-retour intacts.
+Le test comptait **2 meshes** au lieu d'un. En lisant le **chunk JSON du GLB**
+lui-même, le fichier contient exactement :
 
-Restent également dus : la validation Khronos (§E.9) et l'essai dans un runtime
-réel (§E.11).
+```
+meshes  : ['GEO-head_animation_realistic.001']
+nodes   : TMP_jaw, TMP_head, GEO_face_runtime, TMP_F0_JAW_RIG
+skins   : 1
+attributs : JOINTS_0, NORMAL, POSITION, TEXCOORD_0, WEIGHTS_0
+targets : 3
+generator : Khronos glTF Blender I/O v5.1.20
+```
+
+Un seul mesh. L'`Icosphere` de 42 sommets est fabriquée **par l'importeur de
+Blender** comme forme d'os ; elle n'a jamais été dans le fichier. Je comptais
+des objets créés à l'import et je les attribuais à l'export.
+
+Le test lit désormais le fichier, pas la scène qui en sort : **9 sondes sur 9**.
+
+## Ce qui reste dû
+
+Aucune **animation** n'est encore dans le GLB (`animations: []`) : le spike
+d'action du §E.7 et son bake ne sont pas faits. Restent aussi la validation
+Khronos (§E.9) et l'essai dans un runtime réel (§E.11).

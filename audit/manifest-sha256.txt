@@ -32,8 +32,8 @@ d2f9340744720cc6c4aff7625d21ff6e12e5e575be14112ea5a02a9a373cf071  ./experiments/
 e5b90591c836cfad62cad6c140fd40eb8908bc299b87b2c0d0207ac1140d8675  ./experiments/gltf-spike/atlas-runtime-spike.blend1
 98c786db253b2753c9da034d93bb76e7182173495b5da751797c339b463fb688  ./experiments/gltf-spike/export-settings.json
 090871862d2afb08dce639e5da7c2334e62939c959c076b8527f5dc3eac68570  ./experiments/gltf-spike/export_spike.py
-168e570a522745543cdfe3e8d0bb191b659c25c5c6dc0afbbba5c104e2ac2d56  ./experiments/gltf-spike/import_spike.py
-127b6327d69bae70e405bab30e1dbc1bb21c6246ddc3789f3df80331302ce059  ./experiments/gltf-spike/roundtrip.json
+d37afe704dd6153d20fc35b37f00207e71e058cdc5e7f2a7805aa3cdb2d7a992  ./experiments/gltf-spike/import_spike.py
+41be16f86039f426b9549a6bb322bd1075afe1ab0c99b312e96e74d713912672  ./experiments/gltf-spike/roundtrip.json
 d8d51f53a75ae56333675698278e18277cc3c8d9e38c83510f615ba42ef35657  ./experiments/modifier-order/A_ARMATURE_THEN_MULTIRES.blend
 448d12ece033dcda5677d742e083b0add1f6732df0d861e16356618e93f51c30  ./experiments/modifier-order/B_MULTIRES_THEN_ARMATURE.blend
 b6739035dc2f85b0865af935b850b1a9989039997e2dc195140d3293962d8119  ./experiments/modifier-order/build-ab.py
@@ -90,7 +90,7 @@ faedac4b90acef0394985e376839291054490cf430ae3929a2e2f757ac3d572f  ./reports/f0-c
 9c5392911e29cfcd8ad14a30e36f3895c6ba881d9d1215d72c06533d931b3667  ./reports/f0-final/DECISION_RACCORD_CORPS.md
 50b0fc0b67931100f4abb85a78268fcc0b03b335a9710990a4e8cecbc20d9d76  ./reports/f0-final/RAPPORT_F0B_EN_COURS.md
 c61f2f879d504d92037dd71878d911884136884543058148e0dde4bdef75f757  ./reports/f0-final/RAPPORT_F0C.md
-512be01f71a2e4b3e7a84e0eba726c5ab64a14370bafb05bb067eea49af0c210  ./reports/f0-final/RAPPORT_F0E.md
+bec8324c814edefc5ef29534bccf3444a964c6183acb3001014f8462f17b06da  ./reports/f0-final/RAPPORT_F0E.md
 33e7e352c2261dba1be6b464cd9920ee5c2dcd84d1e57ea10196b69eeabd055a  ./reports/f0-final/author-input.json
 bf49024226ff860a110f3b9e310071593be6d7d894b9da75617228de2bcb159b  ./reports/f0-final/body-transfer-map.json
 2ba53f1f09a21f593fe0e003ca4b706613ea1ac515a67ffbc24bf08fbbb484c4  ./reports/f0-final/body-transfer.json
