@@ -70,6 +70,14 @@ d46b878a77a71267ddf07a25754d76611f4d7760421fe17b5a6eae2d6e95e5c0  ./renders/f0-f
 92d75af7c6523c9b6f3a66969a2899c842e797e588c293e13750abf9fba65dfe  ./renders/f0-final/contacts/lips_000.png
 dbed018cccd26a77ea77649f84068b4dab55f470bbba575140979c54fbfe5fda  ./renders/f0-final/contacts/lips_050.png
 266eec0fec501a2df7dcc54ef97427922d9ff2c4cef50979f0d72d699a6ebc1e  ./renders/f0-final/contacts/lips_100.png
+d21b8a4493a5981a8b04fbd51f314c9e3a5f055d9a6af642840a193d9381a4c1  ./renders/f0-final/sagittal/median_bouche.png
+16037b2c7c648d7c73134905f61a2100c525297c411b0b1d7d4fd224f89e47f7  ./renders/f0-final/sagittal/median_cavite_orale.png
+903a857b3cf1d3591c17ee51fcb510542fc393176f209dfef1a4a84ef8be6058  ./renders/f0-final/sagittal/median_cou.png
+c114e8a2d2be3840b7390d714045da49099d09814d7cb82d0f774fe71d14bfc9  ./renders/f0-final/sagittal/median_orbite.png
+4cd8be788686c277933ad2d5f66676b7c37738b5ba75e9f989766c1ea33ca528  ./renders/f0-final/sagittal/parasagittal_oeil_L_bouche.png
+5c08893ccdb91bfd78d19c874d3c716a7fcd68309ccce52d8b6cda1f705e1dd8  ./renders/f0-final/sagittal/parasagittal_oeil_L_cavite_orale.png
+230c030db73e7a880b1f68305e1b334141fbc2fd25cd4f310db13b164b38cfdb  ./renders/f0-final/sagittal/parasagittal_oeil_L_cou.png
+8068847aa411444f83ed00b336bdb02b968bccb82102fd20230b8e302da8779b  ./renders/f0-final/sagittal/parasagittal_oeil_L_orbite.png
 462c0e96e81cce743ca8645cbac96601da96e9ef558998bfcd77e7e3078c6a26  ./renders/f0/gros_plan_bouche.png
 aff4c9d43554700d44ed71a1ac5c8b5c0709a5a5b4ba4464d7cd2f74db5e9b6f  ./renders/f0/gros_plan_nez.png
 bbe54a8cc331f469d978ffc93ff08c5d85d9be83d7516d7b535d473d50edb242  ./renders/f0/gros_plan_oeil_L.png
@@ -96,6 +104,7 @@ faedac4b90acef0394985e376839291054490cf430ae3929a2e2f757ac3d572f  ./reports/f0-c
 50b0fc0b67931100f4abb85a78268fcc0b03b335a9710990a4e8cecbc20d9d76  ./reports/f0-final/RAPPORT_F0B_EN_COURS.md
 c61f2f879d504d92037dd71878d911884136884543058148e0dde4bdef75f757  ./reports/f0-final/RAPPORT_F0C.md
 ac03b80532e62e99060f2a54c04127a2fed468c9e58f0c84a1982371ff347c23  ./reports/f0-final/RAPPORT_F0E.md
+513acee52e5ee5160ee0df42aa33259871b43999b9cd6018171e7d58a58f4f69  ./reports/f0-final/RAPPORT_F0F4_SAGITTAL.md
 312186ef05b550b457ac5d229e72427cde0ca776d60d72b49a97646df72975af  ./reports/f0-final/anatomy-counts.json
 33e7e352c2261dba1be6b464cd9920ee5c2dcd84d1e57ea10196b69eeabd055a  ./reports/f0-final/author-input.json
 bf49024226ff860a110f3b9e310071593be6d7d894b9da75617228de2bcb159b  ./reports/f0-final/body-transfer-map.json
@@ -125,6 +134,7 @@ c2e34f319b76e0b7d6d8c554ac5eb85e890330b18bcfc7f529a662909be92510  ./reports/f0-f
 dc8379225f6ad4778270d20f56b9a49c4ae915a5c8b5d4e8e6984c30a0dcd218  ./reports/f0-final/runtime-mesh.json
 3ef43b38fa217a8e2c41330c3c6145566c32cbf4f439487a00ad88116eba2ade  ./reports/f0-final/runtime-pivot-negatif.json
 2137768917f6f466cb55cbe5c2ad89dd91d8f247edfc614bd29474c236331105  ./reports/f0-final/runtime-resolution.json
+796ee1c82ce26549e18982be96b3080138c1716dafd59e024ad17bf6c6aad51a  ./reports/f0-final/sagittal-render.json
 093341d28ff525c257d3a9ce59b3f3db5444dab8feb3f0e607c0e251a6c567c9  ./reports/f0-final/validation-glb-negatif.json
 10ea022ce901e8c272528380d61edbb28543268ca0a4d32a31cb997ed1d703ab  ./reports/f0-final/validation-glb.json
 dd61186eeb6b5dc99da6c212c3d288b975645e732483d2a27793b3eb176cfad0  ./reports/f0/RAPPORT_F0.md
@@ -191,6 +201,7 @@ b0ec10f5f6fb396677276cd46bfe5c2edc906f25a37cb74e2033c2ecc3739632  ./tests/verrou
 5c7f985d38e7a247f4f0fb088bb18851fc1491beb063a8d067ffb34ba12d0552  ./tools/f0-render-contacts.py
 348bff26591cb7ecd56dc40b54b5545b2bcb629ad949e938b8f77c96ff58c1b5  ./tools/f0-show-contact-candidates.py
 0fc573e943a42f5121e0d53002801ae1db351dd0e9396262b583add5649c19e2  ./tools/inspect-modifier-stack.py
+9ae39cb235868ebb43ef481a74b686405c3ad3d48594d6fa51ad03dcfee99f8e  ./tools/render-f0-sagittal.py
 50a928613e47bb5f31fd78e5b1472c440350a99e285ecc206b83195162979047  ./tools/runtime_eval.py
 aa260e2e2cf2bacf138593e9f21c84193e7c78d8cc765ff4b8fa529cc2531294  ./tools/validate_glb.py
 ff1e98e47907479fc8378d5253b5565578fb4405967cab38aafd8abeca1cbc46  ./tools/write-f0-author-input.py
