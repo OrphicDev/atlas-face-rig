@@ -1,0 +1,78 @@
+{
+  "niveau_multires": 1,
+  "sommets_dense": 12950,
+  "faces_dense": 12948,
+  "loops_dense": 51792,
+  "uv_sha_neutre": "7488a467a164ba61c92e76a579a9a0ec850965715deb65431861de5a664212a9",
+  "morphs": {
+    "TMP_blink.L": {
+      "sommets": 12950,
+      "amplitude_max_mm": 8.4962,
+      "uv_identique": true
+    },
+    "TMP_blink.R": {
+      "sommets": 12950,
+      "amplitude_max_mm": 8.4264,
+      "uv_identique": true
+    },
+    "TMP_mouthClose": {
+      "sommets": 12950,
+      "amplitude_max_mm": 1.8196,
+      "uv_identique": true
+    }
+  },
+  "sommets_sans_poids": 0,
+  "registre": {
+    "registre": "build-runtime-mesh",
+    "total": 5,
+    "reussies": 5,
+    "echecs": 0,
+    "sautees": 0,
+    "sondes": [
+      {
+        "id": "runtime.topologie_TMP_blink.L",
+        "description": "meme topologie dense que le neutre",
+        "configuration_connue": "morph a 1",
+        "expected": 12950,
+        "measured": 12950,
+        "status": "PASS"
+      },
+      {
+        "id": "runtime.topologie_TMP_blink.R",
+        "description": "meme topologie dense que le neutre",
+        "configuration_connue": "morph a 1",
+        "expected": 12950,
+        "measured": 12950,
+        "status": "PASS"
+      },
+      {
+        "id": "runtime.topologie_TMP_mouthClose",
+        "description": "meme topologie dense que le neutre",
+        "configuration_connue": "morph a 1",
+        "expected": 12950,
+        "measured": 12950,
+        "status": "PASS"
+      },
+      {
+        "id": "runtime.sommets_sans_poids",
+        "description": "chaque sommet dense a un poids",
+        "configuration_connue": "projection barycentrique",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "runtime.pas_de_multires",
+        "description": "le runtime ne porte plus de Multires",
+        "configuration_connue": "objet runtime",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      }
+    ]
+  },
+  "objets_runtime": [
+    "GEO_face_runtime",
+    "TMP_F0_JAW_RIG"
+  ]
+}

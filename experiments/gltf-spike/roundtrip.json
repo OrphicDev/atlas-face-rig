@@ -1,0 +1,87 @@
+{
+  "reference": {
+    "sommets": 12950,
+    "morphs": [
+      "TMP_blink.L",
+      "TMP_blink.R",
+      "TMP_mouthClose"
+    ]
+  },
+  "importe": {
+    "sommets": 51791,
+    "morphs": [
+      "TMP_blink.L",
+      "TMP_blink.R",
+      "TMP_mouthClose"
+    ],
+    "os": [
+      "TMP_head",
+      "TMP_jaw"
+    ],
+    "actions": []
+  },
+  "neutre_mm": {
+    "p50": 0.0,
+    "p95": 4.5e-05,
+    "max": 0.000277
+  },
+  "registre": {
+    "registre": "gltf-roundtrip",
+    "total": 6,
+    "reussies": 5,
+    "echecs": 1,
+    "sautees": 0,
+    "sondes": [
+      {
+        "id": "glb.un_mesh",
+        "description": "un mesh importe",
+        "configuration_connue": "GLB",
+        "expected": 1,
+        "measured": 2,
+        "status": "FAIL"
+      },
+      {
+        "id": "glb.une_armature",
+        "description": "une armature importee",
+        "configuration_connue": "GLB",
+        "expected": 1,
+        "measured": 1,
+        "status": "PASS"
+      },
+      {
+        "id": "glb.morphs",
+        "description": "les trois morph targets survivent",
+        "configuration_connue": "GLB",
+        "expected": 3,
+        "measured": 3,
+        "status": "PASS"
+      },
+      {
+        "id": "glb.joints",
+        "description": "les os de deformation survivent",
+        "configuration_connue": "GLB",
+        "expected": ">= 2",
+        "measured": 2,
+        "status": "PASS"
+      },
+      {
+        "id": "glb.neutre_p95",
+        "description": "surface neutre apres aller-retour",
+        "configuration_connue": "plus proche point",
+        "expected": "<= 0,10 mm",
+        "measured": 4.5e-05,
+        "status": "PASS",
+        "tolerance": 0.1
+      },
+      {
+        "id": "glb.neutre_max",
+        "description": "pire ecart du neutre",
+        "configuration_connue": "plus proche point",
+        "expected": "<= 0,50 mm",
+        "measured": 0.000277,
+        "status": "PASS",
+        "tolerance": 0.5
+      }
+    ]
+  }
+}
