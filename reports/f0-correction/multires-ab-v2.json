@@ -44,11 +44,9 @@
       }
     },
     "gap_levres_mm": {
-      "min": 0.269115,
-      "median": 1.934975,
-      "p95": 7.226944,
-      "max": 7.448435,
-      "moyenne": 2.967857
+      "hauteur_bbox_mm": 5.8832,
+      "jour_max_colonne_mm": 5.6915,
+      "sommets": 76
     },
     "penetrations_globe": {
       "anterieures": 193,
@@ -65,33 +63,27 @@
           "sha_uv_avant": "7d14e5436b29f4f9126d7d791a9252c244b886ecf978fa23cac083d1a195d22b",
           "intensites": {
             "0.25": {
-              "points_deplaces": 361,
+              "points_deplaces": 264,
               "repere": {
                 "L": {
-                  "sommets_concernes": 184,
-                  "rayon_globe_mm": 11.745,
-                  "centre": [
-                    1.49486,
-                    -0.1254,
-                    0.76669
-                  ]
+                  "sommets_du_bord": 40,
+                  "sommets_concernes": 205,
+                  "portee_mm": 9.0,
+                  "h_contact": -0.003517
                 },
                 "R": {
-                  "sommets_concernes": 184,
-                  "rayon_globe_mm": 11.745,
-                  "centre": [
-                    1.43028,
-                    -0.1254,
-                    0.76669
-                  ]
+                  "sommets_du_bord": 40,
+                  "sommets_concernes": 201,
+                  "portee_mm": 9.0,
+                  "h_contact": -0.004043
                 }
               },
               "amplitude_mm": {
                 "min": 0.0,
                 "median": 0.0,
-                "p95": 0.597534,
-                "max": 9.534767,
-                "moyenne": 0.109224
+                "p95": 0.735592,
+                "max": 4.09688,
+                "moyenne": 0.087908
               },
               "retour_au_neutre_mm": {
                 "min": 0.0,
@@ -101,11 +93,11 @@
                 "moyenne": 0.0
               },
               "penetrations_globe": {
-                "anterieures": 20,
-                "posterieures": 18,
-                "total": 38
+                "anterieures": 36,
+                "posterieures": 5,
+                "total": 41
               },
-              "variation_volume_pct": 0.04914,
+              "variation_volume_pct": -0.00735,
               "sha_uv_apres_shape_key": "7d14e5436b29f4f9126d7d791a9252c244b886ecf978fa23cac083d1a195d22b",
               "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
               "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
@@ -113,53 +105,47 @@
               "uv_evaluee_inchangee": true,
               "uv_inchangee": true,
               "etirement_aretes": {
-                "min": 0.341923,
+                "min": 0.312245,
                 "median": 1.0,
-                "p95": 1.000169,
-                "max": 4.798695,
-                "moyenne": 1.005292
+                "p95": 1.0,
+                "max": 3.09892,
+                "moyenne": 1.001564
               },
               "gap_ouverture_mm": {
                 "R": {
-                  "hauteur_bbox_mm": 15.0295,
-                  "jour_max_colonne_mm": 11.799,
+                  "hauteur_bbox_mm": 12.874,
+                  "jour_max_colonne_mm": 9.8089,
                   "sommets": 40
                 },
                 "L": {
-                  "hauteur_bbox_mm": 15.7601,
-                  "jour_max_colonne_mm": 10.0933,
+                  "hauteur_bbox_mm": 14.7169,
+                  "jour_max_colonne_mm": 9.82,
                   "sommets": 40
                 }
               }
             },
             "0.5": {
-              "points_deplaces": 362,
+              "points_deplaces": 264,
               "repere": {
                 "L": {
-                  "sommets_concernes": 184,
-                  "rayon_globe_mm": 11.745,
-                  "centre": [
-                    1.49486,
-                    -0.1254,
-                    0.76669
-                  ]
+                  "sommets_du_bord": 40,
+                  "sommets_concernes": 205,
+                  "portee_mm": 9.0,
+                  "h_contact": -0.003517
                 },
                 "R": {
-                  "sommets_concernes": 184,
-                  "rayon_globe_mm": 11.745,
-                  "centre": [
-                    1.43028,
-                    -0.1254,
-                    0.76669
-                  ]
+                  "sommets_du_bord": 40,
+                  "sommets_concernes": 201,
+                  "portee_mm": 9.0,
+                  "h_contact": -0.004043
                 }
               },
               "amplitude_mm": {
                 "min": 0.0,
                 "median": 0.0,
-                "p95": 0.904155,
-                "max": 14.511663,
-                "moyenne": 0.180769
+                "p95": 1.326677,
+                "max": 6.665883,
+                "moyenne": 0.156311
               },
               "retour_au_neutre_mm": {
                 "min": 0.0,
@@ -169,11 +155,11 @@
                 "moyenne": 0.0
               },
               "penetrations_globe": {
-                "anterieures": 37,
-                "posterieures": 26,
-                "total": 63
+                "anterieures": 58,
+                "posterieures": 11,
+                "total": 69
               },
-              "variation_volume_pct": 0.12248,
+              "variation_volume_pct": 0.00575,
               "sha_uv_apres_shape_key": "7d14e5436b29f4f9126d7d791a9252c244b886ecf978fa23cac083d1a195d22b",
               "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
               "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
@@ -181,53 +167,47 @@
               "uv_evaluee_inchangee": true,
               "uv_inchangee": true,
               "etirement_aretes": {
-                "min": 0.309374,
+                "min": 0.273941,
                 "median": 1.0,
-                "p95": 1.000595,
-                "max": 6.10211,
-                "moyenne": 1.010507
+                "p95": 1.002149,
+                "max": 4.029126,
+                "moyenne": 1.00452
               },
               "gap_ouverture_mm": {
                 "R": {
-                  "hauteur_bbox_mm": 12.667,
-                  "jour_max_colonne_mm": 10.247,
+                  "hauteur_bbox_mm": 8.6378,
+                  "jour_max_colonne_mm": 6.483,
                   "sommets": 40
                 },
                 "L": {
-                  "hauteur_bbox_mm": 12.3512,
-                  "jour_max_colonne_mm": 8.5594,
+                  "hauteur_bbox_mm": 9.8292,
+                  "jour_max_colonne_mm": 6.4945,
                   "sommets": 40
                 }
               }
             },
             "1.0": {
-              "points_deplaces": 362,
+              "points_deplaces": 264,
               "repere": {
                 "L": {
-                  "sommets_concernes": 184,
-                  "rayon_globe_mm": 11.745,
-                  "centre": [
-                    1.49486,
-                    -0.1254,
-                    0.76669
-                  ]
+                  "sommets_du_bord": 40,
+                  "sommets_concernes": 205,
+                  "portee_mm": 9.0,
+                  "h_contact": -0.003517
                 },
                 "R": {
-                  "sommets_concernes": 184,
-                  "rayon_globe_mm": 11.745,
-                  "centre": [
-                    1.43028,
-                    -0.1254,
-                    0.76669
-                  ]
+                  "sommets_du_bord": 40,
+                  "sommets_concernes": 201,
+                  "portee_mm": 9.0,
+                  "h_contact": -0.004043
                 }
               },
               "amplitude_mm": {
                 "min": 0.0,
                 "median": 0.0,
-                "p95": 1.472584,
-                "max": 22.543435,
-                "moyenne": 0.30941
+                "p95": 2.4725,
+                "max": 11.12575,
+                "moyenne": 0.284625
               },
               "retour_au_neutre_mm": {
                 "min": 0.0,
@@ -237,11 +217,11 @@
                 "moyenne": 0.0
               },
               "penetrations_globe": {
-                "anterieures": 73,
-                "posterieures": 46,
-                "total": 119
+                "anterieures": 64,
+                "posterieures": 17,
+                "total": 81
               },
-              "variation_volume_pct": 0.26219,
+              "variation_volume_pct": 0.03927,
               "sha_uv_apres_shape_key": "7d14e5436b29f4f9126d7d791a9252c244b886ecf978fa23cac083d1a195d22b",
               "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
               "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
@@ -249,37 +229,37 @@
               "uv_evaluee_inchangee": true,
               "uv_inchangee": true,
               "etirement_aretes": {
-                "min": 0.250449,
+                "min": 0.118511,
                 "median": 1.0,
-                "p95": 1.00147,
-                "max": 6.526776,
-                "moyenne": 1.019691
+                "p95": 1.012535,
+                "max": 4.842776,
+                "moyenne": 1.014
               },
               "gap_ouverture_mm": {
                 "R": {
-                  "hauteur_bbox_mm": 9.6641,
-                  "jour_max_colonne_mm": 7.143,
+                  "hauteur_bbox_mm": 4.782,
+                  "jour_max_colonne_mm": 4.0046,
                   "sommets": 40
                 },
                 "L": {
-                  "hauteur_bbox_mm": 10.4038,
-                  "jour_max_colonne_mm": 6.358,
+                  "hauteur_bbox_mm": 4.3163,
+                  "jour_max_colonne_mm": 2.3937,
                   "sommets": 40
                 }
               }
             }
           },
           "temps_s": {
-            "min": 0.035962,
-            "median": 0.036414,
-            "p95": 0.037116,
-            "max": 0.037116,
-            "moyenne": 0.03642
+            "min": 0.037483,
+            "median": 0.038603,
+            "p95": 0.039498,
+            "max": 0.039498,
+            "moyenne": 0.038491
           },
           "memoire": {
             "sommets": 3242,
             "octets_shape_key_theorique": 38904,
-            "octets_blend_compresse": 1017891
+            "octets_blend_compresse": 1017272
           }
         },
         "B_haute_resolution": {
@@ -287,33 +267,27 @@
           "sha_uv_avant": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
           "intensites": {
             "0.25": {
-              "points_deplaces": 1446,
+              "points_deplaces": 1071,
               "repere": {
                 "L": {
-                  "sommets_concernes": 734,
-                  "rayon_globe_mm": 11.745,
-                  "centre": [
-                    1.49486,
-                    -0.1254,
-                    0.76669
-                  ]
+                  "sommets_du_bord": 40,
+                  "sommets_concernes": 814,
+                  "portee_mm": 9.0,
+                  "h_contact": -0.003517
                 },
                 "R": {
-                  "sommets_concernes": 734,
-                  "rayon_globe_mm": 11.745,
-                  "centre": [
-                    1.43028,
-                    -0.1254,
-                    0.76669
-                  ]
+                  "sommets_du_bord": 40,
+                  "sommets_concernes": 802,
+                  "portee_mm": 9.0,
+                  "h_contact": -0.004043
                 }
               },
               "amplitude_mm": {
                 "min": 0.0,
                 "median": 0.0,
-                "p95": 0.4667,
-                "max": 12.087791,
-                "moyenne": 0.128365
+                "p95": 0.772569,
+                "max": 7.429722,
+                "moyenne": 0.095289
               },
               "retour_au_neutre_mm": {
                 "min": 0.0,
@@ -323,9 +297,9 @@
                 "moyenne": 0.0
               },
               "penetrations_globe": {
-                "anterieures": 0,
+                "anterieures": 5,
                 "posterieures": 0,
-                "total": 0
+                "total": 5
               },
               "variation_volume_pct": null,
               "sha_uv_apres_shape_key": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
@@ -336,33 +310,27 @@
               "uv_inchangee": true
             },
             "0.5": {
-              "points_deplaces": 1450,
+              "points_deplaces": 1071,
               "repere": {
                 "L": {
-                  "sommets_concernes": 734,
-                  "rayon_globe_mm": 11.745,
-                  "centre": [
-                    1.49486,
-                    -0.1254,
-                    0.76669
-                  ]
+                  "sommets_du_bord": 40,
+                  "sommets_concernes": 814,
+                  "portee_mm": 9.0,
+                  "h_contact": -0.003517
                 },
                 "R": {
-                  "sommets_concernes": 734,
-                  "rayon_globe_mm": 11.745,
-                  "centre": [
-                    1.43028,
-                    -0.1254,
-                    0.76669
-                  ]
+                  "sommets_du_bord": 40,
+                  "sommets_concernes": 802,
+                  "portee_mm": 9.0,
+                  "h_contact": -0.004043
                 }
               },
               "amplitude_mm": {
                 "min": 0.0,
                 "median": 0.0,
-                "p95": 0.677519,
-                "max": 17.658269,
-                "moyenne": 0.199892
+                "p95": 1.374676,
+                "max": 10.989217,
+                "moyenne": 0.165724
               },
               "retour_au_neutre_mm": {
                 "min": 0.0,
@@ -372,9 +340,9 @@
                 "moyenne": 0.0
               },
               "penetrations_globe": {
-                "anterieures": 2,
+                "anterieures": 18,
                 "posterieures": 0,
-                "total": 2
+                "total": 18
               },
               "variation_volume_pct": null,
               "sha_uv_apres_shape_key": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
@@ -385,33 +353,27 @@
               "uv_inchangee": true
             },
             "1.0": {
-              "points_deplaces": 1452,
+              "points_deplaces": 1071,
               "repere": {
                 "L": {
-                  "sommets_concernes": 734,
-                  "rayon_globe_mm": 11.745,
-                  "centre": [
-                    1.49486,
-                    -0.1254,
-                    0.76669
-                  ]
+                  "sommets_du_bord": 40,
+                  "sommets_concernes": 814,
+                  "portee_mm": 9.0,
+                  "h_contact": -0.003517
                 },
                 "R": {
-                  "sommets_concernes": 734,
-                  "rayon_globe_mm": 11.745,
-                  "centre": [
-                    1.43028,
-                    -0.1254,
-                    0.76669
-                  ]
+                  "sommets_du_bord": 40,
+                  "sommets_concernes": 802,
+                  "portee_mm": 9.0,
+                  "h_contact": -0.004043
                 }
               },
               "amplitude_mm": {
                 "min": 0.0,
                 "median": 0.0,
-                "p95": 0.971746,
-                "max": 27.018234,
-                "moyenne": 0.321286
+                "p95": 2.527768,
+                "max": 16.327584,
+                "moyenne": 0.296444
               },
               "retour_au_neutre_mm": {
                 "min": 0.0,
@@ -421,9 +383,9 @@
                 "moyenne": 0.0
               },
               "penetrations_globe": {
-                "anterieures": 0,
+                "anterieures": 6,
                 "posterieures": 0,
-                "total": 0
+                "total": 6
               },
               "variation_volume_pct": null,
               "sha_uv_apres_shape_key": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
@@ -435,16 +397,16 @@
             }
           },
           "temps_s": {
-            "min": 0.025291,
-            "median": 0.025565,
-            "p95": 0.025873,
-            "max": 0.025873,
-            "moyenne": 0.025544
+            "min": 0.025564,
+            "median": 0.02604,
+            "p95": 0.026508,
+            "max": 0.026508,
+            "moyenne": 0.02608
           },
           "memoire": {
             "sommets": 12950,
             "octets_shape_key_theorique": 155400,
-            "octets_blend_compresse": 1776268
+            "octets_blend_compresse": 1774342
           }
         }
       }
@@ -456,19 +418,19 @@
           "sha_uv_avant": "7d14e5436b29f4f9126d7d791a9252c244b886ecf978fa23cac083d1a195d22b",
           "intensites": {
             "0.25": {
-              "points_deplaces": 333,
+              "points_deplaces": 257,
               "repere": {
-                "sommets_de_la_bande": 273,
-                "demi_largeur_mm": 40.77,
-                "z_contact": 0.69422,
-                "centre_x": 1.46254
+                "sommets_du_bord": 76,
+                "demi_largeur_mm": 23.86,
+                "z_contact": 0.69424,
+                "centre_x": 1.46258
               },
               "amplitude_mm": {
                 "min": 0.0,
                 "median": 0.0,
-                "p95": 0.149571,
-                "max": 0.553489,
-                "moyenne": 0.018582
+                "p95": 0.118916,
+                "max": 0.98753,
+                "moyenne": 0.021699
               },
               "retour_au_neutre_mm": {
                 "min": 0.0,
@@ -482,7 +444,7 @@
                 "posterieures": 15,
                 "total": 208
               },
-              "variation_volume_pct": 0.00373,
+              "variation_volume_pct": 0.00276,
               "sha_uv_apres_shape_key": "7d14e5436b29f4f9126d7d791a9252c244b886ecf978fa23cac083d1a195d22b",
               "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
               "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
@@ -490,34 +452,32 @@
               "uv_evaluee_inchangee": true,
               "uv_inchangee": true,
               "etirement_aretes": {
-                "min": 0.901466,
+                "min": 0.830419,
                 "median": 1.0,
                 "p95": 1.0,
-                "max": 1.151528,
-                "moyenne": 0.999511
+                "max": 1.149987,
+                "moyenne": 0.999758
               },
               "gap_levres_mm": {
-                "min": 0.156641,
-                "median": 1.838386,
-                "p95": 6.735921,
-                "max": 7.269859,
-                "moyenne": 2.813216
+                "hauteur_bbox_mm": 4.4125,
+                "jour_max_colonne_mm": 4.2687,
+                "sommets": 76
               }
             },
             "0.5": {
-              "points_deplaces": 333,
+              "points_deplaces": 257,
               "repere": {
-                "sommets_de_la_bande": 273,
-                "demi_largeur_mm": 40.77,
-                "z_contact": 0.69422,
-                "centre_x": 1.46254
+                "sommets_du_bord": 76,
+                "demi_largeur_mm": 23.86,
+                "z_contact": 0.69424,
+                "centre_x": 1.46258
               },
               "amplitude_mm": {
                 "min": 0.0,
                 "median": 0.0,
-                "p95": 0.298833,
-                "max": 1.106978,
-                "moyenne": 0.037164
+                "p95": 0.23746,
+                "max": 1.975,
+                "moyenne": 0.043411
               },
               "retour_au_neutre_mm": {
                 "min": 0.0,
@@ -531,7 +491,7 @@
                 "posterieures": 15,
                 "total": 208
               },
-              "variation_volume_pct": 0.00699,
+              "variation_volume_pct": 0.0059,
               "sha_uv_apres_shape_key": "7d14e5436b29f4f9126d7d791a9252c244b886ecf978fa23cac083d1a195d22b",
               "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
               "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
@@ -539,34 +499,32 @@
               "uv_evaluee_inchangee": true,
               "uv_inchangee": true,
               "etirement_aretes": {
-                "min": 0.80831,
+                "min": 0.671627,
                 "median": 1.0,
                 "p95": 1.0,
-                "max": 1.303598,
-                "moyenne": 0.999127
+                "max": 1.300053,
+                "moyenne": 0.999719
               },
               "gap_levres_mm": {
-                "min": 0.118732,
-                "median": 1.725733,
-                "p95": 7.092237,
-                "max": 10.838151,
-                "moyenne": 2.781139
+                "hauteur_bbox_mm": 2.9417,
+                "jour_max_colonne_mm": 2.8458,
+                "sommets": 76
               }
             },
             "1.0": {
-              "points_deplaces": 333,
+              "points_deplaces": 257,
               "repere": {
-                "sommets_de_la_bande": 273,
-                "demi_largeur_mm": 40.77,
-                "z_contact": 0.69422,
-                "centre_x": 1.46254
+                "sommets_du_bord": 76,
+                "demi_largeur_mm": 23.86,
+                "z_contact": 0.69424,
+                "centre_x": 1.46258
               },
               "amplitude_mm": {
                 "min": 0.0,
                 "median": 0.0,
-                "p95": 0.597074,
-                "max": 2.214074,
-                "moyenne": 0.074309
+                "p95": 0.472908,
+                "max": 3.95,
+                "moyenne": 0.086823
               },
               "retour_au_neutre_mm": {
                 "min": 0.0,
@@ -580,7 +538,7 @@
                 "posterieures": 15,
                 "total": 208
               },
-              "variation_volume_pct": 0.01462,
+              "variation_volume_pct": 0.01152,
               "sha_uv_apres_shape_key": "7d14e5436b29f4f9126d7d791a9252c244b886ecf978fa23cac083d1a195d22b",
               "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
               "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
@@ -588,32 +546,30 @@
               "uv_evaluee_inchangee": true,
               "uv_inchangee": true,
               "etirement_aretes": {
-                "min": 0.625395,
+                "min": 0.392711,
                 "median": 1.0,
                 "p95": 1.0,
-                "max": 1.608859,
-                "moyenne": 0.998733
+                "max": 1.600335,
+                "moyenne": 1.000371
               },
               "gap_levres_mm": {
-                "min": 0.177085,
-                "median": 1.377046,
-                "p95": 5.757153,
-                "max": 6.73759,
-                "moyenne": 2.495891
+                "hauteur_bbox_mm": 1.1107,
+                "jour_max_colonne_mm": 0.9688,
+                "sommets": 76
               }
             }
           },
           "temps_s": {
-            "min": 0.035669,
-            "median": 0.035996,
-            "p95": 0.036814,
-            "max": 0.036814,
-            "moyenne": 0.036032
+            "min": 0.036558,
+            "median": 0.037216,
+            "p95": 0.038411,
+            "max": 0.038411,
+            "moyenne": 0.037237
           },
           "memoire": {
             "sommets": 3242,
             "octets_shape_key_theorique": 38904,
-            "octets_blend_compresse": 1016118
+            "octets_blend_compresse": 1015860
           }
         },
         "B_haute_resolution": {
@@ -621,19 +577,19 @@
           "sha_uv_avant": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
           "intensites": {
             "0.25": {
-              "points_deplaces": 1322,
+              "points_deplaces": 1034,
               "repere": {
-                "sommets_de_la_bande": 1107,
-                "demi_largeur_mm": 40.98,
-                "z_contact": 0.69438,
-                "centre_x": 1.46256
+                "sommets_du_bord": 76,
+                "demi_largeur_mm": 23.86,
+                "z_contact": 0.69424,
+                "centre_x": 1.46258
               },
               "amplitude_mm": {
                 "min": 0.0,
                 "median": 0.0,
-                "p95": 0.133097,
-                "max": 0.714242,
-                "moyenne": 0.019532
+                "p95": 0.109196,
+                "max": 1.233041,
+                "moyenne": 0.022036
               },
               "retour_au_neutre_mm": {
                 "min": 0.0,
@@ -653,29 +609,22 @@
               "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
               "uv_cage_inchangee": true,
               "uv_evaluee_inchangee": true,
-              "uv_inchangee": true,
-              "gap_levres_mm": {
-                "min": 0.244975,
-                "median": 1.586854,
-                "p95": 6.695747,
-                "max": 7.237852,
-                "moyenne": 2.643479
-              }
+              "uv_inchangee": true
             },
             "0.5": {
-              "points_deplaces": 1322,
+              "points_deplaces": 1034,
               "repere": {
-                "sommets_de_la_bande": 1107,
-                "demi_largeur_mm": 40.98,
-                "z_contact": 0.69438,
-                "centre_x": 1.46256
+                "sommets_du_bord": 76,
+                "demi_largeur_mm": 23.86,
+                "z_contact": 0.69424,
+                "centre_x": 1.46258
               },
               "amplitude_mm": {
                 "min": 0.0,
                 "median": 0.0,
-                "p95": 0.266194,
-                "max": 1.428485,
-                "moyenne": 0.039065
+                "p95": 0.218332,
+                "max": 2.466023,
+                "moyenne": 0.044071
               },
               "retour_au_neutre_mm": {
                 "min": 0.0,
@@ -695,29 +644,22 @@
               "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
               "uv_cage_inchangee": true,
               "uv_evaluee_inchangee": true,
-              "uv_inchangee": true,
-              "gap_levres_mm": {
-                "min": 0.220835,
-                "median": 1.416504,
-                "p95": 6.164551,
-                "max": 7.028222,
-                "moyenne": 2.319106
-              }
+              "uv_inchangee": true
             },
             "1.0": {
-              "points_deplaces": 1322,
+              "points_deplaces": 1034,
               "repere": {
-                "sommets_de_la_bande": 1107,
-                "demi_largeur_mm": 40.98,
-                "z_contact": 0.69438,
-                "centre_x": 1.46256
+                "sommets_du_bord": 76,
+                "demi_largeur_mm": 23.86,
+                "z_contact": 0.69424,
+                "centre_x": 1.46258
               },
               "amplitude_mm": {
                 "min": 0.0,
                 "median": 0.0,
-                "p95": 0.532389,
-                "max": 2.85691,
-                "moyenne": 0.078129
+                "p95": 0.436664,
+                "max": 4.932046,
+                "moyenne": 0.088142
               },
               "retour_au_neutre_mm": {
                 "min": 0.0,
@@ -737,27 +679,20 @@
               "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
               "uv_cage_inchangee": true,
               "uv_evaluee_inchangee": true,
-              "uv_inchangee": true,
-              "gap_levres_mm": {
-                "min": 0.046313,
-                "median": 0.697553,
-                "p95": 5.102098,
-                "max": 6.608963,
-                "moyenne": 1.698349
-              }
+              "uv_inchangee": true
             }
           },
           "temps_s": {
-            "min": 0.025277,
-            "median": 0.025591,
-            "p95": 0.054527,
-            "max": 0.054527,
-            "moyenne": 0.027513
+            "min": 0.025887,
+            "median": 0.026248,
+            "p95": 0.026504,
+            "max": 0.026504,
+            "moyenne": 0.026209
           },
           "memoire": {
             "sommets": 12950,
             "octets_shape_key_theorique": 155400,
-            "octets_blend_compresse": 1766863
+            "octets_blend_compresse": 1766034
           }
         }
       }
@@ -781,8 +716,10 @@
                   0,
                   0
                 ],
-                "z_haut": 0.7,
-                "z_bas": 0.66,
+                "z_levre": 0.69424,
+                "z_menton": 0.648,
+                "y_arriere": -0.06,
+                "z_bas_cou": 0.61,
                 "degres": 0.0
               },
               "amplitude_mm": {
@@ -820,7 +757,7 @@
               }
             },
             "5.0": {
-              "points_deplaces": 980,
+              "points_deplaces": 571,
               "repere": {
                 "pivot": [
                   1.46257,
@@ -832,16 +769,18 @@
                   0,
                   0
                 ],
-                "z_haut": 0.7,
-                "z_bas": 0.66,
+                "z_levre": 0.69424,
+                "z_menton": 0.648,
+                "y_arriere": -0.06,
+                "z_bas_cou": 0.61,
                 "degres": 5.0
               },
               "amplitude_mm": {
                 "min": 0.0,
                 "median": 0.0,
-                "p95": 15.507556,
-                "max": 21.920253,
-                "moyenne": 2.334834
+                "p95": 5.157727,
+                "max": 9.481716,
+                "moyenne": 0.54721
               },
               "retour_au_neutre_mm": {
                 "min": 0.0,
@@ -855,7 +794,7 @@
                 "posterieures": 15,
                 "total": 208
               },
-              "variation_volume_pct": 0.15046,
+              "variation_volume_pct": -0.18503,
               "sha_uv_apres_shape_key": "7d14e5436b29f4f9126d7d791a9252c244b886ecf978fa23cac083d1a195d22b",
               "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
               "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
@@ -863,15 +802,15 @@
               "uv_evaluee_inchangee": true,
               "uv_inchangee": true,
               "etirement_aretes": {
-                "min": 0.685168,
+                "min": 0.822657,
                 "median": 1.0,
-                "p95": 1.001377,
-                "max": 1.197752,
-                "moyenne": 0.992746
+                "p95": 1.043931,
+                "max": 1.283601,
+                "moyenne": 1.005808
               }
             },
             "10.0": {
-              "points_deplaces": 980,
+              "points_deplaces": 572,
               "repere": {
                 "pivot": [
                   1.46257,
@@ -883,16 +822,18 @@
                   0,
                   0
                 ],
-                "z_haut": 0.7,
-                "z_bas": 0.66,
+                "z_levre": 0.69424,
+                "z_menton": 0.648,
+                "y_arriere": -0.06,
+                "z_bas_cou": 0.61,
                 "degres": 10.0
               },
               "amplitude_mm": {
                 "min": 0.0,
                 "median": 0.0,
-                "p95": 30.973196,
-                "max": 43.808306,
-                "moyenne": 4.655992
+                "p95": 10.25061,
+                "max": 18.832299,
+                "moyenne": 1.088688
               },
               "retour_au_neutre_mm": {
                 "min": 0.0,
@@ -906,7 +847,7 @@
                 "posterieures": 15,
                 "total": 208
               },
-              "variation_volume_pct": 0.32489,
+              "variation_volume_pct": -0.37902,
               "sha_uv_apres_shape_key": "7d14e5436b29f4f9126d7d791a9252c244b886ecf978fa23cac083d1a195d22b",
               "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
               "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
@@ -914,15 +855,15 @@
               "uv_evaluee_inchangee": true,
               "uv_inchangee": true,
               "etirement_aretes": {
-                "min": 0.388718,
+                "min": 0.682386,
                 "median": 1.0,
-                "p95": 1.007204,
-                "max": 1.42046,
-                "moyenne": 0.987694
+                "p95": 1.090664,
+                "max": 1.572313,
+                "moyenne": 1.012223
               }
             },
             "20.0": {
-              "points_deplaces": 980,
+              "points_deplaces": 572,
               "repere": {
                 "pivot": [
                   1.46257,
@@ -934,16 +875,18 @@
                   0,
                   0
                 ],
-                "z_haut": 0.7,
-                "z_bas": 0.66,
+                "z_levre": 0.69424,
+                "z_menton": 0.648,
+                "y_arriere": -0.06,
+                "z_bas_cou": 0.61,
                 "degres": 20.0
               },
               "amplitude_mm": {
                 "min": 0.0,
                 "median": 0.0,
-                "p95": 61.591769,
-                "max": 87.371179,
-                "moyenne": 9.235342
+                "p95": 20.409036,
+                "max": 37.082075,
+                "moyenne": 2.152319
               },
               "retour_au_neutre_mm": {
                 "min": 0.0,
@@ -957,7 +900,7 @@
                 "posterieures": 15,
                 "total": 208
               },
-              "variation_volume_pct": 0.72737,
+              "variation_volume_pct": -0.78793,
               "sha_uv_apres_shape_key": "7d14e5436b29f4f9126d7d791a9252c244b886ecf978fa23cac083d1a195d22b",
               "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
               "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
@@ -965,15 +908,15 @@
               "uv_evaluee_inchangee": true,
               "uv_inchangee": true,
               "etirement_aretes": {
-                "min": 0.076824,
+                "min": 0.521423,
                 "median": 1.0,
-                "p95": 1.034994,
-                "max": 1.918432,
-                "moyenne": 0.987264
+                "p95": 1.192202,
+                "max": 2.148819,
+                "moyenne": 1.026665
               }
             },
             "32.0": {
-              "points_deplaces": 980,
+              "points_deplaces": 572,
               "repere": {
                 "pivot": [
                   1.46257,
@@ -985,16 +928,18 @@
                   0,
                   0
                 ],
-                "z_haut": 0.7,
-                "z_bas": 0.66,
+                "z_levre": 0.69424,
+                "z_menton": 0.648,
+                "y_arriere": -0.06,
+                "z_bas_cou": 0.61,
                 "degres": 32.0
               },
               "amplitude_mm": {
                 "min": 0.0,
                 "median": 0.0,
-                "p95": 97.383648,
-                "max": 138.790446,
-                "moyenne": 14.575565
+                "p95": 32.103188,
+                "max": 58.058036,
+                "moyenne": 3.38776
               },
               "retour_au_neutre_mm": {
                 "min": 0.0,
@@ -1008,7 +953,7 @@
                 "posterieures": 15,
                 "total": 208
               },
-              "variation_volume_pct": 1.2756,
+              "variation_volume_pct": -1.30609,
               "sha_uv_apres_shape_key": "7d14e5436b29f4f9126d7d791a9252c244b886ecf978fa23cac083d1a195d22b",
               "sha_uv_evalue_neutre": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
               "sha_uv_evalue_deforme": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
@@ -1016,25 +961,25 @@
               "uv_evaluee_inchangee": true,
               "uv_inchangee": true,
               "etirement_aretes": {
-                "min": 0.222706,
+                "min": 0.364378,
                 "median": 1.0,
-                "p95": 1.100924,
-                "max": 2.560072,
-                "moyenne": 1.004146
+                "p95": 1.345598,
+                "max": 2.834024,
+                "moyenne": 1.046083
               }
             }
           },
           "temps_s": {
-            "min": 0.035588,
-            "median": 0.035971,
-            "p95": 0.036435,
-            "max": 0.036435,
-            "moyenne": 0.035983
+            "min": 0.036571,
+            "median": 0.037066,
+            "p95": 0.03757,
+            "max": 0.03757,
+            "moyenne": 0.037054
           },
           "memoire": {
             "sommets": 3242,
             "octets_shape_key_theorique": 38904,
-            "octets_blend_compresse": 1022125
+            "octets_blend_compresse": 1019102
           }
         },
         "B_haute_resolution": {
@@ -1054,8 +999,10 @@
                   0,
                   0
                 ],
-                "z_haut": 0.7,
-                "z_bas": 0.66,
+                "z_levre": 0.69424,
+                "z_menton": 0.648,
+                "y_arriere": -0.06,
+                "z_bas_cou": 0.61,
                 "degres": 0.0
               },
               "amplitude_mm": {
@@ -1086,7 +1033,7 @@
               "uv_inchangee": true
             },
             "5.0": {
-              "points_deplaces": 3873,
+              "points_deplaces": 2274,
               "repere": {
                 "pivot": [
                   1.46257,
@@ -1098,16 +1045,18 @@
                   0,
                   0
                 ],
-                "z_haut": 0.7,
-                "z_bas": 0.66,
+                "z_levre": 0.69424,
+                "z_menton": 0.648,
+                "y_arriere": -0.06,
+                "z_bas_cou": 0.61,
                 "degres": 5.0
               },
               "amplitude_mm": {
                 "min": 0.0,
                 "median": 0.0,
-                "p95": 15.507556,
-                "max": 21.920276,
-                "moyenne": 2.330577
+                "p95": 5.302437,
+                "max": 9.556321,
+                "moyenne": 0.546605
               },
               "retour_au_neutre_mm": {
                 "min": 0.0,
@@ -1130,7 +1079,7 @@
               "uv_inchangee": true
             },
             "10.0": {
-              "points_deplaces": 3873,
+              "points_deplaces": 2276,
               "repere": {
                 "pivot": [
                   1.46257,
@@ -1142,16 +1091,18 @@
                   0,
                   0
                 ],
-                "z_haut": 0.7,
-                "z_bas": 0.66,
+                "z_levre": 0.69424,
+                "z_menton": 0.648,
+                "y_arriere": -0.06,
+                "z_bas_cou": 0.61,
                 "degres": 10.0
               },
               "amplitude_mm": {
                 "min": 0.0,
                 "median": 0.0,
-                "p95": 30.973188,
-                "max": 43.808318,
-                "moyenne": 4.647219
+                "p95": 10.53487,
+                "max": 18.979151,
+                "moyenne": 1.087221
               },
               "retour_au_neutre_mm": {
                 "min": 0.0,
@@ -1174,7 +1125,7 @@
               "uv_inchangee": true
             },
             "20.0": {
-              "points_deplaces": 3873,
+              "points_deplaces": 2279,
               "repere": {
                 "pivot": [
                   1.46257,
@@ -1186,16 +1137,18 @@
                   0,
                   0
                 ],
-                "z_haut": 0.7,
-                "z_bas": 0.66,
+                "z_levre": 0.69424,
+                "z_menton": 0.648,
+                "y_arriere": -0.06,
+                "z_bas_cou": 0.61,
                 "degres": 20.0
               },
               "amplitude_mm": {
                 "min": 0.0,
                 "median": 0.0,
-                "p95": 61.591762,
-                "max": 87.371184,
-                "moyenne": 9.220197
+                "p95": 20.836967,
+                "max": 37.365707,
+                "moyenne": 2.148547
               },
               "retour_au_neutre_mm": {
                 "min": 0.0,
@@ -1218,7 +1171,7 @@
               "uv_inchangee": true
             },
             "32.0": {
-              "points_deplaces": 3873,
+              "points_deplaces": 2279,
               "repere": {
                 "pivot": [
                   1.46257,
@@ -1230,16 +1183,18 @@
                   0,
                   0
                 ],
-                "z_haut": 0.7,
-                "z_bas": 0.66,
+                "z_levre": 0.69424,
+                "z_menton": 0.648,
+                "y_arriere": -0.06,
+                "z_bas_cou": 0.61,
                 "degres": 32.0
               },
               "amplitude_mm": {
                 "min": 0.0,
                 "median": 0.0,
-                "p95": 97.383639,
-                "max": 138.790432,
-                "moyenne": 14.558462
+                "p95": 33.012927,
+                "max": 58.490294,
+                "moyenne": 3.382808
               },
               "retour_au_neutre_mm": {
                 "min": 0.0,
@@ -1263,16 +1218,16 @@
             }
           },
           "temps_s": {
-            "min": 0.025257,
-            "median": 0.025525,
-            "p95": 0.025918,
-            "max": 0.025918,
-            "moyenne": 0.025549
+            "min": 0.025671,
+            "median": 0.02607,
+            "p95": 0.026413,
+            "max": 0.026413,
+            "moyenne": 0.026037
           },
           "memoire": {
             "sommets": 12950,
             "octets_shape_key_theorique": 155400,
-            "octets_blend_compresse": 1790027
+            "octets_blend_compresse": 1778710
           }
         }
       }
@@ -1280,10 +1235,10 @@
   },
   "registre": {
     "registre": "f0-multires-v2",
-    "total": 27,
-    "reussies": 22,
-    "echecs": 4,
-    "sautees": 1,
+    "total": 26,
+    "reussies": 21,
+    "echecs": 3,
+    "sautees": 2,
     "sondes": [
       {
         "id": "sonde.sphere.rayon_connu",
@@ -1349,7 +1304,7 @@
         "description": "la sonde rend une valeur finie au neutre",
         "configuration_connue": "maillage NEUTRE",
         "expected": "valeur finie",
-        "measured": 1.934975,
+        "measured": 5.6915,
         "status": "PASS"
       },
       {
@@ -1437,7 +1392,7 @@
         "description": "le clignement n'ajoute aucune penetration anterieure",
         "configuration_connue": "neutre a 193 penetrations anterieures",
         "expected": "<= 193",
-        "measured": 73,
+        "measured": 64,
         "status": "PASS"
       },
       {
@@ -1445,7 +1400,7 @@
         "description": "le clignement referme l'ouverture publiee en F0",
         "configuration_connue": "neutre a 17.519 mm",
         "expected": "<= 0,20 mm",
-        "measured": 6.358,
+        "measured": 2.3937,
         "status": "FAIL",
         "tolerance": 0.2
       },
@@ -1454,7 +1409,7 @@
         "description": "le clignement referme l'ouverture publiee en F0",
         "configuration_connue": "neutre a 11.490 mm",
         "expected": "<= 0,20 mm",
-        "measured": 7.143,
+        "measured": 4.0046,
         "status": "FAIL",
         "tolerance": 0.2
       },
@@ -1463,7 +1418,7 @@
         "description": "le clignement n'ajoute aucune penetration anterieure",
         "configuration_connue": "neutre a 193 penetrations anterieures",
         "expected": "<= 193",
-        "measured": 0,
+        "measured": 6,
         "status": "PASS"
       },
       {
@@ -1475,36 +1430,25 @@
       {
         "id": "levres.A_cage.gap_reduit",
         "description": "la fermeture reduit la fente mesuree au neutre",
-        "configuration_connue": "neutre a 1.935 mm",
-        "expected": "< 1.935 mm",
-        "measured": 1.377046,
+        "configuration_connue": "neutre a 5.691 mm",
+        "expected": "< 5.691 mm",
+        "measured": 0.9688,
         "status": "PASS"
       },
       {
         "id": "levres.A_cage.gap_max",
-        "description": "pire ecart le long de la couture",
+        "description": "pire jour le long du bord publie en F0",
         "configuration_connue": "fermeture a 100 %",
         "expected": "<= 0,30 mm",
-        "measured": 6.73759,
+        "measured": 0.9688,
         "status": "FAIL",
         "tolerance": 0.3
       },
       {
-        "id": "levres.B_haute_resolution.gap_reduit",
-        "description": "la fermeture reduit la fente mesuree au neutre",
-        "configuration_connue": "neutre a 1.935 mm",
-        "expected": "< 1.935 mm",
-        "measured": 0.697553,
-        "status": "PASS"
-      },
-      {
-        "id": "levres.B_haute_resolution.gap_max",
-        "description": "pire ecart le long de la couture",
-        "configuration_connue": "fermeture a 100 %",
-        "expected": "<= 0,30 mm",
-        "measured": 6.608963,
-        "status": "FAIL",
-        "tolerance": 0.3
+        "id": "levres.B_haute_resolution.gap",
+        "description": "jour labial restant",
+        "status": "SKIP",
+        "raison": "mesure definie sur la cage seulement"
       },
       {
         "id": "machoire.A_cage.zero_degre_est_le_neutre",

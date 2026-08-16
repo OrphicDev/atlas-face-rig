@@ -1,7 +1,8 @@
 # Passe 3 — sondes de mesure vérifiées, verdicts anatomiques partiels
 
 Suite de [`RAPPORT_PASSE2.md`](RAPPORT_PASSE2.md). **Statut inchangé :
-`F0 INCOMPLET`.** F1 ne commence pas.
+`F0 INCOMPLET`.** F1 ne commence pas. Suite dans
+[`RAPPORT_PASSE4.md`](RAPPORT_PASSE4.md) — prototypes ancrés et hygiène du `.blend`.
 
 État réel au §1 : `HEAD` valait `ffdad5d`, descendant de `f852c453…` (vérifié
 par `git merge-base --is-ancestor`), arbre propre, manifeste sans échec.

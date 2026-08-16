@@ -146,46 +146,47 @@ def poser_shape_key(ob, deltas, nom="PROTO"):
 
 # ------------------------------------------------------- prototypes ----
 
-def proto_clignement(co_monde, ob, intensite):
+def proto_clignement(co_monde, ob, intensite, bords=None, co_cage=None):
+    """Ancre sur le bord palpebral publie en F0, jamais sur un rayon devine."""
     g = repere_globes(ob)
     lat = (g["L"][0] - g["R"][0]).normalized()
     deltas = [Vector((0, 0, 0)) for _ in co_monde]
     infos = {}
     for cote in "LR":
         ctr, R = g[cote]
-        cl = Clignement(ctr, R, lat)
-        conc = [p for p in co_monde if cl.concerne(p)]
-        if not conc: continue
-        cl.preparer(co_monde)
+        bord = [co_cage[i] for i in bords[cote]]
+        cl = Clignement(bord, ctr, R, lat)
+        conc = sum(1 for p in co_monde if cl.concerne(p))
         for i, p in enumerate(co_monde):
             d = cl.deplacer(p, intensite)
             if d.length > 0: deltas[i] = deltas[i] + d
-        infos[cote] = {"sommets_concernes": len(conc), "rayon_globe_mm": round(R * MM, 3),
-                       "centre": [round(x, 5) for x in ctr]}
+        infos[cote] = {"sommets_du_bord": len(bord), "sommets_concernes": conc,
+                       "portee_mm": round(cl.portee * MM, 2),
+                       "h_contact": round(cl.h_contact, 6)}
     return deltas, infos
 
 
-def proto_levres(co_monde, ob, intensite):
-    # la fente labiale, mesuree : bande la plus avancee entre 0,685 et 0,705 m
-    bande = [p for p in co_monde if 0.686 <= p.z <= 0.703 and p.y < -0.130]
-    cx = sum(p.x for p in bande) / len(bande)
-    demi = (max(p.x for p in bande) - min(p.x for p in bande)) / 2.0
-    z_contact = sum(p.z for p in bande) / len(bande)
-    f = FermetureLabiale(Vector((cx, sum(p.y for p in bande) / len(bande), z_contact)),
-                         demi, z_contact)
+def proto_levres(co_monde, ob, intensite, bords=None, co_cage=None):
+    """Ancre sur le bord de la fente labiale publie en F0."""
+    bord = [co_cage[i] for i in bords["LEVRES"]]
+    f = FermetureLabiale(bord)
     deltas = [f.deplacer(p, intensite) for p in co_monde]
-    return deltas, {"sommets_de_la_bande": len(bande), "demi_largeur_mm": round(demi * MM, 2),
-                    "z_contact": round(z_contact, 5), "centre_x": round(cx, 5)}
+    return deltas, {"sommets_du_bord": len(bord),
+                    "demi_largeur_mm": round(f.demi * MM, 2),
+                    "z_contact": round(f.z_contact, 5), "centre_x": round(f.cx, 5)}
 
 
-def proto_machoire(co_monde, ob, degres):
-    # axe temporo-mandibulaire : la ligne des deux conduits auditifs mesures
+def proto_machoire(co_monde, ob, degres, bords=None, co_cage=None):
+    """Pivot temporo-mandibulaire mesure, levre superieure et nuque relachees."""
+    bord = [co_cage[i] for i in bords["LEVRES"]]
+    z_levre = sum(p.z for p in bord) / len(bord)
     pivot = Vector((sum(p.x for p in co_monde) / len(co_monde), -0.053, 0.740))
-    axe = Vector((1.0, 0.0, 0.0))
-    m = Machoire(pivot, axe, z_haut=0.7000, z_bas=0.6600)
+    m = Machoire(pivot, Vector((1.0, 0.0, 0.0)), z_levre=z_levre,
+                 z_menton=0.6480, y_arriere=-0.060, z_bas_cou=0.6100)
     deltas = [m.deplacer(p, degres) for p in co_monde]
     return deltas, {"pivot": [round(x, 5) for x in pivot], "axe": [1, 0, 0],
-                    "z_haut": 0.70, "z_bas": 0.66, "degres": degres}
+                    "z_levre": round(z_levre, 5), "z_menton": 0.648,
+                    "y_arriere": -0.060, "z_bas_cou": 0.610, "degres": degres}
 
 
 # ---------------------------------------------------------- mesures ----
@@ -369,6 +370,8 @@ if __name__ == "__main__":
     # de reprendre exactement le meme ensemble.
     BORDS = {a["nom"].split(".")[1]: a["indices"] for a in _f0["ouvertures"]
              if (a.get("nom") or "").startswith("fente_palpebrale")}
+    BORD_LEVRES = next(a["indices"] for a in _f0["ouvertures"]
+                       if a.get("nom") == "fente_labiale")
     R = {"fichier": os.path.basename(BLEND), "blender": bpy.app.version_string}
 
     # --- surface neutre evaluee, commune aux deux voies ---
@@ -420,8 +423,9 @@ if __name__ == "__main__":
                   "la sonde retrouve EXACTEMENT la fente publiee en F0",
                   "cage NEUTRE, indices de bord de reports/f0", attendu, obtenu,
                   obtenu is not None and abs(obtenu - attendu) <= 0.02, tolerance=0.02)
-    _, infos0 = proto_levres(co_ev, ob, 0.0)
-    gl0 = gap_levres(co_ev, infos0)
+    BORDS_TOUS = dict(BORDS); BORDS_TOUS["LEVRES"] = BORD_LEVRES
+    _, infos0 = proto_levres(co_ev, ob, 0.0, BORDS_TOUS, co_cage)
+    gl0 = gap_ouverture(co_cage, BORD_LEVRES)
     R["neutre"]["gap_levres_mm"] = gl0
     # Au neutre la bouche de cet asset porte deja une fente de contact : on la
     # MESURE et on s'en sert de reference, au lieu de poser un seuil absolu
@@ -429,7 +433,7 @@ if __name__ == "__main__":
     reg.exige("sonde.gap_levres.neutre_mesure",
               "la sonde rend une valeur finie au neutre",
               "maillage NEUTRE", "valeur finie",
-              gl0["median"] if gl0 else None, gl0 is not None)
+              gl0["jour_max_colonne_mm"] if gl0 else None, gl0 is not None)
     pen0 = penetrations_maillage(co_ev, ob, detail=True)
     R["neutre"]["penetrations_globe"] = pen0
     # L'asset LIVRE intersecte deja ses propres globes au neutre. Ce n'est pas
@@ -474,7 +478,7 @@ if __name__ == "__main__":
             ref, taille_ref, _ = evaluer(cible)
 
             for it in intensites:
-                deltas, infos = fabrique(co_base, ob, it)
+                deltas, infos = fabrique(co_base, ob, it, BORDS_TOUS, co_cage)
                 k, touches = poser_shape_key(cible, deltas, "PROTO")
                 uv_apres = sha_uv(cible.data)
                 co1, taille1, uv_eval = evaluer(cible)
@@ -512,14 +516,16 @@ if __name__ == "__main__":
                             cible.data.shape_keys.key_blocks["PROTO"].data]
                     mes["gap_ouverture_mm"] = {c: gap_ouverture(co_c, BORDS[c])
                                                for c in BORDS}
-                if nom == "fermeture_labiale":
-                    mes["gap_levres_mm"] = gap_levres(co1, infos)
+                if nom == "fermeture_labiale" and voie == "A_cage":
+                    co_c = [cible.matrix_world @ d.co for d in
+                            cible.data.shape_keys.key_blocks["PROTO"].data]
+                    mes["gap_levres_mm"] = gap_ouverture(co_c, BORD_LEVRES)
                 fiche["intensites"][str(it)] = mes
                 # retirer la shape key avant l'intensite suivante
                 cible.shape_key_remove(cible.data.shape_keys.key_blocks["PROTO"])
 
             # --- temps : 5 echauffements, 20 mesures ---
-            deltas, _ = fabrique(co_base, ob, intensites[-1])
+            deltas, _ = fabrique(co_base, ob, intensites[-1], BORDS_TOUS, co_cage)
             k, _ = poser_shape_key(cible, deltas, "PROTO")
             for _ in range(5): evaluer(cible)
             ts = []
@@ -575,15 +581,19 @@ if __name__ == "__main__":
                           v is not None and v <= 0.20, tolerance=0.20)
     for voie, f in R["prototypes"]["fermeture_labiale"]["voies"].items():
         g = f["intensites"]["1.0"].get("gap_levres_mm")
-        ref = R["neutre"]["gap_levres_mm"]["median"]
-        reg.exige("levres.%s.gap_reduit" % voie,
-                  "la fermeture reduit la fente mesuree au neutre",
-                  "neutre a %.3f mm" % ref, "< %.3f mm" % ref,
-                  g["median"] if g else None,
-                  g is not None and g["median"] < ref)
-        reg.exige("levres.%s.gap_max" % voie, "pire ecart le long de la couture",
-                  "fermeture a 100 %", "<= 0,30 mm", g["max"] if g else None,
-                  g is not None and g["max"] <= 0.30, tolerance=0.30)
+        if g is None:
+            reg.saute("levres.%s.gap" % voie, "jour labial restant",
+                      "mesure definie sur la cage seulement")
+        else:
+            ref = R["neutre"]["gap_levres_mm"]["jour_max_colonne_mm"]
+            v = g["jour_max_colonne_mm"]
+            reg.exige("levres.%s.gap_reduit" % voie,
+                      "la fermeture reduit la fente mesuree au neutre",
+                      "neutre a %.3f mm" % ref, "< %.3f mm" % ref, v, v < ref)
+            reg.exige("levres.%s.gap_max" % voie,
+                      "pire jour le long du bord publie en F0",
+                      "fermeture a 100 %", "<= 0,30 mm", v, v <= 0.30,
+                      tolerance=0.30)
     for voie, f in R["prototypes"]["ouverture_machoire"]["voies"].items():
         z = f["intensites"]["0.0"]
         reg.exige("machoire.%s.zero_degre_est_le_neutre" % voie,

@@ -108,30 +108,46 @@ def globes(ob):
     return g
 
 
+# Les bords publies en F0 : la deformation et la mesure doivent porter sur le
+# meme ensemble de sommets, c'est la lecon de la passe 3.
+_F0 = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                  "..", "reports", "f0", "audit-topologie.json"),
+                     encoding="utf-8"))
+BORDS = {a["nom"].split(".")[1]: a["indices"] for a in _F0["ouvertures"]
+         if (a.get("nom") or "").startswith("fente_palpebrale")}
+BORD_LEVRES = next(a["indices"] for a in _F0["ouvertures"]
+                   if a.get("nom") == "fente_labiale")
+
+
+def cage_monde():
+    t = bpy.data.objects[TETE]
+    return [t.matrix_world @ v.co for v in t.data.vertices]
+
+
 def deltas_clignement(co, ob, it):
     g = globes(ob); lat = (g["L"][0] - g["R"][0]).normalized()
+    cage = cage_monde()
     out = [Vector((0, 0, 0)) for _ in co]
     for c in "LR":
-        cl = Clignement(g[c][0], g[c][1], lat)
-        if not [p for p in co if cl.concerne(p)]: continue
-        cl.preparer(co)
+        cl = Clignement([cage[i] for i in BORDS[c]], g[c][0], g[c][1], lat)
         for i, p in enumerate(co):
             out[i] = out[i] + cl.deplacer(p, it)
     return out
 
 
 def deltas_levres(co, ob, it):
-    b = [p for p in co if 0.686 <= p.z <= 0.703 and p.y < -0.130]
-    cx = sum(p.x for p in b) / len(b)
-    demi = (max(p.x for p in b) - min(p.x for p in b)) / 2.0
-    z = sum(p.z for p in b) / len(b)
-    f = FermetureLabiale(Vector((cx, sum(p.y for p in b) / len(b), z)), demi, z)
+    cage = cage_monde()
+    f = FermetureLabiale([cage[i] for i in BORD_LEVRES])
     return [f.deplacer(p, it) for p in co]
 
 
 def deltas_machoire(co, ob, deg):
+    cage = cage_monde()
+    bord = [cage[i] for i in BORD_LEVRES]
+    z_levre = sum(p.z for p in bord) / len(bord)
     m = Machoire(Vector((sum(p.x for p in co) / len(co), -0.053, 0.740)),
-                 Vector((1, 0, 0)), 0.7000, 0.6600)
+                 Vector((1, 0, 0)), z_levre=z_levre, z_menton=0.6480,
+                 y_arriere=-0.060, z_bas_cou=0.6100)
     return [m.deplacer(p, deg) for p in co]
 
 

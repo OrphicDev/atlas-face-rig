@@ -110,8 +110,20 @@ handoffs/BOOTSTRAP_CHAT_3_FACE.md   handoffs/HANDOFF_FACE_NEXT.md
 audit/AUDIT_PACKET_FACE.md    audit/manifest-sha256.txt
 ```
 
-Aucun secret, aucune conversation, aucun chemin personnel, aucun asset sans
-droits.
+Aucun secret, aucune conversation, aucun asset sans droits — **mesuré**, pas
+affirmé, par `tests/f0-hygiene-blend.py` : 0 jeton, 0 clé privée, 0 courriel,
+0 bibliothèque liée, 0 image externe, 0 script embarqué.
+
+> **Correction d'une affirmation fausse.** Ce paquet annonçait « aucun chemin
+> personnel ». C'est faux et l'audit l'avait vu : `FACE_BASE_LOCKED.blend`
+> contient **une** chaîne `/Users/orphicagency`, dans l'en-tête où Blender
+> inscrit le chemin de sa propre dernière sauvegarde
+> (`.../atlas-face-rig/source/FACE_BASE_LOCKED.blend`). Elle est intrinsèque au
+> format : Blender l'écrit à chaque `save_as_mainfile` et il n'existe pas
+> d'option pour l'omettre. Risque : elle divulgue le nom d'utilisateur macOS et
+> l'arborescence du poste de travail. Elle ne contient ni secret, ni jeton, ni
+> adresse. Mesure et détail dans
+> [`reports/f0-correction/hygiene-blend.json`](../reports/f0-correction/hygiene-blend.json).
 
 ## Temps
 
