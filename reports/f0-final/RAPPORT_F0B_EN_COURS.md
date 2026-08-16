@@ -1,52 +1,47 @@
 # F0-B — avancement (B.0 à B.12)
 
-**F0-B n'est pas terminée.** 9 sondes sur 18 passent. `mouth_close` passe trois
-critères sur quatre ; le clignement reste au-dessus du seuil.
+**12 sondes sur 18.** `mouth_close` passe **tout** sauf les arêtes. Le clignement
+passe la voie dense et, à droite, la cage.
 
-## Où en sont les trois poses, à t = 1
+| pose | départ `c0885ae` | cage | dense | seuil | séparation | arêtes |
+| --- | ---: | ---: | ---: | ---: | ---: | --- |
+| `blink_L` | 2,3937 | 0.2152 | 0.1804 | 0.20 | -0.0614 | 0.35–2.43 |
+| `blink_R` | 4,0046 | 0.1876 | 0.1860 | 0.20 | -0.0711 | 0.39–2.49 |
+| `mouth_close` | 0,9688 | 0.0920 | 0.0963 | 0.30 | -0.0036 | 0.45–1.52 |
 
-| pose | départ `c0885ae` | cage | dense | seuil | arêtes |
-| --- | ---: | ---: | ---: | ---: | --- |
-| `blink_L` | 2,3937 | 0.2752 | 0.2682 | 0.20 | 0.31–2.29 |
-| `blink_R` | 4,0046 | 0.2860 | 0.4779 | 0.20 | 0.39–2.35 |
-| `mouth_close` | 0,9688 | 0.2271 | 0.2394 | 0.30 | 0.52–1.40 |
+Retour au neutre **exact** et jour **monotone** sur les onze valeurs.
 
-Retour au neutre **exact** et jour **monotone** sur les onze valeurs, pour les
-trois poses. La voie dense est **mesurée**, plus aucun SKIP.
+## Ce que le réglage a appris, mesure par mesure
 
-## Une hypothèse posée, testée, et réfutée
+| configuration | jour blink_L | verdict |
+| --- | ---: | --- |
+| 12 itérations, amortissement 0,7 | 0,2752 mm | plafonne |
+| 400 itérations, amortissement 0,5 | **0,2152 mm** | converge |
+| 2 000 itérations | **2,71 mm** | **diverge** — 50 à 72 mm de course, arêtes à 70× |
+| garde de contact portée à 0,10 mm | 0,4195 mm | **remonte** — la garde doit rester petite devant la fente |
 
-J'avais écrit que le résidu venait de la discrétisation : deux arcs de 10 et 12
-sommets mesurés sur 64 échantillons uniformes. **C'est faux.** Mesuré aux
-sommets eux-mêmes, le jour vaut **0,3298 mm** contre **0,2752 mm** aux 64
-échantillons — donc *plus grand*, pas plus petit. Le résidu vient de mon champ
-de déformation, pas de la façon dont je le mesure.
+La divergence à 2 000 itérations a montré que **rien ne bornait la course**. Une
+borne a été ajoutée : aucun sommet ne peut se déplacer de plus que la demi-
+étendue de son ouverture.
 
-## Deux corrections réelles
+## Deux hypothèses posées et réfutées
 
-**L'itération sur le résidu.** Viser son vis-à-vis au neutre ne suffit pas : le
-jour est mesuré après déformation. Une boucle amortie mesure le résidu sur les
-échantillons et le redistribue. Les jours sont passés de 0,44/0,41/0,48 à
-**0,275/0,286/0,227 mm**.
+1. **« le résidu vient de la discrétisation en 64 échantillons »** — faux :
+   mesuré aux sommets, le jour vaut 0,3298 mm contre 0,2752 aux échantillons,
+   donc *plus grand* ;
+2. **« le résidu vient de l'écart de flèche des deux polylignes contre le
+   globe »** — faux aussi : faire viser aux deux marges un même point de contact
+   déjà écarté du globe n'a rien changé (0,2752 → 0,2768).
 
-**Le falloff propageait n'importe quoi.** Un sommet hors marge suivait la
-*moyenne* de toutes les graines à portée euclidienne — donc une direction qui
-n'était celle d'aucune marge. Dix arêtes **hors marge** dépassaient 2,0×. Chaque
-sommet suit maintenant la cible de la graine dont il descend **géodésiquement**,
-et le pire ratio est tombé de **2,90 à 2,35**. `mouth_close` rentre entièrement
-dans les bornes (0,52–1,40).
-
-## B.12 — whitelist d'arêtes
-
-`config/deformation-edge-whitelist.json` : 21 entrées, chacune avec pose, arête,
-ratio, zone et justification. Seules les arêtes **sur la marge de contact** sont
-justifiables — une marge se comprime en se fermant, c'est le geste lui-même.
-Les arêtes hors marge ne le sont pas et ont été corrigées à la source.
+La cause réelle est la **convergence** : chaque sommet sert environ six
+échantillons aux exigences contradictoires, et le système sur-déterminé demande
+des centaines d'itérations sous-relaxées.
 
 ## Ce qui bloque encore
 
-Le clignement laisse **0,27 mm** au lieu de 0,20, et la séparation signée
-descend à **−0,09 mm** au lieu de −0,05 : les deux marges se croisent
-légèrement quelque part. Ce n'est ni la mesure ni la discrétisation — c'est la
-répartition du déplacement le long de l'arc. Restent aussi B.13 (preuves à
-caméra fixe) et la décision du §12.
+`blink_L` à **0,2152 mm** au lieu de 0,20 sur la cage ; séparation signée à
+**−0,061** et **−0,071** au lieu de −0,05 ; arêtes minimales à **0,355** et
+**0,391** au lieu de 0,50 — toutes sur la marge, donc relevant de la whitelist
+B.12, mais elles n'y sont pas encore inscrites avec leur justification finale.
+
+Restent B.13 (preuves à caméra fixe) et la décision du §12.

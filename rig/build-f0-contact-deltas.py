@@ -36,8 +36,14 @@ wai = importlib.util.module_from_spec(_w); _w.loader.exec_module(wai)
 
 PORTEES_MM = {"fente_palpebrale.L": 9.0, "fente_palpebrale.R": 9.0,
               "fente_labiale": 12.0}
-GARDE_CONTACT_M = 0.00002    # 0,02 mm de separation minimale entre les marges
-AMORTISSEMENT = 0.7          # l'iteration converge sans depasser
+GARDE_CONTACT_M = 0.00002    # 0,02 mm. Mesure : a 0,10 mm la course augmente de
+                             # moitie et le jour REMONTE a 0,42 mm. La garde doit
+                             # rester tres petite devant la fente.
+AMORTISSEMENT = 0.5          # sous-relaxation : le systeme est sur-determine
+ITERATIONS = 400             # 12 iterations laissaient 0,275 mm ; 400 en laissent
+                             # 0,215. A 2000 la boucle DIVERGE (50 a 72 mm de
+                             # deplacement) : le systeme est sur-determine et rien
+                             # ne bornait la course. D'ou la borne ci-dessous.
 POSES = {"blink_L": ["fente_palpebrale.L"],
          "blink_R": ["fente_palpebrale.R"],
          "mouth_close": ["fente_labiale"]}
@@ -116,6 +122,8 @@ def deplacements_de_marge(co, P, cle, globes, M):
         return [c / L for c in cum] if L > 1e-12 else cum
 
     s_h, s_b = parametres(haut), parametres(bas)
+    tous = [co[i] for i in haut + bas]
+    course_max = 1.20 * max((a - b).length for a in tous for b in tous) * 0.5
 
     def point_a(chemin, s_list, s):
         for k in range(len(s_list) - 1):
@@ -149,7 +157,7 @@ def deplacements_de_marge(co, P, cle, globes, M):
     # echantillons uniformes. On mesure donc le residu SUR LES ECHANTILLONS, et
     # on le redistribue aux extremites de leurs segments. Ce n'est pas un
     # reglage : c'est la boucle que la mesure reclamait.
-    for _ in range(12):
+    for _ in range(ITERATIONS):
         w = [co[i] + out.get(i, Vector((0, 0, 0))) for i in range(len(co))]
         pire = 0.0
         corr = {}
@@ -159,6 +167,14 @@ def deplacements_de_marge(co, P, cle, globes, M):
             pb = w[paire["lower_segment"][0]].lerp(
                 w[paire["lower_segment"][1]], paire["lower_t"])
             contact = ph.lerp(pb, 0.75) if est_oeil else (ph + pb) * 0.5
+            # UN SEUL ecartement, applique au point de CONTACT, pas a chaque
+            # marge separement. Plaquer chaque sommet sur la sphere laissait les
+            # deux polylignes a des fleches differentes — 0,444 mm contre
+            # 0,212 — et cet ecart-la FAISAIT le jour residuel de 0,275 mm.
+            if est_oeil:
+                dd = contact - ctr
+                if dd.length < ray + 0.0004:
+                    contact = ctr + dd.normalized() * (ray + 0.0004)
             # On ne vise pas la coincidence exacte : deux marges qui visent le
             # MEME point se croisent des que l'iteration depasse, et la
             # separation signee devenait negative (-0,10 mm). Elles visent donc
@@ -175,17 +191,16 @@ def deplacements_de_marge(co, P, cle, globes, M):
                     if poids <= 1e-9: continue
                     a = corr.setdefault(i, [Vector((0, 0, 0)), 0.0])
                     a[0] += d * poids; a[1] += poids
-        if pire * MM < 0.05:
+        if pire * MM < 0.02:
             break
         for i, (somme, poids) in corr.items():
             if poids <= 1e-9: continue
             v = out.get(i, Vector((0, 0, 0))) + somme / poids
-            if est_oeil:
-                q = co[i] + v
-                dd = q - ctr
-                if dd.length < ray + 0.0004:
-                    q = ctr + dd.normalized() * (ray + 0.0004)
-                v = q - co[i]
+            # BORNE. Sans elle, l'iteration s'emballait : 50 a 72 mm de course
+            # sur une fente de 10 mm de haut, et des aretes a 70x. Aucun sommet
+            # ne peut se deplacer de plus que la hauteur de son ouverture.
+            if v.length > course_max:
+                v = v.normalized() * course_max
             out[i] = v
     return out
 
