@@ -1,0 +1,283 @@
+{
+  "schema_version": 1,
+  "commit_source": "90808dc37fee7cefae8a37492acc6f6fe3089306",
+  "blender": "5.1.2",
+  "blend": "source/FACE_F0_FOUNDATION_FINAL.blend",
+  "blend_sha256": "eb7fbccc863ab7723c56e65faacc09e98b1bc76dd6c5f9dc91b2981492b2a37a",
+  "espace": "WORLD",
+  "unites": "METERS",
+  "inventaire_objets": [
+    "GEO-head_animation_realistic",
+    "GEO-head_animation_realistic.iris.L",
+    "GEO-head_animation_realistic.iris.R",
+    "GEO-head_animation_realistic.sclera.L",
+    "GEO-head_animation_realistic.sclera.R"
+  ],
+  "empreintes": {
+    "signature_topologie": "a3476f7a09faad775129abd5eb0b8bc66c39b32a2a252404b0935d5109f4fd45",
+    "signature_neutre_basis": "235b15cd0f8aca4be7c8ef6600bd9734ac5862905b3e9178a6551b5b82d81986",
+    "signature_uv": "31694f627545bcff9b61ead0b5851c4a8acd5539a0a3f6e1fa6924b08f973424",
+    "signature_configuration": "0e7ca6d3db8e2453a5d6d652a00a78725baf636b285b5606a3ba6a9a7601b7d5",
+    "signature_inventaire_scene": "aa192618c04d4ce9244a8f4458fc227733cecb1be4153dce438d872adea0b00e"
+  },
+  "objet": "GEO-head_animation_realistic",
+  "topologie": {
+    "sha256": "b65d7f10895f3077b8dbe8d10f8830e79eddf7f7c06c853119c027857c0b2a63",
+    "vertices": 3242,
+    "edges": 6474,
+    "polygons": 3234,
+    "loops": 12948
+  },
+  "configuration_modificateurs": {
+    "pile": [
+      {
+        "nom": "Multires",
+        "type": "MULTIRES",
+        "levels": 1
+      }
+    ]
+  },
+  "multires_level": 1,
+  "sans_armature": true,
+  "sans_shape_key_permanente": true,
+  "artifacts": {
+    "author_input": {
+      "path": "reports/f0-final/author-input.json",
+      "sha256": "33e7e352c2261dba1be6b464cd9920ee5c2dcd84d1e57ea10196b69eeabd055a"
+    },
+    "mirror_map": {
+      "path": "reports/f0-final/carte-miroir.json",
+      "sha256": "9498553601d09fb50e99cda0de6f935c9572488d3b54ba5167be1fe8f867ddde"
+    },
+    "globe_fit": {
+      "path": "config/globe-fit.json",
+      "sha256": "8365f0c37fc55f093227647118188fa9d1e88e5d5fbd874064b84a41ffe8be8b"
+    },
+    "jaw_mask": {
+      "path": "config/jaw-mask.json",
+      "sha256": "3b248c734756fe800f25fac6a2751b017cff818ee90912143f645188e4b5b6dc"
+    },
+    "jaw_motion": {
+      "path": "config/jaw-motion.json",
+      "sha256": "618a4fc61672088ac800f704fb6177bf1acfc9291a6ef1c352a1ebc5c77d3799"
+    },
+    "anatomy_counts": {
+      "path": "reports/f0-final/anatomy-counts.json",
+      "sha256": "312186ef05b550b457ac5d229e72427cde0ca776d60d72b49a97646df72975af"
+    }
+  },
+  "deltas": {
+    "blink_L": {
+      "path": "reports/f0-final/deformations/blink_L.cage-delta.json",
+      "sha256": "dd6ece354915c232d0e64469e055e6656ce2f0343ef8284afd94a607d26fbade"
+    },
+    "blink_R": {
+      "path": "reports/f0-final/deformations/blink_R.cage-delta.json",
+      "sha256": "0d00b3bb1753f22005f0665fb124cb47fd8fda7b280fc63ff55def56f1bd3cd6"
+    },
+    "mouth_close": {
+      "path": "reports/f0-final/deformations/mouth_close.cage-delta.json",
+      "sha256": "db509f904363d37c1d014685009e4fadf1a975a21d05837ec34bf579b65bc0f6"
+    }
+  },
+  "decisions": {
+    "raccord_corps": {
+      "path": "reports/f0-final/DECISION_RACCORD_CORPS.md",
+      "sha256": "9c5392911e29cfcd8ad14a30e36f3895c6ba881d9d1215d72c06533d931b3667"
+    },
+    "ordre_modificateurs": {
+      "path": "reports/f0-final/DECISION_MODIFIER_ORDER.md",
+      "sha256": "2aca5ffeb365420ccfbedd0a32c9654848a57b0849eba9d9b7a9fb9098f3d8ce"
+    }
+  },
+  "resultats": {
+    "runtime_mesh": {
+      "path": "reports/f0-final/runtime-mesh.json",
+      "sha256": "dc8379225f6ad4778270d20f56b9a49c4ae915a5c8b5d4e8e6984c30a0dcd218",
+      "reussies": 7,
+      "total": 7,
+      "echecs": 0,
+      "sautees": 0
+    },
+    "gltf_roundtrip": {
+      "path": "experiments/gltf-spike/roundtrip.json",
+      "sha256": "08c91175cb9466e2214eebaacfd243f513f4ae5069875021ce495e8aeba5cd19",
+      "reussies": 14,
+      "total": 14,
+      "echecs": 0,
+      "sautees": 0
+    },
+    "gltf_validation": {
+      "path": "reports/f0-final/validation-glb.json",
+      "sha256": "10ea022ce901e8c272528380d61edbb28543268ca0a4d32a31cb997ed1d703ab",
+      "reussies": 15,
+      "total": 16,
+      "echecs": 0,
+      "sautees": 1
+    },
+    "gltf_runtime": {
+      "path": "reports/f0-final/runtime-glb.json",
+      "sha256": "530681ef4b24a08bb3a6f6eae661f36a591fec74f9fc91842d306ebd17cb0500",
+      "reussies": 8,
+      "total": 8,
+      "echecs": 0,
+      "sautees": 0
+    }
+  },
+  "anatomy_counts": {
+    "boucles_palpebrales": {
+      "L": 5,
+      "R": 5
+    },
+    "boucles_labiales": 3,
+    "triangles_region_bouche": 14,
+    "sommets_bord_narine": {
+      "L": 7,
+      "R": 8
+    },
+    "rayon_mm": 10.0,
+    "definitions": {
+      "boucles_palpebrales": "anneaux concentriques par arete depuis le bord cote peau, dont la distance moyenne a la marge est <= 10 mm",
+      "boucles_labiales": "idem autour de la fente labiale",
+      "triangles_region_bouche": "faces a 3 cotes de region fente_labiale",
+      "sommets_bord_narine": "sommets du bord de narine, cote peau"
+    }
+  },
+  "registre": {
+    "registre": "f0-output-contract",
+    "total": 16,
+    "reussies": 16,
+    "echecs": 0,
+    "sautees": 0,
+    "sondes": [
+      {
+        "id": "contrat.artefact.author_input",
+        "description": "l'artefact existe et se signe",
+        "configuration_connue": "reports/f0-final/author-input.json",
+        "expected": "present",
+        "measured": "present",
+        "status": "PASS"
+      },
+      {
+        "id": "contrat.artefact.mirror_map",
+        "description": "l'artefact existe et se signe",
+        "configuration_connue": "reports/f0-final/carte-miroir.json",
+        "expected": "present",
+        "measured": "present",
+        "status": "PASS"
+      },
+      {
+        "id": "contrat.artefact.globe_fit",
+        "description": "l'artefact existe et se signe",
+        "configuration_connue": "config/globe-fit.json",
+        "expected": "present",
+        "measured": "present",
+        "status": "PASS"
+      },
+      {
+        "id": "contrat.artefact.jaw_mask",
+        "description": "l'artefact existe et se signe",
+        "configuration_connue": "config/jaw-mask.json",
+        "expected": "present",
+        "measured": "present",
+        "status": "PASS"
+      },
+      {
+        "id": "contrat.artefact.jaw_motion",
+        "description": "l'artefact existe et se signe",
+        "configuration_connue": "config/jaw-motion.json",
+        "expected": "present",
+        "measured": "present",
+        "status": "PASS"
+      },
+      {
+        "id": "contrat.artefact.anatomy_counts",
+        "description": "l'artefact existe et se signe",
+        "configuration_connue": "reports/f0-final/anatomy-counts.json",
+        "expected": "present",
+        "measured": "present",
+        "status": "PASS"
+      },
+      {
+        "id": "contrat.artefact.blink_L",
+        "description": "l'artefact existe et se signe",
+        "configuration_connue": "reports/f0-final/deformations/blink_L.cage-delta.json",
+        "expected": "present",
+        "measured": "present",
+        "status": "PASS"
+      },
+      {
+        "id": "contrat.artefact.blink_R",
+        "description": "l'artefact existe et se signe",
+        "configuration_connue": "reports/f0-final/deformations/blink_R.cage-delta.json",
+        "expected": "present",
+        "measured": "present",
+        "status": "PASS"
+      },
+      {
+        "id": "contrat.artefact.mouth_close",
+        "description": "l'artefact existe et se signe",
+        "configuration_connue": "reports/f0-final/deformations/mouth_close.cage-delta.json",
+        "expected": "present",
+        "measured": "present",
+        "status": "PASS"
+      },
+      {
+        "id": "contrat.anatomy_sha",
+        "description": "les comptes portent la topologie du blend",
+        "configuration_connue": "reports/f0-final/anatomy-counts.json",
+        "expected": "b65d7f10895f3077b8dbe8d10f8830e79eddf7f7c06c853119c027857c0b2a63",
+        "measured": "b65d7f10895f3077b8dbe8d10f8830e79eddf7f7c06c853119c027857c0b2a63",
+        "status": "PASS"
+      },
+      {
+        "id": "contrat.sans_armature",
+        "description": "la fondation ne porte aucune armature",
+        "configuration_connue": "inventaire",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "contrat.sans_shape_key",
+        "description": "la fondation ne porte aucune shape key",
+        "configuration_connue": "GEO-head_animation_realistic",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "contrat.multires",
+        "description": "le Multires est present et non applique",
+        "configuration_connue": "pile de GEO-head_animation_realistic",
+        "expected": ">= 1",
+        "measured": 1,
+        "status": "PASS"
+      },
+      {
+        "id": "contrat.artefact.raccord_corps",
+        "description": "l'artefact existe et se signe",
+        "configuration_connue": "reports/f0-final/DECISION_RACCORD_CORPS.md",
+        "expected": "present",
+        "measured": "present",
+        "status": "PASS"
+      },
+      {
+        "id": "contrat.artefact.ordre_modificateurs",
+        "description": "l'artefact existe et se signe",
+        "configuration_connue": "reports/f0-final/DECISION_MODIFIER_ORDER.md",
+        "expected": "present",
+        "measured": "present",
+        "status": "PASS"
+      },
+      {
+        "id": "contrat.chemins_relatifs",
+        "description": "aucun chemin absolu utilisateur",
+        "configuration_connue": "tous les artefacts",
+        "expected": [],
+        "measured": [],
+        "status": "PASS"
+      }
+    ]
+  }
+}

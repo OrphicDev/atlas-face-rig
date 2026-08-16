@@ -1,0 +1,50 @@
+{
+  "contract": "source/FACE_F0_FOUNDATION_FINAL.output-contract.json",
+  "fautes": [],
+  "negatif": {
+    "cle_mutee": "artifacts.author_input",
+    "source": "reports/f0-final/author-input.json",
+    "octet_change": 70,
+    "fautes": [
+      [
+        "artifacts.author_input",
+        "SHA different",
+        "33e7e352c226",
+        "8f23169cddc0"
+      ]
+    ]
+  },
+  "registre": {
+    "registre": "check-output-contract",
+    "total": 3,
+    "reussies": 3,
+    "echecs": 0,
+    "sautees": 0,
+    "sondes": [
+      {
+        "id": "contrat.verification",
+        "description": "chaque artefact retrouve son SHA",
+        "configuration_connue": "12 artefacts declares",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "contrat.refus_sha_modifie",
+        "description": "un artefact dont un chiffre change est refuse",
+        "configuration_connue": "copie temporaire de reports/f0-final/author-input.json",
+        "expected": "refus sur artifacts.author_input",
+        "measured": "refuse",
+        "status": "PASS"
+      },
+      {
+        "id": "contrat.artefact_intact",
+        "description": "l'artefact versionne n'a pas ete touche",
+        "configuration_connue": "reports/f0-final/author-input.json",
+        "expected": "33e7e352c226",
+        "measured": "33e7e352c226",
+        "status": "PASS"
+      }
+    ]
+  }
+}

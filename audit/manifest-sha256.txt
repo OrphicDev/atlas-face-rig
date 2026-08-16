@@ -45,6 +45,7 @@ b6739035dc2f85b0865af935b850b1a9989039997e2dc195140d3293962d8119  ./experiments/
 94f5cbacc3359a19868cfcbef2b26e62433bdc71de430bd5f5ca64fa5ce79448  ./exports/atlas-face-spike.glb
 ce4df937b1299354bfc264adfb60275de647b94d6397120bda6ad1428a9b9e81  ./handoffs/BOOTSTRAP_CHAT_3_FACE.md
 071c1c343c091cc3923b4cbfef0d84e6df88676add2abf2988ab2b9f7afe1611  ./handoffs/HANDOFF_FACE_NEXT.md
+87fc644e0ecbbbac1200266a05eca10fc6030859243f6af2318f44c8d63b7819  ./handoffs/TUTO_CHAT_3_COMPLET.md
 422ed51e3d006788b5ceca5761c370702f452cffbba472d4c2314e1f9728223f  ./renders/.gitkeep
 f9c7522eecd55b1d510b4262440707c278c89905c6a8f5dae00373e9e5eab0e0  ./renders/f0-correction/coupe_sagittale_bouche.png
 ebf5a789e20bdf04513f62644deb22d83878e98f1de388b276c477d762958f75  ./renders/f0-correction/coupe_sagittale_generale.png
@@ -95,6 +96,7 @@ faedac4b90acef0394985e376839291054490cf430ae3929a2e2f757ac3d572f  ./reports/f0-c
 50b0fc0b67931100f4abb85a78268fcc0b03b335a9710990a4e8cecbc20d9d76  ./reports/f0-final/RAPPORT_F0B_EN_COURS.md
 c61f2f879d504d92037dd71878d911884136884543058148e0dde4bdef75f757  ./reports/f0-final/RAPPORT_F0C.md
 ac03b80532e62e99060f2a54c04127a2fed468c9e58f0c84a1982371ff347c23  ./reports/f0-final/RAPPORT_F0E.md
+312186ef05b550b457ac5d229e72427cde0ca776d60d72b49a97646df72975af  ./reports/f0-final/anatomy-counts.json
 33e7e352c2261dba1be6b464cd9920ee5c2dcd84d1e57ea10196b69eeabd055a  ./reports/f0-final/author-input.json
 bf49024226ff860a110f3b9e310071593be6d7d894b9da75617228de2bcb159b  ./reports/f0-final/body-transfer-map.json
 2ba53f1f09a21f593fe0e003ca4b706613ea1ac515a67ffbc24bf08fbbb484c4  ./reports/f0-final/body-transfer.json
@@ -102,12 +104,14 @@ bf49024226ff860a110f3b9e310071593be6d7d894b9da75617228de2bcb159b  ./reports/f0-f
 3e7980ef203fcb7e64de4ac61ca3cd7174adde97a62ec6c426ee256fbe23d709  ./reports/f0-final/contact-candidates.json
 013cbb03b2078f6e796f7154afcea2c7a3057b3dd6012dc6b42971a2522ba7fc  ./reports/f0-final/contact-render-settings.json
 eadffa956c199e408e1c62cb6ea2858f014dd3fe5c9635a2f1d031518dd5b0aa  ./reports/f0-final/contacts-v3.json
+e2a6ccf1d0eaeb0b8fade067defd46a9225cde183c418f72dfa73f1f6649c8ea  ./reports/f0-final/contract-check.json
 4313490ec957285776a67825ea2c0f5a0e141e2ceb0970101508753d7a1e4eee  ./reports/f0-final/correspondances-marges.json
 dd6ece354915c232d0e64469e055e6656ce2f0343ef8284afd94a607d26fbade  ./reports/f0-final/deformations/blink_L.cage-delta.json
 0d00b3bb1753f22005f0665fb124cb47fd8fda7b280fc63ff55def56f1bd3cd6  ./reports/f0-final/deformations/blink_R.cage-delta.json
 9b7ddfe640bb12acb63c82ef8255918bc28f4750a72b4112d8d3500459a23ced  ./reports/f0-final/deformations/jaw-mask.json
 4d0362776c2413be0802fa4fcaa69f27223010d8211cb7cc51813bba9a9f90f9  ./reports/f0-final/deformations/jaw-mask.npy
 db509f904363d37c1d014685009e4fadf1a975a21d05837ec34bf579b65bc0f6  ./reports/f0-final/deformations/mouth_close.cage-delta.json
+f5482f5b1b031580c40478eff9d48f4a3529037f6ae9b51c2c5bfa10bbc0751c  ./reports/f0-final/foundation.json
 6d2392670ed66fe2ebf81c9e11ca260311828b704faaa70ef86c47d1548d86e9  ./reports/f0-final/head-body-fit.json
 df2d09e692d3e19e6fa252013b1ea8952cdc667e86d2661ec8e2f41f9a42c1d9  ./reports/f0-final/jaw-motion.json
 6da5c032de4dfb697caa83b9d4b293d776edcf801e768581b3328c827688f4dc  ./reports/f0-final/jaw-prototype.json
@@ -140,14 +144,18 @@ ce30632def20fed4dcb54feb9c80835636d831a2ee207481032c0120ce134592  ./reports/repr
 422ed51e3d006788b5ceca5761c370702f452cffbba472d4c2314e1f9728223f  ./rig/.gitkeep
 ccf81def894f7e981609febeec8657b9f552bf49e866cc9ec7b544f3eb714026  ./rig/build-body-transfer.py
 143be1d19c78568e1dba660b0bd489cb920769c65cd62ae569e94adcaf2e464f  ./rig/build-f0-contact-deltas.py
+6bd7198c6b2137e752a60c8fe4020bc31c06fe49403d562dd48dbc8f9145332c  ./rig/build-f0-foundation.py
 bf0f155f02a8ace2856734e3ebcc2a4c7515fa6ad5e00fa366da9e8a993ebf18  ./rig/build-f0-jaw-prototype.py
 d68ef4ce97d1f589ff1c63237b9918931747d25dc98a7d9db7be867c51d09b10  ./rig/build-jaw-mask.py
 4058c15201be6c7a3272ef4d8e73a1924dbcd0a66119de2bba186ab562b3bd19  ./rig/build-runtime-mesh.py
 1b196bbf101f8977ce9b762fcfa854d2ed01a8d51dedfeb07637974e5bd0bad4  ./rig/construire-face-base.py
 6f00f15136ae35922a89b626e99376aec3a29864d541f3ef2440f210f516231a  ./rig/fit-head-to-body.py
 03d0eff60a63039d888ef349057a5c3c03957d354f63ad51d38ddfa41ee6459e  ./rig/sceller-face-base.py
+cbab1599a200d14417889ad84d56682a99f893ef9b57e880ae508d32a096dca1  ./rig/write-f0-output-contract.py
 422ed51e3d006788b5ceca5761c370702f452cffbba472d4c2314e1f9728223f  ./source/.gitkeep
 cc9e55a47b1496fa81ed42deee6ee3a6f498c309d5b86610e5cd2407831f2bd8  ./source/FACE_BASE_LOCKED.blend
+eb7fbccc863ab7723c56e65faacc09e98b1bc76dd6c5f9dc91b2981492b2a37a  ./source/FACE_F0_FOUNDATION_FINAL.blend
+bc598d91c9156c5d2bb4553a365a67a6ddad9769a531986e4edef4997f1399f5  ./source/FACE_F0_FOUNDATION_FINAL.output-contract.json
 174d02a2c6acad06be3752239891a9193d0c2fbdf26c96a8429ff3bffe255af7  ./tests/anatomie.py
 fc870aa51ef81750f7ead0983092beca4b27611a6e7e595f3a6565ffbdb3ec84  ./tests/anatomie_globe.py
 bfa9145f45815ea2332f0fd281f88aab18a076409ea1d5613e19e3beb255bc9c  ./tests/anatomie_marges.py
@@ -168,6 +176,7 @@ d116ee1caa497039d47ac13627e1886c2c1b2d8b7a9f59a35682c81ef0ad5b57  ./tests/f0-mul
 8ac2181e4750ca0f787a4ae9f179171adc2b06da5faf072ce68b96df18688429  ./tests/f0-raccord-corps.py
 a6b7259d10c2e84d3580108839a4adf0f1ee68fcc7bfa4b56719d6c067b49063  ./tests/inspecter-asset-corps.py
 fdccfe8057b040e1b24302f170d2282af425a089d0b937d4bf5fbd6e8a5ee5da  ./tests/inspecter-asset-tetes.py
+cdbb50436e13c4a6d649c7cc4ec50baec784273149bfcf0c9d07a55045e75bd8  ./tests/measure-f0-anatomy-counts.py
 969943cc6f4c9916457e59595b9b890c46357d924205b0b675913f612c86767c  ./tests/rendus-neutre.py
 431653c280ffcdaa8fb9755ce22f37557915afd8db2b7aadd003c5f8bb53134b  ./tests/run-f0-final.py
 0d290e0fa2ed8aef656338234a072fdf1ddb49023623fc7ffc265202a097fe47  ./tests/runtime-glb.py
@@ -177,6 +186,7 @@ d164ed0ae1d64f19e179c1310eb5195eedda1cf2e9c3fa8c3f7d7940cbd78c0a  ./tests/verrou
 def058cef245d6c708b4bd0a6119ac438b719e91dc3e3f30af5e8f80e311e2f5  ./tests/verrou-topologie.json
 b0ec10f5f6fb396677276cd46bfe5c2edc906f25a37cb74e2033c2ecc3739632  ./tests/verrou-topologie.py
 0e6175c427366d270704beea6b96a7268a14083cacb5d8ae6d3824cc1ae38b46  ./tools/build-mirror-map.py
+94444c32c8279292e4445c95ce158ba0f1d7c618dfeafae9a3c949f12aaa3d58  ./tools/check-f0-output-contract.py
 1f3bb48920e0a89c6c2c394ca454a59188e1905850f95f820885c8f200aeda96  ./tools/compare-modifier-order.py
 5c7f985d38e7a247f4f0fb088bb18851fc1491beb063a8d067ffb34ba12d0552  ./tools/f0-render-contacts.py
 348bff26591cb7ecd56dc40b54b5545b2bcb629ad949e938b8f77c96ff58c1b5  ./tools/f0-show-contact-candidates.py

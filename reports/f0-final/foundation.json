@@ -1,0 +1,109 @@
+{
+  "source": "source/FACE_BASE_LOCKED.blend",
+  "source_sha256": "cc9e55a47b1496fa81ed42deee6ee3a6f498c309d5b86610e5cd2407831f2bd8",
+  "sortie": "source/FACE_F0_FOUNDATION_FINAL.blend",
+  "sortie_sha256": "eb7fbccc863ab7723c56e65faacc09e98b1bc76dd6c5f9dc91b2981492b2a37a",
+  "temporaires_retires": [],
+  "inventaire": [
+    "GEO-head_animation_realistic",
+    "GEO-head_animation_realistic.iris.L",
+    "GEO-head_animation_realistic.iris.R",
+    "GEO-head_animation_realistic.sclera.L",
+    "GEO-head_animation_realistic.sclera.R"
+  ],
+  "registre": {
+    "registre": "f0-foundation",
+    "total": 8,
+    "reussies": 8,
+    "echecs": 0,
+    "sautees": 0,
+    "sondes": [
+      {
+        "id": "fondation.source_signee",
+        "description": "le blend d'auteur porte bien son SHA",
+        "configuration_connue": "source/FACE_BASE_LOCKED.blend",
+        "expected": "cc9e55a47b1496fa81ed42deee6ee3a6f498c309d5b86610e5cd2407831f2bd8",
+        "measured": "cc9e55a47b1496fa81ed42deee6ee3a6f498c309d5b86610e5cd2407831f2bd8",
+        "status": "PASS"
+      },
+      {
+        "id": "fondation.temporaires_retires",
+        "description": "aucun objet TMP_ ou DBG_ ne reste",
+        "configuration_connue": "suppression nominative",
+        "expected": [],
+        "measured": [],
+        "status": "PASS"
+      },
+      {
+        "id": "fondation.aucune_armature",
+        "description": "aucune armature dans la fondation",
+        "configuration_connue": "inventaire",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "fondation.aucune_shape_key",
+        "description": "aucune shape key permanente",
+        "configuration_connue": "objet GEO-head_animation_realistic",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "fondation.multires",
+        "description": "le Multires est present et NON applique",
+        "configuration_connue": "pile de GEO-head_animation_realistic",
+        "expected": "1 Multires niveau >= 1",
+        "measured": "1 Multires niveau 1",
+        "status": "PASS"
+      },
+      {
+        "id": "fondation.meshes_oculaires",
+        "description": "les quatre meshes oculaires sont la",
+        "configuration_connue": "4 attendus",
+        "expected": [
+          "GEO-head_animation_realistic.iris.L",
+          "GEO-head_animation_realistic.iris.R",
+          "GEO-head_animation_realistic.sclera.L",
+          "GEO-head_animation_realistic.sclera.R"
+        ],
+        "measured": [
+          "GEO-head_animation_realistic.iris.L",
+          "GEO-head_animation_realistic.iris.R",
+          "GEO-head_animation_realistic.sclera.L",
+          "GEO-head_animation_realistic.sclera.R"
+        ],
+        "status": "PASS"
+      },
+      {
+        "id": "fondation.cinq_meshes",
+        "description": "exactement les cinq meshes attendus",
+        "configuration_connue": "inventaire des meshes",
+        "expected": [
+          "GEO-head_animation_realistic",
+          "GEO-head_animation_realistic.iris.L",
+          "GEO-head_animation_realistic.iris.R",
+          "GEO-head_animation_realistic.sclera.L",
+          "GEO-head_animation_realistic.sclera.R"
+        ],
+        "measured": [
+          "GEO-head_animation_realistic",
+          "GEO-head_animation_realistic.iris.L",
+          "GEO-head_animation_realistic.iris.R",
+          "GEO-head_animation_realistic.sclera.L",
+          "GEO-head_animation_realistic.sclera.R"
+        ],
+        "status": "PASS"
+      },
+      {
+        "id": "fondation.topologie",
+        "description": "la topologie est celle du contrat",
+        "configuration_connue": "GEO-head_animation_realistic",
+        "expected": "b65d7f10895f3077b8dbe8d10f8830e79eddf7f7c06c853119c027857c0b2a63",
+        "measured": "b65d7f10895f3077b8dbe8d10f8830e79eddf7f7c06c853119c027857c0b2a63",
+        "status": "PASS"
+      }
+    ]
+  }
+}

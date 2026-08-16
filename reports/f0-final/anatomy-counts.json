@@ -1,0 +1,312 @@
+{
+  "schema_version": 1,
+  "mesh": "GEO-head_animation_realistic",
+  "topology_sha256": "b65d7f10895f3077b8dbe8d10f8830e79eddf7f7c06c853119c027857c0b2a63",
+  "source_marges": "reports/f0-final/correspondances-marges.json",
+  "source_audit": "reports/f0/audit-topologie.json",
+  "rayon_mm": 10.0,
+  "definitions": {
+    "boucles_palpebrales": "anneaux concentriques par arete depuis le bord cote peau, dont la distance moyenne a la marge est <= 10 mm",
+    "boucles_labiales": "idem autour de la fente labiale",
+    "triangles_region_bouche": "faces a 3 cotes de region fente_labiale",
+    "sommets_bord_narine": "sommets du bord de narine, cote peau"
+  },
+  "boucles_palpebrales": {
+    "L": 5,
+    "R": 5
+  },
+  "sommets_bord_narine": {
+    "L": 7,
+    "R": 8
+  },
+  "profils": {
+    "fente_palpebrale.L": {
+      "anneau_0_sommets": 20,
+      "profil": [
+        {
+          "anneau": 1,
+          "sommets": 20,
+          "distance_moy_mm": 1.59
+        },
+        {
+          "anneau": 2,
+          "sommets": 22,
+          "distance_moy_mm": 2.96
+        },
+        {
+          "anneau": 3,
+          "sommets": 25,
+          "distance_moy_mm": 4.16
+        },
+        {
+          "anneau": 4,
+          "sommets": 26,
+          "distance_moy_mm": 5.48
+        },
+        {
+          "anneau": 5,
+          "sommets": 26,
+          "distance_moy_mm": 7.65
+        },
+        {
+          "anneau": 6,
+          "sommets": 25,
+          "distance_moy_mm": 10.9
+        },
+        {
+          "anneau": 7,
+          "sommets": 27,
+          "distance_moy_mm": 14.63
+        },
+        {
+          "anneau": 8,
+          "sommets": 29,
+          "distance_moy_mm": 19.11
+        },
+        {
+          "anneau": 9,
+          "sommets": 31,
+          "distance_moy_mm": 24.12
+        },
+        {
+          "anneau": 10,
+          "sommets": 34,
+          "distance_moy_mm": 29.42
+        },
+        {
+          "anneau": 11,
+          "sommets": 38,
+          "distance_moy_mm": 34.35
+        },
+        {
+          "anneau": 12,
+          "sommets": 43,
+          "distance_moy_mm": 40.1
+        }
+      ]
+    },
+    "fente_palpebrale.R": {
+      "anneau_0_sommets": 20,
+      "profil": [
+        {
+          "anneau": 1,
+          "sommets": 21,
+          "distance_moy_mm": 1.64
+        },
+        {
+          "anneau": 2,
+          "sommets": 23,
+          "distance_moy_mm": 3.0
+        },
+        {
+          "anneau": 3,
+          "sommets": 25,
+          "distance_moy_mm": 4.14
+        },
+        {
+          "anneau": 4,
+          "sommets": 26,
+          "distance_moy_mm": 5.49
+        },
+        {
+          "anneau": 5,
+          "sommets": 25,
+          "distance_moy_mm": 7.92
+        },
+        {
+          "anneau": 6,
+          "sommets": 25,
+          "distance_moy_mm": 11.24
+        },
+        {
+          "anneau": 7,
+          "sommets": 26,
+          "distance_moy_mm": 15.3
+        },
+        {
+          "anneau": 8,
+          "sommets": 28,
+          "distance_moy_mm": 19.73
+        },
+        {
+          "anneau": 9,
+          "sommets": 30,
+          "distance_moy_mm": 24.66
+        },
+        {
+          "anneau": 10,
+          "sommets": 34,
+          "distance_moy_mm": 29.7
+        },
+        {
+          "anneau": 11,
+          "sommets": 38,
+          "distance_moy_mm": 34.62
+        },
+        {
+          "anneau": 12,
+          "sommets": 45,
+          "distance_moy_mm": 39.96
+        }
+      ]
+    },
+    "fente_labiale": {
+      "anneau_0_sommets": 38,
+      "profil": [
+        {
+          "anneau": 1,
+          "sommets": 38,
+          "distance_moy_mm": 2.77
+        },
+        {
+          "anneau": 2,
+          "sommets": 38,
+          "distance_moy_mm": 5.58
+        },
+        {
+          "anneau": 3,
+          "sommets": 38,
+          "distance_moy_mm": 8.69
+        },
+        {
+          "anneau": 4,
+          "sommets": 38,
+          "distance_moy_mm": 12.16
+        },
+        {
+          "anneau": 5,
+          "sommets": 38,
+          "distance_moy_mm": 16.49
+        },
+        {
+          "anneau": 6,
+          "sommets": 40,
+          "distance_moy_mm": 21.34
+        },
+        {
+          "anneau": 7,
+          "sommets": 48,
+          "distance_moy_mm": 26.02
+        },
+        {
+          "anneau": 8,
+          "sommets": 58,
+          "distance_moy_mm": 30.22
+        },
+        {
+          "anneau": 9,
+          "sommets": 61,
+          "distance_moy_mm": 33.89
+        },
+        {
+          "anneau": 10,
+          "sommets": 60,
+          "distance_moy_mm": 38.27
+        },
+        {
+          "anneau": 11,
+          "sommets": 60,
+          "distance_moy_mm": 42.9
+        },
+        {
+          "anneau": 12,
+          "sommets": 56,
+          "distance_moy_mm": 48.59
+        }
+      ]
+    }
+  },
+  "boucles_labiales": 3,
+  "ecarts_profil": [],
+  "triangles_region_bouche": 14,
+  "symetrie_palpebrale": true,
+  "registre": {
+    "registre": "anatomy-counts",
+    "total": 10,
+    "reussies": 10,
+    "echecs": 0,
+    "sautees": 0,
+    "sondes": [
+      {
+        "id": "anatomie.sha_marges",
+        "description": "les marges decrivent CETTE topologie",
+        "configuration_connue": "correspondances-marges.json",
+        "expected": "b65d7f10895f3077b8dbe8d10f8830e79eddf7f7c06c853119c027857c0b2a63",
+        "measured": "b65d7f10895f3077b8dbe8d10f8830e79eddf7f7c06c853119c027857c0b2a63",
+        "status": "PASS"
+      },
+      {
+        "id": "anatomie.regions_definies",
+        "description": "chaque region necessaire est definie",
+        "configuration_connue": "audit de topologie",
+        "expected": [],
+        "measured": [],
+        "status": "PASS"
+      },
+      {
+        "id": "anatomie.peau_exterieure",
+        "description": "le classement peau/muqueuse retrouve celui de l'audit",
+        "configuration_connue": "48 rayons, seuil 0.15",
+        "expected": 2458,
+        "measured": 2458,
+        "status": "PASS"
+      },
+      {
+        "id": "anatomie.boucles_palpebrales.L",
+        "description": "anneaux a <= 10 mm de la fente palpebrale",
+        "configuration_connue": "20 sommets de bord cote peau",
+        "expected": ">= 1",
+        "measured": 5,
+        "status": "PASS"
+      },
+      {
+        "id": "anatomie.boucles_palpebrales.R",
+        "description": "anneaux a <= 10 mm de la fente palpebrale",
+        "configuration_connue": "20 sommets de bord cote peau",
+        "expected": ">= 1",
+        "measured": 5,
+        "status": "PASS"
+      },
+      {
+        "id": "anatomie.boucles_labiales",
+        "description": "anneaux a <= 10 mm de la fente labiale",
+        "configuration_connue": "38 sommets de bord cote peau",
+        "expected": ">= 1",
+        "measured": 3,
+        "status": "PASS"
+      },
+      {
+        "id": "anatomie.profil_reproduit",
+        "description": "le profil recompute retrouve celui de l'audit",
+        "configuration_connue": "meme topologie, sonde a reponse connue",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "anatomie.triangles_bouche",
+        "description": "triangles de la region bouche",
+        "configuration_connue": "18 triangles dans le maillage",
+        "expected": ">= 0",
+        "measured": 14,
+        "status": "PASS"
+      },
+      {
+        "id": "anatomie.bord_narine.L",
+        "description": "sommets de bord de narine",
+        "configuration_connue": "cote peau",
+        "expected": ">= 1",
+        "measured": 7,
+        "status": "PASS"
+      },
+      {
+        "id": "anatomie.bord_narine.R",
+        "description": "sommets de bord de narine",
+        "configuration_connue": "cote peau",
+        "expected": ">= 1",
+        "measured": 8,
+        "status": "PASS"
+      }
+    ]
+  }
+}
