@@ -95,18 +95,25 @@ reg.exige("runtime.pas_de_multires", "le runtime ne porte plus de Multires",
 R["sommets_sans_poids"] = sans_poids
 # Le blend runtime ne doit contenir QUE ce qui part a l'export. Garder la cage
 # et les yeux dedans faisait exporter deux meshes au lieu d'un.
-# `parent` seul COMPOSE la matrice locale avec celle du parent : la matrice
-# locale valait deja celle de la tete, l'armature est au meme endroit, et le
-# maillage se retrouvait a exactement le double — 1,46 m de son propre rig.
-# La matrice d'inverse de parent annule cette composition.
+# AUCUN PARENTAGE. Deux raisons, et la seconde est de la specification.
+#
+# 1. `parent` seul COMPOSE la matrice locale avec celle du parent : la matrice
+#    locale valait deja celle de la tete, l'armature est au meme endroit, et le
+#    maillage se retrouvait a exactement le double — 1,46 m de son propre rig.
+# 2. Le validateur Khronos le dit sans detour : NODE_SKINNED_MESH_NON_ROOT,
+#    « les transformations parentes n'affecteront pas un mesh peau ». La
+#    specification glTF IGNORE la transformation du noeud d'un mesh peau. Le
+#    parentage n'apportait donc rien et n'exposait qu'un piege.
+#
+# La deformation vient du modificateur d'armature, pas du lien de parente.
 avant = run.matrix_world.copy()
-run.parent = rig
-run.matrix_parent_inverse = rig.matrix_world.inverted()
 bpy.context.view_layer.update()
 derive = (run.matrix_world.translation - avant.translation).length
-reg.exige("runtime.parentage", "le parentage ne deplace pas le maillage",
-          "translation avant/apres parent = %s" % rig.name, "<= 1e-6 m",
-          round(derive, 9), derive <= 1e-6, tolerance=1e-6)
+reg.exige("runtime.sans_parent", "le maillage peau n'est parente a rien",
+          "exigence du validateur Khronos", None, run.parent, run.parent is None)
+reg.exige("runtime.pas_de_derive", "rien n'a deplace le maillage",
+          "translation avant/apres", "<= 1e-6 m", round(derive, 9),
+          derive <= 1e-6, tolerance=1e-6)
 ecart_tete = (run.matrix_world.translation - tete.matrix_world.translation).length
 reg.exige("runtime.au_meme_endroit", "le runtime est la ou est la tete d'auteur",
           "translations comparees", "<= 1e-6 m", round(ecart_tete, 9),

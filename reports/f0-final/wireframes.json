@@ -77,13 +77,13 @@
       ],
       "ortho_scale": 0.075,
       "delta": "blink_L",
-      "delta_sha": "ce461a5c",
+      "delta_sha": "5467d6d2",
       "sommets_deplaces": 164,
-      "px_fil": 139841,
-      "part_fil": 0.13984,
+      "px_fil": 139850,
+      "part_fil": 0.13985,
       "epaisseur_fil_mm": 0.2274,
-      "espacement_aretes_mm": 3.7321,
-      "legende": "Blender 5.1.2 | paupiere_L_fermee | SHA b65d7f10 | delta ce461a5c | fil 0.23 mm"
+      "espacement_aretes_mm": 3.732,
+      "legende": "Blender 5.1.2 | paupiere_L_fermee | SHA b65d7f10 | delta 5467d6d2 | fil 0.23 mm"
     },
     {
       "nom": "paupiere_R_neutre",
@@ -155,13 +155,13 @@
       ],
       "ortho_scale": 0.075,
       "delta": "blink_R",
-      "delta_sha": "f2bb7e29",
+      "delta_sha": "478ac799",
       "sommets_deplaces": 166,
-      "px_fil": 140108,
-      "part_fil": 0.14011,
+      "px_fil": 140068,
+      "part_fil": 0.14007,
       "epaisseur_fil_mm": 0.2274,
-      "espacement_aretes_mm": 3.7319,
-      "legende": "Blender 5.1.2 | paupiere_R_fermee | SHA b65d7f10 | delta f2bb7e29 | fil 0.23 mm"
+      "espacement_aretes_mm": 3.7318,
+      "legende": "Blender 5.1.2 | paupiere_R_fermee | SHA b65d7f10 | delta 478ac799 | fil 0.23 mm"
     },
     {
       "nom": "levres_neutre",
@@ -233,13 +233,13 @@
       ],
       "ortho_scale": 0.085,
       "delta": "mouth_close",
-      "delta_sha": "c50929d8",
+      "delta_sha": "a816d26e",
       "sommets_deplaces": 271,
-      "px_fil": 157273,
-      "part_fil": 0.15727,
+      "px_fil": 157563,
+      "part_fil": 0.15756,
       "epaisseur_fil_mm": 0.2575,
-      "espacement_aretes_mm": 3.7283,
-      "legende": "Blender 5.1.2 | levres_fermee | SHA b65d7f10 | delta c50929d8 | fil 0.26 mm"
+      "espacement_aretes_mm": 3.7284,
+      "legende": "Blender 5.1.2 | levres_fermee | SHA b65d7f10 | delta a816d26e | fil 0.26 mm"
     },
     {
       "nom": "narine_L",
@@ -692,7 +692,7 @@
         "description": "la pose deplace reellement la surface",
         "configuration_connue": "contre paupiere_L_neutre",
         "expected": ">= 0,5 mm",
-        "measured": 8.5034,
+        "measured": 8.483,
         "status": "PASS"
       },
       {
@@ -716,7 +716,7 @@
         "description": "la pose deplace reellement la surface",
         "configuration_connue": "contre paupiere_R_neutre",
         "expected": ">= 0,5 mm",
-        "measured": 8.3645,
+        "measured": 8.3252,
         "status": "PASS"
       },
       {
@@ -740,7 +740,7 @@
         "description": "la pose deplace reellement la surface",
         "configuration_connue": "contre levres_neutre",
         "expected": ">= 0,5 mm",
-        "measured": 1.8196,
+        "measured": 1.8415,
         "status": "PASS"
       },
       {
@@ -748,7 +748,7 @@
         "description": "le fil est visible sans noyer l'image",
         "configuration_connue": "1000000 px",
         "expected": "entre 2 % et 45 % de fil",
-        "measured": "15.73 %",
+        "measured": "15.76 %",
         "status": "PASS"
       },
       {

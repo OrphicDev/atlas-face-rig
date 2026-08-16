@@ -109,15 +109,43 @@ def borne(J, i):
 
 
 def khronos(chemin, exe):
-    exe = exe or shutil.which("gltf-validator") or shutil.which("gltf_validator")
+    """Le validateur officiel. Trois formes acceptees, dans cet ordre :
+
+      * un appelant JavaScript (`.js`) execute par node — c'est la forme du
+        paquet npm officiel, qui est une BIBLIOTHEQUE et non un binaire ;
+      * un executable `gltf-validator` dans le PATH ;
+      * rien, et la sonde est publiee SAUTEE avec sa raison.
+
+    La sortie du validateur est rendue telle quelle : elle n'est jamais
+    reinterpretee en chemin.
+    """
+    exe = exe or os.environ.get("GLTF_VALIDATOR_CLI")
     if not exe:
-        return None, ("validateur Khronos absent de la machine : ni "
-                      "`gltf-validator` dans le PATH ni --khronos fourni")
+        defaut = os.path.join(RACINE, "tools", "khronos", "valider.js")
+        if os.path.isfile(defaut) and shutil.which("node"):
+            exe = defaut
+    if not exe:
+        exe = shutil.which("gltf-validator") or shutil.which("gltf_validator")
+    if not exe:
+        return None, ("validateur Khronos absent de la machine : ni appelant "
+                      "node, ni `gltf-validator` dans le PATH, ni --khronos")
+    if exe.endswith(".js"):
+        if not shutil.which("node"):
+            return None, "node est absent : l'appelant %s ne peut pas tourner" % exe
+        argv = ["node", exe, chemin]
+    else:
+        argv = [exe, "-o", "-", "-p", chemin]
+    env = dict(os.environ)
+    env.setdefault("GLTF_VALIDATOR_PATH", os.environ.get(
+        "GLTF_VALIDATOR_PATH", "/tmp/gltfval/node_modules/gltf-validator"))
     try:
-        p = subprocess.run([exe, "-o", "-", "-p", chemin],
-                           capture_output=True, text=True, timeout=300)
+        p = subprocess.run(argv, capture_output=True, text=True, timeout=300,
+                           env=env)
     except Exception as e:
         return None, "le validateur a echoue a demarrer : %r" % (e,)
+    if p.returncode != 0 and not p.stdout.strip():
+        return None, "le validateur a rendu %d : %s" % (p.returncode,
+                                                        p.stderr[-200:])
     try:
         return json.loads(p.stdout or "{}"), None
     except json.JSONDecodeError:
@@ -368,9 +396,18 @@ if __name__ == "__main__":
                    "le validateur officiel Khronos ne signale aucune erreur",
                    raison)
     else:
-        n = kh.get("issues", {}).get("numErrors", -1)
+        i = kh.get("issues", {})
+        n = i.get("numErrors", -1)
         reg.exige("khronos.validator", "aucune erreur signalee par Khronos",
-                  "gltf-validator", 0, n, n == 0)
+                  "validateur %s" % kh.get("validatorVersion", "?"), 0, n, n == 0)
+        # Les avertissements ne sont pas des erreurs, mais les taire serait
+        # publier « zero erreur » en cachant ce que l'outil dit vraiment.
+        reg.exige("khronos.avertissements",
+                  "aucun avertissement du validateur officiel",
+                  "; ".join("%s %s" % (m.get("code"), m.get("pointer"))
+                            for m in i.get("messages", [])
+                            if m.get("severity") == 1) or "aucun",
+                  0, i.get("numWarnings", -1), i.get("numWarnings") == 0)
     R["khronos"] = kh if kh is not None else {"saute": raison}
     R["fichier"] = os.path.relpath(chemin, RACINE)
     R["registre"] = reg.bilan()

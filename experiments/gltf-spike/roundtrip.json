@@ -30,8 +30,8 @@
     "nodes": [
       "TMP_jaw",
       "TMP_head",
-      "GEO_face_runtime",
-      "TMP_F0_JAW_RIG"
+      "TMP_F0_JAW_RIG",
+      "GEO_face_runtime"
     ],
     "skins": 1,
     "animations": [

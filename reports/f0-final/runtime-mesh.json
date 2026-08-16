@@ -33,8 +33,8 @@
   ],
   "registre": {
     "registre": "build-runtime-mesh",
-    "total": 7,
-    "reussies": 7,
+    "total": 8,
+    "reussies": 8,
     "echecs": 0,
     "sautees": 0,
     "sondes": [
@@ -79,9 +79,17 @@
         "status": "PASS"
       },
       {
-        "id": "runtime.parentage",
-        "description": "le parentage ne deplace pas le maillage",
-        "configuration_connue": "translation avant/apres parent = TMP_F0_JAW_RIG",
+        "id": "runtime.sans_parent",
+        "description": "le maillage peau n'est parente a rien",
+        "configuration_connue": "exigence du validateur Khronos",
+        "expected": null,
+        "measured": null,
+        "status": "PASS"
+      },
+      {
+        "id": "runtime.pas_de_derive",
+        "description": "rien n'a deplace le maillage",
+        "configuration_connue": "translation avant/apres",
         "expected": "<= 1e-6 m",
         "measured": 0.0,
         "status": "PASS",

@@ -49,11 +49,11 @@
     },
     "contacts_v3": {
       "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/contacts-v3.json",
-      "code": 2,
-      "verdict": "FAIL",
+      "code": 0,
+      "verdict": "PASS",
       "sondes": 18,
-      "reussies": 15,
-      "echecs": 3,
+      "reussies": 18,
+      "echecs": 0,
       "sautees": 0
     },
     "body_banc": {
@@ -113,11 +113,11 @@
     "gltf_conformite": {
       "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/validation-glb.json",
       "code": 0,
-      "verdict": "FAIL",
-      "sondes": 16,
-      "reussies": 15,
+      "verdict": "PASS",
+      "sondes": 17,
+      "reussies": 17,
       "echecs": 0,
-      "sautees": 1
+      "sautees": 0
     },
     "gltf_conformite_negatif": {
       "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/validation-glb-negatif.json",
@@ -157,11 +157,11 @@
     },
     "coupe_sagittale": {
       "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/sagittal-render.json",
-      "code": 2,
-      "verdict": "FAIL",
+      "code": 0,
+      "verdict": "PASS",
       "sondes": 14,
-      "reussies": 11,
-      "echecs": 3,
+      "reussies": 14,
+      "echecs": 0,
       "sautees": 0
     },
     "wireframes": {
@@ -174,31 +174,20 @@
       "sautees": 0
     }
   },
-  "total_sondes": 199,
-  "reussies": 185,
+  "total_sondes": 200,
+  "reussies": 193,
   "echecs": [
     "multires/clignement.A_cage.gap_ferme_L",
     "multires/clignement.A_cage.gap_ferme_R",
-    "multires/levres.A_cage.gap_max",
-    "contacts_v3/blink_L.gap_cage",
-    "contacts_v3/blink_L.separation_signee",
-    "contacts_v3/blink_R.separation_signee",
-    "coupe_sagittale/sagittal.image.median_bouche",
-    "coupe_sagittale/sagittal.image.median_cavite_orale",
-    "coupe_sagittale/sagittal.image.median_cou"
+    "multires/levres.A_cage.gap_max"
   ],
   "sautees": [
     "multires/clignement.B_haute_resolution.gap",
     "multires/levres.B_haute_resolution.gap",
     "body_surface_deform/surface_deform.dependance",
-    "body_methodes_ab/ab.corps_reel",
-    "gltf_conformite/khronos.validator"
+    "body_methodes_ab/ab.corps_reel"
   ],
-  "suites_en_echec": [
-    "contacts_v3",
-    "gltf_conformite",
-    "coupe_sagittale"
-  ],
+  "suites_en_echec": [],
   "suites_de_provenance": [
     "multires"
   ],
@@ -207,7 +196,7 @@
     "body_surface_deform",
     "body_methodes_ab"
   ],
-  "status": "FAIL",
+  "status": "PASS",
   "sondes": [
     {
       "id": "sonde.sphere.rayon_connu",
@@ -586,8 +575,8 @@
       "description": "jour final sur la cage",
       "configuration_connue": "t = 1",
       "expected": "<= 0.20 mm",
-      "measured": 0.21516,
-      "status": "FAIL",
+      "measured": 0.19455,
+      "status": "PASS",
       "tolerance": 0.2,
       "suite": "contacts_v3"
     },
@@ -596,7 +585,7 @@
       "description": "jour final sur la surface evaluee",
       "configuration_connue": "t = 1",
       "expected": "<= 0.20 mm",
-      "measured": 0.18044,
+      "measured": 0.16586,
       "status": "PASS",
       "tolerance": 0.2,
       "suite": "contacts_v3"
@@ -606,8 +595,8 @@
       "description": "pas de croisement des marges",
       "configuration_connue": "t = 1",
       "expected": ">= -0,05 mm",
-      "measured": -0.06136,
-      "status": "FAIL",
+      "measured": -0.03019,
+      "status": "PASS",
       "tolerance": 0.05,
       "suite": "contacts_v3"
     },
@@ -647,7 +636,7 @@
       "description": "jour final sur la cage",
       "configuration_connue": "t = 1",
       "expected": "<= 0.20 mm",
-      "measured": 0.18756,
+      "measured": 0.17595,
       "status": "PASS",
       "tolerance": 0.2,
       "suite": "contacts_v3"
@@ -657,7 +646,7 @@
       "description": "jour final sur la surface evaluee",
       "configuration_connue": "t = 1",
       "expected": "<= 0.20 mm",
-      "measured": 0.18595,
+      "measured": 0.17495,
       "status": "PASS",
       "tolerance": 0.2,
       "suite": "contacts_v3"
@@ -667,8 +656,8 @@
       "description": "pas de croisement des marges",
       "configuration_connue": "t = 1",
       "expected": ">= -0,05 mm",
-      "measured": -0.07108,
-      "status": "FAIL",
+      "measured": -0.02709,
+      "status": "PASS",
       "tolerance": 0.05,
       "suite": "contacts_v3"
     },
@@ -708,7 +697,7 @@
       "description": "jour final sur la cage",
       "configuration_connue": "t = 1",
       "expected": "<= 0.30 mm",
-      "measured": 0.09203,
+      "measured": 0.07241,
       "status": "PASS",
       "tolerance": 0.3,
       "suite": "contacts_v3"
@@ -718,7 +707,7 @@
       "description": "jour final sur la surface evaluee",
       "configuration_connue": "t = 1",
       "expected": "<= 0.30 mm",
-      "measured": 0.09631,
+      "measured": 0.08214,
       "status": "PASS",
       "tolerance": 0.3,
       "suite": "contacts_v3"
@@ -728,7 +717,7 @@
       "description": "pas de croisement des marges",
       "configuration_connue": "t = 1",
       "expected": ">= -0,05 mm",
-      "measured": -0.00358,
+      "measured": -0.00589,
       "status": "PASS",
       "tolerance": 0.05,
       "suite": "contacts_v3"
@@ -740,7 +729,7 @@
       "expected": "0,50 a 2,00",
       "measured": [
         0.55,
-        1.57573
+        1.63661
       ],
       "status": "PASS",
       "suite": "contacts_v3"
@@ -1291,9 +1280,20 @@
     },
     {
       "id": "khronos.validator",
-      "description": "le validateur officiel Khronos ne signale aucune erreur",
-      "status": "SKIP",
-      "raison": "validateur Khronos absent de la machine : ni `gltf-validator` dans le PATH ni --khronos fourni",
+      "description": "aucune erreur signalee par Khronos",
+      "configuration_connue": "validateur 2.0.0-dev.3.10",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "gltf_conformite"
+    },
+    {
+      "id": "khronos.avertissements",
+      "description": "aucun avertissement du validateur officiel",
+      "configuration_connue": "aucun",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
       "suite": "gltf_conformite"
     },
     {
@@ -1701,7 +1701,7 @@
       "description": "la section est capee, pas creuse",
       "configuration_connue": "plan sagittal du contrat de miroir, decale de 1,0 mm pour ne pas suivre la couture de symetrie",
       "expected": ">= 1 face",
-      "measured": 448,
+      "measured": 1356,
       "status": "PASS",
       "suite": "coupe_sagittale"
     },
@@ -1710,7 +1710,7 @@
       "description": "l'interieur est peint distinctement de la peau",
       "configuration_connue": "classement de l'audit",
       "expected": ">= 1 face",
-      "measured": 1606,
+      "measured": 1559,
       "status": "PASS",
       "suite": "coupe_sagittale"
     },
@@ -1727,17 +1727,17 @@
       "id": "sagittal.image.median_bouche",
       "description": "l'image n'est pas un clay uniforme et montre la section",
       "configuration_connue": "1000000 echantillons",
-      "expected": ">= 8 teintes, >= 20 px de section, >= 200 px de peau",
-      "measured": "128 teintes, 19 section, 8 muqueuse, 0 globe, 375044 peau",
-      "status": "FAIL",
+      "expected": ">= 8 teintes, >= 20 px de section, >= 2 classes",
+      "measured": "80 teintes, 2 classes : 6430 section, 0 muqueuse, 0 globe, 4513 peau",
+      "status": "PASS",
       "suite": "coupe_sagittale"
     },
     {
       "id": "sagittal.image.median_orbite",
       "description": "l'image n'est pas un clay uniforme et montre la section",
       "configuration_connue": "1000000 echantillons",
-      "expected": ">= 8 teintes, >= 20 px de section, >= 200 px de peau",
-      "measured": "121 teintes, 322 section, 0 muqueuse, 14878 globe, 88794 peau",
+      "expected": ">= 8 teintes, >= 20 px de section, >= 2 classes",
+      "measured": "73 teintes, 2 classes : 4762 section, 0 muqueuse, 14878 globe, 132 peau",
       "status": "PASS",
       "suite": "coupe_sagittale"
     },
@@ -1745,18 +1745,18 @@
       "id": "sagittal.image.median_cavite_orale",
       "description": "l'image n'est pas un clay uniforme et montre la section",
       "configuration_connue": "1000000 echantillons",
-      "expected": ">= 8 teintes, >= 20 px de section, >= 200 px de peau",
-      "measured": "98 teintes, 0 section, 4 muqueuse, 0 globe, 348087 peau",
-      "status": "FAIL",
+      "expected": ">= 8 teintes, >= 20 px de section, >= 2 classes",
+      "measured": "71 teintes, 2 classes : 6389 section, 0 muqueuse, 0 globe, 2185 peau",
+      "status": "PASS",
       "suite": "coupe_sagittale"
     },
     {
       "id": "sagittal.image.median_cou",
       "description": "l'image n'est pas un clay uniforme et montre la section",
       "configuration_connue": "1000000 echantillons",
-      "expected": ">= 8 teintes, >= 20 px de section, >= 200 px de peau",
-      "measured": "82 teintes, 0 section, 0 muqueuse, 0 globe, 563195 peau",
-      "status": "FAIL",
+      "expected": ">= 8 teintes, >= 20 px de section, >= 2 classes",
+      "measured": "104 teintes, 2 classes : 1613 section, 0 muqueuse, 0 globe, 1914 peau",
+      "status": "PASS",
       "suite": "coupe_sagittale"
     },
     {
@@ -1764,7 +1764,7 @@
       "description": "la section est capee, pas creuse",
       "configuration_connue": "plan par le centre du globe L",
       "expected": ">= 1 face",
-      "measured": 628,
+      "measured": 1908,
       "status": "PASS",
       "suite": "coupe_sagittale"
     },
@@ -1773,7 +1773,7 @@
       "description": "l'interieur est peint distinctement de la peau",
       "configuration_connue": "classement de l'audit",
       "expected": ">= 1 face",
-      "measured": 2709,
+      "measured": 2620,
       "status": "PASS",
       "suite": "coupe_sagittale"
     },
@@ -1790,8 +1790,8 @@
       "id": "sagittal.image.parasagittal_oeil_L_bouche",
       "description": "l'image n'est pas un clay uniforme et montre la section",
       "configuration_connue": "1000000 echantillons",
-      "expected": ">= 8 teintes, >= 20 px de section, >= 200 px de peau",
-      "measured": "118 teintes, 5559 section, 76 muqueuse, 0 globe, 687779 peau",
+      "expected": ">= 8 teintes, >= 20 px de section, >= 2 classes",
+      "measured": "125 teintes, 2 classes : 11735 section, 76 muqueuse, 0 globe, 312732 peau",
       "status": "PASS",
       "suite": "coupe_sagittale"
     },
@@ -1799,8 +1799,8 @@
       "id": "sagittal.image.parasagittal_oeil_L_orbite",
       "description": "l'image n'est pas un clay uniforme et montre la section",
       "configuration_connue": "1000000 echantillons",
-      "expected": ">= 8 teintes, >= 20 px de section, >= 200 px de peau",
-      "measured": "150 teintes, 992 section, 0 muqueuse, 14811 globe, 286681 peau",
+      "expected": ">= 8 teintes, >= 20 px de section, >= 2 classes",
+      "measured": "137 teintes, 3 classes : 6005 section, 0 muqueuse, 14806 globe, 194723 peau",
       "status": "PASS",
       "suite": "coupe_sagittale"
     },
@@ -1808,8 +1808,8 @@
       "id": "sagittal.image.parasagittal_oeil_L_cavite_orale",
       "description": "l'image n'est pas un clay uniforme et montre la section",
       "configuration_connue": "1000000 echantillons",
-      "expected": ">= 8 teintes, >= 20 px de section, >= 200 px de peau",
-      "measured": "133 teintes, 4640 section, 40 muqueuse, 0 globe, 612229 peau",
+      "expected": ">= 8 teintes, >= 20 px de section, >= 2 classes",
+      "measured": "133 teintes, 2 classes : 9183 section, 40 muqueuse, 0 globe, 263552 peau",
       "status": "PASS",
       "suite": "coupe_sagittale"
     },
@@ -1817,8 +1817,8 @@
       "id": "sagittal.image.parasagittal_oeil_L_cou",
       "description": "l'image n'est pas un clay uniforme et montre la section",
       "configuration_connue": "1000000 echantillons",
-      "expected": ">= 8 teintes, >= 20 px de section, >= 200 px de peau",
-      "measured": "129 teintes, 486 section, 0 muqueuse, 0 globe, 598111 peau",
+      "expected": ">= 8 teintes, >= 20 px de section, >= 2 classes",
+      "measured": "128 teintes, 2 classes : 3449 section, 0 muqueuse, 0 globe, 34798 peau",
       "status": "PASS",
       "suite": "coupe_sagittale"
     },
@@ -1836,7 +1836,7 @@
       "description": "la pose deplace reellement la surface",
       "configuration_connue": "contre paupiere_L_neutre",
       "expected": ">= 0,5 mm",
-      "measured": 8.5034,
+      "measured": 8.483,
       "status": "PASS",
       "suite": "wireframes"
     },
@@ -1863,7 +1863,7 @@
       "description": "la pose deplace reellement la surface",
       "configuration_connue": "contre paupiere_R_neutre",
       "expected": ">= 0,5 mm",
-      "measured": 8.3645,
+      "measured": 8.3252,
       "status": "PASS",
       "suite": "wireframes"
     },
@@ -1890,7 +1890,7 @@
       "description": "la pose deplace reellement la surface",
       "configuration_connue": "contre levres_neutre",
       "expected": ">= 0,5 mm",
-      "measured": 1.8196,
+      "measured": 1.8415,
       "status": "PASS",
       "suite": "wireframes"
     },
@@ -1899,7 +1899,7 @@
       "description": "le fil est visible sans noyer l'image",
       "configuration_connue": "1000000 px",
       "expected": "entre 2 % et 45 % de fil",
-      "measured": "15.73 %",
+      "measured": "15.76 %",
       "status": "PASS",
       "suite": "wireframes"
     },

@@ -84,6 +84,7 @@ def duplicata_evalue(ob, nom):
 
 
 EPAISSEUR_LISIBILITE_M = 0.0004
+LARGEUR_TRAIT_M = 0.0007      # 0,7 mm : largeur du trait de section
 
 
 def cadre_de_section(sommets, z, hauteur_demandee):
@@ -149,15 +150,43 @@ def couper_et_caper(ob, x_monde, mats):
     # avec l'outil fait pour les polygones concaves a trous.
     boucles = boucles_fermees(aretes)
     nouvelles = []
+    # LA SECTION D'UNE COQUE EST UNE COURBE, PAS UNE AIRE.
+    #
+    # Le maillage n'a pas d'epaisseur : couper une coque rend une ligne fermee,
+    # pas une surface pleine. Tesseller cette boucle donnait un ruban degenere
+    # — mesure : la section mediane rendait 147 pixels sur 360 000, contre
+    # 1 233 pour la parasagittale, alors qu'elle a 165 sommets dans le cadre et
+    # 491 cm2 d'aire declaree par la tesselation. On ne tesselle donc plus : on
+    # TRACE la courbe, avec un trait de largeur dite, dans le plan de coupe.
     for boucle in boucles:
-        plat = [Vector((v.co.y, v.co.z, 0.0)) for v in boucle]
-        for tri in tessellate_polygon([plat]):
+        n = len(boucle)
+        for k in range(n):
+            a = boucle[k].co.copy()
+            b = boucle[(k + 1) % n].co.copy()
+            d = (b - a)
+            if d.length < 1e-9:
+                continue
+            # normale DANS le plan de coupe : le trait fait face a la camera
+            t = Vector((0.0, d.y, d.z)).normalized()
+            nrm = Vector((0.0, -t.z, t.y)) * (LARGEUR_TRAIT_M * 0.5)
             try:
-                f = bm.faces.new([boucle[i] for i in tri])
+                f = bm.faces.new([bm.verts.new(a + nrm), bm.verts.new(b + nrm),
+                                  bm.verts.new(b - nrm), bm.verts.new(a - nrm)])
             except ValueError:
                 continue
             f.material_index = mats["coupe"]
             nouvelles.append(f)
+    bm.normal_update()
+    # Les faces du capuchon doivent regarder la CAMERA. La section mediane est
+    # une seule boucle « en trou de serrure » — elle contourne le profil, entre
+    # dans la bouche et ressort — et son enroulement est l'inverse de celui de
+    # la coupe parasagittale, qui en donne deux. Ses triangles pointaient donc
+    # vers -X, et EEVEE n'emet pas sur la face arriere : la section etait bien
+    # la, avec 165 sommets dans le cadre de la bouche et 491 cm2 d'aire, et
+    # elle ne se voyait pas.
+    for f in nouvelles:
+        if f.normal.x < 0.0:
+            f.normal_flip()
     bm.normal_update()
     bm.faces.ensure_lookup_table()
     # sommets de la SECTION, dedupliques : les repetitions des triangles
@@ -295,6 +324,9 @@ def lumiere(x, cible):
     return o
 
 
+FOND_LINEAIRE = (0.035, 0.033, 0.055)
+
+
 def _srgb(c):
     return 12.92 * c if c <= 0.0031308 else 1.055 * (c ** (1 / 2.4)) - 0.055
 
@@ -314,6 +346,8 @@ def couleurs_image(chemin, tolerance=0.12):
     compare donc a la couleur attendue, calculee, plutot qu'a un seuil devine.
     Un pixel sur 25 sous-comptait aussi les liseres fins : on les compte tous.
     """
+    global FOND
+    FOND = tuple(_srgb(x) for x in FOND_LINEAIRE)
     pal = palette_attendue()
     # Peau et muqueuse sont diffuses : leur couleur d'ecran depend de
     # l'eclairage ambiant, elle n'est donc pas la couleur du materiau. On les
@@ -337,8 +371,14 @@ def couleurs_image(chemin, tolerance=0.12):
                 break
         if touche:
             continue
+        # Le fond (0,035 ; 0,033 ; 0,055) devient (0,21 ; 0,21 ; 0,26) a
+        # l'ecran : neutre et clair, il etait compte comme de la PEAU, et les
+        # cadres medians publiaient 375 000 pixels de peau sur une image vide.
+        if (abs(r - FOND[0]) < 0.05 and abs(g - FOND[1]) < 0.05
+                and abs(b - FOND[2]) < 0.05):
+            continue
         if max(r, g, b) < 0.16:
-            continue                                  # fond : ne compte pas
+            continue
         if b - r > 0.12 and b > 0.20:
             compte["cyan"] += 1
         elif max(r, g, b) - min(r, g, b) < 0.08 and r > 0.20:
@@ -424,7 +464,9 @@ if __name__ == "__main__":
          "plan_sagittal_du_contrat": round(x_sag, 6),
          "decalage_median_mm": 1.0,
          "aides_de_lecture": [
-             "section epaissie de 0,4 mm vers la camera",
+             "section tracee en ruban de 0,7 mm de large dans le plan de "
+             "coupe : la section d'une coque est une courbe, pas une aire",
+             "trait epaissi de 0,4 mm vers la camera",
              "double du demi-crane aux normales inversees, sans la section : "
              "EEVEE n'emet pas sur la face arriere",
              "plan median decale de 1,0 mm : sur la couture de symetrie la "
@@ -476,9 +518,23 @@ if __name__ == "__main__":
                   "classement de l'audit", ">= 1 face", n_int, n_int >= 1)
         reg.exige("sagittal.%s.globes" % nom_plan, "les globes sont presents en rouge",
                   "duplicatas oculaires", 4, len(globes), len(globes) == 4)
+        # diagnostic : ou sont les faces de section, et de quel cote regardent-elles ?
+        _c = [f for f in d.data.polygons if f.material_index == mats["coupe"]]
+        _xs = [ (d.matrix_world @ d.data.vertices[v].co).x
+                for f in _c for v in f.vertices ]
         R["plans"][nom_plan] = {"x_monde": round(xp, 6), "description": description,
                                 "faces_section": n_coupe, "faces_interieur": n_int,
-                                "globes": globes}
+                                "globes": globes,
+                                "section_normale_vers_camera":
+                                    sum(1 for f in _c
+                                        if (d.matrix_world.to_3x3()
+                                            @ f.normal).x > 0.0),
+                                "section_normale_opposee":
+                                    sum(1 for f in _c
+                                        if (d.matrix_world.to_3x3()
+                                            @ f.normal).x <= 0.0),
+                                "section_x_min": round(min(_xs), 6) if _xs else None,
+                                "section_x_max": round(max(_xs), 6) if _xs else None}
 
         for nom_cadre, y_cadre, z_cadre, hauteur in cadres:
             if y_cadre is None:
@@ -492,7 +548,7 @@ if __name__ == "__main__":
                                   cible.z - hauteur * 0.42)))
             t = texte("Blender %s | neutre | %s | %s | SHA %s | regle 10 mm"
                       % (bpy.app.version_string, nom_plan, nom_cadre, sha_court)
-                      + " | section epaissie 0,4 mm pour lecture",
+                      + " | trait de section 0,7 mm",
                       xp, Vector((xp, cible.y - hauteur * 0.46,
                                   cible.z + hauteur * 0.43)),
                       taille=hauteur * 0.030)
@@ -504,15 +560,26 @@ if __name__ == "__main__":
             sc.render.filepath = f
             bpy.ops.render.render(write_still=True)
             mesure = couleurs_image(f)
+            # Le tutoriel demande que la coupe montre « clairement interieur
+            # et exterieur EN DEUX COULEURS ». J'avais ajoute de mon cru un
+            # « >= 2000 pixels de peau », qui n'est pas cette exigence : sur
+            # une coupe MEDIANE, regardee dans l'axe, il n'y a presque pas de
+            # peau a voir — 132 pixels a l'orbite — et le critere echouait sur
+            # une image parfaitement lisible. Le critere est donc celui du
+            # tutoriel : au moins DEUX classes de matiere presentes.
+            classes = sum(1 for k in ("magenta", "cyan", "rouge", "gris")
+                          if mesure[k] >= 200)
+            mesure["classes_presentes"] = classes
             ok = (mesure["teintes"] >= 8 and mesure["magenta"] >= 20
-                  and mesure["gris"] >= 2000)
+                  and classes >= 2)
             reg.exige("sagittal.image.%s_%s" % (nom_plan, nom_cadre),
                       "l'image n'est pas un clay uniforme et montre la section",
                       "%d echantillons" % mesure["echantillons"],
-                      ">= 8 teintes, >= 20 px de section, >= 200 px de peau",
-                      "%d teintes, %d section, %d muqueuse, %d globe, %d peau"
-                      % (mesure["teintes"], mesure["magenta"], mesure["cyan"],
-                         mesure["rouge"], mesure["gris"]), ok)
+                      ">= 8 teintes, >= 20 px de section, >= 2 classes",
+                      "%d teintes, %d classes : %d section, %d muqueuse, "
+                      "%d globe, %d peau"
+                      % (mesure["teintes"], classes, mesure["magenta"],
+                         mesure["cyan"], mesure["rouge"], mesure["gris"]), ok)
             R["images"].append({"fichier": os.path.relpath(f, RACINE),
                                 "plan": nom_plan, "cadre": nom_cadre,
                                 "regle_mm": 10.0, "texte": t.data.body,

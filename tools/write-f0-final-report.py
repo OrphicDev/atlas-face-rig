@@ -52,6 +52,9 @@ if __name__ == "__main__":
     RUN = lire("reports/f0-final/runtime-resolution.json") or {}
     GLB = lire("reports/f0-final/runtime-glb.json") or {}
     VAL = lire("reports/f0-final/validation-glb.json") or {}
+    _kh = VAL.get("khronos") or {}
+    if "saute" in _kh:
+        _kh = {}
     RT = lire("experiments/gltf-spike/roundtrip.json") or {}
     JAW = lire("reports/f0-final/jaw-prototype.json") or {}
     ORD = lire("reports/f0-final/modifier-order-ab.json") or {}
@@ -71,8 +74,15 @@ if __name__ == "__main__":
                    "reussies", REG.get("reussies"))
 
     # --- le gate, condition par condition, avec sa preuve
-    def g(nom, ok, preuve):
-        return "| %s | %s | %s |" % (nom, "**oui**" if ok else "**non**", preuve)
+    reserves = []
+
+    def g(nom, ok, preuve, reserve=None):
+        if ok and reserve:
+            reserves.append((nom, reserve))
+            marque = "**oui**, sous réserve"
+        else:
+            marque = "**oui**" if ok else "**non**"
+        return "| %s | %s | %s |" % (nom, marque, preuve)
 
     # Le gate lit la suite V3, qui fait foi. La suite historique est rejouee
     # pour la provenance, pas pour trancher.
@@ -97,15 +107,26 @@ if __name__ == "__main__":
           "`jaw-prototype.json` → angles %s, erreur rigide %s mm"
           % (JAW.get("angles"), sorted(set(JAW.get("erreur_rigide_mm", {}).values())))),
         g("stratégie tête-corps décidée et prouvée",
-          os.path.isfile(os.path.join(RACINE, "reports/f0-final/DECISION_RACCORD_CORPS.md")),
-          "[DECISION_RACCORD_CORPS.md](DECISION_RACCORD_CORPS.md)"),
+          os.path.isfile(os.path.join(RACINE,
+                                      "reports/f0-final/DECISION_RACCORD_CORPS.md")),
+          "[DECISION_RACCORD_CORPS.md](DECISION_RACCORD_CORPS.md) ; "
+          "les contre-épreuves D.8 et D.9 existent et leur **règle de mesure "
+          "est vérifiée à réponse connue** (banc 17/17), mais elles attendent "
+          "l'asset corps hors dépôt",
+          reserve="les deux contre-épreuves n'ont JAMAIS tourné sur le vrai "
+                  "corps : `ATLAS_BASE_MESH` est absent de cette machine. La "
+                  "voie retenue est mesurée (D.7, 5/5), l'alternative ne l'est "
+                  "pas. La décision n'est donc pas comparée, elle est prise."),
         g("ordre Armature/Multires et résolution runtime décidés par mesure",
           bool(ORD) and bool(RUN),
           "[DECISION_MODIFIER_ORDER.md](DECISION_MODIFIER_ORDER.md), "
           "`runtime-resolution.json` → %s sommets denses" % RUN.get("sommets_dense")),
-        g("spike GLB : zéro erreur Khronos", False,
-          "**validateur Khronos absent de la machine** — sonde publiée SAUTÉE, "
-          "jamais PASS"),
+        g("spike GLB : zéro erreur Khronos",
+          _kh.get("issues", {}).get("numErrors") == 0,
+          "validateur officiel %s → **%s erreur(s)**, %s avertissement(s)"
+          % (_kh.get("validatorVersion", "absent"),
+             _kh.get("issues", {}).get("numErrors", "—"),
+             _kh.get("issues", {}).get("numWarnings", "—"))),
         g("spike GLB : aller-retour", RT.get("registre", {}).get("echecs") == 0,
           "`roundtrip.json` → %s/%s" % (RT.get("registre", {}).get("reussies"),
                                         RT.get("registre", {}).get("total"))),
@@ -128,7 +149,12 @@ if __name__ == "__main__":
         g("runner final et replay propre à 0, sans FAIL ni SKIP critique",
           REG.get("status") == "PASS",
           "`registre.json` → %s, %d échec(s), %d sautée(s)"
-          % (REG.get("status"), len(echecs), len(sautees))),
+          % (REG.get("status"), len(echecs), len(sautees)),
+          reserve=("les %d échecs restants sont TOUS dans la suite historique "
+                   "`multires`, que j'ai classée PROVENANCE — elle mesure le "
+                   "chemin d'avant les deltas de contact, que la suite V3 "
+                   "remplace. Ce classement est mon jugement, pas une mesure."
+                   % len(echecs)) if echecs else None),
         g("FACE_BASE_LOCKED.blend a gardé son SHA", True,
           "`author-input.json` → cc9e55a4…"),
         g("la fondation ne contient ni armature ni shape key",
@@ -138,13 +164,22 @@ if __name__ == "__main__":
           "`build-f0-manifest.py --verify` → 2/2"),
     ]
     passe = all("**oui**" in x for x in gate)
+    sans_reserve = passe and not reserves
 
     t = []
     A = t.append
     A("# F0 — rapport final\n")
-    A("> **F0 INCOMPLÈTE.** Ce rapport ne clôture pas F0 : plusieurs conditions "
-      "du gate ne sont pas remplies, et elles sont nommées plus bas.\n"
-      if not passe else "> **F0 TERMINÉE.**\n")
+    if sans_reserve:
+        A("> **F0 TERMINÉE.**\n")
+    elif passe:
+        A("> **F0 — toutes les conditions du gate sont remplies, %d SOUS "
+          "RÉSERVE.** Le tutoriel demande de ne pas publier de clôture tant "
+          "qu'un point n'est pas franc : ces réserves sont nommées sous le "
+          "tableau, et F0 n'est pas déclarée terminée ici.\n" % len(reserves))
+    else:
+        A("> **F0 INCOMPLÈTE.** Ce rapport ne clôture pas F0 : plusieurs "
+          "conditions du gate ne sont pas remplies, et elles sont nommées "
+          "plus bas.\n")
     A("## Provenance et environnement\n")
     A("| | |\n| --- | --- |")
     A("| commit | `%s` |" % commit)
@@ -234,6 +269,11 @@ if __name__ == "__main__":
     A("| condition | remplie | preuve |")
     A("| --- | :---: | --- |")
     t.extend(gate)
+    if reserves:
+        A("\n### Les réserves, nommément\n")
+        for nom, r in reserves:
+            A("- **%s** — %s" % (nom, r))
+        A("")
     A("\n## Limites connues — les %d échecs et %d sondes sautées\n"
       % (len(echecs), len(sautees)))
     A("| sonde en échec | ce qu'elle mesure |")

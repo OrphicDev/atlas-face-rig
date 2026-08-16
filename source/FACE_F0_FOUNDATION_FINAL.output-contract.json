@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "commit_source": "70cb0227ee570f0957610b908baf5a1bf6b2dc4b",
+  "commit_source": "f6f1c86442971fcacbfc23b8ed88dc6c8a7dae6f",
   "blender": "5.1.2",
   "blend": "source/FACE_F0_FOUNDATION_FINAL.blend",
   "blend_sha256": "eb7fbccc863ab7723c56e65faacc09e98b1bc76dd6c5f9dc91b2981492b2a37a",
@@ -69,15 +69,15 @@
   "deltas": {
     "blink_L": {
       "path": "reports/f0-final/deformations/blink_L.cage-delta.json",
-      "sha256": "a5baf38b6ac83159ad83284d6db90c4dbe8158a75da09db4e06753dcdc4bf8b1"
+      "sha256": "10c370f822afe2f68b0e2c56da9e0da0627239c1e91b3c159843c726e71b1de1"
     },
     "blink_R": {
       "path": "reports/f0-final/deformations/blink_R.cage-delta.json",
-      "sha256": "5926d86301e24bf5faf20270c6ee30030fc97a37ccdd79844a313865625eea08"
+      "sha256": "8a3ac2a389f4c671b6a6c47092689a044224c05fae84ff447f720eb7a449d614"
     },
     "mouth_close": {
       "path": "reports/f0-final/deformations/mouth_close.cage-delta.json",
-      "sha256": "eb60c4d8edbd74aecb53956df9d833b48eeaa548d71fae0693cdfc56e82619a9"
+      "sha256": "08853b004230c70f3ec3942317e19371b2411303b0bb726363db3ae2d7381d73"
     }
   },
   "decisions": {
@@ -93,15 +93,15 @@
   "resultats": {
     "runtime_mesh": {
       "path": "reports/f0-final/runtime-mesh.json",
-      "sha256": "dc8379225f6ad4778270d20f56b9a49c4ae915a5c8b5d4e8e6984c30a0dcd218",
-      "reussies": 7,
-      "total": 7,
+      "sha256": "5fcd905396efbd2c32df415a109445fa2fcd0c601fcc7f2e465702a4d9b3d89e",
+      "reussies": 8,
+      "total": 8,
       "echecs": 0,
       "sautees": 0
     },
     "gltf_roundtrip": {
       "path": "experiments/gltf-spike/roundtrip.json",
-      "sha256": "08c91175cb9466e2214eebaacfd243f513f4ae5069875021ce495e8aeba5cd19",
+      "sha256": "9de88f6c76989ee378eebd957329e8edca7d85ab83f8eebb74c8d88a9c64159f",
       "reussies": 14,
       "total": 14,
       "echecs": 0,
@@ -109,15 +109,15 @@
     },
     "gltf_validation": {
       "path": "reports/f0-final/validation-glb.json",
-      "sha256": "10ea022ce901e8c272528380d61edbb28543268ca0a4d32a31cb997ed1d703ab",
-      "reussies": 15,
-      "total": 16,
+      "sha256": "2a617a160160a80be669025dd21e97d4b641ba7b4ecf38ad613e799131fb6cdd",
+      "reussies": 17,
+      "total": 17,
       "echecs": 0,
-      "sautees": 1
+      "sautees": 0
     },
     "gltf_runtime": {
       "path": "reports/f0-final/runtime-glb.json",
-      "sha256": "530681ef4b24a08bb3a6f6eae661f36a591fec74f9fc91842d306ebd17cb0500",
+      "sha256": "85765ded6fc10258ee8adbf6e510193db7c3d5a7f64d5d11672f7f71d0e13527",
       "reussies": 8,
       "total": 8,
       "echecs": 0,

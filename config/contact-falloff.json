@@ -28,7 +28,7 @@
     "blink_L": {
       "aretes_examinees": 360,
       "sommets_libres": 144,
-      "sommets_deplaces_par_projection": 27,
+      "sommets_deplaces_par_projection": 28,
       "passes": 4000,
       "aretes_hors_bornes_apres": 0,
       "sommets_de_marge_touches": []
@@ -36,7 +36,7 @@
     "blink_R": {
       "aretes_examinees": 361,
       "sommets_libres": 146,
-      "sommets_deplaces_par_projection": 24,
+      "sommets_deplaces_par_projection": 27,
       "passes": 4000,
       "aretes_hors_bornes_apres": 0,
       "sommets_de_marge_touches": []

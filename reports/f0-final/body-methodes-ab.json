@@ -47,7 +47,7 @@
       "faces_inversees": 1600,
       "auto_intersections": 0,
       "sommets_doubles": 0,
-      "secondes": 0.0008
+      "secondes": 0.0009
     }
   },
   "avertissement": "chiffres du banc synthetique : la METHODE est comparee, pas le maillage reel. Aucune conclusion sur le raccord n'en est tiree.",
@@ -106,7 +106,7 @@
     },
     "secondes": {
       "barycentrique": 0.0002,
-      "surface_deform": 0.0008
+      "surface_deform": 0.0009
     }
   },
   "ecart_max_dans_le_masque_mm": 2e-06,

@@ -24,15 +24,57 @@
     "generator": "Khronos glTF Blender I/O v5.1.20"
   },
   "khronos": {
-    "saute": "validateur Khronos absent de la machine : ni `gltf-validator` dans le PATH ni --khronos fourni"
+    "uri": "atlas-face-spike.glb",
+    "mimeType": "model/gltf-binary",
+    "validatorVersion": "2.0.0-dev.3.10",
+    "validatedAt": "2026-08-16T13:23:45.865Z",
+    "issues": {
+      "numErrors": 0,
+      "numWarnings": 0,
+      "numInfos": 1,
+      "numHints": 0,
+      "messages": [
+        {
+          "code": "UNUSED_OBJECT",
+          "message": "This object may be unused.",
+          "severity": 2,
+          "pointer": "/meshes/0/primitives/0/attributes/TEXCOORD_0"
+        }
+      ],
+      "truncated": false
+    },
+    "info": {
+      "version": "2.0",
+      "generator": "Khronos glTF Blender I/O v5.1.20",
+      "resources": [
+        {
+          "pointer": "/buffers/0",
+          "mimeType": "application/gltf-buffer",
+          "storage": "glb",
+          "byteLength": 3629648
+        }
+      ],
+      "animationCount": 2,
+      "materialCount": 0,
+      "hasMorphTargets": true,
+      "hasSkins": true,
+      "hasTextures": false,
+      "hasDefaultScene": true,
+      "drawCallCount": 1,
+      "totalVertexCount": 51791,
+      "totalTriangleCount": 25896,
+      "maxUVs": 1,
+      "maxInfluences": 4,
+      "maxAttributes": 5
+    }
   },
   "fichier": "exports/atlas-face-spike.glb",
   "registre": {
     "registre": "validation-glb",
-    "total": 16,
-    "reussies": 15,
+    "total": 17,
+    "reussies": 17,
     "echecs": 0,
-    "sautees": 1,
+    "sautees": 0,
     "sondes": [
       {
         "id": "glb.conteneur",
@@ -156,9 +198,19 @@
       },
       {
         "id": "khronos.validator",
-        "description": "le validateur officiel Khronos ne signale aucune erreur",
-        "status": "SKIP",
-        "raison": "validateur Khronos absent de la machine : ni `gltf-validator` dans le PATH ni --khronos fourni"
+        "description": "aucune erreur signalee par Khronos",
+        "configuration_connue": "validateur 2.0.0-dev.3.10",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "khronos.avertissements",
+        "description": "aucun avertissement du validateur officiel",
+        "configuration_connue": "aucun",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
       }
     ]
   }

@@ -37,7 +37,7 @@
     "TMP_SPIKE_MORPH"
   ],
   "info_runtime": {
-    "node": 2,
+    "node": 3,
     "sommets": 51791,
     "targets": 3,
     "joints": 2

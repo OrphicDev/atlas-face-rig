@@ -47,7 +47,7 @@
     "faces_inversees": 1600,
     "auto_intersections": 0,
     "sommets_doubles": 0,
-    "secondes": 0.0008
+    "secondes": 0.0009
   },
   "ecart_des_deux_voies_mm": 2e-06,
   "registre": {

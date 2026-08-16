@@ -2,12 +2,12 @@
   "sondes.total": {
     "source": "reports/f0-final/registre.json",
     "cle": "total_sondes",
-    "valeur": 199
+    "valeur": 200
   },
   "sondes.reussies": {
     "source": "reports/f0-final/registre.json",
     "cle": "reussies",
-    "valeur": 185
+    "valeur": 193
   },
   "contacts_v3:blink_L.aretes": {
     "source": "reports/f0-final/contacts-v3.json",
@@ -20,12 +20,12 @@
   "contacts_v3:blink_L.gap_cage": {
     "source": "reports/f0-final/contacts-v3.json",
     "cle": "registre.sondes[id=blink_L.gap_cage].measured",
-    "valeur": 0.21516
+    "valeur": 0.19455
   },
   "contacts_v3:blink_L.gap_dense": {
     "source": "reports/f0-final/contacts-v3.json",
     "cle": "registre.sondes[id=blink_L.gap_dense].measured",
-    "valeur": 0.18044
+    "valeur": 0.16586
   },
   "contacts_v3:blink_L.monotone": {
     "source": "reports/f0-final/contacts-v3.json",
@@ -40,7 +40,7 @@
   "contacts_v3:blink_L.separation_signee": {
     "source": "reports/f0-final/contacts-v3.json",
     "cle": "registre.sondes[id=blink_L.separation_signee].measured",
-    "valeur": -0.06136
+    "valeur": -0.03019
   },
   "contacts_v3:blink_R.aretes": {
     "source": "reports/f0-final/contacts-v3.json",
@@ -53,12 +53,12 @@
   "contacts_v3:blink_R.gap_cage": {
     "source": "reports/f0-final/contacts-v3.json",
     "cle": "registre.sondes[id=blink_R.gap_cage].measured",
-    "valeur": 0.18756
+    "valeur": 0.17595
   },
   "contacts_v3:blink_R.gap_dense": {
     "source": "reports/f0-final/contacts-v3.json",
     "cle": "registre.sondes[id=blink_R.gap_dense].measured",
-    "valeur": 0.18595
+    "valeur": 0.17495
   },
   "contacts_v3:blink_R.monotone": {
     "source": "reports/f0-final/contacts-v3.json",
@@ -73,25 +73,25 @@
   "contacts_v3:blink_R.separation_signee": {
     "source": "reports/f0-final/contacts-v3.json",
     "cle": "registre.sondes[id=blink_R.separation_signee].measured",
-    "valeur": -0.07108
+    "valeur": -0.02709
   },
   "contacts_v3:mouth_close.aretes": {
     "source": "reports/f0-final/contacts-v3.json",
     "cle": "registre.sondes[id=mouth_close.aretes].measured",
     "valeur": [
       0.55,
-      1.57573
+      1.63661
     ]
   },
   "contacts_v3:mouth_close.gap_cage": {
     "source": "reports/f0-final/contacts-v3.json",
     "cle": "registre.sondes[id=mouth_close.gap_cage].measured",
-    "valeur": 0.09203
+    "valeur": 0.07241
   },
   "contacts_v3:mouth_close.gap_dense": {
     "source": "reports/f0-final/contacts-v3.json",
     "cle": "registre.sondes[id=mouth_close.gap_dense].measured",
-    "valeur": 0.09631
+    "valeur": 0.08214
   },
   "contacts_v3:mouth_close.monotone": {
     "source": "reports/f0-final/contacts-v3.json",
@@ -106,7 +106,7 @@
   "contacts_v3:mouth_close.separation_signee": {
     "source": "reports/f0-final/contacts-v3.json",
     "cle": "registre.sondes[id=mouth_close.separation_signee].measured",
-    "valeur": -0.00358
+    "valeur": -0.00589
   },
   "anatomie.boucles_palpebrales.L": {
     "source": "reports/f0-final/anatomy-counts.json",

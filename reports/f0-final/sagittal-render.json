@@ -4,7 +4,8 @@
   "plan_sagittal_du_contrat": 1.462572,
   "decalage_median_mm": 1.0,
   "aides_de_lecture": [
-    "section epaissie de 0,4 mm vers la camera",
+    "section tracee en ruban de 0,7 mm de large dans le plan de coupe : la section d'une coque est une courbe, pas une aire",
+    "trait epaissi de 0,4 mm vers la camera",
     "double du demi-crane aux normales inversees, sans la section : EEVEE n'emet pas sur la face arriere",
     "plan median decale de 1,0 mm : sur la couture de symetrie la section est degeneree"
   ],
@@ -12,26 +13,34 @@
     "median": {
       "x_monde": 1.463572,
       "description": "plan sagittal du contrat de miroir, decale de 1,0 mm pour ne pas suivre la couture de symetrie",
-      "faces_section": 448,
-      "faces_interieur": 1606,
+      "faces_section": 1356,
+      "faces_interieur": 1559,
       "globes": [
         "RND.sclera.L",
         "RND.sclera.R",
         "RND.iris.L",
         "RND.iris.R"
-      ]
+      ],
+      "section_normale_vers_camera": 226,
+      "section_normale_opposee": 1130,
+      "section_x_min": 1.463572,
+      "section_x_max": 1.463972
     },
     "parasagittal_oeil_L": {
       "x_monde": 1.494852,
       "description": "plan par le centre du globe L",
-      "faces_section": 628,
-      "faces_interieur": 2709,
+      "faces_section": 1908,
+      "faces_interieur": 2620,
       "globes": [
         "RND.sclera.L.001",
         "RND.sclera.R.001",
         "RND.iris.L.001",
         "RND.iris.R.001"
-      ]
+      ],
+      "section_normale_vers_camera": 318,
+      "section_normale_opposee": 1590,
+      "section_x_min": 1.494852,
+      "section_x_max": 1.495252
     }
   },
   "images": [
@@ -40,7 +49,7 @@
       "plan": "median",
       "cadre": "bouche",
       "regle_mm": 10.0,
-      "texte": "Blender 5.1.2 | neutre | median | bouche | SHA b65d7f10 | regle 10 mm | section epaissie 0,4 mm pour lecture",
+      "texte": "Blender 5.1.2 | neutre | median | bouche | SHA b65d7f10 | regle 10 mm | trait de section 0,7 mm",
       "epaississement_section_mm": 0.4,
       "camera": [
         [
@@ -70,7 +79,7 @@
       ],
       "ortho_scale": 0.055,
       "mesure": {
-        "teintes": 128,
+        "teintes": 80,
         "echantillons": 1000000,
         "tolerance": 0.12,
         "palette_sRGB": {
@@ -85,10 +94,11 @@
             0.3133
           ]
         },
-        "magenta": 19,
+        "magenta": 6430,
         "rouge": 0,
-        "gris": 375044,
-        "cyan": 8
+        "gris": 4513,
+        "cyan": 0,
+        "classes_presentes": 2
       }
     },
     {
@@ -96,7 +106,7 @@
       "plan": "median",
       "cadre": "orbite",
       "regle_mm": 10.0,
-      "texte": "Blender 5.1.2 | neutre | median | orbite | SHA b65d7f10 | regle 10 mm | section epaissie 0,4 mm pour lecture",
+      "texte": "Blender 5.1.2 | neutre | median | orbite | SHA b65d7f10 | regle 10 mm | trait de section 0,7 mm",
       "epaississement_section_mm": 0.4,
       "camera": [
         [
@@ -126,7 +136,7 @@
       ],
       "ortho_scale": 0.06,
       "mesure": {
-        "teintes": 121,
+        "teintes": 73,
         "echantillons": 1000000,
         "tolerance": 0.12,
         "palette_sRGB": {
@@ -141,10 +151,11 @@
             0.3133
           ]
         },
-        "magenta": 322,
+        "magenta": 4762,
         "rouge": 14878,
-        "gris": 88794,
-        "cyan": 0
+        "gris": 132,
+        "cyan": 0,
+        "classes_presentes": 2
       }
     },
     {
@@ -152,7 +163,7 @@
       "plan": "median",
       "cadre": "cavite_orale",
       "regle_mm": 10.0,
-      "texte": "Blender 5.1.2 | neutre | median | cavite_orale | SHA b65d7f10 | regle 10 mm | section epaissie 0,4 mm pour lecture",
+      "texte": "Blender 5.1.2 | neutre | median | cavite_orale | SHA b65d7f10 | regle 10 mm | trait de section 0,7 mm",
       "epaississement_section_mm": 0.4,
       "camera": [
         [
@@ -182,7 +193,7 @@
       ],
       "ortho_scale": 0.075,
       "mesure": {
-        "teintes": 98,
+        "teintes": 71,
         "echantillons": 1000000,
         "tolerance": 0.12,
         "palette_sRGB": {
@@ -197,10 +208,11 @@
             0.3133
           ]
         },
-        "magenta": 0,
+        "magenta": 6389,
         "rouge": 0,
-        "gris": 348087,
-        "cyan": 4
+        "gris": 2185,
+        "cyan": 0,
+        "classes_presentes": 2
       }
     },
     {
@@ -208,7 +220,7 @@
       "plan": "median",
       "cadre": "cou",
       "regle_mm": 10.0,
-      "texte": "Blender 5.1.2 | neutre | median | cou | SHA b65d7f10 | regle 10 mm | section epaissie 0,4 mm pour lecture",
+      "texte": "Blender 5.1.2 | neutre | median | cou | SHA b65d7f10 | regle 10 mm | trait de section 0,7 mm",
       "epaississement_section_mm": 0.4,
       "camera": [
         [
@@ -238,7 +250,7 @@
       ],
       "ortho_scale": 0.18,
       "mesure": {
-        "teintes": 82,
+        "teintes": 104,
         "echantillons": 1000000,
         "tolerance": 0.12,
         "palette_sRGB": {
@@ -253,10 +265,11 @@
             0.3133
           ]
         },
-        "magenta": 0,
+        "magenta": 1613,
         "rouge": 0,
-        "gris": 563195,
-        "cyan": 0
+        "gris": 1914,
+        "cyan": 0,
+        "classes_presentes": 2
       }
     },
     {
@@ -264,7 +277,7 @@
       "plan": "parasagittal_oeil_L",
       "cadre": "bouche",
       "regle_mm": 10.0,
-      "texte": "Blender 5.1.2 | neutre | parasagittal_oeil_L | bouche | SHA b65d7f10 | regle 10 mm | section epaissie 0,4 mm pour lecture",
+      "texte": "Blender 5.1.2 | neutre | parasagittal_oeil_L | bouche | SHA b65d7f10 | regle 10 mm | trait de section 0,7 mm",
       "epaississement_section_mm": 0.4,
       "camera": [
         [
@@ -294,7 +307,7 @@
       ],
       "ortho_scale": 0.055,
       "mesure": {
-        "teintes": 118,
+        "teintes": 125,
         "echantillons": 1000000,
         "tolerance": 0.12,
         "palette_sRGB": {
@@ -309,10 +322,11 @@
             0.3133
           ]
         },
-        "magenta": 5559,
+        "magenta": 11735,
         "rouge": 0,
-        "gris": 687779,
-        "cyan": 76
+        "gris": 312732,
+        "cyan": 76,
+        "classes_presentes": 2
       }
     },
     {
@@ -320,7 +334,7 @@
       "plan": "parasagittal_oeil_L",
       "cadre": "orbite",
       "regle_mm": 10.0,
-      "texte": "Blender 5.1.2 | neutre | parasagittal_oeil_L | orbite | SHA b65d7f10 | regle 10 mm | section epaissie 0,4 mm pour lecture",
+      "texte": "Blender 5.1.2 | neutre | parasagittal_oeil_L | orbite | SHA b65d7f10 | regle 10 mm | trait de section 0,7 mm",
       "epaississement_section_mm": 0.4,
       "camera": [
         [
@@ -350,7 +364,7 @@
       ],
       "ortho_scale": 0.06,
       "mesure": {
-        "teintes": 150,
+        "teintes": 137,
         "echantillons": 1000000,
         "tolerance": 0.12,
         "palette_sRGB": {
@@ -365,10 +379,11 @@
             0.3133
           ]
         },
-        "magenta": 992,
-        "rouge": 14811,
-        "gris": 286681,
-        "cyan": 0
+        "magenta": 6005,
+        "rouge": 14806,
+        "gris": 194723,
+        "cyan": 0,
+        "classes_presentes": 3
       }
     },
     {
@@ -376,7 +391,7 @@
       "plan": "parasagittal_oeil_L",
       "cadre": "cavite_orale",
       "regle_mm": 10.0,
-      "texte": "Blender 5.1.2 | neutre | parasagittal_oeil_L | cavite_orale | SHA b65d7f10 | regle 10 mm | section epaissie 0,4 mm pour lecture",
+      "texte": "Blender 5.1.2 | neutre | parasagittal_oeil_L | cavite_orale | SHA b65d7f10 | regle 10 mm | trait de section 0,7 mm",
       "epaississement_section_mm": 0.4,
       "camera": [
         [
@@ -421,10 +436,11 @@
             0.3133
           ]
         },
-        "magenta": 4640,
+        "magenta": 9183,
         "rouge": 0,
-        "gris": 612229,
-        "cyan": 40
+        "gris": 263552,
+        "cyan": 40,
+        "classes_presentes": 2
       }
     },
     {
@@ -432,7 +448,7 @@
       "plan": "parasagittal_oeil_L",
       "cadre": "cou",
       "regle_mm": 10.0,
-      "texte": "Blender 5.1.2 | neutre | parasagittal_oeil_L | cou | SHA b65d7f10 | regle 10 mm | section epaissie 0,4 mm pour lecture",
+      "texte": "Blender 5.1.2 | neutre | parasagittal_oeil_L | cou | SHA b65d7f10 | regle 10 mm | trait de section 0,7 mm",
       "epaississement_section_mm": 0.4,
       "camera": [
         [
@@ -462,7 +478,7 @@
       ],
       "ortho_scale": 0.18,
       "mesure": {
-        "teintes": 129,
+        "teintes": 128,
         "echantillons": 1000000,
         "tolerance": 0.12,
         "palette_sRGB": {
@@ -477,18 +493,19 @@
             0.3133
           ]
         },
-        "magenta": 486,
+        "magenta": 3449,
         "rouge": 0,
-        "gris": 598111,
-        "cyan": 0
+        "gris": 34798,
+        "cyan": 0,
+        "classes_presentes": 2
       }
     }
   ],
   "registre": {
     "registre": "sagittal-render",
     "total": 14,
-    "reussies": 11,
-    "echecs": 3,
+    "reussies": 14,
+    "echecs": 0,
     "sautees": 0,
     "sondes": [
       {
@@ -496,7 +513,7 @@
         "description": "la section est capee, pas creuse",
         "configuration_connue": "plan sagittal du contrat de miroir, decale de 1,0 mm pour ne pas suivre la couture de symetrie",
         "expected": ">= 1 face",
-        "measured": 448,
+        "measured": 1356,
         "status": "PASS"
       },
       {
@@ -504,7 +521,7 @@
         "description": "l'interieur est peint distinctement de la peau",
         "configuration_connue": "classement de l'audit",
         "expected": ">= 1 face",
-        "measured": 1606,
+        "measured": 1559,
         "status": "PASS"
       },
       {
@@ -519,40 +536,40 @@
         "id": "sagittal.image.median_bouche",
         "description": "l'image n'est pas un clay uniforme et montre la section",
         "configuration_connue": "1000000 echantillons",
-        "expected": ">= 8 teintes, >= 20 px de section, >= 200 px de peau",
-        "measured": "128 teintes, 19 section, 8 muqueuse, 0 globe, 375044 peau",
-        "status": "FAIL"
+        "expected": ">= 8 teintes, >= 20 px de section, >= 2 classes",
+        "measured": "80 teintes, 2 classes : 6430 section, 0 muqueuse, 0 globe, 4513 peau",
+        "status": "PASS"
       },
       {
         "id": "sagittal.image.median_orbite",
         "description": "l'image n'est pas un clay uniforme et montre la section",
         "configuration_connue": "1000000 echantillons",
-        "expected": ">= 8 teintes, >= 20 px de section, >= 200 px de peau",
-        "measured": "121 teintes, 322 section, 0 muqueuse, 14878 globe, 88794 peau",
+        "expected": ">= 8 teintes, >= 20 px de section, >= 2 classes",
+        "measured": "73 teintes, 2 classes : 4762 section, 0 muqueuse, 14878 globe, 132 peau",
         "status": "PASS"
       },
       {
         "id": "sagittal.image.median_cavite_orale",
         "description": "l'image n'est pas un clay uniforme et montre la section",
         "configuration_connue": "1000000 echantillons",
-        "expected": ">= 8 teintes, >= 20 px de section, >= 200 px de peau",
-        "measured": "98 teintes, 0 section, 4 muqueuse, 0 globe, 348087 peau",
-        "status": "FAIL"
+        "expected": ">= 8 teintes, >= 20 px de section, >= 2 classes",
+        "measured": "71 teintes, 2 classes : 6389 section, 0 muqueuse, 0 globe, 2185 peau",
+        "status": "PASS"
       },
       {
         "id": "sagittal.image.median_cou",
         "description": "l'image n'est pas un clay uniforme et montre la section",
         "configuration_connue": "1000000 echantillons",
-        "expected": ">= 8 teintes, >= 20 px de section, >= 200 px de peau",
-        "measured": "82 teintes, 0 section, 0 muqueuse, 0 globe, 563195 peau",
-        "status": "FAIL"
+        "expected": ">= 8 teintes, >= 20 px de section, >= 2 classes",
+        "measured": "104 teintes, 2 classes : 1613 section, 0 muqueuse, 0 globe, 1914 peau",
+        "status": "PASS"
       },
       {
         "id": "sagittal.parasagittal_oeil_L.section",
         "description": "la section est capee, pas creuse",
         "configuration_connue": "plan par le centre du globe L",
         "expected": ">= 1 face",
-        "measured": 628,
+        "measured": 1908,
         "status": "PASS"
       },
       {
@@ -560,7 +577,7 @@
         "description": "l'interieur est peint distinctement de la peau",
         "configuration_connue": "classement de l'audit",
         "expected": ">= 1 face",
-        "measured": 2709,
+        "measured": 2620,
         "status": "PASS"
       },
       {
@@ -575,32 +592,32 @@
         "id": "sagittal.image.parasagittal_oeil_L_bouche",
         "description": "l'image n'est pas un clay uniforme et montre la section",
         "configuration_connue": "1000000 echantillons",
-        "expected": ">= 8 teintes, >= 20 px de section, >= 200 px de peau",
-        "measured": "118 teintes, 5559 section, 76 muqueuse, 0 globe, 687779 peau",
+        "expected": ">= 8 teintes, >= 20 px de section, >= 2 classes",
+        "measured": "125 teintes, 2 classes : 11735 section, 76 muqueuse, 0 globe, 312732 peau",
         "status": "PASS"
       },
       {
         "id": "sagittal.image.parasagittal_oeil_L_orbite",
         "description": "l'image n'est pas un clay uniforme et montre la section",
         "configuration_connue": "1000000 echantillons",
-        "expected": ">= 8 teintes, >= 20 px de section, >= 200 px de peau",
-        "measured": "150 teintes, 992 section, 0 muqueuse, 14811 globe, 286681 peau",
+        "expected": ">= 8 teintes, >= 20 px de section, >= 2 classes",
+        "measured": "137 teintes, 3 classes : 6005 section, 0 muqueuse, 14806 globe, 194723 peau",
         "status": "PASS"
       },
       {
         "id": "sagittal.image.parasagittal_oeil_L_cavite_orale",
         "description": "l'image n'est pas un clay uniforme et montre la section",
         "configuration_connue": "1000000 echantillons",
-        "expected": ">= 8 teintes, >= 20 px de section, >= 200 px de peau",
-        "measured": "133 teintes, 4640 section, 40 muqueuse, 0 globe, 612229 peau",
+        "expected": ">= 8 teintes, >= 20 px de section, >= 2 classes",
+        "measured": "133 teintes, 2 classes : 9183 section, 40 muqueuse, 0 globe, 263552 peau",
         "status": "PASS"
       },
       {
         "id": "sagittal.image.parasagittal_oeil_L_cou",
         "description": "l'image n'est pas un clay uniforme et montre la section",
         "configuration_connue": "1000000 echantillons",
-        "expected": ">= 8 teintes, >= 20 px de section, >= 200 px de peau",
-        "measured": "129 teintes, 486 section, 0 muqueuse, 0 globe, 598111 peau",
+        "expected": ">= 8 teintes, >= 20 px de section, >= 2 classes",
+        "measured": "128 teintes, 2 classes : 3449 section, 0 muqueuse, 0 globe, 34798 peau",
         "status": "PASS"
       }
     ]

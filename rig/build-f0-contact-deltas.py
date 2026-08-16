@@ -16,7 +16,7 @@ aretes depuis l'anneau de marge.
       --output-dir reports/f0-final/deformations \
       --debug-blend experiments/f0-contacts/FACE_F0_CONTACTS_DEBUG.blend
 """
-import argparse, hashlib, importlib.util, json, os, struct, sys
+import argparse, hashlib, importlib.util, json, math, os, struct, sys
 try: sys.stdout.reconfigure(line_buffering=True)
 except Exception: pass
 import bpy
@@ -257,11 +257,39 @@ def deplacements_de_marge(co, P, cle, globes, M):
     # echantillons uniformes. On mesure donc le residu SUR LES ECHANTILLONS, et
     # on le redistribue aux extremites de leurs segments. Ce n'est pas un
     # reglage : c'est la boucle que la mesure reclamait.
+    # La garde S'ANNULE AUX COMMISSURES. Les terminaux medial et lateral sont
+    # des ancres PARTAGEES — le meme sommet pour la marge haute et la marge
+    # basse — donc leur separation vaut zero par construction. Imposer 0,02 mm
+    # jusqu'au bout mettait le solveur en contradiction avec sa propre ancre,
+    # et il depassait juste a cote : la paire 62 sur 64 croisait de -0,061 mm a
+    # gauche et -0,071 a droite, et c'etait la SEULE des soixante-quatre.
+    n_paires = len(o["paires"])
+
+    def garde_a(k):
+        if n_paires < 2:
+            return GARDE_CONTACT_M
+        s_k = k / (n_paires - 1)
+        return GARDE_CONTACT_M * math.sin(math.pi * s_k) ** 0.5
+
     for _ in range(ITERATIONS):
         w = [co[i] + out.get(i, Vector((0, 0, 0))) for i in range(len(co))]
         pire = 0.0
         corr = {}
+        # Le residu de chaque paire est mesure AVANT de corriger, pour pouvoir
+        # peser les corrections. 64 echantillons pour 22 sommets de marge : les
+        # demandes se contredisent et leur MOYENNE laisse la pire paire
+        # insatisfaite. C'est un probleme de minimax, pas de moindres carres :
+        # on donne davantage de voix aux paires les plus fautives.
+        residus = []
         for paire in o["paires"]:
+            ph0 = w[paire["upper_segment"][0]].lerp(
+                w[paire["upper_segment"][1]], paire["upper_t"])
+            pb0 = w[paire["lower_segment"][0]].lerp(
+                w[paire["lower_segment"][1]], paire["lower_t"])
+            residus.append((ph0 - pb0).length)
+        pire_residu = max(residus) if residus else 0.0
+
+        for k_paire, paire in enumerate(o["paires"]):
             ph = w[paire["upper_segment"][0]].lerp(
                 w[paire["upper_segment"][1]], paire["upper_t"])
             pb = w[paire["lower_segment"][0]].lerp(
@@ -279,18 +307,21 @@ def deplacements_de_marge(co, P, cle, globes, M):
             # MEME point se croisent des que l'iteration depasse, et la
             # separation signee devenait negative (-0,10 mm). Elles visent donc
             # deux points separes par une garde de 0,02 mm, superieure au-dessus.
-            garde = Vector((0.0, 0.0, 0.5 * GARDE_CONTACT_M))
+            garde = Vector((0.0, 0.0, 0.5 * garde_a(k_paire)))
             cible_h, cible_b = contact + garde, contact - garde
             pire = max(pire, (ph - pb).length)
             for seg, t, p, cible in ((paire["upper_segment"], paire["upper_t"],
                                       ph, cible_h),
                                      (paire["lower_segment"], paire["lower_t"],
                                       pb, cible_b)):
-                d = (cible - p) * AMORTISSEMENT
+                poids_paire = 1.0
+                if pire_residu > 1e-12:
+                    poids_paire = 1.0 + 3.0 * (residus[k_paire] / pire_residu)
+                d = (cible - p) * AMORTISSEMENT * poids_paire
                 for i, poids in ((seg[0], 1.0 - t), (seg[1], t)):
                     if poids <= 1e-9: continue
                     a = corr.setdefault(i, [Vector((0, 0, 0)), 0.0])
-                    a[0] += d * poids; a[1] += poids
+                    a[0] += d * poids; a[1] += poids * poids_paire
         if pire * MM < 0.02:
             break
         for i, (somme, poids) in corr.items():
