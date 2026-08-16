@@ -69,6 +69,17 @@ def suites_v3(src, sortie):
     spike = chemin("experiments", "gltf-spike", "spike.blend")
     glb = chemin("exports", "atlas-face-spike.glb")
     return [
+        # La suite V3 des contacts FAIT FOI. Elle manquait au runner, si bien
+        # que le gate lisait le clignement dans la suite historique — 2,39 mm
+        # la ou V3 mesure 0,215 — et les levres a 0,97 mm la ou V3 mesure 0,092.
+        ("contacts_v3",
+         [BLENDER, "--background", "--factory-startup", "--python-exit-code", "1",
+          "--python", chemin("tests", "f0-contacts-v3.py"), "--",
+          "--input", "experiments/f0-contacts/FACE_F0_CONTACTS_WORK.blend",
+          "--deltas", "reports/f0-final/deformations",
+          "--pairs", "reports/f0-final/correspondances-marges.json",
+          "--output", chemin(sortie, "contacts-v3.json")],
+         chemin(sortie, "contacts-v3.json")),
         ("anatomy_counts",
          [BLENDER, "--background", src, "--python-exit-code", "1",
           "--python", chemin("tests", "measure-f0-anatomy-counts.py"), "--",

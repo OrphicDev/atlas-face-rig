@@ -39,3 +39,6 @@ Colonnes obligatoires — une action sans preuve ne compte pas :
 - **Zones à surveiller**, nommées par la mesure : le philtrum et la lèvre
   inférieure portent 14 triangles ; la paupière n'a que 4 boucles dans 5,5 mm ;
   les narines n'ont que 7 à 8 sommets de pourtour.
+
+
+> **État F0 (2026-08-16, commit `ace4b94`).** F0 est **incomplète** : 167 sondes, 151 réussies, 13 échec(s), 3 sautée(s). Vérité unique : [`reports/f0-final/RAPPORT_F0_FINAL.md`](../reports/f0-final/RAPPORT_F0_FINAL.md). F1 n'a pas commencé.

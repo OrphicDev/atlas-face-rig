@@ -1,0 +1,66 @@
+{
+  "rapport": "reports/f0-final/RAPPORT_F0_FINAL.md",
+  "liens": [
+    "DECISION_RACCORD_CORPS.md",
+    "DECISION_MODIFIER_ORDER.md",
+    "RAPPORT_F0F4_SAGITTAL.md",
+    "RAPPORT_F0F5_WIREFRAMES.md",
+    "RAPPORT_F0E.md"
+  ],
+  "casses": [],
+  "interdits": [],
+  "valeurs": {
+    "tracees": 32,
+    "divergentes": [],
+    "sources_absentes": []
+  },
+  "registre": {
+    "registre": "check-report-links",
+    "total": 5,
+    "reussies": 5,
+    "echecs": 0,
+    "sautees": 0,
+    "sondes": [
+      {
+        "id": "liens.resolvent",
+        "description": "chaque lien local designe un fichier existant",
+        "configuration_connue": "5 liens",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "liens.aucun_temporaire",
+        "description": "aucun lien vers un temporaire ou un cache",
+        "configuration_connue": "5 liens",
+        "expected": [],
+        "measured": [],
+        "status": "PASS"
+      },
+      {
+        "id": "valeurs.rederivees",
+        "description": "chaque valeur citee est retrouvee dans son JSON",
+        "configuration_connue": "32 valeurs tracees",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "valeurs.sources_presentes",
+        "description": "chaque source citee existe",
+        "configuration_connue": "32 valeurs",
+        "expected": [],
+        "measured": [],
+        "status": "PASS"
+      },
+      {
+        "id": "rapport.coherent",
+        "description": "le rapport n'annonce pas F0 TERMINEE avec des conditions non remplies",
+        "configuration_connue": "lecture du tableau du gate",
+        "expected": false,
+        "measured": false,
+        "status": "PASS"
+      }
+    ]
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "sondes.total": {
+    "source": "reports/f0-final/registre.json",
+    "cle": "total_sondes",
+    "valeur": 167
+  },
+  "sondes.reussies": {
+    "source": "reports/f0-final/registre.json",
+    "cle": "reussies",
+    "valeur": 151
+  },
+  "contacts_v3:blink_L.aretes": {
+    "source": "reports/f0-final/contacts-v3.json",
+    "cle": "registre.sondes[id=blink_L.aretes].measured",
+    "valeur": [
+      0.35499,
+      2.42828
+    ]
+  },
+  "contacts_v3:blink_L.gap_cage": {
+    "source": "reports/f0-final/contacts-v3.json",
+    "cle": "registre.sondes[id=blink_L.gap_cage].measured",
+    "valeur": 0.21516
+  },
+  "contacts_v3:blink_L.gap_dense": {
+    "source": "reports/f0-final/contacts-v3.json",
+    "cle": "registre.sondes[id=blink_L.gap_dense].measured",
+    "valeur": 0.18044
+  },
+  "contacts_v3:blink_L.monotone": {
+    "source": "reports/f0-final/contacts-v3.json",
+    "cle": "registre.sondes[id=blink_L.monotone].measured",
+    "valeur": true
+  },
+  "contacts_v3:blink_L.retour_neutre": {
+    "source": "reports/f0-final/contacts-v3.json",
+    "cle": "registre.sondes[id=blink_L.retour_neutre].measured",
+    "valeur": 0.0
+  },
+  "contacts_v3:blink_L.separation_signee": {
+    "source": "reports/f0-final/contacts-v3.json",
+    "cle": "registre.sondes[id=blink_L.separation_signee].measured",
+    "valeur": -0.06136
+  },
+  "contacts_v3:blink_R.aretes": {
+    "source": "reports/f0-final/contacts-v3.json",
+    "cle": "registre.sondes[id=blink_R.aretes].measured",
+    "valeur": [
+      0.39084,
+      2.48539
+    ]
+  },
+  "contacts_v3:blink_R.gap_cage": {
+    "source": "reports/f0-final/contacts-v3.json",
+    "cle": "registre.sondes[id=blink_R.gap_cage].measured",
+    "valeur": 0.18756
+  },
+  "contacts_v3:blink_R.gap_dense": {
+    "source": "reports/f0-final/contacts-v3.json",
+    "cle": "registre.sondes[id=blink_R.gap_dense].measured",
+    "valeur": 0.18595
+  },
+  "contacts_v3:blink_R.monotone": {
+    "source": "reports/f0-final/contacts-v3.json",
+    "cle": "registre.sondes[id=blink_R.monotone].measured",
+    "valeur": true
+  },
+  "contacts_v3:blink_R.retour_neutre": {
+    "source": "reports/f0-final/contacts-v3.json",
+    "cle": "registre.sondes[id=blink_R.retour_neutre].measured",
+    "valeur": 0.0
+  },
+  "contacts_v3:blink_R.separation_signee": {
+    "source": "reports/f0-final/contacts-v3.json",
+    "cle": "registre.sondes[id=blink_R.separation_signee].measured",
+    "valeur": -0.07108
+  },
+  "contacts_v3:mouth_close.aretes": {
+    "source": "reports/f0-final/contacts-v3.json",
+    "cle": "registre.sondes[id=mouth_close.aretes].measured",
+    "valeur": [
+      0.44731,
+      1.52322
+    ]
+  },
+  "contacts_v3:mouth_close.gap_cage": {
+    "source": "reports/f0-final/contacts-v3.json",
+    "cle": "registre.sondes[id=mouth_close.gap_cage].measured",
+    "valeur": 0.09203
+  },
+  "contacts_v3:mouth_close.gap_dense": {
+    "source": "reports/f0-final/contacts-v3.json",
+    "cle": "registre.sondes[id=mouth_close.gap_dense].measured",
+    "valeur": 0.09631
+  },
+  "contacts_v3:mouth_close.monotone": {
+    "source": "reports/f0-final/contacts-v3.json",
+    "cle": "registre.sondes[id=mouth_close.monotone].measured",
+    "valeur": true
+  },
+  "contacts_v3:mouth_close.retour_neutre": {
+    "source": "reports/f0-final/contacts-v3.json",
+    "cle": "registre.sondes[id=mouth_close.retour_neutre].measured",
+    "valeur": 0.0
+  },
+  "contacts_v3:mouth_close.separation_signee": {
+    "source": "reports/f0-final/contacts-v3.json",
+    "cle": "registre.sondes[id=mouth_close.separation_signee].measured",
+    "valeur": -0.00358
+  },
+  "anatomie.boucles_palpebrales.L": {
+    "source": "reports/f0-final/anatomy-counts.json",
+    "cle": "boucles_palpebrales.L",
+    "valeur": 5
+  },
+  "anatomie.boucles_palpebrales.R": {
+    "source": "reports/f0-final/anatomy-counts.json",
+    "cle": "boucles_palpebrales.R",
+    "valeur": 5
+  },
+  "anatomie.boucles_labiales": {
+    "source": "reports/f0-final/anatomy-counts.json",
+    "cle": "boucles_labiales",
+    "valeur": 3
+  },
+  "anatomie.triangles": {
+    "source": "reports/f0-final/anatomy-counts.json",
+    "cle": "triangles_region_bouche",
+    "valeur": 14
+  },
+  "anatomie.narine.L": {
+    "source": "reports/f0-final/anatomy-counts.json",
+    "cle": "sommets_bord_narine.L",
+    "valeur": 7
+  },
+  "anatomie.narine.R": {
+    "source": "reports/f0-final/anatomy-counts.json",
+    "cle": "sommets_bord_narine.R",
+    "valeur": 8
+  },
+  "runtime.sommets_dense": {
+    "source": "reports/f0-final/runtime-resolution.json",
+    "cle": "sommets_dense",
+    "valeur": 12950
+  },
+  "runtime.sans_poids": {
+    "source": "reports/f0-final/runtime-resolution.json",
+    "cle": "sommets_sans_poids",
+    "valeur": 0
+  },
+  "gltf.roundtrip.reussies": {
+    "source": "experiments/gltf-spike/roundtrip.json",
+    "cle": "registre.reussies",
+    "valeur": 14
+  },
+  "gltf.roundtrip.total": {
+    "source": "experiments/gltf-spike/roundtrip.json",
+    "cle": "registre.total",
+    "valeur": 14
+  },
+  "runtime.derive": {
+    "source": "reports/f0-final/runtime-glb.json",
+    "cle": "derive_radiale_mm",
+    "valeur": 0.000112
+  },
+  "runtime.course": {
+    "source": "reports/f0-final/runtime-glb.json",
+    "cle": "course_machoire_mm",
+    "valeur": 67.6269
+  }
+}

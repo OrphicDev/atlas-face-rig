@@ -1,7 +1,11 @@
 # HANDOFF — la suite du visage, à partir de F1
 
-F0 est terminée et mesurée. **Rien n'est riggé.** Ne recommence pas F0 : tout
-est chiffré, vérifié et verrouillé.
+**F0 n'est PAS terminée.** Ce document affirmait le contraire pendant que
+`STATUS.md` affirmait « F0 INCOMPLET » : la contradiction est levée ici.
+L'état réellement démontré est dans
+[`reports/f0-final/RAPPORT_F0_FINAL.md`](../reports/f0-final/RAPPORT_F0_FINAL.md).
+**Rien n'est riggé.** Ne recommence pas ce qui est déjà mesuré, mais ne
+commence pas F1 non plus : le gate F0 n'est pas passé.
 
 ## 1. Où reprendre
 

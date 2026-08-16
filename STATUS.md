@@ -1,17 +1,35 @@
-STATUS: F0 INCOMPLET — le raccord corps ne passe pas les seuils
+STATUS: **F0 INCOMPLÈTE** — 167 sondes, 151 réussies, 13 échec(s), 3 sautée(s)
+
+> Vérité unique : [`reports/f0-final/RAPPORT_F0_FINAL.md`](reports/f0-final/RAPPORT_F0_FINAL.md).
+> Mesuré le 2026-08-16, commit `ace4b94`, Blender 5.1.2.
 
 | | |
 | --- | --- |
-| **statut global** | **F0 INCOMPLET** — voir `reports/f0-correction/RAPPORT_F0_CORRECTION.md` |
-| dernière étape terminée | audit topologique, décision multires, décision de topologie, base verrouillée |
-| étape suivante | **finir la correction F0** : étendre l'influence du clignement aux sommets de bord audités, trancher le raccord corps, export glTF, preuves visuelles. **F1 ne commence pas.** |
+| **statut global** | **F0 INCOMPLÈTE** — le gate n'est pas passé |
+| fondation | `source/FACE_F0_FOUNDATION_FINAL.blend` |
+| contrat de sortie | `source/FACE_F0_FOUNDATION_FINAL.output-contract.json` |
 | branche active | `face/chat-3-caucasian-v1` |
-| commit de départ | `4c6a4dbfbaddc52fbf1222afd7e07b65de915b96` |
-| géométrie faciale | **verrouillée** : `source/FACE_BASE_LOCKED.blend` |
-| shape keys | **aucune** — c'est voulu, F1 n'en demande pas |
-| rig facial | **inexistant** |
-| sondes vérifiées / total | comptées par registre, plus à la main : 5/5 préflight, 11/11 scellement, 15/15 raccord (dont 2 seuils en échec assumés) |
-| processus actifs | **aucun** |
+| sondes | **151 / 167**, comptées par registre et jamais à la main |
+| suites en échec | `multires`, `raccord`, `hygiene`, `contacts_v3`, `gltf_conformite`, `coupe_sagittale` |
+| F1 | **ne commence pas** tant que le gate n'est pas passé |
+
+## Ce qui bloque, nommément
+
+- clignement gauche sur la cage : 0.21516 mm pour 0,20 exigés
+- séparations signées et rapports d'arêtes des paupières (V3)
+- validateur Khronos absent de la machine — sonde SAUTÉE, jamais PASS
+- trois cadres de la coupe sagittale médiane sans section
+- chemin personnel encore présent dans le blend (hygiène)
+- raccord corps : la suite historique reste en échec métier
+
+## Ce qui bloque, nommément
+
+- clignement gauche sur la cage : 0.21516 mm pour 0,20 exiges
+- separations signees et rapports d'aretes des paupieres (V3)
+- validateur Khronos absent de la machine — sonde SAUTEE, jamais PASS
+- trois cadres de la coupe sagittale mediane sans section
+- chemin personnel encore present dans le blend (hygiene)
+- raccord corps : la suite historique reste en echec metier
 
 ## Ce qui existe maintenant
 

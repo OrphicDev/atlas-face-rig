@@ -41,9 +41,9 @@
 | sommets | **5 134** |
 | faces | **5 122** |
 | octets | 980 099 |
-| SHA-256 | `669ccdb7858adea2e3091218bdfeed4fe1b4d955d866497ad20e8559c95e55bd` |
-| empreinte de topologie | `d29e2af3ef67aec5bad705c5e5a4b72428f906f01af94c33880c85a47722e5ae` |
-| empreinte de pose neutre | `9246d8acb2d68a38a6f355db90df967e8f6e71907343ce1cf028549bed20c324` |
+| SHA-256 | `669ccdb7858adea2e3091218bdfeed4fe1b4d955d866497ad20e8559c95e55bd` — **OBSOLÈTE** : empreinte du paquet d'audit d'origine, antérieur au verrou c0885. Ce n'est **pas** celle du verrou c0885 ni celle de la fondation finale. |
+| empreinte de topologie | `d29e2af3ef67aec5bad705c5e5a4b72428f906f01af94c33880c85a47722e5ae` — **OBSOLÈTE** : empreinte du paquet d'audit d'origine, antérieur au verrou c0885. Ce n'est **pas** celle du verrou c0885 ni celle de la fondation finale. |
+| empreinte de pose neutre | `9246d8acb2d68a38a6f355db90df967e8f6e71907343ce1cf028549bed20c324` — **OBSOLÈTE** : empreinte du paquet d'audit d'origine, antérieur au verrou c0885. Ce n'est **pas** celle du verrou c0885 ni celle de la fondation finale. |
 | transformations | échelle 1,1,1 · rotation nulle · position monde inchangée |
 
 ## Commandes et codes de sortie
@@ -129,3 +129,8 @@ affirmé, par `tests/f0-hygiene-blend.py` : 0 jeton, 0 clé privée, 0 courriel,
 
 Une session. F0 seule : audit topologique, banc multires, base verrouillée,
 verrou, rendus, rapports.
+
+
+---
+
+> **Note du 2026-08-16, commit `ace4b94`.** Les trois empreintes ci-dessus appartiennent au paquet d'audit d'origine. Le verrou courant est `source/FACE_BASE_LOCKED.blend` (`cc9e55a4…`) et la fondation est `source/FACE_F0_FOUNDATION_FINAL.blend` (`eb7fbccc…`). Vérité unique : [`reports/f0-final/RAPPORT_F0_FINAL.md`](../reports/f0-final/RAPPORT_F0_FINAL.md).

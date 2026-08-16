@@ -1,0 +1,49 @@
+{
+  "a": "reports/f0-final/registre.json",
+  "b": "reports/f0-final/replay-clean/registre.json",
+  "sondes_comparees": 167,
+  "divergentes": [],
+  "verdicts_changes": [],
+  "master_sha256": "cc9e55a47b1496fa81ed42deee6ee3a6f498c309d5b86610e5cd2407831f2bd8",
+  "registre": {
+    "registre": "replay-determinisme",
+    "total": 4,
+    "reussies": 4,
+    "echecs": 0,
+    "sautees": 0,
+    "sondes": [
+      {
+        "id": "replay.memes_sondes",
+        "description": "le replay execute exactement les memes sondes",
+        "configuration_connue": "167 / 167",
+        "expected": [],
+        "measured": [],
+        "status": "PASS"
+      },
+      {
+        "id": "replay.memes_mesures",
+        "description": "chaque sonde rend la MEME valeur, pas seulement le meme verdict",
+        "configuration_connue": "167 sondes comparees",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "replay.memes_verdicts",
+        "description": "aucun verdict ne change",
+        "configuration_connue": "167 sondes",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "replay.master_intact",
+        "description": "le master historique a garde son SHA",
+        "configuration_connue": "source/FACE_BASE_LOCKED.blend",
+        "expected": "cc9e55a47b1496fa81ed42deee6ee3a6f498c309d5b86610e5cd2407831f2bd8",
+        "measured": "cc9e55a47b1496fa81ed42deee6ee3a6f498c309d5b86610e5cd2407831f2bd8",
+        "status": "PASS"
+      }
+    ]
+  }
+}

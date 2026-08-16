@@ -1,0 +1,37 @@
+{
+  "date": "2026-08-16",
+  "commit": "ace4b94",
+  "documents": {
+    "STATUS.md": "entete reecrit depuis le registre",
+    "handoffs/HANDOFF_FACE_NEXT.md": "deja coherent",
+    "audit/AUDIT_PACKET_FACE.md": "empreintes anciennes datees",
+    "README.md": "renvoi vers la verite unique",
+    "CHANGELOG.md": "renvoi vers la verite unique",
+    "docs/FACS_MATRIX.md": "renvoi vers la verite unique"
+  },
+  "registre": {
+    "registre": "living-docs",
+    "total": 2,
+    "reussies": 2,
+    "echecs": 0,
+    "sautees": 0,
+    "sondes": [
+      {
+        "id": "docs.aucune_contradiction",
+        "description": "aucun document vivant n'affirme F0 terminee",
+        "configuration_connue": "6 documents",
+        "expected": [],
+        "measured": [],
+        "status": "PASS"
+      },
+      {
+        "id": "docs.renvoi_unique",
+        "description": "chaque document vivant renvoie au rapport final",
+        "configuration_connue": "6 documents",
+        "expected": 6,
+        "measured": 6,
+        "status": "PASS"
+      }
+    ]
+  }
+}
