@@ -1,0 +1,101 @@
+{
+  "status": "OK",
+  "mode": "synthetique",
+  "plan": "reports/f0-final/body-replacement-plan.json",
+  "zone_de_jonction_m": 0.056,
+  "avant": {
+    "faces_corps": 1600,
+    "aretes_ouvertes_corps": 160
+  },
+  "apres": {
+    "faces": 1600,
+    "aretes_ouvertes_total": 160,
+    "aretes_ouvertes_a_la_jonction": 0,
+    "aretes_ouvertes_bord_exterieur": 160,
+    "aretes_non_manifold": 0,
+    "faces_inversees": 0,
+    "auto_intersections": 0,
+    "sommets_doubles": 0
+  },
+  "images": [
+    "renders/f0-final/body-replacement/remplacement_face.png",
+    "renders/f0-final/body-replacement/remplacement_profil_L.png",
+    "renders/f0-final/body-replacement/remplacement_profil_R.png",
+    "renders/f0-final/body-replacement/remplacement_arriere_du_cou.png",
+    "renders/f0-final/body-replacement/remplacement_tete_tournee.png"
+  ],
+  "registre": {
+    "registre": "body-replacement",
+    "total": 8,
+    "reussies": 8,
+    "echecs": 0,
+    "sautees": 0,
+    "sondes": [
+      {
+        "id": "remplacement.plan_avant_decoupe",
+        "description": "les indices sont ecrits AVANT toute suppression",
+        "configuration_connue": "reports/f0-final/body-replacement-plan.json",
+        "expected": true,
+        "measured": true,
+        "status": "PASS"
+      },
+      {
+        "id": "remplacement.trou_ouvert",
+        "description": "la decoupe ouvre bien un trou",
+        "configuration_connue": "400 faces retirees",
+        "expected": "> 160",
+        "measured": 240,
+        "status": "PASS"
+      },
+      {
+        "id": "remplacement.zero_trou",
+        "description": "aucune arete ouverte A LA JONCTION",
+        "configuration_connue": "zone de 56 mm autour de la decoupe",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "remplacement.zero_double_surface",
+        "description": "aucun sommet confondu restant",
+        "configuration_connue": "maillage fusionne",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "remplacement.zero_intersection",
+        "description": "aucune auto-intersection",
+        "configuration_connue": "maillage fusionne",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "remplacement.zero_non_manifold",
+        "description": "aucune arete non manifold",
+        "configuration_connue": "maillage fusionne",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "remplacement.zero_face_inversee",
+        "description": "aucune face retournee",
+        "configuration_connue": "maillage fusionne",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "remplacement.cinq_vues",
+        "description": "face, profils, arriere du cou et tete tournee sont rendus",
+        "configuration_connue": "vues exigees par le tutoriel",
+        "expected": 5,
+        "measured": 5,
+        "status": "PASS"
+      }
+    ]
+  },
+  "verdict": "La voie remplacement passe ses controles : 8/8"
+}

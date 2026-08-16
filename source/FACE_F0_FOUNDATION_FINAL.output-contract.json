@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "commit_source": "90808dc37fee7cefae8a37492acc6f6fe3089306",
+  "commit_source": "70cb0227ee570f0957610b908baf5a1bf6b2dc4b",
   "blender": "5.1.2",
   "blend": "source/FACE_F0_FOUNDATION_FINAL.blend",
   "blend_sha256": "eb7fbccc863ab7723c56e65faacc09e98b1bc76dd6c5f9dc91b2981492b2a37a",
@@ -69,21 +69,21 @@
   "deltas": {
     "blink_L": {
       "path": "reports/f0-final/deformations/blink_L.cage-delta.json",
-      "sha256": "dd6ece354915c232d0e64469e055e6656ce2f0343ef8284afd94a607d26fbade"
+      "sha256": "a5baf38b6ac83159ad83284d6db90c4dbe8158a75da09db4e06753dcdc4bf8b1"
     },
     "blink_R": {
       "path": "reports/f0-final/deformations/blink_R.cage-delta.json",
-      "sha256": "0d00b3bb1753f22005f0665fb124cb47fd8fda7b280fc63ff55def56f1bd3cd6"
+      "sha256": "5926d86301e24bf5faf20270c6ee30030fc97a37ccdd79844a313865625eea08"
     },
     "mouth_close": {
       "path": "reports/f0-final/deformations/mouth_close.cage-delta.json",
-      "sha256": "db509f904363d37c1d014685009e4fadf1a975a21d05837ec34bf579b65bc0f6"
+      "sha256": "eb60c4d8edbd74aecb53956df9d833b48eeaa548d71fae0693cdfc56e82619a9"
     }
   },
   "decisions": {
     "raccord_corps": {
       "path": "reports/f0-final/DECISION_RACCORD_CORPS.md",
-      "sha256": "9c5392911e29cfcd8ad14a30e36f3895c6ba881d9d1215d72c06533d931b3667"
+      "sha256": "8f4d3ead11a8b264e5619451083e6d7a11684734751980d7707431a80c33c100"
     },
     "ordre_modificateurs": {
       "path": "reports/f0-final/DECISION_MODIFIER_ORDER.md",

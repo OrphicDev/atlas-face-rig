@@ -2,12 +2,12 @@
   "sondes.total": {
     "source": "reports/f0-final/registre.json",
     "cle": "total_sondes",
-    "valeur": 167
+    "valeur": 199
   },
   "sondes.reussies": {
     "source": "reports/f0-final/registre.json",
     "cle": "reussies",
-    "valeur": 154
+    "valeur": 185
   },
   "contacts_v3:blink_L.aretes": {
     "source": "reports/f0-final/contacts-v3.json",

@@ -58,3 +58,36 @@ contre-épreuve `Surface Deform` du §D.8 — et de comparer les deux surfaces
 obtenues. Cette contre-épreuve n'est pas faite. **La décision de stratégie est
 donc prise sur la mesure de similarité et sur les propriétés démontrées du
 transfert, pas sur un seuil d'erreur que je n'ai pas encore mesuré.**
+
+
+---
+
+## Mise à jour — F0-D.8 et F0-D.9 sont écrites et mesurables
+
+La décision ci-dessus a été prise sans la contre-épreuve Surface Deform ni
+l'essai de remplacement complet. Les deux existent désormais :
+
+- `rig/f0-body-surface-deform.py` — le modificateur posé sur un **duplicata**,
+  lié au neutre, `is_bound` vérifié, les six poses rejouées, la même règle de
+  mesure que la voie barycentrique ;
+- `rig/build-f0-body-replacement.py` — le plan d'indices écrit **avant** toute
+  suppression, puis découpe, fusion, et cinq vues ; zéro trou à la jonction,
+  zéro double surface, zéro auto-intersection, zéro non-manifold, zéro face
+  inversée.
+
+Leur **règle de mesure** est vérifiée à réponse connue par
+`tests/f0-body-banc-synthetique.py` (17/17) : une levée de 3,000 mm se
+transfère exactement, rien ne bouge hors masque, et chaque sonde de topologie
+compte exactement la faute injectée. Les deux voies s'y accordent à
+**2 nanomètres**.
+
+Ce qui manque n'est pas le travail, c'est **le corps** :
+`ATLAS_BASE_MESH` — `human_base_meshes_bundle.blend`, 49 420 489 octets,
+SHA `3c121505…` — n'est pas sur cette machine. Tant qu'il manque, les deux
+étapes sont publiées **SAUTÉES** avec leur dépendance nommée, et
+`reports/f0-final/body-methodes-ab.json` dit explicitement que ses chiffres
+viennent du banc synthétique.
+
+**La décision « transfert de déformations » n'est donc pas révisée ici.** Elle
+le sera dès que l'asset sera de retour : la commande est écrite, elle tourne
+telle quelle.

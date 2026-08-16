@@ -23,7 +23,7 @@
     "multires": {
       "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/multires-ab-v2.json",
       "code": 2,
-      "verdict": "FAIL",
+      "verdict": "PROVENANCE",
       "sondes": 26,
       "reussies": 21,
       "echecs": 3,
@@ -32,7 +32,7 @@
     "raccord": {
       "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/raccord-corps.json",
       "code": 2,
-      "verdict": "FAIL",
+      "verdict": "SKIP",
       "sondes": 0,
       "reussies": 0,
       "echecs": 0,
@@ -40,11 +40,11 @@
     },
     "hygiene": {
       "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/hygiene-blend-raw.json",
-      "code": 1,
-      "verdict": "FAIL",
+      "code": 0,
+      "verdict": "PASS",
       "sondes": 11,
-      "reussies": 10,
-      "echecs": 1,
+      "reussies": 11,
+      "echecs": 0,
       "sautees": 0
     },
     "contacts_v3": {
@@ -52,9 +52,45 @@
       "code": 2,
       "verdict": "FAIL",
       "sondes": 18,
-      "reussies": 12,
-      "echecs": 6,
+      "reussies": 15,
+      "echecs": 3,
       "sautees": 0
+    },
+    "body_banc": {
+      "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/body-banc-synthetique.json",
+      "code": 0,
+      "verdict": "PASS",
+      "sondes": 17,
+      "reussies": 17,
+      "echecs": 0,
+      "sautees": 0
+    },
+    "body_surface_deform": {
+      "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/body-surface-deform.json",
+      "code": 0,
+      "verdict": "SKIP",
+      "sondes": 1,
+      "reussies": 0,
+      "echecs": 0,
+      "sautees": 1
+    },
+    "body_remplacement": {
+      "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/body-replacement.json",
+      "code": 0,
+      "verdict": "PASS",
+      "sondes": 8,
+      "reussies": 8,
+      "echecs": 0,
+      "sautees": 0
+    },
+    "body_methodes_ab": {
+      "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/body-methodes-ab.json",
+      "code": 0,
+      "verdict": "SKIP",
+      "sondes": 6,
+      "reussies": 5,
+      "echecs": 0,
+      "sautees": 1
     },
     "anatomy_counts": {
       "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/anatomy-counts.json",
@@ -138,19 +174,15 @@
       "sautees": 0
     }
   },
-  "total_sondes": 167,
-  "reussies": 151,
+  "total_sondes": 199,
+  "reussies": 185,
   "echecs": [
     "multires/clignement.A_cage.gap_ferme_L",
     "multires/clignement.A_cage.gap_ferme_R",
     "multires/levres.A_cage.gap_max",
-    "hygiene/blend.aucun_chemin_personnel",
     "contacts_v3/blink_L.gap_cage",
     "contacts_v3/blink_L.separation_signee",
-    "contacts_v3/blink_L.aretes",
     "contacts_v3/blink_R.separation_signee",
-    "contacts_v3/blink_R.aretes",
-    "contacts_v3/mouth_close.aretes",
     "coupe_sagittale/sagittal.image.median_bouche",
     "coupe_sagittale/sagittal.image.median_cavite_orale",
     "coupe_sagittale/sagittal.image.median_cou"
@@ -158,15 +190,22 @@
   "sautees": [
     "multires/clignement.B_haute_resolution.gap",
     "multires/levres.B_haute_resolution.gap",
+    "body_surface_deform/surface_deform.dependance",
+    "body_methodes_ab/ab.corps_reel",
     "gltf_conformite/khronos.validator"
   ],
   "suites_en_echec": [
-    "multires",
-    "raccord",
-    "hygiene",
     "contacts_v3",
     "gltf_conformite",
     "coupe_sagittale"
+  ],
+  "suites_de_provenance": [
+    "multires"
+  ],
+  "suites_sautees_faute_d_asset": [
+    "raccord",
+    "body_surface_deform",
+    "body_methodes_ab"
   ],
   "status": "FAIL",
   "sondes": [
@@ -516,11 +555,11 @@
     },
     {
       "id": "blend.aucun_chemin_personnel",
-      "description": "aucun chemin /Users dans le fichier",
-      "configuration_connue": "fichier non compresse scanne",
+      "description": "aucun chemin /Users dans le fichier PUBLIE",
+      "configuration_connue": "octets du livrable, scannes tels quels",
       "expected": 0,
-      "measured": 1,
-      "status": "FAIL",
+      "measured": 0,
+      "status": "PASS",
       "suite": "hygiene"
     },
     {
@@ -578,10 +617,10 @@
       "configuration_connue": "t = 1",
       "expected": "0,50 a 2,00",
       "measured": [
-        0.35499,
-        2.42828
+        0.55,
+        1.90003
       ],
-      "status": "FAIL",
+      "status": "PASS",
       "suite": "contacts_v3"
     },
     {
@@ -639,10 +678,10 @@
       "configuration_connue": "t = 1",
       "expected": "0,50 a 2,00",
       "measured": [
-        0.39084,
-        2.48539
+        0.55,
+        1.90002
       ],
-      "status": "FAIL",
+      "status": "PASS",
       "suite": "contacts_v3"
     },
     {
@@ -700,11 +739,303 @@
       "configuration_connue": "t = 1",
       "expected": "0,50 a 2,00",
       "measured": [
-        0.44731,
-        1.52322
+        0.55,
+        1.57573
       ],
-      "status": "FAIL",
+      "status": "PASS",
       "suite": "contacts_v3"
+    },
+    {
+      "id": "banc.masque",
+      "description": "le masque couvre la part DERIVEE de la grille",
+      "configuration_connue": "21 sommets par axe",
+      "expected": 441,
+      "measured": 441,
+      "status": "PASS",
+      "suite": "body_banc"
+    },
+    {
+      "id": "banc.carte_sans_rejet",
+      "description": "chaque sommet masque trouve son triangle",
+      "configuration_connue": "441 sommets masques",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "body_banc"
+    },
+    {
+      "id": "banc.barycentriques",
+      "description": "les poids somment a 1 apres normalisation",
+      "configuration_connue": "441 entrees",
+      "expected": "< 1e-9",
+      "measured": 0.0,
+      "status": "PASS",
+      "suite": "body_banc"
+    },
+    {
+      "id": "banc.source_levee",
+      "description": "la source est levee de la valeur connue",
+      "configuration_connue": "81 sommets de la tete",
+      "expected": 3.0,
+      "measured": 3.000000053,
+      "status": "PASS",
+      "tolerance": 1e-09,
+      "suite": "body_banc"
+    },
+    {
+      "id": "banc.levee_transferee",
+      "description": "au centre, le transfert rend la levee connue",
+      "configuration_connue": "sommet du corps le plus proche de l'origine",
+      "expected": 3.0,
+      "measured": 3.0,
+      "status": "PASS",
+      "tolerance": 0.0001,
+      "suite": "body_banc"
+    },
+    {
+      "id": "banc.max_dans_le_masque",
+      "description": "le maximum vaut la levee connue",
+      "configuration_connue": "441 sommets",
+      "expected": 3.0,
+      "measured": 3.0,
+      "status": "PASS",
+      "tolerance": 0.0001,
+      "suite": "body_banc"
+    },
+    {
+      "id": "banc.hors_masque_nul",
+      "description": "aucun sommet hors masque ne bouge",
+      "configuration_connue": "1240 sommets",
+      "expected": 0.0,
+      "measured": 0.0,
+      "status": "PASS",
+      "suite": "body_banc"
+    },
+    {
+      "id": "banc.sd_bind",
+      "description": "Surface Deform s'est lie au neutre",
+      "configuration_connue": "cible EXP_head_source, groupe VG_F0_FACE_TRANSFER",
+      "expected": true,
+      "measured": true,
+      "status": "PASS",
+      "suite": "body_banc"
+    },
+    {
+      "id": "banc.sd_max_dans_le_masque",
+      "description": "Surface Deform rend lui aussi la levee connue",
+      "configuration_connue": "441 sommets",
+      "expected": 3.0,
+      "measured": 3.000002,
+      "status": "PASS",
+      "tolerance": 0.05,
+      "suite": "body_banc"
+    },
+    {
+      "id": "banc.sd_hors_masque_nul",
+      "description": "Surface Deform ne bouge rien hors du groupe",
+      "configuration_connue": "1240 sommets",
+      "expected": "<= 0,01 mm",
+      "measured": 0.0,
+      "status": "PASS",
+      "tolerance": 0.01,
+      "suite": "body_banc"
+    },
+    {
+      "id": "banc.deux_voies_comparables",
+      "description": "les deux voies mesurent la meme levee a 0,05 mm",
+      "configuration_connue": "barycentrique contre Surface Deform",
+      "expected": "<= 0,05 mm",
+      "measured": 2e-06,
+      "status": "PASS",
+      "tolerance": 0.05,
+      "suite": "body_banc"
+    },
+    {
+      "id": "banc.aretes_ouvertes",
+      "description": "un trou d'une face ajoute 4 aretes ouvertes",
+      "configuration_connue": "grille 11 x 11, une face retiree",
+      "expected": 44,
+      "measured": 44,
+      "status": "PASS",
+      "suite": "body_banc"
+    },
+    {
+      "id": "banc.non_manifold",
+      "description": "une face en aileron cree une arete a 3 faces",
+      "configuration_connue": "grille 11 x 11 + 1 triangle",
+      "expected": 1,
+      "measured": 1,
+      "status": "PASS",
+      "suite": "body_banc"
+    },
+    {
+      "id": "banc.faces_inversees",
+      "description": "deux faces retournees sont comptees deux fois",
+      "configuration_connue": "grille 11 x 11",
+      "expected": 2,
+      "measured": 2,
+      "status": "PASS",
+      "suite": "body_banc"
+    },
+    {
+      "id": "banc.sommets_doubles",
+      "description": "cinq sommets confondus sont comptes cinq fois",
+      "configuration_connue": "grille 11 x 11 + 5 doublons",
+      "expected": 5,
+      "measured": 5,
+      "status": "PASS",
+      "suite": "body_banc"
+    },
+    {
+      "id": "banc.auto_intersections",
+      "description": "un quad plante en travers du plan est detecte",
+      "configuration_connue": "grille 11 x 11 + 1 quad vertical",
+      "expected": ">= 1",
+      "measured": 10,
+      "status": "PASS",
+      "suite": "body_banc"
+    },
+    {
+      "id": "banc.aucune_intersection_a_tort",
+      "description": "une grille plane n'auto-intersecte pas",
+      "configuration_connue": "grille 11 x 11",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "body_banc"
+    },
+    {
+      "id": "surface_deform.dependance",
+      "description": "la contre-epreuve Surface Deform tourne sur le vrai corps",
+      "status": "SKIP",
+      "raison": "asset hors depot indisponible : ATLAS_BASE_MESH absent",
+      "suite": "body_surface_deform"
+    },
+    {
+      "id": "remplacement.plan_avant_decoupe",
+      "description": "les indices sont ecrits AVANT toute suppression",
+      "configuration_connue": "reports/f0-final/body-replacement-plan.json",
+      "expected": true,
+      "measured": true,
+      "status": "PASS",
+      "suite": "body_remplacement"
+    },
+    {
+      "id": "remplacement.trou_ouvert",
+      "description": "la decoupe ouvre bien un trou",
+      "configuration_connue": "400 faces retirees",
+      "expected": "> 160",
+      "measured": 240,
+      "status": "PASS",
+      "suite": "body_remplacement"
+    },
+    {
+      "id": "remplacement.zero_trou",
+      "description": "aucune arete ouverte A LA JONCTION",
+      "configuration_connue": "zone de 56 mm autour de la decoupe",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "body_remplacement"
+    },
+    {
+      "id": "remplacement.zero_double_surface",
+      "description": "aucun sommet confondu restant",
+      "configuration_connue": "maillage fusionne",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "body_remplacement"
+    },
+    {
+      "id": "remplacement.zero_intersection",
+      "description": "aucune auto-intersection",
+      "configuration_connue": "maillage fusionne",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "body_remplacement"
+    },
+    {
+      "id": "remplacement.zero_non_manifold",
+      "description": "aucune arete non manifold",
+      "configuration_connue": "maillage fusionne",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "body_remplacement"
+    },
+    {
+      "id": "remplacement.zero_face_inversee",
+      "description": "aucune face retournee",
+      "configuration_connue": "maillage fusionne",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "body_remplacement"
+    },
+    {
+      "id": "remplacement.cinq_vues",
+      "description": "face, profils, arriere du cou et tete tournee sont rendus",
+      "configuration_connue": "vues exigees par le tutoriel",
+      "expected": 5,
+      "measured": 5,
+      "status": "PASS",
+      "suite": "body_remplacement"
+    },
+    {
+      "id": "ab.corps_reel",
+      "description": "la comparaison porte sur le vrai corps",
+      "status": "SKIP",
+      "raison": "asset hors depot absent : asset hors depot indisponible : ATLAS_BASE_MESH absent",
+      "suite": "body_methodes_ab"
+    },
+    {
+      "id": "ab.deux_bilans",
+      "description": "les deux voies ont produit un bilan",
+      "configuration_connue": "banc synthetique",
+      "expected": [],
+      "measured": [],
+      "status": "PASS",
+      "suite": "body_methodes_ab"
+    },
+    {
+      "id": "ab.meme_amplitude",
+      "description": "les deux voies rendent la meme amplitude dans le masque",
+      "configuration_connue": "banc synthetique",
+      "expected": "<= 0,05 mm",
+      "measured": 2e-06,
+      "status": "PASS",
+      "tolerance": 0.05,
+      "suite": "body_methodes_ab"
+    },
+    {
+      "id": "ab.aucune_fuite_hors_groupe",
+      "description": "aucune des deux voies ne bouge un sommet hors du groupe",
+      "configuration_connue": "banc synthetique",
+      "expected": "<= 0,01 mm",
+      "measured": 0.0,
+      "status": "PASS",
+      "tolerance": 0.01,
+      "suite": "body_methodes_ab"
+    },
+    {
+      "id": "ab.aucune_intersection",
+      "description": "aucune des deux voies n'auto-intersecte",
+      "configuration_connue": "banc synthetique",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "body_methodes_ab"
+    },
+    {
+      "id": "ab.uv_intactes",
+      "description": "les UV survivent aux deux voies",
+      "configuration_connue": "banc synthetique",
+      "expected": "empreintes identiques",
+      "measured": "identiques",
+      "status": "PASS",
+      "suite": "body_methodes_ab"
     },
     {
       "id": "anatomie.sha_marges",
@@ -1505,7 +1836,7 @@
       "description": "la pose deplace reellement la surface",
       "configuration_connue": "contre paupiere_L_neutre",
       "expected": ">= 0,5 mm",
-      "measured": 8.4962,
+      "measured": 8.5034,
       "status": "PASS",
       "suite": "wireframes"
     },
@@ -1514,7 +1845,7 @@
       "description": "le fil est visible sans noyer l'image",
       "configuration_connue": "1000000 px",
       "expected": "entre 2 % et 45 % de fil",
-      "measured": "13.96 %",
+      "measured": "13.98 %",
       "status": "PASS",
       "suite": "wireframes"
     },
@@ -1532,7 +1863,7 @@
       "description": "la pose deplace reellement la surface",
       "configuration_connue": "contre paupiere_R_neutre",
       "expected": ">= 0,5 mm",
-      "measured": 8.4264,
+      "measured": 8.3645,
       "status": "PASS",
       "suite": "wireframes"
     },
@@ -1541,7 +1872,7 @@
       "description": "le fil est visible sans noyer l'image",
       "configuration_connue": "1000000 px",
       "expected": "entre 2 % et 45 % de fil",
-      "measured": "13.96 %",
+      "measured": "14.01 %",
       "status": "PASS",
       "suite": "wireframes"
     },

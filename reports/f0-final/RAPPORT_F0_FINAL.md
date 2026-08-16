@@ -6,7 +6,7 @@
 
 | | |
 | --- | --- |
-| commit | `8a43c15` |
+| commit | `70cb022` |
 | Blender | 5.1.2 |
 | fondation | `source/FACE_F0_FOUNDATION_FINAL.blend` |
 | SHA du blend | `eb7fbccc863ab772` |
@@ -16,7 +16,7 @@
 
 ## Le registre agrégé
 
-**167 sondes, 154 réussies, 10 échec(s), 3 sautée(s)** — `reports/f0-final/registre.json`.
+**199 sondes, 185 réussies, 9 échec(s), 5 sautée(s)** — `reports/f0-final/registre.json`.
 
 | suite | sondes | réussies | échecs | sautées | verdict |
 | --- | ---: | ---: | ---: | ---: | --- |
@@ -26,8 +26,12 @@
 | `raccord` | 0 | 0 | 0 | 0 | SKIP |
 | `hygiene` | 11 | 11 | 0 | 0 | PASS |
 | `contacts_v3` | 18 | 15 | 3 | 0 | FAIL |
+| `body_banc` | 17 | 17 | 0 | 0 | PASS |
+| `body_surface_deform` | 1 | 0 | 0 | 1 | SKIP |
+| `body_remplacement` | 8 | 8 | 0 | 0 | PASS |
+| `body_methodes_ab` | 6 | 5 | 0 | 1 | SKIP |
 | `anatomy_counts` | 10 | 10 | 0 | 0 | PASS |
-| `contrat_de_sortie` | 3 | 2 | 1 | 0 | FAIL |
+| `contrat_de_sortie` | 3 | 3 | 0 | 0 | PASS |
 | `gltf_conformite` | 16 | 15 | 0 | 1 | FAIL |
 | `gltf_conformite_negatif` | 15 | 15 | 0 | 0 | PASS |
 | `gltf_aller_retour` | 14 | 14 | 0 | 0 | PASS |
@@ -100,12 +104,12 @@ Définition retenue et rayon : `anatomy-counts.json` → `definitions`, `rayon_m
 | spike GLB : runtime réel | **oui** | `runtime-glb.json` → 8/8, spécification à 0.000268 mm |
 | UV, neutralité, topologie et inventaire signés | **oui** | contrat de sortie → cinq empreintes |
 | preuves bilatérales, wireframes et coupes présentes | **non** | wireframes 27/27, coupe 11/14 |
-| runner final et replay propre à 0, sans FAIL ni SKIP critique | **non** | `registre.json` → FAIL, 10 échec(s), 3 sautée(s) |
+| runner final et replay propre à 0, sans FAIL ni SKIP critique | **non** | `registre.json` → FAIL, 9 échec(s), 5 sautée(s) |
 | FACE_BASE_LOCKED.blend a gardé son SHA | **oui** | `author-input.json` → cc9e55a4… |
 | la fondation ne contient ni armature ni shape key | **oui** | contrat de sortie |
 | le manifeste se vérifie | **oui** | `build-f0-manifest.py --verify` → 2/2 |
 
-## Limites connues — les 10 échecs et 3 sondes sautées
+## Limites connues — les 9 échecs et 5 sondes sautées
 
 | sonde en échec | ce qu'elle mesure |
 | --- | --- |
@@ -115,7 +119,6 @@ Définition retenue et rayon : `anatomy-counts.json` → `definitions`, `rayon_m
 | `contacts_v3/blink_L.gap_cage` | jour final sur la cage — attendu <= 0.20 mm, mesuré 0.21516 |
 | `contacts_v3/blink_L.separation_signee` | pas de croisement des marges — attendu >= -0,05 mm, mesuré -0.06136 |
 | `contacts_v3/blink_R.separation_signee` | pas de croisement des marges — attendu >= -0,05 mm, mesuré -0.07108 |
-| `contrat_de_sortie/contrat.verification` | chaque artefact retrouve son SHA — attendu 0, mesuré 3 |
 | `coupe_sagittale/sagittal.image.median_bouche` | l'image n'est pas un clay uniforme et montre la section — attendu >= 8 teintes, >= 20 px de section, >= 200 px de peau, mesuré 128 teintes, 19 section, 8 muqueuse, 0 globe, 375044 peau |
 | `coupe_sagittale/sagittal.image.median_cavite_orale` | l'image n'est pas un clay uniforme et montre la section — attendu >= 8 teintes, >= 20 px de section, >= 200 px de peau, mesuré 98 teintes, 0 section, 4 muqueuse, 0 globe, 348087 peau |
 | `coupe_sagittale/sagittal.image.median_cou` | l'image n'est pas un clay uniforme et montre la section — attendu >= 8 teintes, >= 20 px de section, >= 200 px de peau, mesuré 82 teintes, 0 section, 0 muqueuse, 0 globe, 563195 peau |
@@ -124,6 +127,8 @@ Définition retenue et rayon : `anatomy-counts.json` → `definitions`, `rayon_m
 | --- | --- |
 | `multires/clignement.B_haute_resolution.gap` | mesure definie sur la cage seulement |
 | `multires/levres.B_haute_resolution.gap` | mesure definie sur la cage seulement |
+| `body_surface_deform/surface_deform.dependance` | asset hors depot indisponible : ATLAS_BASE_MESH absent |
+| `body_methodes_ab/ab.corps_reel` | asset hors depot absent : asset hors depot indisponible : ATLAS_BASE_MESH absent |
 | `gltf_conformite/khronos.validator` | validateur Khronos absent de la machine : ni `gltf-validator` dans le PATH ni --khronos fourni |
 
 ## Rejouer

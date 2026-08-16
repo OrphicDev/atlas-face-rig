@@ -1,0 +1,204 @@
+{
+  "levee_connue_mm": 3.0,
+  "rayon_m": 0.03,
+  "barycentrique": {
+    "methode": "barycentrique",
+    "sommets_masque": 441,
+    "sommets_hors_masque": 1240,
+    "deplacement_dans_le_masque_mm": {
+      "p50": 0.0,
+      "p95": 3.0,
+      "max": 3.0,
+      "n": 441
+    },
+    "deplacement_hors_masque_mm": {
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0,
+      "n": 1240
+    },
+    "uv_sha256": "0cc77841f6a5030a8d1ac69c2f246dd45faa0046417257c13bc59f38d0528bc4",
+    "aretes_ouvertes": 160,
+    "aretes_non_manifold": 0,
+    "faces_inversees": 1600,
+    "auto_intersections": 0,
+    "sommets_doubles": 0,
+    "secondes": 0.0002
+  },
+  "surface_deform": {
+    "methode": "surface_deform",
+    "sommets_masque": 441,
+    "sommets_hors_masque": 1240,
+    "deplacement_dans_le_masque_mm": {
+      "p50": 5e-06,
+      "p95": 3.000001,
+      "max": 3.000002,
+      "n": 441
+    },
+    "deplacement_hors_masque_mm": {
+      "p50": 0.0,
+      "p95": 0.0,
+      "max": 0.0,
+      "n": 1240
+    },
+    "uv_sha256": "0cc77841f6a5030a8d1ac69c2f246dd45faa0046417257c13bc59f38d0528bc4",
+    "aretes_ouvertes": 160,
+    "aretes_non_manifold": 0,
+    "faces_inversees": 1600,
+    "auto_intersections": 0,
+    "sommets_doubles": 0,
+    "secondes": 0.0008
+  },
+  "ecart_des_deux_voies_mm": 2e-06,
+  "registre": {
+    "registre": "body-banc-synthetique",
+    "total": 17,
+    "reussies": 17,
+    "echecs": 0,
+    "sautees": 0,
+    "sondes": [
+      {
+        "id": "banc.masque",
+        "description": "le masque couvre la part DERIVEE de la grille",
+        "configuration_connue": "21 sommets par axe",
+        "expected": 441,
+        "measured": 441,
+        "status": "PASS"
+      },
+      {
+        "id": "banc.carte_sans_rejet",
+        "description": "chaque sommet masque trouve son triangle",
+        "configuration_connue": "441 sommets masques",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "banc.barycentriques",
+        "description": "les poids somment a 1 apres normalisation",
+        "configuration_connue": "441 entrees",
+        "expected": "< 1e-9",
+        "measured": 0.0,
+        "status": "PASS"
+      },
+      {
+        "id": "banc.source_levee",
+        "description": "la source est levee de la valeur connue",
+        "configuration_connue": "81 sommets de la tete",
+        "expected": 3.0,
+        "measured": 3.000000053,
+        "status": "PASS",
+        "tolerance": 1e-09
+      },
+      {
+        "id": "banc.levee_transferee",
+        "description": "au centre, le transfert rend la levee connue",
+        "configuration_connue": "sommet du corps le plus proche de l'origine",
+        "expected": 3.0,
+        "measured": 3.0,
+        "status": "PASS",
+        "tolerance": 0.0001
+      },
+      {
+        "id": "banc.max_dans_le_masque",
+        "description": "le maximum vaut la levee connue",
+        "configuration_connue": "441 sommets",
+        "expected": 3.0,
+        "measured": 3.0,
+        "status": "PASS",
+        "tolerance": 0.0001
+      },
+      {
+        "id": "banc.hors_masque_nul",
+        "description": "aucun sommet hors masque ne bouge",
+        "configuration_connue": "1240 sommets",
+        "expected": 0.0,
+        "measured": 0.0,
+        "status": "PASS"
+      },
+      {
+        "id": "banc.sd_bind",
+        "description": "Surface Deform s'est lie au neutre",
+        "configuration_connue": "cible EXP_head_source, groupe VG_F0_FACE_TRANSFER",
+        "expected": true,
+        "measured": true,
+        "status": "PASS"
+      },
+      {
+        "id": "banc.sd_max_dans_le_masque",
+        "description": "Surface Deform rend lui aussi la levee connue",
+        "configuration_connue": "441 sommets",
+        "expected": 3.0,
+        "measured": 3.000002,
+        "status": "PASS",
+        "tolerance": 0.05
+      },
+      {
+        "id": "banc.sd_hors_masque_nul",
+        "description": "Surface Deform ne bouge rien hors du groupe",
+        "configuration_connue": "1240 sommets",
+        "expected": "<= 0,01 mm",
+        "measured": 0.0,
+        "status": "PASS",
+        "tolerance": 0.01
+      },
+      {
+        "id": "banc.deux_voies_comparables",
+        "description": "les deux voies mesurent la meme levee a 0,05 mm",
+        "configuration_connue": "barycentrique contre Surface Deform",
+        "expected": "<= 0,05 mm",
+        "measured": 2e-06,
+        "status": "PASS",
+        "tolerance": 0.05
+      },
+      {
+        "id": "banc.aretes_ouvertes",
+        "description": "un trou d'une face ajoute 4 aretes ouvertes",
+        "configuration_connue": "grille 11 x 11, une face retiree",
+        "expected": 44,
+        "measured": 44,
+        "status": "PASS"
+      },
+      {
+        "id": "banc.non_manifold",
+        "description": "une face en aileron cree une arete a 3 faces",
+        "configuration_connue": "grille 11 x 11 + 1 triangle",
+        "expected": 1,
+        "measured": 1,
+        "status": "PASS"
+      },
+      {
+        "id": "banc.faces_inversees",
+        "description": "deux faces retournees sont comptees deux fois",
+        "configuration_connue": "grille 11 x 11",
+        "expected": 2,
+        "measured": 2,
+        "status": "PASS"
+      },
+      {
+        "id": "banc.sommets_doubles",
+        "description": "cinq sommets confondus sont comptes cinq fois",
+        "configuration_connue": "grille 11 x 11 + 5 doublons",
+        "expected": 5,
+        "measured": 5,
+        "status": "PASS"
+      },
+      {
+        "id": "banc.auto_intersections",
+        "description": "un quad plante en travers du plan est detecte",
+        "configuration_connue": "grille 11 x 11 + 1 quad vertical",
+        "expected": ">= 1",
+        "measured": 10,
+        "status": "PASS"
+      },
+      {
+        "id": "banc.aucune_intersection_a_tort",
+        "description": "une grille plane n'auto-intersecte pas",
+        "configuration_connue": "grille 11 x 11",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      }
+    ]
+  }
+}

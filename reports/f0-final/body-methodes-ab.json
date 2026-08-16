@@ -1,0 +1,171 @@
+{
+  "source_des_chiffres": "banc synthetique",
+  "methodes": {
+    "barycentrique": {
+      "methode": "barycentrique",
+      "sommets_masque": 441,
+      "sommets_hors_masque": 1240,
+      "deplacement_dans_le_masque_mm": {
+        "p50": 0.0,
+        "p95": 3.0,
+        "max": 3.0,
+        "n": 441
+      },
+      "deplacement_hors_masque_mm": {
+        "p50": 0.0,
+        "p95": 0.0,
+        "max": 0.0,
+        "n": 1240
+      },
+      "uv_sha256": "0cc77841f6a5030a8d1ac69c2f246dd45faa0046417257c13bc59f38d0528bc4",
+      "aretes_ouvertes": 160,
+      "aretes_non_manifold": 0,
+      "faces_inversees": 1600,
+      "auto_intersections": 0,
+      "sommets_doubles": 0,
+      "secondes": 0.0002
+    },
+    "surface_deform": {
+      "methode": "surface_deform",
+      "sommets_masque": 441,
+      "sommets_hors_masque": 1240,
+      "deplacement_dans_le_masque_mm": {
+        "p50": 5e-06,
+        "p95": 3.000001,
+        "max": 3.000002,
+        "n": 441
+      },
+      "deplacement_hors_masque_mm": {
+        "p50": 0.0,
+        "p95": 0.0,
+        "max": 0.0,
+        "n": 1240
+      },
+      "uv_sha256": "0cc77841f6a5030a8d1ac69c2f246dd45faa0046417257c13bc59f38d0528bc4",
+      "aretes_ouvertes": 160,
+      "aretes_non_manifold": 0,
+      "faces_inversees": 1600,
+      "auto_intersections": 0,
+      "sommets_doubles": 0,
+      "secondes": 0.0008
+    }
+  },
+  "avertissement": "chiffres du banc synthetique : la METHODE est comparee, pas le maillage reel. Aucune conclusion sur le raccord n'en est tiree.",
+  "comparaison": {
+    "deplacement_dans_le_masque_mm": {
+      "barycentrique": {
+        "p50": 0.0,
+        "p95": 3.0,
+        "max": 3.0,
+        "n": 441
+      },
+      "surface_deform": {
+        "p50": 5e-06,
+        "p95": 3.000001,
+        "max": 3.000002,
+        "n": 441
+      }
+    },
+    "deplacement_hors_masque_mm": {
+      "barycentrique": {
+        "p50": 0.0,
+        "p95": 0.0,
+        "max": 0.0,
+        "n": 1240
+      },
+      "surface_deform": {
+        "p50": 0.0,
+        "p95": 0.0,
+        "max": 0.0,
+        "n": 1240
+      }
+    },
+    "auto_intersections": {
+      "barycentrique": 0,
+      "surface_deform": 0
+    },
+    "sommets_doubles": {
+      "barycentrique": 0,
+      "surface_deform": 0
+    },
+    "aretes_ouvertes": {
+      "barycentrique": 160,
+      "surface_deform": 160
+    },
+    "aretes_non_manifold": {
+      "barycentrique": 0,
+      "surface_deform": 0
+    },
+    "faces_inversees": {
+      "barycentrique": 1600,
+      "surface_deform": 1600
+    },
+    "uv_sha256": {
+      "barycentrique": "0cc77841f6a5030a8d1ac69c2f246dd45faa0046417257c13bc59f38d0528bc4",
+      "surface_deform": "0cc77841f6a5030a8d1ac69c2f246dd45faa0046417257c13bc59f38d0528bc4"
+    },
+    "secondes": {
+      "barycentrique": 0.0002,
+      "surface_deform": 0.0008
+    }
+  },
+  "ecart_max_dans_le_masque_mm": 2e-06,
+  "plus_rapide": "barycentrique",
+  "registre": {
+    "registre": "body-methodes-ab",
+    "total": 6,
+    "reussies": 5,
+    "echecs": 0,
+    "sautees": 1,
+    "sondes": [
+      {
+        "id": "ab.corps_reel",
+        "description": "la comparaison porte sur le vrai corps",
+        "status": "SKIP",
+        "raison": "asset hors depot absent : asset hors depot indisponible : ATLAS_BASE_MESH absent"
+      },
+      {
+        "id": "ab.deux_bilans",
+        "description": "les deux voies ont produit un bilan",
+        "configuration_connue": "banc synthetique",
+        "expected": [],
+        "measured": [],
+        "status": "PASS"
+      },
+      {
+        "id": "ab.meme_amplitude",
+        "description": "les deux voies rendent la meme amplitude dans le masque",
+        "configuration_connue": "banc synthetique",
+        "expected": "<= 0,05 mm",
+        "measured": 2e-06,
+        "status": "PASS",
+        "tolerance": 0.05
+      },
+      {
+        "id": "ab.aucune_fuite_hors_groupe",
+        "description": "aucune des deux voies ne bouge un sommet hors du groupe",
+        "configuration_connue": "banc synthetique",
+        "expected": "<= 0,01 mm",
+        "measured": 0.0,
+        "status": "PASS",
+        "tolerance": 0.01
+      },
+      {
+        "id": "ab.aucune_intersection",
+        "description": "aucune des deux voies n'auto-intersecte",
+        "configuration_connue": "banc synthetique",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "ab.uv_intactes",
+        "description": "les UV survivent aux deux voies",
+        "configuration_connue": "banc synthetique",
+        "expected": "empreintes identiques",
+        "measured": "identiques",
+        "status": "PASS"
+      }
+    ]
+  }
+}

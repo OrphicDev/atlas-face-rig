@@ -1,7 +1,7 @@
 {
   "a": "reports/f0-final/registre.json",
   "b": "reports/f0-final/replay-clean/registre.json",
-  "sondes_comparees": 167,
+  "sondes_comparees": 199,
   "divergentes": [],
   "verdicts_changes": [],
   "master_sha256": "cc9e55a47b1496fa81ed42deee6ee3a6f498c309d5b86610e5cd2407831f2bd8",
@@ -15,7 +15,7 @@
       {
         "id": "replay.memes_sondes",
         "description": "le replay execute exactement les memes sondes",
-        "configuration_connue": "167 / 167",
+        "configuration_connue": "199 / 199",
         "expected": [],
         "measured": [],
         "status": "PASS"
@@ -23,7 +23,7 @@
       {
         "id": "replay.memes_mesures",
         "description": "chaque sonde rend la MEME valeur, pas seulement le meme verdict",
-        "configuration_connue": "167 sondes comparees",
+        "configuration_connue": "199 sondes comparees",
         "expected": 0,
         "measured": 0,
         "status": "PASS"
@@ -31,7 +31,7 @@
       {
         "id": "replay.memes_verdicts",
         "description": "aucun verdict ne change",
-        "configuration_connue": "167 sondes",
+        "configuration_connue": "199 sondes",
         "expected": 0,
         "measured": 0,
         "status": "PASS"

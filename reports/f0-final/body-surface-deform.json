@@ -1,0 +1,27 @@
+{
+  "status": "SAUTE",
+  "raison": "asset hors depot indisponible : ATLAS_BASE_MESH absent",
+  "dependance": {
+    "variable": "ATLAS_BASE_MESH",
+    "fichier": "human_base_meshes_bundle.blend",
+    "octets_attendus": 49420489,
+    "sha256_attendu": "3c121505651140ceb4d69fd1d8923f7788ffadd81672f5be14845a5f2c75c137",
+    "paquet": "Human Base Meshes bundle v1.4.1",
+    "licence": "CC0"
+  },
+  "registre": {
+    "registre": "body-surface-deform",
+    "total": 1,
+    "reussies": 0,
+    "echecs": 0,
+    "sautees": 1,
+    "sondes": [
+      {
+        "id": "surface_deform.dependance",
+        "description": "la contre-epreuve Surface Deform tourne sur le vrai corps",
+        "status": "SKIP",
+        "raison": "asset hors depot indisponible : ATLAS_BASE_MESH absent"
+      }
+    ]
+  }
+}

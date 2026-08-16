@@ -40,7 +40,7 @@ def chemin(*p):
 PROVENANCE = {"multires"}
 # Suites qui dependent d'un asset HORS DEPOT. Absent, elles sont SAUTEES avec
 # la dependance nommee, jamais comptees comme un echec de mesure.
-DEPEND_ASSET = {"raccord"}
+DEPEND_ASSET = {"raccord", "body_surface_deform", "body_methodes_ab"}
 
 
 def asset_present():
@@ -96,6 +96,35 @@ def suites_v3(src, sortie):
           "--pairs", "reports/f0-final/correspondances-marges.json",
           "--output", chemin(sortie, "contacts-v3.json")],
          chemin(sortie, "contacts-v3.json")),
+        # F0-D.8 et D.9. La regle de mesure est verifiee a REPONSE CONNUE par
+        # le banc synthetique, qui tourne sans l'asset : le transfert d'une
+        # levee de 3,000 mm, le mouvement hors masque, et chaque sonde de
+        # topologie contre une faute injectee.
+        ("body_banc",
+         [BLENDER, "--background", "--factory-startup", "--python-exit-code", "1",
+          "--python", chemin("tests", "f0-body-banc-synthetique.py"), "--",
+          "--report", chemin(sortie, "body-banc-synthetique.json")],
+         chemin(sortie, "body-banc-synthetique.json")),
+        ("body_surface_deform",
+         [BLENDER, "--background", "--factory-startup", "--python-exit-code", "1",
+          "--python", chemin("rig", "f0-body-surface-deform.py"), "--",
+          "--fit", "reports/f0-final/head-body-fit.json",
+          "--deltas", "reports/f0-final/deformations",
+          "--motion", "config/jaw-motion.json",
+          "--report", chemin(sortie, "body-surface-deform.json")],
+         chemin(sortie, "body-surface-deform.json")),
+        ("body_remplacement",
+         [BLENDER, "--background", "--factory-startup", "--python-exit-code", "1",
+          "--python", chemin("rig", "build-f0-body-replacement.py"), "--",
+          "--mode", "synthetique",
+          "--plan", chemin(sortie, "body-replacement-plan.json"),
+          "--report", chemin(sortie, "body-replacement.json"),
+          "--renders", "renders/f0-final/body-replacement"],
+         chemin(sortie, "body-replacement.json")),
+        ("body_methodes_ab",
+         py + [chemin("tests", "f0-body-methodes-ab.py"),
+               "--report", chemin(sortie, "body-methodes-ab.json")],
+         chemin(sortie, "body-methodes-ab.json")),
         ("anatomy_counts",
          [BLENDER, "--background", src, "--python-exit-code", "1",
           "--python", chemin("tests", "measure-f0-anatomy-counts.py"), "--",
