@@ -1,0 +1,85 @@
+{
+  "frames": {
+    "1": {
+      "pose": "neutral",
+      "jaw_rot_x_deg": 0.0,
+      "morphs": {
+        "TMP_blink.L": 0.0,
+        "TMP_blink.R": 0.0,
+        "TMP_mouthClose": 0.0
+      }
+    },
+    "10": {
+      "pose": "blink_L_100",
+      "jaw_rot_x_deg": 0.0,
+      "morphs": {
+        "TMP_blink.L": 1.0,
+        "TMP_blink.R": 0.0,
+        "TMP_mouthClose": 0.0
+      }
+    },
+    "20": {
+      "pose": "blink_R_100",
+      "jaw_rot_x_deg": 0.0,
+      "morphs": {
+        "TMP_blink.L": 0.0,
+        "TMP_blink.R": 1.0,
+        "TMP_mouthClose": 0.0
+      }
+    },
+    "30": {
+      "pose": "mouthClose_100",
+      "jaw_rot_x_deg": 0.0,
+      "morphs": {
+        "TMP_blink.L": 0.0,
+        "TMP_blink.R": 0.0,
+        "TMP_mouthClose": 1.0
+      }
+    },
+    "40": {
+      "pose": "jaw_20",
+      "jaw_rot_x_deg": 19.999999,
+      "morphs": {
+        "TMP_blink.L": 0.0,
+        "TMP_blink.R": 0.0,
+        "TMP_mouthClose": 0.0
+      }
+    },
+    "50": {
+      "pose": "jaw_32",
+      "jaw_rot_x_deg": 32.0,
+      "morphs": {
+        "TMP_blink.L": 0.0,
+        "TMP_blink.R": 0.0,
+        "TMP_mouthClose": 0.0
+      }
+    },
+    "60": {
+      "pose": "gaze_left",
+      "jaw_rot_x_deg": 0.0,
+      "morphs": {
+        "TMP_blink.L": 0.0,
+        "TMP_blink.R": 0.0,
+        "TMP_mouthClose": 0.0
+      }
+    },
+    "70": {
+      "pose": "gaze_right",
+      "jaw_rot_x_deg": 0.0,
+      "morphs": {
+        "TMP_blink.L": 0.0,
+        "TMP_blink.R": 0.0,
+        "TMP_mouthClose": 0.0
+      }
+    },
+    "80": {
+      "pose": "neutral",
+      "jaw_rot_x_deg": 0.0,
+      "morphs": {
+        "TMP_blink.L": 0.0,
+        "TMP_blink.R": 0.0,
+        "TMP_mouthClose": 0.0
+      }
+    }
+  }
+}

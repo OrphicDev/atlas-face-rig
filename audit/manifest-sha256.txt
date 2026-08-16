@@ -30,15 +30,18 @@ b85762684abebc6493f6a96227792efdf0e6b922d9ca5c572384dac0157b69de  ./experiments/
 11a9bdfd0d7974e8d3b8c3dc9949c097524daf251b08f99b2707832e3efe26d5  ./experiments/f0-jaw/FACE_F0_JAW_PROTOTYPE.blend1
 d2f9340744720cc6c4aff7625d21ff6e12e5e575be14112ea5a02a9a373cf071  ./experiments/gltf-spike/atlas-runtime-spike.blend
 e5b90591c836cfad62cad6c140fd40eb8908bc299b87b2c0d0207ac1140d8675  ./experiments/gltf-spike/atlas-runtime-spike.blend1
-98c786db253b2753c9da034d93bb76e7182173495b5da751797c339b463fb688  ./experiments/gltf-spike/export-settings.json
+d8324dfe13dbfeda5683980ca043537c8014c55068bc9e72a69ce8685012468d  ./experiments/gltf-spike/build_spike.py
+4d6493a60ff56d788e4e2de3aaae0360fcca85bafba1eb7fc5eb45256fce3b43  ./experiments/gltf-spike/export-settings.json
 090871862d2afb08dce639e5da7c2334e62939c959c076b8527f5dc3eac68570  ./experiments/gltf-spike/export_spike.py
-d37afe704dd6153d20fc35b37f00207e71e058cdc5e7f2a7805aa3cdb2d7a992  ./experiments/gltf-spike/import_spike.py
-41be16f86039f426b9549a6bb322bd1075afe1ab0c99b312e96e74d713912672  ./experiments/gltf-spike/roundtrip.json
+deb462e0e3b80548a7f19a08e297370b2d02b4957eaeb74c777f1fa322015a0b  ./experiments/gltf-spike/import_spike.py
+22cc3fe51313b780c0be05bb2775c6ee9abd4b8a45427041fec9a5036e6d7f26  ./experiments/gltf-spike/roundtrip.json
+abab3240528c18653fd45c569ad6dcd3324881df80d7cd3607cb59598b66fe67  ./experiments/gltf-spike/spike-reference.json
+f68c5f230f3e36b3a3d769ec1d171285157c96e62a6cd62f787ad11e582bcb0d  ./experiments/gltf-spike/spike.blend
 d8d51f53a75ae56333675698278e18277cc3c8d9e38c83510f615ba42ef35657  ./experiments/modifier-order/A_ARMATURE_THEN_MULTIRES.blend
 448d12ece033dcda5677d742e083b0add1f6732df0d861e16356618e93f51c30  ./experiments/modifier-order/B_MULTIRES_THEN_ARMATURE.blend
 b6739035dc2f85b0865af935b850b1a9989039997e2dc195140d3293962d8119  ./experiments/modifier-order/build-ab.py
 5348888c85a4b7f2345a6085042cdd8a003a8a50ca0ae0cafd100118b4715a66  ./experiments/modifier-order/build-manifest.json
-46a7583d0af67e54a812355142677132e80a4baba23bb2db27e22863b3be3509  ./exports/atlas-face-spike.glb
+015d7689e30c239250988ad5fb3170711872018658d053f7aeea4b16249b6dab  ./exports/atlas-face-spike.glb
 ce4df937b1299354bfc264adfb60275de647b94d6397120bda6ad1428a9b9e81  ./handoffs/BOOTSTRAP_CHAT_3_FACE.md
 071c1c343c091cc3923b4cbfef0d84e6df88676add2abf2988ab2b9f7afe1611  ./handoffs/HANDOFF_FACE_NEXT.md
 422ed51e3d006788b5ceca5761c370702f452cffbba472d4c2314e1f9728223f  ./renders/.gitkeep
@@ -90,7 +93,7 @@ faedac4b90acef0394985e376839291054490cf430ae3929a2e2f757ac3d572f  ./reports/f0-c
 9c5392911e29cfcd8ad14a30e36f3895c6ba881d9d1215d72c06533d931b3667  ./reports/f0-final/DECISION_RACCORD_CORPS.md
 50b0fc0b67931100f4abb85a78268fcc0b03b335a9710990a4e8cecbc20d9d76  ./reports/f0-final/RAPPORT_F0B_EN_COURS.md
 c61f2f879d504d92037dd71878d911884136884543058148e0dde4bdef75f757  ./reports/f0-final/RAPPORT_F0C.md
-bec8324c814edefc5ef29534bccf3444a964c6183acb3001014f8462f17b06da  ./reports/f0-final/RAPPORT_F0E.md
+966dc02066c1dea2673b081cc27ed4f88b7ab77be7217011f447918700803433  ./reports/f0-final/RAPPORT_F0E.md
 33e7e352c2261dba1be6b464cd9920ee5c2dcd84d1e57ea10196b69eeabd055a  ./reports/f0-final/author-input.json
 bf49024226ff860a110f3b9e310071593be6d7d894b9da75617228de2bcb159b  ./reports/f0-final/body-transfer-map.json
 2ba53f1f09a21f593fe0e003ca4b706613ea1ac515a67ffbc24bf08fbbb484c4  ./reports/f0-final/body-transfer.json
@@ -114,6 +117,8 @@ a0ae6ab895cb0f53a6baa62c37c240978c7b7a7b6cff5c7c0e2f410c5217ba37  ./reports/f0-f
 90ca41df7503a5f1ca6db4db8a14b154b4b2b0d41c35b05fc68ab9ef53fa32f2  ./reports/f0-final/modifier-stack-input.json
 c2e34f319b76e0b7d6d8c554ac5eb85e890330b18bcfc7f529a662909be92510  ./reports/f0-final/preuves-visuelles.json
 2137768917f6f466cb55cbe5c2ad89dd91d8f247edfc614bd29474c236331105  ./reports/f0-final/runtime-resolution.json
+093341d28ff525c257d3a9ce59b3f3db5444dab8feb3f0e607c0e251a6c567c9  ./reports/f0-final/validation-glb-negatif.json
+1ce23822ee9140c7ac99ce6d9f33b87174ed0127bdff012bb09855c59ceabafa  ./reports/f0-final/validation-glb.json
 dd61186eeb6b5dc99da6c212c3d288b975645e732483d2a27793b3eb176cfad0  ./reports/f0/RAPPORT_F0.md
 4ca5dd69ff8d2d397c4bee19afd5ef9d95b03802a108c140778eaf4f280f89d4  ./reports/f0/audit-topologie.json
 92ca426186c48802cd4a00cbb4d7cad7152f985b5e3e6147e66403fd347062ba  ./reports/f0/multires-ab.json
@@ -161,6 +166,7 @@ a6b7259d10c2e84d3580108839a4adf0f1ee68fcc7bfa4b56719d6c067b49063  ./tests/inspec
 fdccfe8057b040e1b24302f170d2282af425a089d0b937d4bf5fbd6e8a5ee5da  ./tests/inspecter-asset-tetes.py
 969943cc6f4c9916457e59595b9b890c46357d924205b0b675913f612c86767c  ./tests/rendus-neutre.py
 431653c280ffcdaa8fb9755ce22f37557915afd8db2b7aadd003c5f8bb53134b  ./tests/run-f0-final.py
+df7a3e6dfd7c83957d075baf2d30aa11c8bfd51f82a21761f7f32aa51aebd25f  ./tests/validate-glb-negatif.py
 d164ed0ae1d64f19e179c1310eb5195eedda1cf2e9c3fa8c3f7d7940cbd78c0a  ./tests/verrou-topologie-negatif.py
 def058cef245d6c708b4bd0a6119ac438b719e91dc3e3f30af5e8f80e311e2f5  ./tests/verrou-topologie.json
 b0ec10f5f6fb396677276cd46bfe5c2edc906f25a37cb74e2033c2ecc3739632  ./tests/verrou-topologie.py
@@ -169,6 +175,7 @@ b0ec10f5f6fb396677276cd46bfe5c2edc906f25a37cb74e2033c2ecc3739632  ./tests/verrou
 5c7f985d38e7a247f4f0fb088bb18851fc1491beb063a8d067ffb34ba12d0552  ./tools/f0-render-contacts.py
 348bff26591cb7ecd56dc40b54b5545b2bcb629ad949e938b8f77c96ff58c1b5  ./tools/f0-show-contact-candidates.py
 0fc573e943a42f5121e0d53002801ae1db351dd0e9396262b583add5649c19e2  ./tools/inspect-modifier-stack.py
+aa260e2e2cf2bacf138593e9f21c84193e7c78d8cc765ff4b8fa529cc2531294  ./tools/validate_glb.py
 ff1e98e47907479fc8378d5253b5565578fb4405967cab38aafd8abeca1cbc46  ./tools/write-f0-author-input.py
 422ed51e3d006788b5ceca5761c370702f452cffbba472d4c2314e1f9728223f  ./videos/.gitkeep
 7796fbbe0e79fe6db339150bf3b482c1087ede3d8ee63bcc7ce7dd654b14a070  ./work/blender-path.txt

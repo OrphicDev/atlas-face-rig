@@ -1,0 +1,260 @@
+{
+  "source": "exports/atlas-face-spike.glb",
+  "mutations": [
+    {
+      "mutation": "m_conteneur",
+      "faute": "longueur totale declaree fausse",
+      "sonde_attendue": "glb.conteneur",
+      "sondes_tombees": [
+        "glb.conteneur"
+      ],
+      "refus_a_la_lecture": null
+    },
+    {
+      "mutation": "m_version",
+      "faute": "asset.version = 1.0",
+      "sonde_attendue": "gltf.version",
+      "sondes_tombees": [
+        "gltf.version"
+      ],
+      "refus_a_la_lecture": null
+    },
+    {
+      "mutation": "m_bufferview",
+      "faute": "un bufferView deborde le BIN",
+      "sonde_attendue": "gltf.bufferviews",
+      "sondes_tombees": [
+        "gltf.bufferviews"
+      ],
+      "refus_a_la_lecture": null
+    },
+    {
+      "mutation": "m_minmax",
+      "faute": "un min declare plus bas que le vrai",
+      "sonde_attendue": "gltf.min_max",
+      "sondes_tombees": [
+        "gltf.min_max"
+      ],
+      "refus_a_la_lecture": null
+    },
+    {
+      "mutation": "m_indices",
+      "faute": "un indice depasse le nombre de sommets",
+      "sonde_attendue": "gltf.indices",
+      "sondes_tombees": [
+        "gltf.indices"
+      ],
+      "refus_a_la_lecture": null
+    },
+    {
+      "mutation": "m_normale",
+      "faute": "une normale de longueur 4",
+      "sonde_attendue": "gltf.normales",
+      "sondes_tombees": [
+        "gltf.normales"
+      ],
+      "refus_a_la_lecture": null
+    },
+    {
+      "mutation": "m_poids",
+      "faute": "des poids qui ne somment plus a 1",
+      "sonde_attendue": "gltf.poids",
+      "sondes_tombees": [
+        "gltf.poids"
+      ],
+      "refus_a_la_lecture": null
+    },
+    {
+      "mutation": "m_joints",
+      "faute": "un index d'os hors du skin",
+      "sonde_attendue": "gltf.joints",
+      "sondes_tombees": [
+        "gltf.joints"
+      ],
+      "refus_a_la_lecture": null
+    },
+    {
+      "mutation": "m_sparse",
+      "faute": "indices sparse non croissants",
+      "sonde_attendue": "gltf.sparse",
+      "sondes_tombees": [
+        "gltf.sparse"
+      ],
+      "refus_a_la_lecture": null
+    },
+    {
+      "mutation": "m_morphs",
+      "faute": "un poids de morph pour trois targets",
+      "sonde_attendue": "gltf.morphs",
+      "sondes_tombees": [
+        "gltf.morphs"
+      ],
+      "refus_a_la_lecture": null
+    },
+    {
+      "mutation": "m_hierarchie",
+      "faute": "un noeud avec deux parents",
+      "sonde_attendue": "gltf.hierarchie",
+      "sondes_tombees": [
+        "gltf.hierarchie"
+      ],
+      "refus_a_la_lecture": null
+    },
+    {
+      "mutation": "m_animation",
+      "faute": "un canal vers un chemin inconnu",
+      "sonde_attendue": "gltf.animations",
+      "sondes_tombees": [
+        "gltf.animations"
+      ],
+      "refus_a_la_lecture": null
+    },
+    {
+      "mutation": "m_quaternion",
+      "faute": "un quaternion non unitaire",
+      "sonde_attendue": "gltf.quaternions",
+      "sondes_tombees": [
+        "gltf.quaternions"
+      ],
+      "refus_a_la_lecture": null
+    },
+    {
+      "mutation": "m_skin",
+      "faute": "un joint de plus que de matrices de bind",
+      "sonde_attendue": "gltf.skin",
+      "sondes_tombees": [
+        "gltf.skin"
+      ],
+      "refus_a_la_lecture": null
+    }
+  ],
+  "registre": {
+    "registre": "validation-glb-negatif",
+    "total": 15,
+    "reussies": 15,
+    "echecs": 0,
+    "sautees": 0,
+    "sondes": [
+      {
+        "id": "temoin.intact",
+        "description": "le fichier non mute passe le controleur",
+        "configuration_connue": "GLB d'origine",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "refus.conteneur.conteneur",
+        "description": "le controleur refuse : longueur totale declaree fausse",
+        "configuration_connue": "mutation ciblee",
+        "expected": "glb.conteneur en FAIL",
+        "measured": "glb.conteneur",
+        "status": "PASS"
+      },
+      {
+        "id": "refus.version.version",
+        "description": "le controleur refuse : asset.version = 1.0",
+        "configuration_connue": "mutation ciblee",
+        "expected": "gltf.version en FAIL",
+        "measured": "gltf.version",
+        "status": "PASS"
+      },
+      {
+        "id": "refus.bufferviews.bufferview",
+        "description": "le controleur refuse : un bufferView deborde le BIN",
+        "configuration_connue": "mutation ciblee",
+        "expected": "gltf.bufferviews en FAIL",
+        "measured": "gltf.bufferviews",
+        "status": "PASS"
+      },
+      {
+        "id": "refus.min_max.minmax",
+        "description": "le controleur refuse : un min declare plus bas que le vrai",
+        "configuration_connue": "mutation ciblee",
+        "expected": "gltf.min_max en FAIL",
+        "measured": "gltf.min_max",
+        "status": "PASS"
+      },
+      {
+        "id": "refus.indices.indices",
+        "description": "le controleur refuse : un indice depasse le nombre de sommets",
+        "configuration_connue": "mutation ciblee",
+        "expected": "gltf.indices en FAIL",
+        "measured": "gltf.indices",
+        "status": "PASS"
+      },
+      {
+        "id": "refus.normales.normale",
+        "description": "le controleur refuse : une normale de longueur 4",
+        "configuration_connue": "mutation ciblee",
+        "expected": "gltf.normales en FAIL",
+        "measured": "gltf.normales",
+        "status": "PASS"
+      },
+      {
+        "id": "refus.poids.poids",
+        "description": "le controleur refuse : des poids qui ne somment plus a 1",
+        "configuration_connue": "mutation ciblee",
+        "expected": "gltf.poids en FAIL",
+        "measured": "gltf.poids",
+        "status": "PASS"
+      },
+      {
+        "id": "refus.joints.joints",
+        "description": "le controleur refuse : un index d'os hors du skin",
+        "configuration_connue": "mutation ciblee",
+        "expected": "gltf.joints en FAIL",
+        "measured": "gltf.joints",
+        "status": "PASS"
+      },
+      {
+        "id": "refus.sparse.sparse",
+        "description": "le controleur refuse : indices sparse non croissants",
+        "configuration_connue": "mutation ciblee",
+        "expected": "gltf.sparse en FAIL",
+        "measured": "gltf.sparse",
+        "status": "PASS"
+      },
+      {
+        "id": "refus.morphs.morphs",
+        "description": "le controleur refuse : un poids de morph pour trois targets",
+        "configuration_connue": "mutation ciblee",
+        "expected": "gltf.morphs en FAIL",
+        "measured": "gltf.morphs",
+        "status": "PASS"
+      },
+      {
+        "id": "refus.hierarchie.hierarchie",
+        "description": "le controleur refuse : un noeud avec deux parents",
+        "configuration_connue": "mutation ciblee",
+        "expected": "gltf.hierarchie en FAIL",
+        "measured": "gltf.hierarchie",
+        "status": "PASS"
+      },
+      {
+        "id": "refus.animations.animation",
+        "description": "le controleur refuse : un canal vers un chemin inconnu",
+        "configuration_connue": "mutation ciblee",
+        "expected": "gltf.animations en FAIL",
+        "measured": "gltf.animations",
+        "status": "PASS"
+      },
+      {
+        "id": "refus.quaternions.quaternion",
+        "description": "le controleur refuse : un quaternion non unitaire",
+        "configuration_connue": "mutation ciblee",
+        "expected": "gltf.quaternions en FAIL",
+        "measured": "gltf.quaternions",
+        "status": "PASS"
+      },
+      {
+        "id": "refus.skin.skin",
+        "description": "le controleur refuse : un joint de plus que de matrices de bind",
+        "configuration_connue": "mutation ciblee",
+        "expected": "gltf.skin en FAIL",
+        "measured": "gltf.skin",
+        "status": "PASS"
+      }
+    ]
+  }
+}

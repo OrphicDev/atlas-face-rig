@@ -18,7 +18,10 @@
       "TMP_head",
       "TMP_jaw"
     ],
-    "actions": []
+    "actions": [
+      "TMP_SPIKE",
+      "TMP_SPIKE_MORPH"
+    ]
   },
   "glb": {
     "meshes": [
@@ -31,8 +34,65 @@
       "TMP_F0_JAW_RIG"
     ],
     "skins": 1,
-    "animations": [],
+    "animations": [
+      "TMP_SPIKE",
+      "TMP_SPIKE_MORPH"
+    ],
     "generator": "Khronos glTF Blender I/O v5.1.20"
+  },
+  "animation": {
+    "rangees_en_nla_par_l_importeur": [
+      [
+        "GEO-head_animation_realistic.001",
+        "TMP_SPIKE_MORPH"
+      ]
+    ],
+    "poses": 9,
+    "ecart_angle_max_deg": 1.3e-05,
+    "ecart_morph_max": 0.0,
+    "detail_angle": [
+      [
+        1,
+        3e-06
+      ],
+      [
+        10,
+        3e-06
+      ],
+      [
+        20,
+        3e-06
+      ],
+      [
+        30,
+        3e-06
+      ],
+      [
+        40,
+        2e-06
+      ],
+      [
+        50,
+        1.3e-05
+      ],
+      [
+        60,
+        3e-06
+      ],
+      [
+        70,
+        3e-06
+      ],
+      [
+        80,
+        3e-06
+      ]
+    ],
+    "pire_morph": [
+      1,
+      "TMP_blink.L",
+      0.0
+    ]
   },
   "neutre_mm": {
     "p50": 0.0,
@@ -41,8 +101,8 @@
   },
   "registre": {
     "registre": "gltf-roundtrip",
-    "total": 9,
-    "reussies": 9,
+    "total": 14,
+    "reussies": 14,
     "echecs": 0,
     "sautees": 0,
     "sondes": [
@@ -113,6 +173,48 @@
         "expected": ">= 2",
         "measured": 2,
         "status": "PASS"
+      },
+      {
+        "id": "anim.presente",
+        "description": "le GLB porte au moins une animation",
+        "configuration_connue": "chunk JSON",
+        "expected": ">= 1",
+        "measured": 2,
+        "status": "PASS"
+      },
+      {
+        "id": "anim.actions_actives",
+        "description": "chaque animation du fichier est jouable",
+        "configuration_connue": "assignation depuis les pistes NLA",
+        "expected": "0 restee muette",
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "anim.canaux",
+        "description": "os machoire ET morphs pilotes a l'import",
+        "configuration_connue": "scene reimportee",
+        "expected": "TMP_jaw + 3 morphs",
+        "measured": "TMP_jaw + 3 morphs",
+        "status": "PASS"
+      },
+      {
+        "id": "anim.machoire",
+        "description": "angle de machoire a chaque pose clef",
+        "configuration_connue": "9 poses",
+        "expected": "<= 0,05 deg",
+        "measured": 1.3e-05,
+        "status": "PASS",
+        "tolerance": 0.05
+      },
+      {
+        "id": "anim.morphs_valeurs",
+        "description": "valeur de chaque morph a chaque pose clef",
+        "configuration_connue": "27 mesures",
+        "expected": "<= 0,002",
+        "measured": 0.0,
+        "status": "PASS",
+        "tolerance": 0.002
       },
       {
         "id": "glb.neutre_p95",

@@ -1,0 +1,165 @@
+{
+  "conteneur": {
+    "anomalies": [],
+    "octets": 3635536,
+    "bin": 3629496
+  },
+  "bufferviews_hors_bornes": [],
+  "sparse_fautifs": [],
+  "accessors_fautifs": [],
+  "min_max_faux": [],
+  "indices": [],
+  "normales_hors_norme": [],
+  "poids_non_normalises": [],
+  "animations_fautives": [],
+  "resume": {
+    "meshes": 1,
+    "nodes": 4,
+    "accessors": 22,
+    "animations": [
+      "TMP_SPIKE",
+      "TMP_SPIKE_MORPH"
+    ],
+    "extensions_requises": [],
+    "generator": "Khronos glTF Blender I/O v5.1.20"
+  },
+  "khronos": {
+    "saute": "validateur Khronos absent de la machine : ni `gltf-validator` dans le PATH ni --khronos fourni"
+  },
+  "fichier": "exports/atlas-face-spike.glb",
+  "registre": {
+    "registre": "validation-glb",
+    "total": 16,
+    "reussies": 15,
+    "echecs": 0,
+    "sautees": 1,
+    "sondes": [
+      {
+        "id": "glb.conteneur",
+        "description": "entete, longueurs et alignement des chunks",
+        "configuration_connue": "lecture octet par octet",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "gltf.version",
+        "description": "asset.version vaut 2.0",
+        "configuration_connue": "chunk JSON",
+        "expected": "2.0",
+        "measured": "2.0",
+        "status": "PASS"
+      },
+      {
+        "id": "gltf.bufferviews",
+        "description": "chaque bufferView tient dans le BIN",
+        "configuration_connue": "28 bufferViews",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "gltf.sparse",
+        "description": "blocs sparse : indices croissants et dans les bornes",
+        "configuration_connue": "6 accessor(s) sparse",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "gltf.accessors",
+        "description": "type, alignement et bornes de chaque accessor",
+        "configuration_connue": "22 accessors",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "gltf.min_max",
+        "description": "les min/max declares sont les vrais",
+        "configuration_connue": "recalcul sur les donnees",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "gltf.indices",
+        "description": "indices dans les bornes, triangles complets",
+        "configuration_connue": "1 meshes",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "gltf.normales",
+        "description": "normales unitaires a 1e-3",
+        "configuration_connue": "toutes les normales",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "gltf.poids",
+        "description": "les poids de peau somment a 1 a 2e-3",
+        "configuration_connue": "tous les sommets peses",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "gltf.joints",
+        "description": "chaque index d'os designe un joint du skin",
+        "configuration_connue": "2 joints",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "gltf.morphs",
+        "description": "meme nombre de targets sur toutes les primitives",
+        "configuration_connue": "1 meshes",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "gltf.hierarchie",
+        "description": "chaque noeud a au plus un parent, sans cycle",
+        "configuration_connue": "4 noeuds",
+        "expected": "0 double, 0 cycle",
+        "measured": "0 double(s), 0 cycle",
+        "status": "PASS"
+      },
+      {
+        "id": "gltf.animations",
+        "description": "echantillonneurs et canaux coherents",
+        "configuration_connue": "2 animation(s)",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "gltf.quaternions",
+        "description": "quaternions unitaires a 2e-3",
+        "configuration_connue": "noeuds et animations",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "gltf.skin",
+        "description": "une matrice de bind par joint",
+        "configuration_connue": "1 skin(s)",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "khronos.validator",
+        "description": "le validateur officiel Khronos ne signale aucune erreur",
+        "status": "SKIP",
+        "raison": "validateur Khronos absent de la machine : ni `gltf-validator` dans le PATH ni --khronos fourni"
+      }
+    ]
+  }
+}

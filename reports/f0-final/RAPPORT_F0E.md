@@ -62,8 +62,71 @@ des objets créés à l'import et je les attribuais à l'export.
 
 Le test lit désormais le fichier, pas la scène qui en sort : **9 sondes sur 9**.
 
+## L'animation — §E.7
+
+Une action de preuve `TMP_SPIKE` de neuf poses clefs (neutre, les deux
+clignements, bouche fermée, mâchoire à 20° puis 32°, deux regards, retour au
+neutre) est posée sur l'os `TMP_jaw` et sur les trois morphs, exportée, puis
+**remesurée après réimport contre les valeurs écrites au moment de la pose** :
+
+| mesure | pire écart sur les 9 poses |
+| --- | --- |
+| angle de mâchoire | **1.3e-05 °** |
+| valeur de morph | **0.0** |
+
+Passer de « le GLB contient une animation » à « l'animation vaut ce qu'elle
+valait » a fait tomber une sonde, et elle avait raison de tomber : l'importeur
+de Blender **range l'animation des morphs dans une piste NLA** au lieu de
+l'activer. Je lisais des valeurs jamais évaluées — la même faute que
+l'`Icosphere`, lire la scène au lieu du fichier. Le test active désormais
+explicitement toute action laissée en NLA, et le dit dans son rapport.
+
+**14 sondes sur 14** pour l'aller-retour.
+
+## La conformité glTF 2.0 — §E.9
+
+`tools/validate_glb.py` appelle le validateur **Khronos** s'il est présent et
+publie sa sortie telle quelle. Il n'est pas installé sur cette machine, et je
+n'ai pas décidé seul d'aller chercher un binaire : cette sonde est publiée
+**SAUTÉE**, avec la raison. Un PASS venant d'un outil jamais exécuté serait un
+mensonge. La commande qui la lèvera :
+
+```
+python3 tools/validate_glb.py --input exports/atlas-face-spike.glb \
+  --report reports/f0-final/validation-glb.json --khronos /chemin/gltf-validator
+```
+
+À côté, un contrôle de conformité écrit dans le dépôt lit le fichier octet par
+octet, sans rien installer : conteneur et alignement des chunks, bornes des
+bufferViews, type/alignement/bornes de chaque accessor, **blocs sparse**,
+min/max déclarés recalculés sur les données, indices dans les bornes, normales
+unitaires, poids de peau normalisés, index d'os dans le skin, cohérence des
+morph targets, hiérarchie sans double parent ni cycle, échantillonneurs
+d'animation, quaternions unitaires, matrices de bind. **15 sur 16, une sautée.**
+
+Là aussi j'ai dû corriger ma propre lecture avant d'accuser l'export : les
+trois morph targets sont des accessors **sparse**, et mon décodeur ignorait le
+bloc `sparse`. Il lisait des zéros et déclarait faux 18 min/max parfaitement
+exacts.
+
+### La contre-épreuve du contrôleur — 14 mutations
+
+Un contrôleur qui dit PASS ne prouve rien tant qu'il n'a pas refusé des fautes
+connues. `tests/validate-glb-negatif.py` fabrique 14 GLB mutants — longueur de
+conteneur fausse, `asset.version` à 1.0, bufferView débordant, min déclaré
+faux, indice hors bornes, normale de longueur 4, poids ne sommant plus à 1,
+index d'os hors du skin, indices sparse non croissants, poids de morph
+manquant, nœud à deux parents, canal d'animation vers un chemin inconnu,
+quaternion non unitaire, joint sans matrice de bind. **Chacune tombe sur la
+sonde qui la nomme, et sur elle seule : 15/15.**
+
+Deux mutations « réussissaient » d'abord pour la mauvaise raison : mon harnais
+écrivait 4 octets quel que soit le type du composant, ce qui raccourcissait le
+BIN et décalait tout ce qui suit — une mutation en abîmait cinq. Et je
+comptais une exception comme un refus, alors qu'une exception prouve seulement
+que quelque chose a cassé.
+
 ## Ce qui reste dû
 
-Aucune **animation** n'est encore dans le GLB (`animations: []`) : le spike
-d'action du §E.7 et son bake ne sont pas faits. Restent aussi la validation
-Khronos (§E.9) et l'essai dans un runtime réel (§E.11).
+Le validateur **Khronos** lui-même (§E.9) n'a pas tourné : il n'est pas sur la
+machine. Et l'essai dans un runtime réel (§E.11) reste entier.
