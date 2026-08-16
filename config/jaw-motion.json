@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "space": "WORLD",
+  "units": "METERS",
+  "condyle_landmarks": {
+    "L": [
+      1.53226,
+      -0.05038,
+      0.73917
+    ],
+    "R": [
+      1.39371,
+      -0.05156,
+      0.74089
+    ]
+  },
+  "positions_world_xyz": {
+    "L": [
+      1.53226,
+      -0.05038,
+      0.73917
+    ],
+    "R": [
+      1.39371,
+      -0.05156,
+      0.74089
+    ]
+  },
+  "pivot_world_xyz": [
+    1.462985,
+    -0.05097,
+    0.74003
+  ],
+  "hinge_axis_world_xyz": [
+    0.999886632,
+    0.008515825,
+    -0.012412972
+  ],
+  "ecart_a_X_monde_deg": 0.862527,
+  "rotation_max_deg": 32.0,
+  "translation_start": 0.35,
+  "translation_max_mm": 6.0,
+  "translation_direction_head_local": [
+    0.0,
+    -0.943858,
+    -0.33035
+  ],
+  "z_levre": 0.694472,
+  "z_menton": 0.645326,
+  "z_bas_cou": 0.554408,
+  "source": "conduits auditifs mesures dans reports/f0/audit-topologie.json"
+}

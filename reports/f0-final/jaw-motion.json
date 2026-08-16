@@ -1,0 +1,164 @@
+{
+  "angles": {
+    "0": {
+      "gap_central_mm": 3.5586,
+      "deplacement_median_marge_inf_mm": 0.0,
+      "deplacement_max_levre_sup_mm": 0.0,
+      "deplacement_max_crane_mm": 0.0,
+      "deplacement_max_cou_mm": 0.0,
+      "menton_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "arete_min": 0.9999,
+      "arete_max": 1.0001
+    },
+    "5": {
+      "gap_central_mm": 11.8013,
+      "deplacement_median_marge_inf_mm": 9.4638,
+      "deplacement_max_levre_sup_mm": 0.0,
+      "deplacement_max_crane_mm": 0.0,
+      "deplacement_max_cou_mm": 0.0,
+      "menton_mm": [
+        -0.1034,
+        7.7472,
+        -3.0157
+      ],
+      "arete_min": 0.58964,
+      "arete_max": 6.43269
+    },
+    "10": {
+      "gap_central_mm": 21.378,
+      "deplacement_median_marge_inf_mm": 18.9097,
+      "deplacement_max_levre_sup_mm": 0.0,
+      "deplacement_max_crane_mm": 0.0,
+      "deplacement_max_cou_mm": 0.0,
+      "menton_mm": [
+        -0.2004,
+        15.7279,
+        -5.3447
+      ],
+      "arete_min": 0.33941,
+      "arete_max": 11.89446
+    },
+    "20": {
+      "gap_central_mm": 40.3002,
+      "deplacement_median_marge_inf_mm": 37.0942,
+      "deplacement_max_levre_sup_mm": 0.0,
+      "deplacement_max_crane_mm": 0.0,
+      "deplacement_max_cou_mm": 0.0,
+      "menton_mm": [
+        -0.3715,
+        30.1347,
+        -8.581
+      ],
+      "arete_min": 0.32527,
+      "arete_max": 22.31002
+    },
+    "32": {
+      "gap_central_mm": 61.8499,
+      "deplacement_median_marge_inf_mm": 57.7978,
+      "deplacement_max_levre_sup_mm": 0.0,
+      "deplacement_max_crane_mm": 0.0,
+      "deplacement_max_cou_mm": 0.0,
+      "menton_mm": [
+        -0.5314,
+        46.838,
+        -8.9272
+      ],
+      "arete_min": 0.22833,
+      "arete_max": 34.11083
+    }
+  },
+  "registre": {
+    "registre": "f0-jaw-motion",
+    "total": 10,
+    "reussies": 10,
+    "echecs": 0,
+    "sautees": 0,
+    "sondes": [
+      {
+        "id": "jaw.zero_est_le_neutre",
+        "description": "0 degre rend exactement le neutre",
+        "configuration_connue": "cinq angles",
+        "expected": "<= 0,01 mm",
+        "measured": 0.000133,
+        "status": "PASS",
+        "tolerance": 0.01
+      },
+      {
+        "id": "jaw.gap_croissant_5",
+        "description": "le jour augmente strictement",
+        "configuration_connue": "angle precedent 0",
+        "expected": "> 3.5586 mm",
+        "measured": 11.8013,
+        "status": "PASS"
+      },
+      {
+        "id": "jaw.gap_croissant_10",
+        "description": "le jour augmente strictement",
+        "configuration_connue": "angle precedent 5",
+        "expected": "> 11.8013 mm",
+        "measured": 21.378,
+        "status": "PASS"
+      },
+      {
+        "id": "jaw.gap_croissant_20",
+        "description": "le jour augmente strictement",
+        "configuration_connue": "angle precedent 10",
+        "expected": "> 21.3780 mm",
+        "measured": 40.3002,
+        "status": "PASS"
+      },
+      {
+        "id": "jaw.gap_croissant_32",
+        "description": "le jour augmente strictement",
+        "configuration_connue": "angle precedent 20",
+        "expected": "> 40.3002 mm",
+        "measured": 61.8499,
+        "status": "PASS"
+      },
+      {
+        "id": "jaw.gap_32",
+        "description": "jour central a 32 degres",
+        "configuration_connue": "cinq angles",
+        "expected": ">= 8 mm",
+        "measured": 61.8499,
+        "status": "PASS"
+      },
+      {
+        "id": "jaw.marge_inf_32",
+        "description": "la marge inferieure se deplace",
+        "configuration_connue": "32 degres",
+        "expected": ">= 10 mm",
+        "measured": 57.7978,
+        "status": "PASS"
+      },
+      {
+        "id": "jaw.crane_fixe",
+        "description": "le crane reste fixe",
+        "configuration_connue": "32 degres",
+        "expected": "<= 0,01 mm",
+        "measured": 0.0,
+        "status": "PASS"
+      },
+      {
+        "id": "jaw.levre_sup_fixe",
+        "description": "la levre superieure reste fixe",
+        "configuration_connue": "32 degres",
+        "expected": "<= 0,01 mm",
+        "measured": 0.0,
+        "status": "PASS"
+      },
+      {
+        "id": "jaw.cou_fixe",
+        "description": "le bas du cou reste fixe",
+        "configuration_connue": "32 degres",
+        "expected": "<= 0,5 mm",
+        "measured": 0.0,
+        "status": "PASS"
+      }
+    ]
+  }
+}

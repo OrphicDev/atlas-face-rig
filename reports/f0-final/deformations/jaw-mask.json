@@ -1,0 +1,85 @@
+{
+  "sommets": 3242,
+  "graines": 265,
+  "exclusions": 2371,
+  "portee_m": 0.07,
+  "poids_moyen": 0.162467,
+  "sommets_pleins": 281,
+  "sommets_nuls": 2516,
+  "registre": {
+    "registre": "build-jaw-mask",
+    "total": 8,
+    "reussies": 8,
+    "echecs": 0,
+    "sautees": 0,
+    "sondes": [
+      {
+        "id": "jaw.lip_vs_exclude",
+        "description": "aucune graine labiale dans l'exclusion",
+        "configuration_connue": "reperes audites",
+        "expected": [],
+        "measured": [],
+        "status": "PASS"
+      },
+      {
+        "id": "jaw.mandibule_deux_cotes",
+        "description": "les deux cotes ont des graines",
+        "configuration_connue": "reperes audites",
+        "expected": "> 0 des deux",
+        "measured": [
+          51,
+          51
+        ],
+        "status": "PASS"
+      },
+      {
+        "id": "jaw.bornes",
+        "description": "poids dans [0,1]",
+        "configuration_connue": "tableau complet",
+        "expected": true,
+        "measured": true,
+        "status": "PASS"
+      },
+      {
+        "id": "jaw.marge_inferieure",
+        "description": "la marge labiale inferieure est pleine",
+        "configuration_connue": "graines",
+        "expected": ">= 0,95",
+        "measured": 1.0,
+        "status": "PASS"
+      },
+      {
+        "id": "jaw.marge_superieure",
+        "description": "la levre superieure hors commissures est nulle",
+        "configuration_connue": "exclusion, commissures otees",
+        "expected": 0.0,
+        "measured": 0.0,
+        "status": "PASS"
+      },
+      {
+        "id": "jaw.commissures_intermediaires",
+        "description": "les commissures sont entre 0 et 1",
+        "configuration_connue": "sommets partages par les deux arcs",
+        "expected": "0 < w < 1",
+        "measured": 0.7402,
+        "status": "PASS"
+      },
+      {
+        "id": "jaw.crane",
+        "description": "le crane ne bouge pas",
+        "configuration_connue": "z au-dessus des levres",
+        "expected": 0.0,
+        "measured": 0.0,
+        "status": "PASS"
+      },
+      {
+        "id": "jaw.bas_du_cou",
+        "description": "le bas du cou ne bouge pas",
+        "configuration_connue": "z bas",
+        "expected": 0.0,
+        "measured": 0.0,
+        "status": "PASS"
+      }
+    ]
+  }
+}
