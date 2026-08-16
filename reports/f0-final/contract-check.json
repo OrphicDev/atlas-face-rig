@@ -1,6 +1,25 @@
 {
   "contract": "source/FACE_F0_FOUNDATION_FINAL.output-contract.json",
-  "fautes": [],
+  "fautes": [
+    [
+      "deltas.blink_L",
+      "SHA different",
+      "dd6ece354915",
+      "a5baf38b6ac8"
+    ],
+    [
+      "deltas.blink_R",
+      "SHA different",
+      "0d00b3bb1753",
+      "5926d86301e2"
+    ],
+    [
+      "deltas.mouth_close",
+      "SHA different",
+      "db509f904363",
+      "eb60c4d8edbd"
+    ]
+  ],
   "negatif": {
     "cle_mutee": "artifacts.author_input",
     "source": "reports/f0-final/author-input.json",
@@ -11,14 +30,32 @@
         "SHA different",
         "33e7e352c226",
         "8f23169cddc0"
+      ],
+      [
+        "deltas.blink_L",
+        "SHA different",
+        "dd6ece354915",
+        "a5baf38b6ac8"
+      ],
+      [
+        "deltas.blink_R",
+        "SHA different",
+        "0d00b3bb1753",
+        "5926d86301e2"
+      ],
+      [
+        "deltas.mouth_close",
+        "SHA different",
+        "db509f904363",
+        "eb60c4d8edbd"
       ]
     ]
   },
   "registre": {
     "registre": "check-output-contract",
     "total": 3,
-    "reussies": 3,
-    "echecs": 0,
+    "reussies": 2,
+    "echecs": 1,
     "sautees": 0,
     "sondes": [
       {
@@ -26,8 +63,8 @@
         "description": "chaque artefact retrouve son SHA",
         "configuration_connue": "12 artefacts declares",
         "expected": 0,
-        "measured": 0,
-        "status": "PASS"
+        "measured": 3,
+        "status": "FAIL"
       },
       {
         "id": "contrat.refus_sha_modifie",

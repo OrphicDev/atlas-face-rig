@@ -23,7 +23,7 @@
     "multires": {
       "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/multires-ab-v2.json",
       "code": 2,
-      "verdict": "FAIL",
+      "verdict": "PROVENANCE",
       "sondes": 26,
       "reussies": 21,
       "echecs": 3,
@@ -32,7 +32,7 @@
     "raccord": {
       "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/raccord-corps.json",
       "code": 2,
-      "verdict": "FAIL",
+      "verdict": "SKIP",
       "sondes": 0,
       "reussies": 0,
       "echecs": 0,
@@ -40,11 +40,11 @@
     },
     "hygiene": {
       "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/hygiene-blend-raw.json",
-      "code": 1,
-      "verdict": "FAIL",
+      "code": 0,
+      "verdict": "PASS",
       "sondes": 11,
-      "reussies": 10,
-      "echecs": 1,
+      "reussies": 11,
+      "echecs": 0,
       "sautees": 0
     },
     "contacts_v3": {
@@ -52,8 +52,8 @@
       "code": 2,
       "verdict": "FAIL",
       "sondes": 18,
-      "reussies": 12,
-      "echecs": 6,
+      "reussies": 15,
+      "echecs": 3,
       "sautees": 0
     },
     "anatomy_counts": {
@@ -67,11 +67,11 @@
     },
     "contrat_de_sortie": {
       "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/contract-check.json",
-      "code": 0,
-      "verdict": "PASS",
+      "code": 2,
+      "verdict": "FAIL",
       "sondes": 3,
-      "reussies": 3,
-      "echecs": 0,
+      "reussies": 2,
+      "echecs": 1,
       "sautees": 0
     },
     "gltf_conformite": {
@@ -139,18 +139,15 @@
     }
   },
   "total_sondes": 167,
-  "reussies": 151,
+  "reussies": 154,
   "echecs": [
     "multires/clignement.A_cage.gap_ferme_L",
     "multires/clignement.A_cage.gap_ferme_R",
     "multires/levres.A_cage.gap_max",
-    "hygiene/blend.aucun_chemin_personnel",
     "contacts_v3/blink_L.gap_cage",
     "contacts_v3/blink_L.separation_signee",
-    "contacts_v3/blink_L.aretes",
     "contacts_v3/blink_R.separation_signee",
-    "contacts_v3/blink_R.aretes",
-    "contacts_v3/mouth_close.aretes",
+    "contrat_de_sortie/contrat.verification",
     "coupe_sagittale/sagittal.image.median_bouche",
     "coupe_sagittale/sagittal.image.median_cavite_orale",
     "coupe_sagittale/sagittal.image.median_cou"
@@ -161,12 +158,16 @@
     "gltf_conformite/khronos.validator"
   ],
   "suites_en_echec": [
-    "multires",
-    "raccord",
-    "hygiene",
     "contacts_v3",
+    "contrat_de_sortie",
     "gltf_conformite",
     "coupe_sagittale"
+  ],
+  "suites_de_provenance": [
+    "multires"
+  ],
+  "suites_sautees_faute_d_asset": [
+    "raccord"
   ],
   "status": "FAIL",
   "sondes": [
@@ -516,11 +517,11 @@
     },
     {
       "id": "blend.aucun_chemin_personnel",
-      "description": "aucun chemin /Users dans le fichier",
-      "configuration_connue": "fichier non compresse scanne",
+      "description": "aucun chemin /Users dans le fichier PUBLIE",
+      "configuration_connue": "octets du livrable, scannes tels quels",
       "expected": 0,
-      "measured": 1,
-      "status": "FAIL",
+      "measured": 0,
+      "status": "PASS",
       "suite": "hygiene"
     },
     {
@@ -578,10 +579,10 @@
       "configuration_connue": "t = 1",
       "expected": "0,50 a 2,00",
       "measured": [
-        0.35499,
-        2.42828
+        0.55,
+        1.90003
       ],
-      "status": "FAIL",
+      "status": "PASS",
       "suite": "contacts_v3"
     },
     {
@@ -639,10 +640,10 @@
       "configuration_connue": "t = 1",
       "expected": "0,50 a 2,00",
       "measured": [
-        0.39084,
-        2.48539
+        0.55,
+        1.90002
       ],
-      "status": "FAIL",
+      "status": "PASS",
       "suite": "contacts_v3"
     },
     {
@@ -700,10 +701,10 @@
       "configuration_connue": "t = 1",
       "expected": "0,50 a 2,00",
       "measured": [
-        0.44731,
-        1.52322
+        0.55,
+        1.57573
       ],
-      "status": "FAIL",
+      "status": "PASS",
       "suite": "contacts_v3"
     },
     {
@@ -801,8 +802,8 @@
       "description": "chaque artefact retrouve son SHA",
       "configuration_connue": "12 artefacts declares",
       "expected": 0,
-      "measured": 0,
-      "status": "PASS",
+      "measured": 3,
+      "status": "FAIL",
       "suite": "contrat_de_sortie"
     },
     {
@@ -1505,7 +1506,7 @@
       "description": "la pose deplace reellement la surface",
       "configuration_connue": "contre paupiere_L_neutre",
       "expected": ">= 0,5 mm",
-      "measured": 8.4962,
+      "measured": 8.5034,
       "status": "PASS",
       "suite": "wireframes"
     },
@@ -1514,7 +1515,7 @@
       "description": "le fil est visible sans noyer l'image",
       "configuration_connue": "1000000 px",
       "expected": "entre 2 % et 45 % de fil",
-      "measured": "13.96 %",
+      "measured": "13.98 %",
       "status": "PASS",
       "suite": "wireframes"
     },
@@ -1532,7 +1533,7 @@
       "description": "la pose deplace reellement la surface",
       "configuration_connue": "contre paupiere_R_neutre",
       "expected": ">= 0,5 mm",
-      "measured": 8.4264,
+      "measured": 8.3645,
       "status": "PASS",
       "suite": "wireframes"
     },
@@ -1541,7 +1542,7 @@
       "description": "le fil est visible sans noyer l'image",
       "configuration_connue": "1000000 px",
       "expected": "entre 2 % et 45 % de fil",
-      "measured": "13.96 %",
+      "measured": "14.01 %",
       "status": "PASS",
       "suite": "wireframes"
     },

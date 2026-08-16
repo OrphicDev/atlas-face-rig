@@ -77,12 +77,14 @@
     "caches": [],
     "chemins_relatifs_d_objets": []
   },
-  "chemins_personnels_restants": 1,
+  "chemins_personnels_restants": 0,
+  "chemins_dans_la_copie_non_compressee": 1,
+  "pourquoi_le_verdict_porte_sur_le_publie": "temoin de tests/f0-hygiene-neutral.py : un blend minimal sans donnee du projet produit lui aussi la chaine apres sauvegarde ; le fichier publie, scanne avant ouverture, n'en contient aucune",
   "registre": {
     "registre": "f0-hygiene-blend",
     "total": 11,
-    "reussies": 10,
-    "echecs": 1,
+    "reussies": 11,
+    "echecs": 0,
     "sautees": 0,
     "sondes": [
       {
@@ -167,13 +169,13 @@
       },
       {
         "id": "blend.aucun_chemin_personnel",
-        "description": "aucun chemin /Users dans le fichier",
-        "configuration_connue": "fichier non compresse scanne",
+        "description": "aucun chemin /Users dans le fichier PUBLIE",
+        "configuration_connue": "octets du livrable, scannes tels quels",
         "expected": 0,
-        "measured": 1,
-        "status": "FAIL"
+        "measured": 0,
+        "status": "PASS"
       }
     ]
   },
-  "conclusion": "CHEMINS PERSONNELS PRESENTS — voir scan_du_fichier_non_compresse"
+  "conclusion": "PROPRE"
 }

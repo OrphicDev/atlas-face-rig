@@ -41,4 +41,4 @@ Colonnes obligatoires — une action sans preuve ne compte pas :
   les narines n'ont que 7 à 8 sommets de pourtour.
 
 
-> **État F0 (2026-08-16, commit `ace4b94`).** F0 est **incomplète** : 167 sondes, 151 réussies, 13 échec(s), 3 sautée(s). Vérité unique : [`reports/f0-final/RAPPORT_F0_FINAL.md`](../reports/f0-final/RAPPORT_F0_FINAL.md). F1 n'a pas commencé.
+> **État F0 (2026-08-16, commit `ab26ab2`).** F0 est **incomplète** : 167 sondes, 154 réussies, 10 échec(s), 3 sautée(s). Vérité unique : [`reports/f0-final/RAPPORT_F0_FINAL.md`](../reports/f0-final/RAPPORT_F0_FINAL.md). F1 n'a pas commencé.

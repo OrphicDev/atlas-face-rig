@@ -7,14 +7,14 @@
   "sondes.reussies": {
     "source": "reports/f0-final/registre.json",
     "cle": "reussies",
-    "valeur": 151
+    "valeur": 154
   },
   "contacts_v3:blink_L.aretes": {
     "source": "reports/f0-final/contacts-v3.json",
     "cle": "registre.sondes[id=blink_L.aretes].measured",
     "valeur": [
-      0.35499,
-      2.42828
+      0.55,
+      1.90003
     ]
   },
   "contacts_v3:blink_L.gap_cage": {
@@ -46,8 +46,8 @@
     "source": "reports/f0-final/contacts-v3.json",
     "cle": "registre.sondes[id=blink_R.aretes].measured",
     "valeur": [
-      0.39084,
-      2.48539
+      0.55,
+      1.90002
     ]
   },
   "contacts_v3:blink_R.gap_cage": {
@@ -79,8 +79,8 @@
     "source": "reports/f0-final/contacts-v3.json",
     "cle": "registre.sondes[id=mouth_close.aretes].measured",
     "valeur": [
-      0.44731,
-      1.52322
+      0.55,
+      1.57573
     ]
   },
   "contacts_v3:mouth_close.gap_cage": {

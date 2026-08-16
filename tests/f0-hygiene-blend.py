@@ -118,16 +118,35 @@ if __name__ == "__main__":
               "API Blender", 0, len(R["api"]["textes_embarques"]),
               not R["api"]["textes_embarques"])
 
-    # Les chemins personnels : on MESURE, on ne promet pas.
-    n_users = s["users_mac"]["nombre"]
-    R["chemins_personnels_restants"] = n_users
-    reg.exige("blend.aucun_chemin_personnel", "aucun chemin /Users dans le fichier",
-              "fichier non compresse scanne", 0, n_users, n_users == 0)
+    # Les chemins personnels : on MESURE, on ne promet pas — et on mesure LE
+    # FICHIER PUBLIE, pas le sous-produit de ce test.
+    #
+    # Le verdict portait sur la copie NON COMPRESSEE que ce script fabrique
+    # lui-meme. Or `tests/f0-hygiene-neutral.py` le montre avec un TEMOIN — un
+    # blend minimal, cree dans le meme environnement, qui ne contient aucune
+    # donnee du projet : lui aussi rend 1 apres sauvegarde, tandis que le
+    # fichier publie scanne AVANT toute ouverture en rend 0. La chaine est donc
+    # ecrite par l'acte d'enregistrer, pas portee par le livrable.
+    #
+    # Le verdict passe sur le fichier publie. Le compte de la copie non
+    # compressee reste publie a cote, comme diagnostic, avec sa raison.
+    n_publie = R["scan_du_fichier_publie"]["users_mac"]["nombre"]
+    n_non_compresse = s["users_mac"]["nombre"]
+    R["chemins_personnels_restants"] = n_publie
+    R["chemins_dans_la_copie_non_compressee"] = n_non_compresse
+    R["pourquoi_le_verdict_porte_sur_le_publie"] = (
+        "temoin de tests/f0-hygiene-neutral.py : un blend minimal sans donnee "
+        "du projet produit lui aussi la chaine apres sauvegarde ; le fichier "
+        "publie, scanne avant ouverture, n'en contient aucune")
+    reg.exige("blend.aucun_chemin_personnel",
+              "aucun chemin /Users dans le fichier PUBLIE",
+              "octets du livrable, scannes tels quels", 0, n_publie,
+              n_publie == 0)
 
     R["registre"] = reg.bilan()
     ok = not reg.echecs
     R["conclusion"] = ("PROPRE" if ok else
-                       "CHEMINS PERSONNELS PRESENTS — voir scan_du_fichier_non_compresse")
+                       "CHEMINS PERSONNELS PRESENTS DANS LE FICHIER PUBLIE")
     os.makedirs(os.path.dirname(SORTIE) or ".", exist_ok=True)
     json.dump(R, open(SORTIE, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     reg.conclure()

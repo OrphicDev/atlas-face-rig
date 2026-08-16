@@ -250,16 +250,16 @@
             }
           },
           "temps_s": {
-            "min": 0.036307,
-            "median": 0.037764,
-            "p95": 0.038762,
-            "max": 0.038762,
-            "moyenne": 0.037566
+            "min": 0.036366,
+            "median": 0.037715,
+            "p95": 0.040402,
+            "max": 0.040402,
+            "moyenne": 0.037692
           },
           "memoire": {
             "sommets": 3242,
             "octets_shape_key_theorique": 38904,
-            "octets_blend_compresse": 1017247
+            "octets_blend_compresse": 1017286
           }
         },
         "B_haute_resolution": {
@@ -397,16 +397,16 @@
             }
           },
           "temps_s": {
-            "min": 0.025122,
-            "median": 0.025436,
-            "p95": 0.025686,
-            "max": 0.025686,
-            "moyenne": 0.02543
+            "min": 0.024852,
+            "median": 0.025392,
+            "p95": 0.026202,
+            "max": 0.026202,
+            "moyenne": 0.025402
           },
           "memoire": {
             "sommets": 12950,
             "octets_shape_key_theorique": 155400,
-            "octets_blend_compresse": 1774370
+            "octets_blend_compresse": 1774321
           }
         }
       }
@@ -560,16 +560,16 @@
             }
           },
           "temps_s": {
-            "min": 0.035821,
-            "median": 0.036167,
-            "p95": 0.036781,
-            "max": 0.036781,
-            "moyenne": 0.036214
+            "min": 0.035701,
+            "median": 0.036134,
+            "p95": 0.03705,
+            "max": 0.03705,
+            "moyenne": 0.036183
           },
           "memoire": {
             "sommets": 3242,
             "octets_shape_key_theorique": 38904,
-            "octets_blend_compresse": 1015847
+            "octets_blend_compresse": 1015865
           }
         },
         "B_haute_resolution": {
@@ -683,16 +683,16 @@
             }
           },
           "temps_s": {
-            "min": 0.024956,
-            "median": 0.025354,
-            "p95": 0.025725,
-            "max": 0.025725,
-            "moyenne": 0.025408
+            "min": 0.025067,
+            "median": 0.025534,
+            "p95": 0.027129,
+            "max": 0.027129,
+            "moyenne": 0.025576
           },
           "memoire": {
             "sommets": 12950,
             "octets_shape_key_theorique": 155400,
-            "octets_blend_compresse": 1766030
+            "octets_blend_compresse": 1766019
           }
         }
       }
@@ -970,16 +970,16 @@
             }
           },
           "temps_s": {
-            "min": 0.035658,
-            "median": 0.035962,
-            "p95": 0.036687,
-            "max": 0.036687,
-            "moyenne": 0.036007
+            "min": 0.035783,
+            "median": 0.036061,
+            "p95": 0.036673,
+            "max": 0.036673,
+            "moyenne": 0.036082
           },
           "memoire": {
             "sommets": 3242,
             "octets_shape_key_theorique": 38904,
-            "octets_blend_compresse": 1019134
+            "octets_blend_compresse": 1019141
           }
         },
         "B_haute_resolution": {
@@ -1218,16 +1218,16 @@
             }
           },
           "temps_s": {
-            "min": 0.02503,
-            "median": 0.025284,
-            "p95": 0.025715,
-            "max": 0.025715,
-            "moyenne": 0.025307
+            "min": 0.02535,
+            "median": 0.025592,
+            "p95": 0.025901,
+            "max": 0.025901,
+            "moyenne": 0.025619
           },
           "memoire": {
             "sommets": 12950,
             "octets_shape_key_theorique": 155400,
-            "octets_blend_compresse": 1778699
+            "octets_blend_compresse": 1778720
           }
         }
       }

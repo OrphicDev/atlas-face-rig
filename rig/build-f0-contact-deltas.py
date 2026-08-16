@@ -49,6 +49,82 @@ POSES = {"blink_L": ["fente_palpebrale.L"],
          "mouth_close": ["fente_labiale"]}
 
 
+RATIO_MIN, RATIO_MAX = 0.50, 2.00
+RATIO_VISE_MIN, RATIO_VISE_MAX = 0.55, 1.90   # on VISE a l'interieur des bornes
+PROJECTIONS = 4000
+
+
+def projeter_longueurs(me, basis, total, marge):
+    """Ramene les rapports d'aretes dans les bornes, SANS toucher la marge.
+
+    La mesure a tranche avant d'ecrire cette fonction : sur les trois poses,
+    AUCUNE arete hors bornes n'a ses deux extremites dans la marge. Les douze
+    aretes fautives du clignement et les trois des levres sont toutes dans la
+    zone de degrade. On peut donc les remettre dans les bornes en ne bougeant
+    que des sommets LIBRES, et le contact — jour, separation signee — ne peut
+    pas changer. C'est verifie apres coup, pas suppose.
+
+    Relaxation de Gauss-Seidel deterministe : les aretes sont parcourues dans
+    l'ordre de leurs indices, jamais dans l'ordre d'un ensemble.
+    """
+    libres = {i for i in total if i not in marge}
+    if not libres:
+        return total, {"aretes_corrigees": 0, "passes": 0}
+    aretes = []
+    for e in me.edges:
+        a, b = int(e.vertices[0]), int(e.vertices[1])
+        if a not in total and b not in total:
+            continue
+        L0 = (basis[a] - basis[b]).length
+        if L0 > 1e-9:
+            aretes.append((a, b, L0))
+    aretes.sort()
+    pos = {i: basis[i] + total[i] for i in total}
+    lire = lambda i: pos.get(i, basis[i])
+    touchees = set()
+    passes = 0
+    for passes in range(1, PROJECTIONS + 1):
+        pire = 0.0
+        for a, b, L0 in aretes:
+            pa, pb = lire(a), lire(b)
+            d = pb - pa
+            L = d.length
+            if L < 1e-12:
+                continue
+            r = L / L0
+            if RATIO_VISE_MIN <= r <= RATIO_VISE_MAX:
+                continue
+            cible = L0 * (RATIO_VISE_MIN if r < RATIO_VISE_MIN else RATIO_VISE_MAX)
+            wa = 1.0 if a in libres else 0.0
+            wb = 1.0 if b in libres else 0.0
+            if wa + wb <= 0.0:
+                continue
+            corr = d.normalized() * (L - cible)
+            if a in libres:
+                pos[a] = pa + corr * (wa / (wa + wb))
+                touchees.add(a)
+            if b in libres:
+                pos[b] = pb - corr * (wb / (wa + wb))
+                touchees.add(b)
+            pire = max(pire, abs(r - min(max(r, RATIO_VISE_MIN), RATIO_VISE_MAX)))
+        if pire < 1e-6:
+            break
+    hors = 0
+    for a, b, L0 in aretes:
+        r = (lire(b) - lire(a)).length / L0
+        if r < RATIO_MIN or r > RATIO_MAX:
+            hors += 1
+    neuf = dict(total)
+    for i in touchees:
+        neuf[i] = pos[i] - basis[i]
+    bouges_marge = [i for i in marge
+                    if i in total and (neuf[i] - total[i]).length > 1e-12]
+    return neuf, {"aretes_examinees": len(aretes), "sommets_libres": len(libres),
+                  "sommets_deplaces_par_projection": len(touchees),
+                  "passes": passes, "aretes_hors_bornes_apres": hors,
+                  "sommets_de_marge_touches": bouges_marge}
+
+
 def lisse(t):
     t = max(0.0, min(1.0, t))
     return t * t * (3.0 - 2.0 * t)
@@ -255,10 +331,22 @@ if __name__ == "__main__":
                     base = vise.get(source.get(i))
                     if base is None: continue
                 total[i] = total.get(i, Vector((0, 0, 0))) + base * w
+        marge_totale = set()
+        for cle in cles:
+            for pr in P["ouvertures"][cle]["paires"]:
+                marge_totale |= set(pr["upper_segment"]) | set(pr["lower_segment"])
+        total, info = projeter_longueurs(me, basis, total, marge_totale)
+        falloff.setdefault("projection_longueurs", {})[pose] = info
+        if info.get("sommets_de_marge_touches"):
+            print("PROJECTION A TOUCHE LA MARGE :", info["sommets_de_marge_touches"])
+            sys.exit(2)
         deltas_par_pose[pose] = total
-        print("  %-12s %4d sommets deplaces, max %.3f mm"
+        print("  %-12s %4d sommets deplaces, max %.3f mm | projection : "
+              "%d sommets, %d passes, %d arete(s) hors bornes apres"
               % (pose, len(total),
-                 max((v.length for v in total.values()), default=0.0) * MM))
+                 max((v.length for v in total.values()), default=0.0) * MM,
+                 info["sommets_deplaces_par_projection"], info["passes"],
+                 info["aretes_hors_bornes_apres"]))
 
     os.makedirs(R(o.output_dir), exist_ok=True)
     for pose, total in deltas_par_pose.items():

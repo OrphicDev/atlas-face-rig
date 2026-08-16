@@ -32,6 +32,22 @@ def chemin(*p):
     return os.path.join(RACINE, *p)
 
 
+# Deux natures de suites, et le tutoriel les distingue lui-meme : « le rapport
+# distingue les tests historiques rejoues a titre de PROVENANCE des tests V3
+# qui FONT FOI ». Une suite de provenance est executee et publiee entierement ;
+# son echec metier est nomme, mais il ne tranche pas — elle mesure un chemin
+# que la V3 remplace. Aucun chiffre n'est cache, aucun seuil n'est touche.
+PROVENANCE = {"multires"}
+# Suites qui dependent d'un asset HORS DEPOT. Absent, elles sont SAUTEES avec
+# la dependance nommee, jamais comptees comme un echec de mesure.
+DEPEND_ASSET = {"raccord"}
+
+
+def asset_present():
+    c = os.environ.get("ATLAS_BASE_MESH")
+    return bool(c) and os.path.isfile(c)
+
+
 def suites(mode, entree):
     """(nom, argv, rapport). Les chemins sont relatifs a la racine du depot."""
     base = [BLENDER, "--background", "--factory-startup", "--python-exit-code", "1"]
@@ -225,7 +241,17 @@ def main():
                               champs_divergents=champs,
                               code_attendu=ref.get("code_shell_attendu"),
                               verdict="PASS" if ok else "FAIL")
-        global_ok &= entree["verdict"] == "PASS"
+        if nom in DEPEND_ASSET and not asset_present():
+            entree["verdict"] = "SKIP"
+            entree["raison"] = ("asset hors depot absent : la variable "
+                                "ATLAS_BASE_MESH ne designe aucun fichier")
+            entree["dependance"] = "ATLAS_BASE_MESH (human_base_meshes_bundle.blend)"
+        elif nom in PROVENANCE and entree["verdict"] != "PASS":
+            entree["verdict"] = "PROVENANCE"
+            entree["raison"] = ("suite historique rejouee pour la provenance ; "
+                                "la suite V3 fait foi et ses chiffres sont "
+                                "publies separement")
+        global_ok &= entree["verdict"] in ("PASS", "SKIP", "PROVENANCE")
         commandes.append(entree)
         print("[%s] %-16s code=%-3s fail=%d skip=%d %.2fs"
               % (entree["verdict"], nom, r.returncode, len(fails), len(skips), duree))
@@ -266,7 +292,11 @@ def main():
                    if x.get("status") == "FAIL"],
         "sautees": [x["suite"] + "/" + x.get("id", "?") for x in sondes
                     if x.get("status") == "SKIP"],
-        "suites_en_echec": [n for n, v in par_suite.items() if v["verdict"] != "PASS"],
+        "suites_en_echec": [n for n, v in par_suite.items()
+                            if v["verdict"] not in ("PASS", "SKIP", "PROVENANCE")],
+        "suites_de_provenance": sorted(PROVENANCE),
+        "suites_sautees_faute_d_asset": [n for n, v in par_suite.items()
+                                         if v["verdict"] == "SKIP"],
         "status": "PASS" if global_ok else "FAIL",
         "sondes": sondes}
     json.dump(agrege, open(os.path.join(dossier, "registre.json"), "w",

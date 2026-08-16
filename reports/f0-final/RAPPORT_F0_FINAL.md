@@ -6,7 +6,7 @@
 
 | | |
 | --- | --- |
-| commit | `ace4b94` |
+| commit | `ab26ab2` |
 | Blender | 5.1.2 |
 | fondation | `source/FACE_F0_FOUNDATION_FINAL.blend` |
 | SHA du blend | `eb7fbccc863ab772` |
@@ -16,18 +16,18 @@
 
 ## Le registre agrégé
 
-**167 sondes, 151 réussies, 13 échec(s), 3 sautée(s)** — `reports/f0-final/registre.json`.
+**167 sondes, 154 réussies, 10 échec(s), 3 sautée(s)** — `reports/f0-final/registre.json`.
 
 | suite | sondes | réussies | échecs | sautées | verdict |
 | --- | ---: | ---: | ---: | ---: | --- |
 | `verrou_positif` | 0 | 0 | 0 | 0 | PASS |
 | `verrou_negatif` | 0 | 0 | 0 | 0 | PASS |
-| `multires` | 26 | 21 | 3 | 2 | FAIL |
-| `raccord` | 0 | 0 | 0 | 0 | FAIL |
-| `hygiene` | 11 | 10 | 1 | 0 | FAIL |
-| `contacts_v3` | 18 | 12 | 6 | 0 | FAIL |
+| `multires` | 26 | 21 | 3 | 2 | PROVENANCE |
+| `raccord` | 0 | 0 | 0 | 0 | SKIP |
+| `hygiene` | 11 | 11 | 0 | 0 | PASS |
+| `contacts_v3` | 18 | 15 | 3 | 0 | FAIL |
 | `anatomy_counts` | 10 | 10 | 0 | 0 | PASS |
-| `contrat_de_sortie` | 3 | 3 | 0 | 0 | PASS |
+| `contrat_de_sortie` | 3 | 2 | 1 | 0 | FAIL |
 | `gltf_conformite` | 16 | 15 | 0 | 1 | FAIL |
 | `gltf_conformite_negatif` | 15 | 15 | 0 | 0 | PASS |
 | `gltf_aller_retour` | 14 | 14 | 0 | 0 | PASS |
@@ -42,19 +42,19 @@ La suite historique `multires` est rejouée pour la **provenance** : ses 2,39 mm
 
 | sonde | attendu | mesuré | |
 | --- | --- | ---: | :---: |
-| `blink_L.aretes` | 0,50 a 2,00 | [0.35499, 2.42828] | FAIL |
+| `blink_L.aretes` | 0,50 a 2,00 | [0.55, 1.90003] | PASS |
 | `blink_L.gap_cage` | <= 0.20 mm | 0.21516 | FAIL |
 | `blink_L.gap_dense` | <= 0.20 mm | 0.18044 | PASS |
 | `blink_L.monotone` | True | True | PASS |
 | `blink_L.retour_neutre` | <= 0,01 mm | 0.0 | PASS |
 | `blink_L.separation_signee` | >= -0,05 mm | -0.06136 | FAIL |
-| `blink_R.aretes` | 0,50 a 2,00 | [0.39084, 2.48539] | FAIL |
+| `blink_R.aretes` | 0,50 a 2,00 | [0.55, 1.90002] | PASS |
 | `blink_R.gap_cage` | <= 0.20 mm | 0.18756 | PASS |
 | `blink_R.gap_dense` | <= 0.20 mm | 0.18595 | PASS |
 | `blink_R.monotone` | True | True | PASS |
 | `blink_R.retour_neutre` | <= 0,01 mm | 0.0 | PASS |
 | `blink_R.separation_signee` | >= -0,05 mm | -0.07108 | FAIL |
-| `mouth_close.aretes` | 0,50 a 2,00 | [0.44731, 1.52322] | FAIL |
+| `mouth_close.aretes` | 0,50 a 2,00 | [0.55, 1.57573] | PASS |
 | `mouth_close.gap_cage` | <= 0.30 mm | 0.09203 | PASS |
 | `mouth_close.gap_dense` | <= 0.30 mm | 0.09631 | PASS |
 | `mouth_close.monotone` | True | True | PASS |
@@ -100,25 +100,22 @@ Définition retenue et rayon : `anatomy-counts.json` → `definitions`, `rayon_m
 | spike GLB : runtime réel | **oui** | `runtime-glb.json` → 8/8, spécification à 0.000268 mm |
 | UV, neutralité, topologie et inventaire signés | **oui** | contrat de sortie → cinq empreintes |
 | preuves bilatérales, wireframes et coupes présentes | **non** | wireframes 27/27, coupe 11/14 |
-| runner final et replay propre à 0, sans FAIL ni SKIP critique | **non** | `registre.json` → FAIL, 13 échec(s), 3 sautée(s) |
+| runner final et replay propre à 0, sans FAIL ni SKIP critique | **non** | `registre.json` → FAIL, 10 échec(s), 3 sautée(s) |
 | FACE_BASE_LOCKED.blend a gardé son SHA | **oui** | `author-input.json` → cc9e55a4… |
 | la fondation ne contient ni armature ni shape key | **oui** | contrat de sortie |
 | le manifeste se vérifie | **oui** | `build-f0-manifest.py --verify` → 2/2 |
 
-## Limites connues — les 13 échecs et 3 sondes sautées
+## Limites connues — les 10 échecs et 3 sondes sautées
 
 | sonde en échec | ce qu'elle mesure |
 | --- | --- |
 | `multires/clignement.A_cage.gap_ferme_L` | le clignement referme l'ouverture publiee en F0 — attendu <= 0,20 mm, mesuré 2.3937 |
 | `multires/clignement.A_cage.gap_ferme_R` | le clignement referme l'ouverture publiee en F0 — attendu <= 0,20 mm, mesuré 4.0046 |
 | `multires/levres.A_cage.gap_max` | pire jour le long du bord publie en F0 — attendu <= 0,30 mm, mesuré 0.9688 |
-| `hygiene/blend.aucun_chemin_personnel` | aucun chemin /Users dans le fichier — attendu 0, mesuré 1 |
 | `contacts_v3/blink_L.gap_cage` | jour final sur la cage — attendu <= 0.20 mm, mesuré 0.21516 |
 | `contacts_v3/blink_L.separation_signee` | pas de croisement des marges — attendu >= -0,05 mm, mesuré -0.06136 |
-| `contacts_v3/blink_L.aretes` | ratio d'arete dans [0,50 ; 2,00] — attendu 0,50 a 2,00, mesuré [0.35499, 2.42828] |
 | `contacts_v3/blink_R.separation_signee` | pas de croisement des marges — attendu >= -0,05 mm, mesuré -0.07108 |
-| `contacts_v3/blink_R.aretes` | ratio d'arete dans [0,50 ; 2,00] — attendu 0,50 a 2,00, mesuré [0.39084, 2.48539] |
-| `contacts_v3/mouth_close.aretes` | ratio d'arete dans [0,50 ; 2,00] — attendu 0,50 a 2,00, mesuré [0.44731, 1.52322] |
+| `contrat_de_sortie/contrat.verification` | chaque artefact retrouve son SHA — attendu 0, mesuré 3 |
 | `coupe_sagittale/sagittal.image.median_bouche` | l'image n'est pas un clay uniforme et montre la section — attendu >= 8 teintes, >= 20 px de section, >= 200 px de peau, mesuré 128 teintes, 19 section, 8 muqueuse, 0 globe, 375044 peau |
 | `coupe_sagittale/sagittal.image.median_cavite_orale` | l'image n'est pas un clay uniforme et montre la section — attendu >= 8 teintes, >= 20 px de section, >= 200 px de peau, mesuré 98 teintes, 0 section, 4 muqueuse, 0 globe, 348087 peau |
 | `coupe_sagittale/sagittal.image.median_cou` | l'image n'est pas un clay uniforme et montre la section — attendu >= 8 teintes, >= 20 px de section, >= 200 px de peau, mesuré 82 teintes, 0 section, 0 muqueuse, 0 globe, 563195 peau |
