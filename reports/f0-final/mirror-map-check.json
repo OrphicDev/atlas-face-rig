@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "registre": "check-mirror-map",
+  "total": 9,
+  "reussies": 9,
+  "echecs": 0,
+  "sautees": 0,
+  "sondes": [
+    {
+      "id": "miroir.taille",
+      "description": "taille egale au nombre de sommets signe",
+      "configuration_connue": "blend auteur",
+      "expected": 3242,
+      "measured": 3242,
+      "status": "PASS"
+    },
+    {
+      "id": "miroir.permutation",
+      "description": "permutation de 0..n-1",
+      "configuration_connue": "carte",
+      "expected": "0..3241",
+      "measured": "triee",
+      "status": "PASS"
+    },
+    {
+      "id": "miroir.involutive",
+      "description": "map[map[i]] == i",
+      "configuration_connue": "carte",
+      "expected": true,
+      "measured": true,
+      "status": "PASS"
+    },
+    {
+      "id": "miroir.midline_fixe",
+      "description": "les sommets medians sont leur propre image",
+      "configuration_connue": "carte",
+      "expected": [],
+      "measured": [],
+      "status": "PASS"
+    },
+    {
+      "id": "miroir.graines",
+      "description": "toutes les paires de graines sont respectees",
+      "configuration_connue": "config/mirror-landmarks.json",
+      "expected": [],
+      "measured": [],
+      "status": "PASS"
+    },
+    {
+      "id": "miroir.aretes",
+      "description": "toute arete devient une arete",
+      "configuration_connue": "maillage",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "miroir.faces",
+      "description": "toute face a un homologue",
+      "configuration_connue": "maillage",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "miroir.topology_sha",
+      "description": "empreinte de connectivite",
+      "configuration_connue": "blend auteur",
+      "expected": "b65d7f10895f3077",
+      "measured": "b65d7f10895f3077",
+      "status": "PASS"
+    },
+    {
+      "id": "miroir.blend_sha",
+      "description": "SHA du blend auteur",
+      "configuration_connue": "blend ouvert",
+      "expected": "cc9e55a47b1496fa",
+      "measured": "cc9e55a47b1496fa",
+      "status": "PASS"
+    }
+  ]
+}

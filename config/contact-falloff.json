@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "topology_sha256": "b65d7f10895f3077b8dbe8d10f8830e79eddf7f7c06c853119c027857c0b2a63",
+  "courbe": "1 - lisse(d / portee), d = distance GEODESIQUE sur aretes",
+  "groupes_graines": {
+    "fente_palpebrale.L": {
+      "sommets_de_marge": 20,
+      "portee_mm": 9.0,
+      "sommets_dans_la_portee": 164
+    },
+    "fente_palpebrale.R": {
+      "sommets_de_marge": 20,
+      "portee_mm": 9.0,
+      "sommets_dans_la_portee": 166
+    },
+    "fente_labiale": {
+      "sommets_de_marge": 38,
+      "portee_mm": 12.0,
+      "sommets_dans_la_portee": 271
+    }
+  },
+  "portees_mm": {
+    "fente_palpebrale.L": 9.0,
+    "fente_palpebrale.R": 9.0,
+    "fente_labiale": 12.0
+  }
+}
