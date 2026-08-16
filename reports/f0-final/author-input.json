@@ -1,0 +1,29 @@
+{
+  "face_author_blend": "source/FACE_BASE_LOCKED.blend",
+  "kind": "c0885_locked",
+  "blend_sha256": "cc9e55a47b1496fa81ed42deee6ee3a6f498c309d5b86610e5cd2407831f2bd8",
+  "topology_sha256": "b65d7f10895f3077b8dbe8d10f8830e79eddf7f7c06c853119c027857c0b2a63",
+  "objet": "GEO-head_animation_realistic",
+  "vertices": 3242,
+  "edges": 6474,
+  "polygons": 3234,
+  "loops": 12948,
+  "uv_layers": [
+    "UVMap"
+  ],
+  "meshes_oculaires": [
+    "GEO-head_animation_realistic.sclera.L",
+    "GEO-head_animation_realistic.sclera.R",
+    "GEO-head_animation_realistic.iris.L",
+    "GEO-head_animation_realistic.iris.R"
+  ],
+  "blender": "5.1.2",
+  "modificateurs": [
+    {
+      "nom": "Multires",
+      "type": "MULTIRES",
+      "levels": 1
+    }
+  ],
+  "shape_keys": 0
+}

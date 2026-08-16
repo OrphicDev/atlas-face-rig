@@ -1,0 +1,44 @@
+{
+  "mesh": "GEO-head_animation_realistic",
+  "topology_sha": "b65d7f10895f3077b8dbe8d10f8830e79eddf7f7c06c853119c027857c0b2a63",
+  "space": "OBJECT_LOCAL",
+  "derivation": "extremites du cycle de bord audite, pas min/max sur le maillage",
+  "ouvertures": {
+    "fente_palpebrale.L": {
+      "groupe": "DBG_eye_margin.L",
+      "medial": {
+        "upper": 3186,
+        "lower": 3186
+      },
+      "lateral": {
+        "upper": 1831,
+        "lower": 1831
+      },
+      "note_visuelle": "medial = extremite la plus proche du plan sagittal ; lateral = l'autre extremite du meme cycle"
+    },
+    "fente_palpebrale.R": {
+      "groupe": "DBG_eye_margin.R",
+      "medial": {
+        "upper": 1541,
+        "lower": 1541
+      },
+      "lateral": {
+        "upper": 289,
+        "lower": 289
+      },
+      "note_visuelle": "medial = extremite la plus proche du plan sagittal ; lateral = l'autre extremite du meme cycle"
+    },
+    "fente_labiale": {
+      "groupe": "DBG_lip_margin",
+      "medial": {
+        "upper": 2489,
+        "lower": 2489
+      },
+      "lateral": {
+        "upper": 947,
+        "lower": 947
+      },
+      "note_visuelle": "medial = extremite la plus proche du plan sagittal ; lateral = l'autre extremite du meme cycle"
+    }
+  }
+}

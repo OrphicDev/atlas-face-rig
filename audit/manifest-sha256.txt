@@ -5,9 +5,12 @@ f8b33e041a0c4bb655a6fe02c7cbd5be4b02991d6a2a30b3cfaf38b2bfd1eb5d  ./README.md
 dda8c53fd598af78b9a98819708813a3cd58d31440144eec0022094889f0b8e5  ./audit/AUDIT_PACKET_FACE.md
 8d2fbb78eb04eafef5d73cc1b9ee75a1f1fc9d8d8c4daa5a3dbeb328236e4f59  ./audit/inspection-asset-corps.json
 556eb52ee460a55c772d052ec68296b3e71ddb656e7e6fbe85dacd215be104e2  ./audit/inspection-asset-tetes.json
+d505be7ea256c51a6fa0ce55a342f8c07fbd28f44428c3389acfc20a208df7bf  ./config/landmarks-contact.json
 a644e5b52dfa6ae000f35bb20504ba061aa2e01f38f5678c8d478e54ba2d3564  ./docs/DENTS_ET_LANGUE.md
 3108630acf6737abccfd13c87e369037297e3a7eace66e4eec2e865fa2035320  ./docs/FACS_MATRIX.md
 ac7eb3f9a2c41346282a90e8c17517d3dcdf88c2236796f3e7034b7ba387e33b  ./docs/SCOPE_V1.md
+5011cea78bdee66a3161b7c0cc1d7cb4d0b828551ab2191d153c0f11f96297f3  ./experiments/f0-contacts/FACE_F0_CONTACTS_WORK.blend
+035115bcd0a16d29112234dfe970871190eb39303cda2a10f5dbe4cf5363de9a  ./experiments/f0-contacts/FACE_F0_CONTACTS_WORK.blend1
 116e52ceba551f34a285dcfef52a14826ca722e86db5df664f92b7455e6c545f  ./experiments/f0-exit-code/README.md
 bd02bb5a037f41ab8a47130dcb80788edaf4d525b271c73f8ba41a4088abe939  ./experiments/f0-exit-code/echec_metier.py
 d6bfb4cc3b42a303163944092733c588fdbc1d9117e2ca31febe095ae331c0ec  ./experiments/f0-exit-code/echec_technique.py
@@ -50,6 +53,10 @@ faedac4b90acef0394985e376839291054490cf430ae3929a2e2f757ac3d572f  ./reports/f0-c
 2a5823a086d803bd009c89bc0aa2b7a3fd072452b9276ff716c989bdec43920b  ./reports/f0-correction/preflight-asset.json
 3eed794a098fff312f9f772b3cb251cfabc1dbef6b9f349ad956246ac2c03708  ./reports/f0-correction/raccord-corps.json
 77173bbfa080027eb1eea4d645ba4dab05396d478153537b15a4b48c0d0e530b  ./reports/f0-correction/verrou-negatif.json
+4bfd02a1f0a8508e302b1db5962c9eabb68adcc76d56746112797a5cdaa3c669  ./reports/f0-final/RAPPORT_F0B_EN_COURS.md
+33e7e352c2261dba1be6b464cd9920ee5c2dcd84d1e57ea10196b69eeabd055a  ./reports/f0-final/author-input.json
+3e7980ef203fcb7e64de4ac61ca3cd7174adde97a62ec6c426ee256fbe23d709  ./reports/f0-final/contact-candidates.json
+4313490ec957285776a67825ea2c0f5a0e141e2ceb0970101508753d7a1e4eee  ./reports/f0-final/correspondances-marges.json
 c2e34f319b76e0b7d6d8c554ac5eb85e890330b18bcfc7f529a662909be92510  ./reports/f0-final/preuves-visuelles.json
 dd61186eeb6b5dc99da6c212c3d288b975645e732483d2a27793b3eb176cfad0  ./reports/f0/RAPPORT_F0.md
 4ca5dd69ff8d2d397c4bee19afd5ef9d95b03802a108c140778eaf4f280f89d4  ./reports/f0/audit-topologie.json
@@ -71,9 +78,11 @@ ce30632def20fed4dcb54feb9c80835636d831a2ee207481032c0120ce134592  ./reports/repr
 422ed51e3d006788b5ceca5761c370702f452cffbba472d4c2314e1f9728223f  ./source/.gitkeep
 cc9e55a47b1496fa81ed42deee6ee3a6f498c309d5b86610e5cd2407831f2bd8  ./source/FACE_BASE_LOCKED.blend
 174d02a2c6acad06be3752239891a9193d0c2fbdf26c96a8429ff3bffe255af7  ./tests/anatomie.py
+bfa9145f45815ea2332f0fd281f88aab18a076409ea1d5613e19e3beb255bc9c  ./tests/anatomie_marges.py
 49c6003b27a111c622545f99012f755143743c761bae4936a8929e2c3332094b  ./tests/asset-preflight.py
 250c514064c218473389f404cec81f7f7f07cedb0ea260f5d5083a72c8ac30fc  ./tests/atlas_commun.py
 8200d534b20dd568692f899d7a3861bfa6369a9a00873820ce4e170f1f5433e0  ./tests/baselines/c0885ae-expected.json
+51b0d97168ddc6ac40495d3f6a947e44b3a34623e12529b3791483082778c790  ./tests/check-f0-author-input.py
 616131a84b8f003cde544e10043190876105f9449b520177fec767ecb4b39a05  ./tests/f0-audit-topologie.py
 9d32a37243fc1065251bbb5e4093a9a27cd91dac106017b990f8c5886658500a  ./tests/f0-hygiene-blend.py
 c6bbd96ca42611e9ee91bf485a69190db2847c6d9d6eb03bc0a6dc6f76219a03  ./tests/f0-hygiene-neutral.py
@@ -88,5 +97,8 @@ fdccfe8057b040e1b24302f170d2282af425a089d0b937d4bf5fbd6e8a5ee5da  ./tests/inspec
 d164ed0ae1d64f19e179c1310eb5195eedda1cf2e9c3fa8c3f7d7940cbd78c0a  ./tests/verrou-topologie-negatif.py
 def058cef245d6c708b4bd0a6119ac438b719e91dc3e3f30af5e8f80e311e2f5  ./tests/verrou-topologie.json
 b0ec10f5f6fb396677276cd46bfe5c2edc906f25a37cb74e2033c2ecc3739632  ./tests/verrou-topologie.py
+f61c6b760f21464795b39c5b3f931572fd1546ff2090398fe9af7b54762d981a  ./tools/__pycache__/write-f0-author-input.cpython-313.pyc
+348bff26591cb7ecd56dc40b54b5545b2bcb629ad949e938b8f77c96ff58c1b5  ./tools/f0-show-contact-candidates.py
+ff1e98e47907479fc8378d5253b5565578fb4405967cab38aafd8abeca1cbc46  ./tools/write-f0-author-input.py
 422ed51e3d006788b5ceca5761c370702f452cffbba472d4c2314e1f9728223f  ./videos/.gitkeep
 7796fbbe0e79fe6db339150bf3b482c1087ede3d8ee63bcc7ce7dd654b14a070  ./work/blender-path.txt
