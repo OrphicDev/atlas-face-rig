@@ -1,0 +1,903 @@
+{
+  "blend": "source/FACE_F0_FOUNDATION_FINAL.blend",
+  "resolution": [
+    1000,
+    1000
+  ],
+  "topology_sha256_court": "b65d7f10",
+  "plan_sagittal": 1.462572,
+  "images": [
+    {
+      "nom": "paupiere_L_neutre",
+      "fichier": "renders/f0-final/wireframes/paupiere_L_neutre.png",
+      "camera": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          1.494852066040039
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          -1.0,
+          -0.6258193254470825
+        ],
+        [
+          0.0,
+          1.0,
+          7.549790126404332e-08,
+          0.766687273979187
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.075,
+      "delta": null,
+      "delta_sha": "-",
+      "sommets_deplaces": 0,
+      "px_fil": 139778,
+      "part_fil": 0.13978,
+      "epaisseur_fil_mm": 0.2271,
+      "espacement_aretes_mm": 3.7261,
+      "legende": "Blender 5.1.2 | paupiere_L_neutre | SHA b65d7f10 | delta - | fil 0.23 mm"
+    },
+    {
+      "nom": "paupiere_L_fermee",
+      "fichier": "renders/f0-final/wireframes/paupiere_L_fermee.png",
+      "camera": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          1.494852066040039
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          -1.0,
+          -0.6258193254470825
+        ],
+        [
+          0.0,
+          1.0,
+          7.549790126404332e-08,
+          0.766687273979187
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.075,
+      "delta": "blink_L",
+      "delta_sha": "749ec214",
+      "sommets_deplaces": 164,
+      "px_fil": 139573,
+      "part_fil": 0.13957,
+      "epaisseur_fil_mm": 0.2274,
+      "espacement_aretes_mm": 3.7323,
+      "legende": "Blender 5.1.2 | paupiere_L_fermee | SHA b65d7f10 | delta 749ec214 | fil 0.23 mm"
+    },
+    {
+      "nom": "paupiere_R_neutre",
+      "fichier": "renders/f0-final/wireframes/paupiere_R_neutre.png",
+      "camera": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          1.430274248123169
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          -1.0,
+          -0.6258193254470825
+        ],
+        [
+          0.0,
+          1.0,
+          7.549790126404332e-08,
+          0.766687273979187
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.075,
+      "delta": null,
+      "delta_sha": "-",
+      "sommets_deplaces": 0,
+      "px_fil": 140126,
+      "part_fil": 0.14013,
+      "epaisseur_fil_mm": 0.2271,
+      "espacement_aretes_mm": 3.7261,
+      "legende": "Blender 5.1.2 | paupiere_R_neutre | SHA b65d7f10 | delta - | fil 0.23 mm"
+    },
+    {
+      "nom": "paupiere_R_fermee",
+      "fichier": "renders/f0-final/wireframes/paupiere_R_fermee.png",
+      "camera": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          1.430274248123169
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          -1.0,
+          -0.6258193254470825
+        ],
+        [
+          0.0,
+          1.0,
+          7.549790126404332e-08,
+          0.766687273979187
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.075,
+      "delta": "blink_R",
+      "delta_sha": "338575bf",
+      "sommets_deplaces": 166,
+      "px_fil": 139569,
+      "part_fil": 0.13957,
+      "epaisseur_fil_mm": 0.2274,
+      "espacement_aretes_mm": 3.7321,
+      "legende": "Blender 5.1.2 | paupiere_R_fermee | SHA b65d7f10 | delta 338575bf | fil 0.23 mm"
+    },
+    {
+      "nom": "levres_neutre",
+      "fichier": "renders/f0-final/wireframes/levres_neutre.png",
+      "camera": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          1.4625804424285889
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          -1.0,
+          -0.6459298133850098
+        ],
+        [
+          0.0,
+          1.0,
+          7.549790126404332e-08,
+          0.6942370533943176
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.085,
+      "delta": null,
+      "delta_sha": "-",
+      "sommets_deplaces": 0,
+      "px_fil": 174802,
+      "part_fil": 0.1748,
+      "epaisseur_fil_mm": 0.2573,
+      "espacement_aretes_mm": 3.7261,
+      "legende": "Blender 5.1.2 | levres_neutre | SHA b65d7f10 | delta - | fil 0.26 mm"
+    },
+    {
+      "nom": "levres_fermee",
+      "fichier": "renders/f0-final/wireframes/levres_fermee.png",
+      "camera": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          1.4625804424285889
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          -1.0,
+          -0.6459298133850098
+        ],
+        [
+          0.0,
+          1.0,
+          7.549790126404332e-08,
+          0.6942370533943176
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.085,
+      "delta": "mouth_close",
+      "delta_sha": "7bb8ae5f",
+      "sommets_deplaces": 271,
+      "px_fil": 157253,
+      "part_fil": 0.15725,
+      "epaisseur_fil_mm": 0.2575,
+      "espacement_aretes_mm": 3.7283,
+      "legende": "Blender 5.1.2 | levres_fermee | SHA b65d7f10 | delta 7bb8ae5f | fil 0.26 mm"
+    },
+    {
+      "nom": "narine_L",
+      "fichier": "renders/f0-final/wireframes/narine_L.png",
+      "camera": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          1.4709687232971191
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          -1.0,
+          -0.6545574069023132
+        ],
+        [
+          0.0,
+          1.0,
+          7.549790126404332e-08,
+          0.7270991802215576
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.055,
+      "delta": null,
+      "delta_sha": "-",
+      "sommets_deplaces": 0,
+      "px_fil": 103471,
+      "part_fil": 0.10347,
+      "epaisseur_fil_mm": 0.1665,
+      "espacement_aretes_mm": 3.7261,
+      "legende": "Blender 5.1.2 | narine_L | SHA b65d7f10 | delta - | fil 0.17 mm"
+    },
+    {
+      "nom": "narine_R",
+      "fichier": "renders/f0-final/wireframes/narine_R.png",
+      "camera": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          1.454399585723877
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          -1.0,
+          -0.6546366214752197
+        ],
+        [
+          0.0,
+          1.0,
+          7.549790126404332e-08,
+          0.7271724939346313
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.055,
+      "delta": null,
+      "delta_sha": "-",
+      "sommets_deplaces": 0,
+      "px_fil": 102369,
+      "part_fil": 0.10237,
+      "epaisseur_fil_mm": 0.1665,
+      "espacement_aretes_mm": 3.7261,
+      "legende": "Blender 5.1.2 | narine_R | SHA b65d7f10 | delta - | fil 0.17 mm"
+    },
+    {
+      "nom": "philtrum_levre_inferieure",
+      "fichier": "renders/f0-final/wireframes/philtrum_levre_inferieure.png",
+      "camera": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          1.4625719785690308
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          -1.0,
+          -0.6459298133850098
+        ],
+        [
+          0.0,
+          1.0,
+          7.549790126404332e-08,
+          0.6942370533943176
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.05,
+      "delta": null,
+      "delta_sha": "-",
+      "sommets_deplaces": 0,
+      "px_fil": 105290,
+      "part_fil": 0.10529,
+      "epaisseur_fil_mm": 0.1514,
+      "espacement_aretes_mm": 3.7261,
+      "legende": "Blender 5.1.2 | philtrum_levre_inferieure | SHA b65d7f10 | delta - | fil 0.15 mm"
+    },
+    {
+      "nom": "cou_et_raccord",
+      "fichier": "renders/f0-final/wireframes/cou_et_raccord.png",
+      "camera": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          1.4625719785690308
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          -1.0,
+          -0.6159298419952393
+        ],
+        [
+          0.0,
+          1.0,
+          7.549790126404332e-08,
+          0.5544080138206482
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.13,
+      "delta": null,
+      "delta_sha": "-",
+      "sommets_deplaces": 0,
+      "px_fil": 76431,
+      "part_fil": 0.07643,
+      "epaisseur_fil_mm": 0.3936,
+      "espacement_aretes_mm": 3.7261,
+      "legende": "Blender 5.1.2 | cou_et_raccord | SHA b65d7f10 | delta - | fil 0.39 mm"
+    },
+    {
+      "nom": "cage_seule",
+      "fichier": "renders/f0-final/wireframes/cage_seule.png",
+      "camera": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          1.4625804424285889
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          -1.0,
+          -0.6459298133850098
+        ],
+        [
+          0.0,
+          1.0,
+          7.549790126404332e-08,
+          0.6942370533943176
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.09,
+      "delta": null,
+      "delta_sha": "-",
+      "sommets_deplaces": 0,
+      "px_fil": 166163,
+      "part_fil": 0.16616,
+      "epaisseur_fil_mm": 0.539,
+      "espacement_aretes_mm": 7.3709,
+      "legende": "Blender 5.1.2 | cage_seule | SHA b65d7f10 | delta - | fil 0.54 mm"
+    },
+    {
+      "nom": "surface_multires",
+      "fichier": "renders/f0-final/wireframes/surface_multires.png",
+      "camera": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          1.4625804424285889
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          -1.0,
+          -0.6459298133850098
+        ],
+        [
+          0.0,
+          1.0,
+          7.549790126404332e-08,
+          0.6942370533943176
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.09,
+      "delta": null,
+      "delta_sha": "-",
+      "sommets_deplaces": 0,
+      "px_fil": 183823,
+      "part_fil": 0.18382,
+      "epaisseur_fil_mm": 0.2725,
+      "espacement_aretes_mm": 3.7261,
+      "legende": "Blender 5.1.2 | surface_multires | SHA b65d7f10 | delta - | fil 0.27 mm"
+    },
+    {
+      "nom": "jaw_00",
+      "fichier": "renders/f0-final/wireframes/jaw_00.png",
+      "camera": [
+        [
+          0.9438585042953491,
+          -3.404924697747447e-08,
+          -0.330350399017334,
+          1.2973967790603638
+        ],
+        [
+          -0.33035045862197876,
+          -3.439415152683978e-08,
+          -0.9438583254814148,
+          -0.6078589558601379
+        ],
+        [
+          2.0775546616391694e-08,
+          1.0,
+          -4.371138473402425e-08,
+          0.674237072467804
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.11,
+      "delta": null,
+      "delta_sha": "-",
+      "sommets_deplaces": 0,
+      "px_fil": 180339,
+      "part_fil": 0.18034,
+      "epaisseur_fil_mm": 0.6588,
+      "espacement_aretes_mm": 7.3709,
+      "legende": "Blender 5.1.2 | jaw_00 | SHA b65d7f10 | fil 0.66 mm"
+    },
+    {
+      "nom": "jaw_05",
+      "fichier": "renders/f0-final/wireframes/jaw_05.png",
+      "camera": [
+        [
+          0.9438585042953491,
+          -3.404924697747447e-08,
+          -0.330350399017334,
+          1.2973967790603638
+        ],
+        [
+          -0.33035045862197876,
+          -3.439415152683978e-08,
+          -0.9438583254814148,
+          -0.6078589558601379
+        ],
+        [
+          2.0775546616391694e-08,
+          1.0,
+          -4.371138473402425e-08,
+          0.674237072467804
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.11,
+      "delta": null,
+      "delta_sha": "-",
+      "sommets_deplaces": 0,
+      "px_fil": 109406,
+      "part_fil": 0.10941,
+      "epaisseur_fil_mm": 0.66,
+      "espacement_aretes_mm": 7.4192,
+      "legende": "Blender 5.1.2 | jaw_05 | SHA b65d7f10 | fil 0.66 mm"
+    },
+    {
+      "nom": "jaw_10",
+      "fichier": "renders/f0-final/wireframes/jaw_10.png",
+      "camera": [
+        [
+          0.9438585042953491,
+          -3.404924697747447e-08,
+          -0.330350399017334,
+          1.2973967790603638
+        ],
+        [
+          -0.33035045862197876,
+          -3.439415152683978e-08,
+          -0.9438583254814148,
+          -0.6078589558601379
+        ],
+        [
+          2.0775546616391694e-08,
+          1.0,
+          -4.371138473402425e-08,
+          0.674237072467804
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.11,
+      "delta": null,
+      "delta_sha": "-",
+      "sommets_deplaces": 0,
+      "px_fil": 97780,
+      "part_fil": 0.09778,
+      "epaisseur_fil_mm": 0.66,
+      "espacement_aretes_mm": 7.5058,
+      "legende": "Blender 5.1.2 | jaw_10 | SHA b65d7f10 | fil 0.66 mm"
+    },
+    {
+      "nom": "jaw_20",
+      "fichier": "renders/f0-final/wireframes/jaw_20.png",
+      "camera": [
+        [
+          0.9438585042953491,
+          -3.404924697747447e-08,
+          -0.330350399017334,
+          1.2973967790603638
+        ],
+        [
+          -0.33035045862197876,
+          -3.439415152683978e-08,
+          -0.9438583254814148,
+          -0.6078589558601379
+        ],
+        [
+          2.0775546616391694e-08,
+          1.0,
+          -4.371138473402425e-08,
+          0.674237072467804
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.11,
+      "delta": null,
+      "delta_sha": "-",
+      "sommets_deplaces": 0,
+      "px_fil": 104725,
+      "part_fil": 0.10472,
+      "epaisseur_fil_mm": 0.66,
+      "espacement_aretes_mm": 7.7392,
+      "legende": "Blender 5.1.2 | jaw_20 | SHA b65d7f10 | fil 0.66 mm"
+    },
+    {
+      "nom": "jaw_32",
+      "fichier": "renders/f0-final/wireframes/jaw_32.png",
+      "camera": [
+        [
+          0.9438585042953491,
+          -3.404924697747447e-08,
+          -0.330350399017334,
+          1.2973967790603638
+        ],
+        [
+          -0.33035045862197876,
+          -3.439415152683978e-08,
+          -0.9438583254814148,
+          -0.6078589558601379
+        ],
+        [
+          2.0775546616391694e-08,
+          1.0,
+          -4.371138473402425e-08,
+          0.674237072467804
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "ortho_scale": 0.11,
+      "delta": null,
+      "delta_sha": "-",
+      "sommets_deplaces": 0,
+      "px_fil": 111825,
+      "part_fil": 0.11182,
+      "epaisseur_fil_mm": 0.66,
+      "espacement_aretes_mm": 8.0607,
+      "legende": "Blender 5.1.2 | jaw_32 | SHA b65d7f10 | fil 0.66 mm"
+    }
+  ],
+  "note_cameras": "les deux cameras d'une paire L/R sont images l'une de l'autre par le plan sagittal du contrat",
+  "registre": {
+    "registre": "wireframes",
+    "total": 27,
+    "reussies": 27,
+    "echecs": 0,
+    "sautees": 0,
+    "sondes": [
+      {
+        "id": "wireframe.paupiere_L_neutre",
+        "description": "le fil est visible sans noyer l'image",
+        "configuration_connue": "1000000 px",
+        "expected": "entre 2 % et 45 % de fil",
+        "measured": "13.98 %",
+        "status": "PASS"
+      },
+      {
+        "id": "wireframe.pose.paupiere_L_fermee",
+        "description": "la pose deplace reellement la surface",
+        "configuration_connue": "contre paupiere_L_neutre",
+        "expected": ">= 0,5 mm",
+        "measured": 8.4962,
+        "status": "PASS"
+      },
+      {
+        "id": "wireframe.paupiere_L_fermee",
+        "description": "le fil est visible sans noyer l'image",
+        "configuration_connue": "1000000 px",
+        "expected": "entre 2 % et 45 % de fil",
+        "measured": "13.96 %",
+        "status": "PASS"
+      },
+      {
+        "id": "wireframe.paupiere_R_neutre",
+        "description": "le fil est visible sans noyer l'image",
+        "configuration_connue": "1000000 px",
+        "expected": "entre 2 % et 45 % de fil",
+        "measured": "14.01 %",
+        "status": "PASS"
+      },
+      {
+        "id": "wireframe.pose.paupiere_R_fermee",
+        "description": "la pose deplace reellement la surface",
+        "configuration_connue": "contre paupiere_R_neutre",
+        "expected": ">= 0,5 mm",
+        "measured": 8.4264,
+        "status": "PASS"
+      },
+      {
+        "id": "wireframe.paupiere_R_fermee",
+        "description": "le fil est visible sans noyer l'image",
+        "configuration_connue": "1000000 px",
+        "expected": "entre 2 % et 45 % de fil",
+        "measured": "13.96 %",
+        "status": "PASS"
+      },
+      {
+        "id": "wireframe.levres_neutre",
+        "description": "le fil est visible sans noyer l'image",
+        "configuration_connue": "1000000 px",
+        "expected": "entre 2 % et 45 % de fil",
+        "measured": "17.48 %",
+        "status": "PASS"
+      },
+      {
+        "id": "wireframe.pose.levres_fermee",
+        "description": "la pose deplace reellement la surface",
+        "configuration_connue": "contre levres_neutre",
+        "expected": ">= 0,5 mm",
+        "measured": 1.8196,
+        "status": "PASS"
+      },
+      {
+        "id": "wireframe.levres_fermee",
+        "description": "le fil est visible sans noyer l'image",
+        "configuration_connue": "1000000 px",
+        "expected": "entre 2 % et 45 % de fil",
+        "measured": "15.73 %",
+        "status": "PASS"
+      },
+      {
+        "id": "wireframe.narine_L",
+        "description": "le fil est visible sans noyer l'image",
+        "configuration_connue": "1000000 px",
+        "expected": "entre 2 % et 45 % de fil",
+        "measured": "10.35 %",
+        "status": "PASS"
+      },
+      {
+        "id": "wireframe.narine_R",
+        "description": "le fil est visible sans noyer l'image",
+        "configuration_connue": "1000000 px",
+        "expected": "entre 2 % et 45 % de fil",
+        "measured": "10.24 %",
+        "status": "PASS"
+      },
+      {
+        "id": "wireframe.philtrum_levre_inferieure",
+        "description": "le fil est visible sans noyer l'image",
+        "configuration_connue": "1000000 px",
+        "expected": "entre 2 % et 45 % de fil",
+        "measured": "10.53 %",
+        "status": "PASS"
+      },
+      {
+        "id": "wireframe.cou_et_raccord",
+        "description": "le fil est visible sans noyer l'image",
+        "configuration_connue": "1000000 px",
+        "expected": "entre 2 % et 45 % de fil",
+        "measured": "7.64 %",
+        "status": "PASS"
+      },
+      {
+        "id": "wireframe.cage_seule",
+        "description": "le fil est visible sans noyer l'image",
+        "configuration_connue": "1000000 px",
+        "expected": "entre 2 % et 45 % de fil",
+        "measured": "16.62 %",
+        "status": "PASS"
+      },
+      {
+        "id": "wireframe.surface_multires",
+        "description": "le fil est visible sans noyer l'image",
+        "configuration_connue": "1000000 px",
+        "expected": "entre 2 % et 45 % de fil",
+        "measured": "18.38 %",
+        "status": "PASS"
+      },
+      {
+        "id": "wireframe.jaw_disponibles",
+        "description": "les cinq poses de machoire existent",
+        "configuration_connue": "experiments/f0-jaw/FACE_F0_JAW_PROTOTYPE.blend",
+        "expected": 5,
+        "measured": 5,
+        "status": "PASS"
+      },
+      {
+        "id": "wireframe.jaw_00",
+        "description": "le fil est visible sans noyer l'image",
+        "configuration_connue": "1000000 px",
+        "expected": "entre 2 % et 45 % de fil",
+        "measured": "18.03 %",
+        "status": "PASS"
+      },
+      {
+        "id": "wireframe.jaw_05",
+        "description": "le fil est visible sans noyer l'image",
+        "configuration_connue": "1000000 px",
+        "expected": "entre 2 % et 45 % de fil",
+        "measured": "10.94 %",
+        "status": "PASS"
+      },
+      {
+        "id": "wireframe.jaw_10",
+        "description": "le fil est visible sans noyer l'image",
+        "configuration_connue": "1000000 px",
+        "expected": "entre 2 % et 45 % de fil",
+        "measured": "9.78 %",
+        "status": "PASS"
+      },
+      {
+        "id": "wireframe.jaw_20",
+        "description": "le fil est visible sans noyer l'image",
+        "configuration_connue": "1000000 px",
+        "expected": "entre 2 % et 45 % de fil",
+        "measured": "10.47 %",
+        "status": "PASS"
+      },
+      {
+        "id": "wireframe.jaw_32",
+        "description": "le fil est visible sans noyer l'image",
+        "configuration_connue": "1000000 px",
+        "expected": "entre 2 % et 45 % de fil",
+        "measured": "11.18 %",
+        "status": "PASS"
+      },
+      {
+        "id": "wireframe.paire.paupiere_neutre",
+        "description": "les deux cameras sont images l'une de l'autre",
+        "configuration_connue": "plan sagittal x = 1.462572",
+        "expected": "<= 0,5 mm",
+        "measured": 0.0176,
+        "status": "PASS",
+        "tolerance": 0.5
+      },
+      {
+        "id": "wireframe.echelle.paupiere_neutre",
+        "description": "meme echelle et meme resolution des deux cotes",
+        "configuration_connue": "paupiere_L_neutre / paupiere_R_neutre",
+        "expected": 0.075,
+        "measured": 0.075,
+        "status": "PASS"
+      },
+      {
+        "id": "wireframe.paire.paupiere_fermee",
+        "description": "les deux cameras sont images l'une de l'autre",
+        "configuration_connue": "plan sagittal x = 1.462572",
+        "expected": "<= 0,5 mm",
+        "measured": 0.0176,
+        "status": "PASS",
+        "tolerance": 0.5
+      },
+      {
+        "id": "wireframe.echelle.paupiere_fermee",
+        "description": "meme echelle et meme resolution des deux cotes",
+        "configuration_connue": "paupiere_L_fermee / paupiere_R_fermee",
+        "expected": 0.075,
+        "measured": 0.075,
+        "status": "PASS"
+      },
+      {
+        "id": "wireframe.paire.narine",
+        "description": "les deux cameras sont images l'une de l'autre",
+        "configuration_connue": "plan sagittal x = 1.462572",
+        "expected": "<= 0,5 mm",
+        "measured": 0.249,
+        "status": "PASS",
+        "tolerance": 0.5
+      },
+      {
+        "id": "wireframe.echelle.narine",
+        "description": "meme echelle et meme resolution des deux cotes",
+        "configuration_connue": "narine_L / narine_R",
+        "expected": 0.055,
+        "measured": 0.055,
+        "status": "PASS"
+      }
+    ]
+  }
+}

@@ -78,6 +78,23 @@ c114e8a2d2be3840b7390d714045da49099d09814d7cb82d0f774fe71d14bfc9  ./renders/f0-f
 5c08893ccdb91bfd78d19c874d3c716a7fcd68309ccce52d8b6cda1f705e1dd8  ./renders/f0-final/sagittal/parasagittal_oeil_L_cavite_orale.png
 230c030db73e7a880b1f68305e1b334141fbc2fd25cd4f310db13b164b38cfdb  ./renders/f0-final/sagittal/parasagittal_oeil_L_cou.png
 8068847aa411444f83ed00b336bdb02b968bccb82102fd20230b8e302da8779b  ./renders/f0-final/sagittal/parasagittal_oeil_L_orbite.png
+fa80c8c263379d5e72b00a77a36ce32aa1f2218c1b40bf3c0639898ad40345cf  ./renders/f0-final/wireframes/cage_seule.png
+c3852d9ccf13cd37d60427644db948a0cee98b60206ba79b7d54dfc13d641bb9  ./renders/f0-final/wireframes/cou_et_raccord.png
+1dc89560e4b55530a1c94eabb37c184da41836cbdd70b4c33d8de673cb51ceb9  ./renders/f0-final/wireframes/jaw_00.png
+c00d44b087f3fef3873bf2fdfca208d828ce90c60d6da0aa22db46e8fd690308  ./renders/f0-final/wireframes/jaw_05.png
+862be24876e37931532daf823dc6cc088ce7acee46ec17fc42ce5b10f50bcfd1  ./renders/f0-final/wireframes/jaw_10.png
+b0e0ffd24c4043d67219d756b46cda5c5f0d743eea81d97e85bdaf638c434852  ./renders/f0-final/wireframes/jaw_20.png
+16085525e7e44ada5b2e9e6871e68b2c61fcc0dbc97a7abcbac339e367f7a533  ./renders/f0-final/wireframes/jaw_32.png
+a353f3e2e9c6f324d9d8df4b61fd92997dab41d54ee758ec4a88430b0aae7901  ./renders/f0-final/wireframes/levres_fermee.png
+a75e10b6af9fbcc2de137d0b9e78c863a0f11131e286394c0a75ef8ed9e8c1b3  ./renders/f0-final/wireframes/levres_neutre.png
+186a40b92a5195452ab1299a79d022688a75d0f879413bc3236febf3e4bb0bc6  ./renders/f0-final/wireframes/narine_L.png
+04597191e794452176610c41b39d773fc84956bf7f7a413634002612f70463a4  ./renders/f0-final/wireframes/narine_R.png
+d447d1a0c08b461ccbf3a36d102c333b51b01b8dbc68cbdbf00cede30b986d2f  ./renders/f0-final/wireframes/paupiere_L_fermee.png
+36dd63e643160ef9b40786d2e9d01d7076509e5e40972f8b8fe083bc0e9ee537  ./renders/f0-final/wireframes/paupiere_L_neutre.png
+f96c82e12352672f5ea810bd149fc29804e9cba491d1a0041c07ec78cb430982  ./renders/f0-final/wireframes/paupiere_R_fermee.png
+b9cfd6115d69d19cfad4ce19c251b6da5876c637a75b9b2b71d141180f1c7545  ./renders/f0-final/wireframes/paupiere_R_neutre.png
+3cf1ee9532b4a6eb534a69b59217569b272cec5b9b9e0d4f7061a555baea9e40  ./renders/f0-final/wireframes/philtrum_levre_inferieure.png
+a469b93e76cf6d9831cad08c2c2eb7646049872a2f5213d6b3d961c2fe9d5a38  ./renders/f0-final/wireframes/surface_multires.png
 462c0e96e81cce743ca8645cbac96601da96e9ef558998bfcd77e7e3078c6a26  ./renders/f0/gros_plan_bouche.png
 aff4c9d43554700d44ed71a1ac5c8b5c0709a5a5b4ba4464d7cd2f74db5e9b6f  ./renders/f0/gros_plan_nez.png
 bbe54a8cc331f469d978ffc93ff08c5d85d9be83d7516d7b535d473d50edb242  ./renders/f0/gros_plan_oeil_L.png
@@ -105,6 +122,7 @@ faedac4b90acef0394985e376839291054490cf430ae3929a2e2f757ac3d572f  ./reports/f0-c
 c61f2f879d504d92037dd71878d911884136884543058148e0dde4bdef75f757  ./reports/f0-final/RAPPORT_F0C.md
 ac03b80532e62e99060f2a54c04127a2fed468c9e58f0c84a1982371ff347c23  ./reports/f0-final/RAPPORT_F0E.md
 513acee52e5ee5160ee0df42aa33259871b43999b9cd6018171e7d58a58f4f69  ./reports/f0-final/RAPPORT_F0F4_SAGITTAL.md
+524c12067b6256a5cfa12fdc407d912fda6f845d37ab641dd8854df66b55fad8  ./reports/f0-final/RAPPORT_F0F5_WIREFRAMES.md
 312186ef05b550b457ac5d229e72427cde0ca776d60d72b49a97646df72975af  ./reports/f0-final/anatomy-counts.json
 33e7e352c2261dba1be6b464cd9920ee5c2dcd84d1e57ea10196b69eeabd055a  ./reports/f0-final/author-input.json
 bf49024226ff860a110f3b9e310071593be6d7d894b9da75617228de2bcb159b  ./reports/f0-final/body-transfer-map.json
@@ -137,6 +155,7 @@ dc8379225f6ad4778270d20f56b9a49c4ae915a5c8b5d4e8e6984c30a0dcd218  ./reports/f0-f
 796ee1c82ce26549e18982be96b3080138c1716dafd59e024ad17bf6c6aad51a  ./reports/f0-final/sagittal-render.json
 093341d28ff525c257d3a9ce59b3f3db5444dab8feb3f0e607c0e251a6c567c9  ./reports/f0-final/validation-glb-negatif.json
 10ea022ce901e8c272528380d61edbb28543268ca0a4d32a31cb997ed1d703ab  ./reports/f0-final/validation-glb.json
+08ad4a64ea6d907a69f540370db0a9ce8b69662ff9439ecd29107724e938bba2  ./reports/f0-final/wireframes.json
 dd61186eeb6b5dc99da6c212c3d288b975645e732483d2a27793b3eb176cfad0  ./reports/f0/RAPPORT_F0.md
 4ca5dd69ff8d2d397c4bee19afd5ef9d95b03802a108c140778eaf4f280f89d4  ./reports/f0/audit-topologie.json
 92ca426186c48802cd4a00cbb4d7cad7152f985b5e3e6147e66403fd347062ba  ./reports/f0/multires-ab.json
@@ -202,6 +221,7 @@ b0ec10f5f6fb396677276cd46bfe5c2edc906f25a37cb74e2033c2ecc3739632  ./tests/verrou
 348bff26591cb7ecd56dc40b54b5545b2bcb629ad949e938b8f77c96ff58c1b5  ./tools/f0-show-contact-candidates.py
 0fc573e943a42f5121e0d53002801ae1db351dd0e9396262b583add5649c19e2  ./tools/inspect-modifier-stack.py
 9ae39cb235868ebb43ef481a74b686405c3ad3d48594d6fa51ad03dcfee99f8e  ./tools/render-f0-sagittal.py
+b2954026106bdba1a83d471ed43f01e057f9fbd53ef413a07c4abba5d7f6c4e9  ./tools/render-f0-wireframes.py
 50a928613e47bb5f31fd78e5b1472c440350a99e285ecc206b83195162979047  ./tools/runtime_eval.py
 aa260e2e2cf2bacf138593e9f21c84193e7c78d8cc765ff4b8fa529cc2531294  ./tools/validate_glb.py
 ff1e98e47907479fc8378d5253b5565578fb4405967cab38aafd8abeca1cbc46  ./tools/write-f0-author-input.py
