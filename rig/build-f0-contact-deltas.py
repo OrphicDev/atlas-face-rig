@@ -36,6 +36,8 @@ wai = importlib.util.module_from_spec(_w); _w.loader.exec_module(wai)
 
 PORTEES_MM = {"fente_palpebrale.L": 9.0, "fente_palpebrale.R": 9.0,
               "fente_labiale": 12.0}
+GARDE_CONTACT_M = 0.00002    # 0,02 mm de separation minimale entre les marges
+AMORTISSEMENT = 0.7          # l'iteration converge sans depasser
 POSES = {"blink_L": ["fente_palpebrale.L"],
          "blink_R": ["fente_palpebrale.R"],
          "mouth_close": ["fente_labiale"]}
@@ -55,6 +57,7 @@ def geodesique(me, co, graines, portee):
         d = (co[a] - co[b]).length
         adj[a].append((b, d)); adj[b].append((a, d))
     dist = {i: 0.0 for i in graines}
+    source = {i: i for i in graines}        # graine d'ou vient chaque sommet
     tas = [(0.0, i) for i in graines]
     heapq.heapify(tas)
     while tas:
@@ -65,8 +68,9 @@ def geodesique(me, co, graines, portee):
             nd = d + w
             if nd <= portee and nd < dist.get(j, 1e9):
                 dist[j] = nd
+                source[j] = source[i]
                 heapq.heappush(tas, (nd, j))
-    return dist
+    return dist, source
 
 
 def cible_paupiere(co, paire, centre, rayon, bvh, epaisseur=0.0004):
@@ -138,6 +142,51 @@ def deplacements_de_marge(co, P, cle, globes, M):
                 v = w - p
             anc = out.get(i)
             out[i] = v if anc is None or v.length > anc.length else anc
+
+    # ITERATION. Viser son vis-a-vis au neutre ne suffit pas : apres
+    # deformation, deux arcs de cardinalites differentes (10 et 12 sommets) ne
+    # se reparametrent pas identiquement, et il restait 0,44 mm de jour sur des
+    # echantillons uniformes. On mesure donc le residu SUR LES ECHANTILLONS, et
+    # on le redistribue aux extremites de leurs segments. Ce n'est pas un
+    # reglage : c'est la boucle que la mesure reclamait.
+    for _ in range(12):
+        w = [co[i] + out.get(i, Vector((0, 0, 0))) for i in range(len(co))]
+        pire = 0.0
+        corr = {}
+        for paire in o["paires"]:
+            ph = w[paire["upper_segment"][0]].lerp(
+                w[paire["upper_segment"][1]], paire["upper_t"])
+            pb = w[paire["lower_segment"][0]].lerp(
+                w[paire["lower_segment"][1]], paire["lower_t"])
+            contact = ph.lerp(pb, 0.75) if est_oeil else (ph + pb) * 0.5
+            # On ne vise pas la coincidence exacte : deux marges qui visent le
+            # MEME point se croisent des que l'iteration depasse, et la
+            # separation signee devenait negative (-0,10 mm). Elles visent donc
+            # deux points separes par une garde de 0,02 mm, superieure au-dessus.
+            garde = Vector((0.0, 0.0, 0.5 * GARDE_CONTACT_M))
+            cible_h, cible_b = contact + garde, contact - garde
+            pire = max(pire, (ph - pb).length)
+            for seg, t, p, cible in ((paire["upper_segment"], paire["upper_t"],
+                                      ph, cible_h),
+                                     (paire["lower_segment"], paire["lower_t"],
+                                      pb, cible_b)):
+                d = (cible - p) * AMORTISSEMENT
+                for i, poids in ((seg[0], 1.0 - t), (seg[1], t)):
+                    if poids <= 1e-9: continue
+                    a = corr.setdefault(i, [Vector((0, 0, 0)), 0.0])
+                    a[0] += d * poids; a[1] += poids
+        if pire * MM < 0.05:
+            break
+        for i, (somme, poids) in corr.items():
+            if poids <= 1e-9: continue
+            v = out.get(i, Vector((0, 0, 0))) + somme / poids
+            if est_oeil:
+                q = co[i] + v
+                dd = q - ctr
+                if dd.length < ray + 0.0004:
+                    q = ctr + dd.normalized() * (ray + 0.0004)
+                v = q - co[i]
+            out[i] = v
     return out
 
 
@@ -171,7 +220,7 @@ if __name__ == "__main__":
             marge = sorted({i for p in P["ouvertures"][cle]["paires"]
                             for i in p["upper_segment"] + p["lower_segment"]})
             portee = PORTEES_MM[cle] / MM
-            dist = geodesique(me, basis, marge, portee)
+            dist, source = geodesique(me, basis, marge, portee)
             vise = deplacements_de_marge(basis, P, cle, G, M)
             falloff["groupes_graines"][cle] = {
                 "sommets_de_marge": len(marge),
@@ -183,12 +232,13 @@ if __name__ == "__main__":
                 if w <= 1e-6: continue
                 base = vise.get(i)
                 if base is None:
-                    # sommet hors marge : il suit le deplacement moyen de ses
-                    # voisins de marge, attenue par le falloff
-                    proches = [vise[j] for j in marge
-                               if (basis[j] - basis[i]).length < portee]
-                    if not proches: continue
-                    base = sum(proches, Vector((0, 0, 0))) / len(proches)
+                    # Un sommet hors marge suit la cible de LA graine dont il
+                    # descend geodesiquement. La version precedente moyennait
+                    # toutes les graines a portee euclidienne : elle tirait des
+                    # sommets eloignes dans une direction qui n'etait celle
+                    # d'aucune marge, et dix aretes HORS MARGE depassaient 2,0x.
+                    base = vise.get(source.get(i))
+                    if base is None: continue
                 total[i] = total.get(i, Vector((0, 0, 0))) + base * w
         deltas_par_pose[pose] = total
         print("  %-12s %4d sommets deplaces, max %.3f mm"

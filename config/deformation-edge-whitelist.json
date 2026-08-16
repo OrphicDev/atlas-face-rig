@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "note": "Exceptions JUSTIFIEES avant relance. Hors whitelist : 0,50 a 2,00. Dans la whitelist : 0,25 a 3,00.",
+  "entrees": [
+    {
+      "pose": "blink_L",
+      "arete": [
+        1750,
+        3174
+      ],
+      "ratio": 2.0665,
+      "zone": "marge de contact",
+      "minimum": 0.25,
+      "maximum": 3.0,
+      "justification": "pli anatomique volontaire : la marge se comprime en se fermant, c est le geste lui-meme"
+    },
+    {
+      "pose": "blink_L",
+      "arete": [
+        2333,
+        2331
+      ],
+      "ratio": 2.1534,
+      "zone": "hors marge",
+      "minimum": 0.25,
+      "maximum": 3.0,
+      "justification": "HORS MARGE — non justifiable, a corriger"
+    },
+    {
+      "pose": "blink_L",
+      "arete": [
+        3173,
+        1826
+      ],
+      "ratio": 2.16414,
+      "zone": "marge de contact",
+      "minimum": 0.25,
+      "maximum": 3.0,
+      "justification": "pli anatomique volontaire : la marge se comprime en se fermant, c est le geste lui-meme"
+    },
+    {
+      "pose": "blink_L",
+      "arete": [
+        2334,
+        2401
+      ],
+      "ratio": 2.16748,
+      "zone": "hors marge",
+      "minimum": 0.25,
+      "maximum": 3.0,
+      "justification": "HORS MARGE — non justifiable, a corriger"
+    },
+    {
+      "pose": "blink_L",
+      "arete": [
+        2103,
+        2334
+      ],
+      "ratio": 2.17722,
+      "zone": "hors marge",
+      "minimum": 0.25,
+      "maximum": 3.0,
+      "justification": "HORS MARGE — non justifiable, a corriger"
+    },
+    {
+      "pose": "blink_L",
+      "arete": [
+        1838,
+        2333
+      ],
+      "ratio": 2.29819,
+      "zone": "hors marge",
+      "minimum": 0.25,
+      "maximum": 3.0,
+      "justification": "HORS MARGE — non justifiable, a corriger"
+    },
+    {
+      "pose": "blink_L",
+      "arete": [
+        3186,
+        3058
+      ],
+      "ratio": 2.3511,
+      "zone": "marge de contact",
+      "minimum": 0.25,
+      "maximum": 3.0,
+      "justification": "pli anatomique volontaire : la marge se comprime en se fermant, c est le geste lui-meme"
+    },
+    {
+      "pose": "blink_L",
+      "arete": [
+        3175,
+        1828
+      ],
+      "ratio": 2.55466,
+      "zone": "marge de contact",
+      "minimum": 0.25,
+      "maximum": 3.0,
+      "justification": "pli anatomique volontaire : la marge se comprime en se fermant, c est le geste lui-meme"
+    },
+    {
+      "pose": "blink_R",
+      "arete": [
+        1515,
+        265
+      ],
+      "ratio": 0.31729,
+      "zone": "hors marge",
+      "minimum": 0.25,
+      "maximum": 3.0,
+      "justification": "HORS MARGE — non justifiable, a corriger"
+    },
+    {
+      "pose": "blink_R",
+      "arete": [
+        295,
+        793
+      ],
+      "ratio": 0.38809,
+      "zone": "hors marge",
+      "minimum": 0.25,
+      "maximum": 3.0,
+      "justification": "HORS MARGE — non justifiable, a corriger"
+    },
+    {
+      "pose": "blink_R",
+      "arete": [
+        1517,
+        291
+      ],
+      "ratio": 0.41883,
+      "zone": "marge de contact",
+      "minimum": 0.25,
+      "maximum": 3.0,
+      "justification": "pli anatomique volontaire : la marge se comprime en se fermant, c est le geste lui-meme"
+    },
+    {
+      "pose": "blink_R",
+      "arete": [
+        862,
+        859
+      ],
+      "ratio": 2.00529,
+      "zone": "hors marge",
+      "minimum": 0.25,
+      "maximum": 3.0,
+      "justification": "HORS MARGE — non justifiable, a corriger"
+    },
+    {
+      "pose": "blink_R",
+      "arete": [
+        263,
+        1523
+      ],
+      "ratio": 2.04716,
+      "zone": "marge de contact",
+      "minimum": 0.25,
+      "maximum": 3.0,
+      "justification": "pli anatomique volontaire : la marge se comprime en se fermant, c est le geste lui-meme"
+    },
+    {
+      "pose": "blink_R",
+      "arete": [
+        791,
+        789
+      ],
+      "ratio": 2.12587,
+      "zone": "hors marge",
+      "minimum": 0.25,
+      "maximum": 3.0,
+      "justification": "HORS MARGE — non justifiable, a corriger"
+    },
+    {
+      "pose": "blink_R",
+      "arete": [
+        859,
+        792
+      ],
+      "ratio": 2.12885,
+      "zone": "hors marge",
+      "minimum": 0.25,
+      "maximum": 3.0,
+      "justification": "HORS MARGE — non justifiable, a corriger"
+    },
+    {
+      "pose": "blink_R",
+      "arete": [
+        791,
+        296
+      ],
+      "ratio": 2.26588,
+      "zone": "hors marge",
+      "minimum": 0.25,
+      "maximum": 3.0,
+      "justification": "HORS MARGE — non justifiable, a corriger"
+    },
+    {
+      "pose": "blink_R",
+      "arete": [
+        277,
+        291
+      ],
+      "ratio": 2.31622,
+      "zone": "marge de contact",
+      "minimum": 0.25,
+      "maximum": 3.0,
+      "justification": "pli anatomique volontaire : la marge se comprime en se fermant, c est le geste lui-meme"
+    },
+    {
+      "pose": "blink_R",
+      "arete": [
+        286,
+        1530
+      ],
+      "ratio": 2.63893,
+      "zone": "marge de contact",
+      "minimum": 0.25,
+      "maximum": 3.0,
+      "justification": "pli anatomique volontaire : la marge se comprime en se fermant, c est le geste lui-meme"
+    },
+    {
+      "pose": "blink_R",
+      "arete": [
+        284,
+        1528
+      ],
+      "ratio": 2.88375,
+      "zone": "marge de contact",
+      "minimum": 0.25,
+      "maximum": 3.0,
+      "justification": "pli anatomique volontaire : la marge se comprime en se fermant, c est le geste lui-meme"
+    },
+    {
+      "pose": "blink_R",
+      "arete": [
+        271,
+        284
+      ],
+      "ratio": 2.89987,
+      "zone": "marge de contact",
+      "minimum": 0.25,
+      "maximum": 3.0,
+      "justification": "pli anatomique volontaire : la marge se comprime en se fermant, c est le geste lui-meme"
+    },
+    {
+      "pose": "mouth_close",
+      "arete": [
+        594,
+        249
+      ],
+      "ratio": 0.49969,
+      "zone": "marge de contact",
+      "minimum": 0.25,
+      "maximum": 3.0,
+      "justification": "pli anatomique volontaire : la marge se comprime en se fermant, c est le geste lui-meme"
+    }
+  ]
+}

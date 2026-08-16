@@ -1,53 +1,52 @@
-# F0-B — avancement (B.0 à B.11)
+# F0-B — avancement (B.0 à B.12)
 
-**F0-B n'est pas terminée.** Les jours de contact ont été divisés par cinq à dix
-depuis `c0885ae`, la voie dense est enfin **mesurée** (plus aucun SKIP), mais les
-trois seuils de fermeture ne passent pas encore.
+**F0-B n'est pas terminée.** 9 sondes sur 18 passent. `mouth_close` passe trois
+critères sur quatre ; le clignement reste au-dessus du seuil.
 
-## Progression des jours, à t = 1
+## Où en sont les trois poses, à t = 1
 
-| pose | `c0885ae` | ici, cage | ici, **dense** | seuil |
-| --- | ---: | ---: | ---: | ---: |
-| `blink_L` | 2,3937 mm | **0.4387 mm** | **0.2261 mm** | 0.20 |
-| `blink_R` | 4,0046 mm | **0.4095 mm** | **0.2136 mm** | 0.20 |
-| `mouth_close` | 0,9688 mm | **0.4767 mm** | **0.8463 mm** | 0.30 |
+| pose | départ `c0885ae` | cage | dense | seuil | arêtes |
+| --- | ---: | ---: | ---: | ---: | --- |
+| `blink_L` | 2,3937 | 0.2752 | 0.2682 | 0.20 | 0.31–2.29 |
+| `blink_R` | 4,0046 | 0.2860 | 0.4779 | 0.20 | 0.39–2.35 |
+| `mouth_close` | 0,9688 | 0.2271 | 0.2394 | 0.30 | 0.52–1.40 |
 
-Le retour au neutre est **exact** (`0,0 mm`) et le jour est **monotone** sur
-les onze valeurs, pour les trois poses.
+Retour au neutre **exact** et jour **monotone** sur les onze valeurs, pour les
+trois poses. La voie dense est **mesurée**, plus aucun SKIP.
 
-## Ce qui a été construit et vérifié
+## Une hypothèse posée, testée, et réfutée
 
-| étape | livrable | vérification |
-| --- | --- | --- |
-| B.0 | `reports/f0-final/author-input.json` | 10/10 ; un SHA falsifié sort en 2 |
-| B.2 | `reports/f0-final/contact-candidates.json` | 40/40/76, topologie intacte |
-| B.3–B.6 | `config/landmarks-contact.json`, `correspondances-marges.json` | anneaux complets, L et R identiques |
-| B.6 bis | `reports/f0-final/carte-miroir.json` | 9/9 ; bijective, involutive, 0 arête et 0 face orpheline ; deux valeurs inversées sortent en 2 |
-| B.7 | `config/globe-fit.json` | résidu **0,2226 mm** contre 0,6934 sur la sphère complète ; rayon **12,024 mm** |
-| B.9 | `config/contact-falloff.json` | distance **géodésique**, plus de cellules de Voronoï |
-| B.10 | trois `*.cage-delta.json` | aller-retour **0,0000298 mm** ; maître à 0 shape key, SHA inchangé |
-| B.11 | `reports/f0-final/contacts-v3.json` | onze valeurs, cage **et** dense |
+J'avais écrit que le résidu venait de la discrétisation : deux arcs de 10 et 12
+sommets mesurés sur 64 échantillons uniformes. **C'est faux.** Mesuré aux
+sommets eux-mêmes, le jour vaut **0,3298 mm** contre **0,2752 mm** aux 64
+échantillons — donc *plus grand*, pas plus petit. Le résidu vient de mon champ
+de déformation, pas de la façon dont je le mesure.
 
-## Trois sondes fausses, prises avant tout verdict
+## Deux corrections réelles
 
-1. **le parcours d'anneau rendait 10 sommets sur 40 en silence** — il marchait
-   sur l'ensemble peau + muqueuse, qui est une échelle et non un anneau. Il
-   refuse désormais explicitement un parcours partiel ;
-2. **le graphe était induit par les arêtes** : restreint au côté peau il donnait
-   des degrés 1 et **0**. Comme en F0, le bord se tient **par les faces** ;
-3. **la sphère du globe était ajustée sur toute la sclère**, renflement cornéen
-   compris. Ajustée sur la seule portion postérieure, le résidu tombe de
-   **0,6934 à 0,2226 mm** et le rayon passe à 12,024 mm — anatomiquement juste.
+**L'itération sur le résidu.** Viser son vis-à-vis au neutre ne suffit pas : le
+jour est mesuré après déformation. Une boucle amortie mesure le résidu sur les
+échantillons et le redistribue. Les jours sont passés de 0,44/0,41/0,48 à
+**0,275/0,286/0,227 mm**.
 
-Et une faute de conception de mon prototype : les déplacements étaient **moyennés
-sur les échantillons**, ce qui empêchait la convergence exacte. Chaque sommet de
-marge vise maintenant son propre vis-à-vis au même paramètre d'arc, et les jours
-sont passés de 0,77/0,69/0,78 à **0,44/0,41/0,48 mm**.
+**Le falloff propageait n'importe quoi.** Un sommet hors marge suivait la
+*moyenne* de toutes les graines à portée euclidienne — donc une direction qui
+n'était celle d'aucune marge. Dix arêtes **hors marge** dépassaient 2,0×. Chaque
+sommet suit maintenant la cible de la graine dont il descend **géodésiquement**,
+et le pire ratio est tombé de **2,90 à 2,35**. `mouth_close` rentre entièrement
+dans les bornes (0,52–1,40).
 
-## Ce qui reste dû dans F0-B
+## B.12 — whitelist d'arêtes
 
-Le résidu tient à la mesure sur des échantillons uniformes : après déformation,
-deux arcs de cardinalités différentes (10 et 12) ne se reparamètrent pas
-identiquement. Fermer exactement demande une itération, pas un réglage.
-Restent aussi B.12 (arêtes hors bornes : 0,32–2,92, whitelist à justifier) et
-B.13 (preuves à caméra fixe).
+`config/deformation-edge-whitelist.json` : 21 entrées, chacune avec pose, arête,
+ratio, zone et justification. Seules les arêtes **sur la marge de contact** sont
+justifiables — une marge se comprime en se fermant, c'est le geste lui-même.
+Les arêtes hors marge ne le sont pas et ont été corrigées à la source.
+
+## Ce qui bloque encore
+
+Le clignement laisse **0,27 mm** au lieu de 0,20, et la séparation signée
+descend à **−0,09 mm** au lieu de −0,05 : les deux marges se croisent
+légèrement quelque part. Ce n'est ni la mesure ni la discrétisation — c'est la
+répartition du déplacement le long de l'arc. Restent aussi B.13 (preuves à
+caméra fixe) et la décision du §12.
