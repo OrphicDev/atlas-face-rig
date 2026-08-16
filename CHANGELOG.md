@@ -84,4 +84,4 @@ La densité autour de la bouche : la sonde n'a pas convergé. **Mesurée depuis,
 L'inspection est en lecture seule. Le visage n'a pas été touché.
 
 
-> **État F0 (2026-08-16, commit `ab26ab2`).** F0 est **incomplète** : 167 sondes, 154 réussies, 10 échec(s), 3 sautée(s). Vérité unique : [`reports/f0-final/RAPPORT_F0_FINAL.md`](reports/f0-final/RAPPORT_F0_FINAL.md). F1 n'a pas commencé.
+> **État F0 (2026-08-16, commit `8a43c15`).** F0 est **incomplète** : 167 sondes, 154 réussies, 10 échec(s), 3 sautée(s). Vérité unique : [`reports/f0-final/RAPPORT_F0_FINAL.md`](reports/f0-final/RAPPORT_F0_FINAL.md). F1 n'a pas commencé.

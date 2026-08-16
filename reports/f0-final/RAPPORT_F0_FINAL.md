@@ -6,7 +6,7 @@
 
 | | |
 | --- | --- |
-| commit | `ab26ab2` |
+| commit | `8a43c15` |
 | Blender | 5.1.2 |
 | fondation | `source/FACE_F0_FOUNDATION_FINAL.blend` |
 | SHA du blend | `eb7fbccc863ab772` |

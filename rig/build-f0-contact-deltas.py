@@ -227,6 +227,30 @@ def deplacements_de_marge(co, P, cle, globes, M):
             anc = out.get(i)
             out[i] = v if anc is None or v.length > anc.length else anc
 
+    # HYPOTHESE TESTEE ET REFUTEE — moindres carres.
+    #
+    # Le systeme est SUR-DETERMINE : 22 sommets de marge pour 64 paires, soit
+    # 128 contraintes de position. Le point echantillonne etant une combinaison
+    # LINEAIRE de deux sommets, j'ai suppose que le probleme etait lineaire et
+    # se resolvait exactement : minimiser
+    #     somme_k || p_haut(k) - (c_k + g/2 z) ||^2 + || p_bas(k) - (c_k - g/2 z) ||^2
+    # avec une regularisation faible et une boucle externe pour le degagement
+    # du globe.
+    #
+    # La mesure a REFUTE l'hypothese. Contacts V3 : 15/18 -> 12/18.
+    #     blink_R.gap_cage        0,18756 -> 0,28188   (passait, ne passe plus)
+    #     blink_L.gap_cage        0,21516 -> 0,27058
+    #     blink_L.separation      -0,06136 -> -0,07829
+    #     blink_R.separation      -0,07108 -> -0,06425
+    #     mouth_close.gap_cage    0,09203 -> 0,19771
+    # Seule la bouche gardait ses sondes au vert, et plus mal qu'avant.
+    #
+    # Deux causes possibles, non departagees : la regularisation tire les
+    # deplacements vers zero, et la borne de course appliquee APRES la
+    # resolution casse l'optimalite qu'on venait de calculer. Je ne les
+    # departage pas ici, et je ne garde pas un solveur qui mesure moins bien.
+    # L'iteration amortie reste en place.
+
     # ITERATION. Viser son vis-a-vis au neutre ne suffit pas : apres
     # deformation, deux arcs de cardinalites differentes (10 et 12 sommets) ne
     # se reparametrent pas identiquement, et il restait 0,44 mm de jour sur des

@@ -1,7 +1,7 @@
 STATUS: **F0 INCOMPLÈTE** — 167 sondes, 154 réussies, 10 échec(s), 3 sautée(s)
 
 > Vérité unique : [`reports/f0-final/RAPPORT_F0_FINAL.md`](reports/f0-final/RAPPORT_F0_FINAL.md).
-> Mesuré le 2026-08-16, commit `ab26ab2`, Blender 5.1.2.
+> Mesuré le 2026-08-16, commit `8a43c15`, Blender 5.1.2.
 
 | | |
 | --- | --- |
@@ -12,6 +12,15 @@ STATUS: **F0 INCOMPLÈTE** — 167 sondes, 154 réussies, 10 échec(s), 3 sauté
 | sondes | **154 / 167**, comptées par registre et jamais à la main |
 | suites en échec | `contacts_v3`, `contrat_de_sortie`, `gltf_conformite`, `coupe_sagittale` |
 | F1 | **ne commence pas** tant que le gate n'est pas passé |
+
+## Ce qui bloque, nommément
+
+- clignement gauche sur la cage : 0.21516 mm pour 0,20 exigés
+- séparations signées et rapports d'arêtes des paupières (V3)
+- validateur Khronos absent de la machine — sonde SAUTÉE, jamais PASS
+- trois cadres de la coupe sagittale médiane sans section
+- chemin personnel encore présent dans le blend (hygiène)
+- raccord corps : la suite historique reste en échec métier
 
 ## Ce qui bloque, nommément
 
