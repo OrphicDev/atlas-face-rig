@@ -1,0 +1,96 @@
+{
+  "label": "B",
+  "blend": "experiments/modifier-order/B_MULTIRES_THEN_ARMATURE.blend",
+  "ordre": [
+    "MULTIRES",
+    "ARMATURE"
+  ],
+  "octets_blend": 1000577,
+  "poses": {
+    "neutral": {
+      "sommets": 12950,
+      "faces": 12948,
+      "loops": 51792,
+      "temps_median_s": 0.037576,
+      "temps_p95_s": 0.046529,
+      "temps_max_s": 0.046529,
+      "uv_sha": "7488a467a164ba61c92e76a579a9a0ec850965715deb65431861de5a664212a9",
+      "uv_identique_au_neutre": true,
+      "ecart_au_neutre_mm": {
+        "max": 0.0,
+        "median": 0.0
+      }
+    },
+    "blink_L_100": {
+      "sommets": 12950,
+      "faces": 12948,
+      "loops": 51792,
+      "temps_median_s": 0.037449,
+      "temps_p95_s": 0.038165,
+      "temps_max_s": 0.038165,
+      "uv_sha": "7488a467a164ba61c92e76a579a9a0ec850965715deb65431861de5a664212a9",
+      "uv_identique_au_neutre": true,
+      "ecart_au_neutre_mm": {
+        "max": 8.49621,
+        "median": 0.0
+      }
+    },
+    "blink_R_100": {
+      "sommets": 12950,
+      "faces": 12948,
+      "loops": 51792,
+      "temps_median_s": 0.037373,
+      "temps_p95_s": 0.037961,
+      "temps_max_s": 0.037961,
+      "uv_sha": "7488a467a164ba61c92e76a579a9a0ec850965715deb65431861de5a664212a9",
+      "uv_identique_au_neutre": true,
+      "ecart_au_neutre_mm": {
+        "max": 8.42636,
+        "median": 0.0
+      }
+    },
+    "mouthClose_100": {
+      "sommets": 12950,
+      "faces": 12948,
+      "loops": 51792,
+      "temps_median_s": 0.037838,
+      "temps_p95_s": 0.039261,
+      "temps_max_s": 0.039261,
+      "uv_sha": "7488a467a164ba61c92e76a579a9a0ec850965715deb65431861de5a664212a9",
+      "uv_identique_au_neutre": true,
+      "ecart_au_neutre_mm": {
+        "max": 1.81959,
+        "median": 0.0
+      }
+    },
+    "jaw_20": {
+      "sommets": 12950,
+      "faces": 12948,
+      "loops": 51792,
+      "temps_median_s": 0.038704,
+      "temps_p95_s": 0.039485,
+      "temps_max_s": 0.039485,
+      "uv_sha": "7488a467a164ba61c92e76a579a9a0ec850965715deb65431861de5a664212a9",
+      "uv_identique_au_neutre": true,
+      "ecart_au_neutre_mm": {
+        "max": 42.60414,
+        "median": 0.0
+      }
+    },
+    "jaw_32": {
+      "sommets": 12950,
+      "faces": 12948,
+      "loops": 51792,
+      "temps_median_s": 0.037407,
+      "temps_p95_s": 0.037842,
+      "temps_max_s": 0.037842,
+      "uv_sha": "7488a467a164ba61c92e76a579a9a0ec850965715deb65431861de5a664212a9",
+      "uv_identique_au_neutre": true,
+      "ecart_au_neutre_mm": {
+        "max": 67.62691,
+        "median": 0.0
+      }
+    }
+  },
+  "retour_neutre_mm": 0.0
+}

@@ -1,0 +1,62 @@
+{
+  "A": {
+    "objets": [
+      "GEO-head_animation_realistic",
+      "GEO-head_animation_realistic.iris.L",
+      "GEO-head_animation_realistic.iris.R",
+      "GEO-head_animation_realistic.sclera.L",
+      "GEO-head_animation_realistic.sclera.R",
+      "TMP_F0_JAW_RIG"
+    ],
+    "ordre": [
+      "ARMATURE",
+      "MULTIRES"
+    ],
+    "shape_keys": [
+      "Basis",
+      "TMP_blink.L",
+      "TMP_blink.R",
+      "TMP_mouthClose"
+    ],
+    "sommets": 3242,
+    "uv": [
+      "UVMap"
+    ]
+  },
+  "B": {
+    "objets": [
+      "GEO-head_animation_realistic",
+      "GEO-head_animation_realistic.iris.L",
+      "GEO-head_animation_realistic.iris.R",
+      "GEO-head_animation_realistic.sclera.L",
+      "GEO-head_animation_realistic.sclera.R",
+      "TMP_F0_JAW_RIG"
+    ],
+    "ordre": [
+      "MULTIRES",
+      "ARMATURE"
+    ],
+    "shape_keys": [
+      "Basis",
+      "TMP_blink.L",
+      "TMP_blink.R",
+      "TMP_mouthClose"
+    ],
+    "sommets": 3242,
+    "uv": [
+      "UVMap"
+    ]
+  },
+  "differences": {
+    "ordre": [
+      [
+        "ARMATURE",
+        "MULTIRES"
+      ],
+      [
+        "MULTIRES",
+        "ARMATURE"
+      ]
+    ]
+  }
+}

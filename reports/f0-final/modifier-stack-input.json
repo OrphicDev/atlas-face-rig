@@ -1,0 +1,53 @@
+{
+  "blend": "source/FACE_BASE_LOCKED.blend",
+  "blend_sha256": "cc9e55a47b1496fa81ed42deee6ee3a6f498c309d5b86610e5cd2407831f2bd8",
+  "blender": "5.1.2",
+  "objets": {
+    "GEO-head_animation_realistic": {
+      "modificateurs": [
+        {
+          "ordre": 0,
+          "nom": "Multires",
+          "type": "MULTIRES",
+          "levels": 1,
+          "sculpt_levels": 1,
+          "render_levels": 1,
+          "total_levels": 1,
+          "show_viewport": true,
+          "show_render": true,
+          "show_in_editmode": false,
+          "use_custom_normals": false,
+          "quality": 4,
+          "uv_smooth": "PRESERVE_BOUNDARIES",
+          "boundary_smooth": "ALL",
+          "use_creases": true,
+          "use_sculpt_base_mesh": false
+        }
+      ],
+      "shape_keys": 0,
+      "sommets": 3242
+    },
+    "GEO-head_animation_realistic.iris.L": {
+      "modificateurs": [],
+      "shape_keys": 0,
+      "sommets": 400
+    },
+    "GEO-head_animation_realistic.iris.R": {
+      "modificateurs": [],
+      "shape_keys": 0,
+      "sommets": 400
+    },
+    "GEO-head_animation_realistic.sclera.L": {
+      "modificateurs": [],
+      "shape_keys": 0,
+      "sommets": 546
+    },
+    "GEO-head_animation_realistic.sclera.R": {
+      "modificateurs": [],
+      "shape_keys": 0,
+      "sommets": 546
+    }
+  },
+  "armatures": [],
+  "armature_modifier": []
+}
