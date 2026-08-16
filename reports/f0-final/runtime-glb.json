@@ -1,0 +1,218 @@
+{
+  "fps": 24.0,
+  "decalage_images": 0,
+  "pivot_contrat": [
+    1.462985,
+    -0.05097,
+    0.74003
+  ],
+  "groupe_deformant": "TMP_jaw",
+  "sommets_pleinement_machoire": 864,
+  "derive_radiale_mm": 0.000112,
+  "course_machoire_mm": 67.6269,
+  "repere": "glTF Y-haut -> Blender Z-haut : (x, y, z) -> (x, -z, y)",
+  "frames": [
+    1,
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80
+  ],
+  "temps": [
+    0.041667,
+    0.416667,
+    0.833333,
+    1.25,
+    1.666667,
+    2.083333,
+    2.5,
+    2.916667,
+    3.333333
+  ],
+  "actions_reveillees": [
+    "TMP_SPIKE_MORPH"
+  ],
+  "info_runtime": {
+    "node": 2,
+    "sommets": 51791,
+    "targets": 3,
+    "joints": 2
+  },
+  "B_contre_A_mm": {
+    "1": {
+      "p50": 0.0,
+      "p95": 0.000119,
+      "max": 0.000171
+    },
+    "10": {
+      "p50": 0.0,
+      "p95": 0.000119,
+      "max": 0.000171
+    },
+    "20": {
+      "p50": 0.0,
+      "p95": 0.000119,
+      "max": 0.000171
+    },
+    "30": {
+      "p50": 0.0,
+      "p95": 0.000119,
+      "max": 0.000169
+    },
+    "40": {
+      "p50": 0.0,
+      "p95": 0.00012,
+      "max": 0.000181
+    },
+    "50": {
+      "p50": 0.0,
+      "p95": 0.000121,
+      "max": 0.000239
+    },
+    "60": {
+      "p50": 0.0,
+      "p95": 0.000119,
+      "max": 0.000171
+    },
+    "70": {
+      "p50": 0.0,
+      "p95": 0.000119,
+      "max": 0.000171
+    },
+    "80": {
+      "p50": 0.0,
+      "p95": 0.000119,
+      "max": 0.000171
+    }
+  },
+  "C_contre_B_mm": {
+    "1": {
+      "p50": 0.0,
+      "p95": 0.000119,
+      "max": 0.000267
+    },
+    "10": {
+      "p50": 0.0,
+      "p95": 0.000119,
+      "max": 0.000267
+    },
+    "20": {
+      "p50": 0.0,
+      "p95": 0.000119,
+      "max": 0.000267
+    },
+    "30": {
+      "p50": 0.0,
+      "p95": 0.000119,
+      "max": 0.000267
+    },
+    "40": {
+      "p50": 0.0,
+      "p95": 0.00012,
+      "max": 0.000267
+    },
+    "50": {
+      "p50": 0.0,
+      "p95": 0.000119,
+      "max": 0.000268
+    },
+    "60": {
+      "p50": 0.0,
+      "p95": 0.000119,
+      "max": 0.000267
+    },
+    "70": {
+      "p50": 0.0,
+      "p95": 0.000119,
+      "max": 0.000267
+    },
+    "80": {
+      "p50": 0.0,
+      "p95": 0.000119,
+      "max": 0.000267
+    }
+  },
+  "amplitude_max_mm": 67.2426,
+  "registre": {
+    "registre": "runtime-glb",
+    "total": 8,
+    "reussies": 8,
+    "echecs": 0,
+    "sautees": 0,
+    "sondes": [
+      {
+        "id": "runtime.pivot_machoire",
+        "description": "la machoire tourne autour du pivot du contrat",
+        "configuration_connue": "864 sommets du groupe TMP_jaw a poids >= 0,999, image 50",
+        "expected": "<= 0,05 mm de derive radiale",
+        "measured": 0.000112,
+        "status": "PASS",
+        "tolerance": 0.05
+      },
+      {
+        "id": "runtime.pivot_dans_la_boite",
+        "description": "le milieu des conduits auditifs est dans la tete",
+        "configuration_connue": "boite monde [[1.321, -0.174, 0.504] ; [1.605, 0.083, 0.885]]",
+        "expected": true,
+        "measured": true,
+        "status": "PASS"
+      },
+      {
+        "id": "runtime.course_machoire",
+        "description": "la course de la machoire est celle d'une machoire",
+        "configuration_connue": "rotation de 32 deg, image 50",
+        "expected": "entre 20 et 90 mm",
+        "measured": 67.6269,
+        "status": "PASS"
+      },
+      {
+        "id": "runtime.horloge",
+        "description": "image -> seconde retrouvee sur le fichier",
+        "configuration_connue": "clefs de 0.041667 a 3.333333 s, 24 im/s",
+        "expected": "<= 1e-4 s aux deux bouts",
+        "measured": 8e-08,
+        "status": "PASS",
+        "tolerance": 0.0001
+      },
+      {
+        "id": "runtime.ordre_sommets",
+        "description": "l'import conserve l'ordre des sommets du fichier",
+        "configuration_connue": "51791 positions",
+        "expected": "<= 0,05 mm au neutre",
+        "measured": 0.000171,
+        "status": "PASS",
+        "tolerance": 0.05
+      },
+      {
+        "id": "runtime.transport",
+        "description": "la deformation survit au GLB",
+        "configuration_connue": "9 poses, plus proche sommet d'auteur",
+        "expected": "<= 0,25 mm au p95",
+        "measured": 0.000121,
+        "status": "PASS",
+        "tolerance": 0.25
+      },
+      {
+        "id": "runtime.specification",
+        "description": "un runtime qui ne lit que la specification retrouve la pose",
+        "configuration_connue": "9 poses, sommet a sommet",
+        "expected": "<= 0,01 mm au pire",
+        "measured": 0.000268,
+        "status": "PASS",
+        "tolerance": 0.01
+      },
+      {
+        "id": "runtime.amplitude",
+        "description": "les poses ne sont pas toutes identiques",
+        "configuration_connue": "echantillon d'un sommet sur 97",
+        "expected": ">= 5 mm",
+        "measured": 67.2426,
+        "status": "PASS"
+      }
+    ]
+  }
+}

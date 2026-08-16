@@ -93,15 +93,31 @@ reg.exige("runtime.pas_de_multires", "le runtime ne porte plus de Multires",
           "objet runtime", 0, sum(1 for m in run.modifiers if m.type == "MULTIRES"),
           not any(m.type == "MULTIRES" for m in run.modifiers))
 R["sommets_sans_poids"] = sans_poids
-R["registre"] = reg.bilan()
 # Le blend runtime ne doit contenir QUE ce qui part a l'export. Garder la cage
 # et les yeux dedans faisait exporter deux meshes au lieu d'un.
+# `parent` seul COMPOSE la matrice locale avec celle du parent : la matrice
+# locale valait deja celle de la tete, l'armature est au meme endroit, et le
+# maillage se retrouvait a exactement le double — 1,46 m de son propre rig.
+# La matrice d'inverse de parent annule cette composition.
+avant = run.matrix_world.copy()
 run.parent = rig
+run.matrix_parent_inverse = rig.matrix_world.inverted()
+bpy.context.view_layer.update()
+derive = (run.matrix_world.translation - avant.translation).length
+reg.exige("runtime.parentage", "le parentage ne deplace pas le maillage",
+          "translation avant/apres parent = %s" % rig.name, "<= 1e-6 m",
+          round(derive, 9), derive <= 1e-6, tolerance=1e-6)
+ecart_tete = (run.matrix_world.translation - tete.matrix_world.translation).length
+reg.exige("runtime.au_meme_endroit", "le runtime est la ou est la tete d'auteur",
+          "translations comparees", "<= 1e-6 m", round(ecart_tete, 9),
+          ecart_tete <= 1e-6, tolerance=1e-6)
 for ob in list(bpy.data.objects):
     if ob.name not in ("GEO_face_runtime", "TMP_F0_JAW_RIG"):
         bpy.data.objects.remove(ob, do_unlink=True)
 bpy.ops.outliner.orphans_purge(do_local_ids=True, do_linked_ids=True, do_recursive=True)
 R["objets_runtime"] = sorted(x.name for x in bpy.data.objects)
+R["translation_runtime"] = [round(x, 6) for x in run.matrix_world.translation]
+R["registre"] = reg.bilan()
 am2 = run.modifiers.new("Armature", "ARMATURE"); am2.object = rig
 am2.use_vertex_groups = True; am2.use_bone_envelopes = False
 am2.use_deform_preserve_volume = False

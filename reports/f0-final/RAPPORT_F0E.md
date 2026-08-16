@@ -6,7 +6,7 @@ Tranché dans [`DECISION_MODIFIER_ORDER.md`](DECISION_MODIFIER_ORDER.md) :
 `ARMATURE PUIS MULTIRES`. Le banc a montré une **équivalence géométrique
 stricte**, pas une supériorité — et c'est écrit comme tel.
 
-## Résolution runtime — 5/5
+## Résolution runtime — 7/7
 
 `rig/build-runtime-mesh.py` matérialise le Multires au lieu de l'exporter.
 
@@ -126,7 +126,68 @@ BIN et décalait tout ce qui suit — une mutation en abîmait cinq. Et je
 comptais une exception comme un refus, alors qu'une exception prouve seulement
 que quelque chose a cassé.
 
+## Le runtime — §E.11, et la faute que rien ne voyait
+
+Trois évaluations de la même animation sont confrontées :
+
+- **A** — Blender rejouant le blend runtime d'origine ;
+- **B** — Blender rejouant le GLB réimporté ;
+- **C** — `tools/runtime_eval.py`, une implémentation de la spécification glTF
+  écrite ici, en Python pur, sans Blender, sans numpy, sans aucune
+  bibliothèque : hiérarchie de nœuds, échantillonnage LINEAR / STEP /
+  CUBICSPLINE, SLERP sur les rotations, morphs, matrices de peau.
+
+| confrontation | ce qu'elle prouve | pire écart |
+| --- | --- | ---: |
+| B contre A | la déformation survit au transport | **0.000121 mm** au p95 |
+| C contre B | un runtime qui ne connaît que la spéc retrouve la pose | **0.000268 mm** |
+
+**0.000268 mm** : sur neuf poses et 51 791 sommets, un moteur qui n'a jamais vu
+Blender reproduit la déformation à un demi-micron. Le fichier se suffit à
+lui-même.
+
+Deux échecs de départ venaient encore de moi, pas du fichier : l'horloge est
+`f/fps` et non `(f−1)/fps` — elle est désormais **lue sur le fichier** et
+vérifiée aux deux bouts —, et glTF est en **Y-haut** quand Blender est en
+Z-haut. Je comparais deux repères et je lisais 1 936 mm d'écart.
+
+### La faute que huit sondes ne voyaient pas
+
+La sonde de garde `runtime.amplitude`, ajoutée seulement pour éviter de
+comparer deux poses immobiles, a rendu **251 mm** de déplacement pour une
+mâchoire à 32°. Une mâchoire fait 60 à 70 mm. En regardant, le maillage
+exporté était à **1,46 m de son propre rig** : `rig/build-runtime-mesh.py`
+faisait `run.parent = rig` **sans poser `matrix_parent_inverse`**, et la
+matrice locale — qui valait déjà celle de la tête — se composait une seconde
+fois avec celle de l'armature, au même endroit. Exactement le double.
+
+Aucune des sondes de F0-E ne l'avait vu, et la raison compte : **elles
+comparaient toutes le même montage fautif à lui-même**. L'aller-retour, la
+conformité, le transport — tout était cohérent, et tout était décalé.
+
+Le correctif est d'une ligne. Deux sondes le gardent maintenant à la
+construction : `runtime.parentage` (le parentage ne déplace pas le maillage)
+et `runtime.au_meme_endroit` (le runtime est là où est la tête d'auteur),
+toutes deux à **0,0 m**.
+
+### Et la sonde évidente ne marche pas
+
+J'ai d'abord écrit la sonde qui semblait s'imposer : *la mâchoire tourne-t-elle
+autour du pivot du contrat ?* — une rotation conserve la distance à son centre.
+Elle passe à **0.000112 mm**. Mais `tests/runtime-pivot-negatif.py` remet la faute
+sous ses yeux, et elle **ne la voit pas** : la dérive reste à 8.5e-05 mm alors que
+le maillage est à 1,46 m.
+
+C'est géométriquement forcé. Le modificateur d'armature ramène les os dans
+l'espace **local du maillage** ; le centre de rotation en monde reste donc le
+pivot, quelle que soit la distance. Seul le bras de levier change.
+
+Ce qui voit la faute, c'est autre chose : la **course** (251,9 mm, hors des
+bornes anatomiques) et un invariant tout bête — le milieu des conduits
+auditifs est **à l'intérieur** d'une tête. `runtime.pivot_dans_la_boite`.
+La contre-épreuve publie les trois verdicts : 5/5.
+
 ## Ce qui reste dû
 
 Le validateur **Khronos** lui-même (§E.9) n'a pas tourné : il n'est pas sur la
-machine. Et l'essai dans un runtime réel (§E.11) reste entier.
+machine, et je n'ai pas décidé seul d'aller chercher un binaire.

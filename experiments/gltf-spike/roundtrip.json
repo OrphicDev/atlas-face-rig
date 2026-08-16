@@ -96,8 +96,8 @@
   },
   "neutre_mm": {
     "p50": 0.0,
-    "p95": 4.5e-05,
-    "max": 0.000277
+    "p95": 6e-05,
+    "max": 0.000137
   },
   "registre": {
     "registre": "gltf-roundtrip",
@@ -221,7 +221,7 @@
         "description": "surface neutre apres aller-retour",
         "configuration_connue": "plus proche point",
         "expected": "<= 0,10 mm",
-        "measured": 4.5e-05,
+        "measured": 6e-05,
         "status": "PASS",
         "tolerance": 0.1
       },
@@ -230,7 +230,7 @@
         "description": "pire ecart du neutre",
         "configuration_connue": "plus proche point",
         "expected": "<= 0,50 mm",
-        "measured": 0.000277,
+        "measured": 0.000137,
         "status": "PASS",
         "tolerance": 0.5
       }

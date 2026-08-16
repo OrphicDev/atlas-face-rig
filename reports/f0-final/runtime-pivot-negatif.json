@@ -1,0 +1,73 @@
+{
+  "pivot": [
+    1.462985,
+    -0.05097,
+    0.74003
+  ],
+  "images": [
+    1,
+    50
+  ],
+  "sain": {
+    "derive_mm": 0.000112,
+    "course_mm": 67.6269,
+    "pivot_dans_la_boite": true
+  },
+  "fautif": {
+    "decalage_m": 1.541886,
+    "derive_mm": 8.5e-05,
+    "course_mm": 251.9148,
+    "pivot_dans_la_boite": false
+  },
+  "lecon": "la sonde de pivot est aveugle a un maillage decale : le modificateur d'armature ramene les os dans l'espace local du maillage, donc le centre de rotation en monde ne bouge pas. Seuls le bras de levier et la boite le voient.",
+  "registre": {
+    "registre": "runtime-pivot-negatif",
+    "total": 5,
+    "reussies": 5,
+    "echecs": 0,
+    "sautees": 0,
+    "sondes": [
+      {
+        "id": "temoin.pivot_dans_la_boite",
+        "description": "le pivot du contrat est dans la boite du maillage sain",
+        "configuration_connue": "boite monde du runtime",
+        "expected": true,
+        "measured": true,
+        "status": "PASS"
+      },
+      {
+        "id": "temoin.sain",
+        "description": "le montage corrige tourne autour du pivot",
+        "configuration_connue": "864 sommets pleinement machoire",
+        "expected": "<= 0.05 mm",
+        "measured": 0.000112,
+        "status": "PASS",
+        "tolerance": 0.05
+      },
+      {
+        "id": "aveugle.pivot_ne_voit_pas",
+        "description": "la sonde de pivot est AVEUGLE au maillage decale, et c'est force",
+        "configuration_connue": "decalage introduit 1.5419 m",
+        "expected": "derive toujours <= 0.05 mm",
+        "measured": 8.5e-05,
+        "status": "PASS"
+      },
+      {
+        "id": "refus.course_absurde",
+        "description": "la course de machoire devient hors bornes anatomiques",
+        "configuration_connue": "meme decalage",
+        "expected": "hors de [20 ; 90] mm",
+        "measured": 251.9148,
+        "status": "PASS"
+      },
+      {
+        "id": "refus.pivot_hors_boite",
+        "description": "le pivot n'est plus dans la boite du maillage decale",
+        "configuration_connue": "decalage 1.5419 m",
+        "expected": "hors boite",
+        "measured": false,
+        "status": "PASS"
+      }
+    ]
+  }
+}
