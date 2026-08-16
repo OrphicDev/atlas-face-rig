@@ -1,7 +1,8 @@
 # Passe 2 — banc multires anatomique et préflight câblé
 
-Suite de [`RAPPORT_F0_CORRECTION.md`](RAPPORT_F0_CORRECTION.md). **Statut
-inchangé : `F0 INCOMPLET`.**
+Suite de [`RAPPORT_F0_CORRECTION.md`](RAPPORT_F0_CORRECTION.md). **Statut inchangé : `F0 INCOMPLET`.** Suite dans
+[`RAPPORT_PASSE3.md`](RAPPORT_PASSE3.md) — sondes de mesure vérifiées et
+verdicts anatomiques partiels.
 
 Cette passe part de `1c54cb6`, descendant direct de `f852c453…`. Le §1 exigeait
 `HEAD = f852c453…` ; l'état réel est publié ici plutôt que masqué, et le §19

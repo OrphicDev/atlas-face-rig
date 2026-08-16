@@ -64,8 +64,14 @@ class Clignement:
         self.h_min = min(self.parametres(p)[0] for p in conc)
         lat = [abs(self.parametres(p)[1]) for p in conc]
         self.lat_max = max(lat) if lat else 1.0
-        # la ligne de rencontre : au tiers inferieur, comme un oeil reel
-        self.h_contact = self.h_min + 0.36 * (self.h_max - self.h_min)
+        # La ligne de rencontre est placee de sorte que la paupiere SUPERIEURE
+        # parcoure 75 % de l'ouverture et l'inferieure 25 % : c'est ce que
+        # signifie « 70-80 % du trajet », et non « 75 % de sa propre course ».
+        # Premiere version : chaque marge n'allait qu'a une fraction de sa
+        # propre distance, elles ne pouvaient donc PAS se rejoindre, et le banc
+        # rendait 9 a 11 mm de jour residuel — un defaut de mon prototype, pas
+        # de la topologie.
+        self.h_contact = self.h_min + self.PART_INF * (self.h_max - self.h_min)
 
     def deplacer(self, p, intensite):
         p = Vector(p)
@@ -75,14 +81,11 @@ class Clignement:
         # poids : 1 au milieu de la paupiere, 0 aux canthus et 0 hors de la fente
         w_lat = 1.0 - lisse(abs(lateral) / max(self.lat_max, 1e-9))
         if h >= self.h_contact:
-            course = (h - self.h_contact) * self.PART_SUP / max(self.PART_SUP, 1e-9)
-            part = self.PART_SUP
             w_h = lisse((h - self.h_contact) / max(self.h_max - self.h_contact, 1e-9))
-            cible_h = self.h_contact + (h - self.h_contact) * (1.0 - self.PART_SUP)
         else:
-            part = self.PART_INF
             w_h = lisse((self.h_contact - h) / max(self.h_contact - self.h_min, 1e-9))
-            cible_h = self.h_contact - (self.h_contact - h) * (1.0 - self.PART_INF)
+        # les deux marges visent la MEME ligne : c'est ce qui ferme l'oeil
+        cible_h = self.h_contact
         w = w_lat * w_h * intensite
         if w <= 0.0:
             return Vector((0, 0, 0))

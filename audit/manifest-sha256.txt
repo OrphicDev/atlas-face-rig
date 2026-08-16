@@ -1,7 +1,7 @@
 cfb8f3d6f12a033f77a58122e34f6bf59877efe2148ee3e55e68619741d612f4  ./.gitignore
 74e6fbedbc5aa4cebb337f927afc9fec3b32707016345572b776f26b4facd6de  ./CHANGELOG.md
 f8b33e041a0c4bb655a6fe02c7cbd5be4b02991d6a2a30b3cfaf38b2bfd1eb5d  ./README.md
-6ba550c7a6d685ed10b77fc0753ccf58cb3838863268f7407d9e47a4744fac52  ./STATUS.md
+90a54d9efca65d983cdd58c062e566f37add8fba6dad256b7623670152698dcf  ./STATUS.md
 76eb10f95df15fe0f44450d1058cef0103d6ed5fe1551e7ec0d54e225efda057  ./audit/AUDIT_PACKET_FACE.md
 8d2fbb78eb04eafef5d73cc1b9ee75a1f1fc9d8d8c4daa5a3dbeb328236e4f59  ./audit/inspection-asset-corps.json
 556eb52ee460a55c772d052ec68296b3e71ddb656e7e6fbe85dacd215be104e2  ./audit/inspection-asset-tetes.json
@@ -24,8 +24,9 @@ cc4c899fa71ec58555159a33f935446dfe7f0e9e72fb572fdd007e19a92b1133  ./renders/f0/h
 927f12961de68516d4d9bd58b3cd0d8d18661cf1777b511fb1e2d565578c5f71  ./renders/f0/neutre_trq_R.png
 422ed51e3d006788b5ceca5761c370702f452cffbba472d4c2314e1f9728223f  ./reports/.gitkeep
 faedac4b90acef0394985e376839291054490cf430ae3929a2e2f757ac3d572f  ./reports/f0-correction/RAPPORT_F0_CORRECTION.md
-cead72b3585f9d23b2597aaa9c3dd64023ef06a67d040e871df9f579a9292f63  ./reports/f0-correction/RAPPORT_PASSE2.md
-96407b39bc0e70407a6bf1fe59f0287516017600074aa9069bd8132b5e76e1ce  ./reports/f0-correction/multires-ab-v2.json
+624ddc9928b8663f74cb41613103ffa038c7b605f329eca6bc65c4918730b85a  ./reports/f0-correction/RAPPORT_PASSE2.md
+22dee37005510afc407c8e4a734a27146fe2eed444f724f89b11f61b3b144258  ./reports/f0-correction/RAPPORT_PASSE3.md
+c4d2facafd4ccbd17203a2586b05dd01e81e3570f2b2e9dfb4918165dcb75547  ./reports/f0-correction/multires-ab-v2.json
 2a5823a086d803bd009c89bc0aa2b7a3fd072452b9276ff716c989bdec43920b  ./reports/f0-correction/preflight-asset.json
 3eed794a098fff312f9f772b3cb251cfabc1dbef6b9f349ad956246ac2c03708  ./reports/f0-correction/raccord-corps.json
 77173bbfa080027eb1eea4d645ba4dab05396d478153537b15a4b48c0d0e530b  ./reports/f0-correction/verrou-negatif.json
@@ -37,11 +38,11 @@ dd61186eeb6b5dc99da6c212c3d288b975645e732483d2a27793b3eb176cfad0  ./reports/f0/R
 03d0eff60a63039d888ef349057a5c3c03957d354f63ad51d38ddfa41ee6459e  ./rig/sceller-face-base.py
 422ed51e3d006788b5ceca5761c370702f452cffbba472d4c2314e1f9728223f  ./source/.gitkeep
 cc9e55a47b1496fa81ed42deee6ee3a6f498c309d5b86610e5cd2407831f2bd8  ./source/FACE_BASE_LOCKED.blend
-618e184ea7bc86632032afeb54b35ad03c6a58b9468f839b57e801d79d836efb  ./tests/anatomie.py
+c0b5975fa3ff538aa6dd888f55a0020a2495e99084764f445325d9e57c3f489c  ./tests/anatomie.py
 49c6003b27a111c622545f99012f755143743c761bae4936a8929e2c3332094b  ./tests/asset-preflight.py
 250c514064c218473389f404cec81f7f7f07cedb0ea260f5d5083a72c8ac30fc  ./tests/atlas_commun.py
 616131a84b8f003cde544e10043190876105f9449b520177fec767ecb4b39a05  ./tests/f0-audit-topologie.py
-efb5029d9a981a2a926d339708dcfd520ebb20b6d187434af76e5791167e3696  ./tests/f0-multires-v2.py
+63cca630166d05bce4a8ee251132dadb94457133ecd9abab03231ac5b7a5364c  ./tests/f0-multires-v2.py
 d116ee1caa497039d47ac13627e1886c2c1b2d8b7a9f59a35682c81ef0ad5b57  ./tests/f0-multires.py
 dd20cf30cb218a73227b877b49be4f2fb1fd3e692ab6037a90a2895ba80338d4  ./tests/f0-raccord-corps.py
 a6b7259d10c2e84d3580108839a4adf0f1ee68fcc7bfa4b56719d6c067b49063  ./tests/inspecter-asset-corps.py
