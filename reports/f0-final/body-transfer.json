@@ -1,0 +1,93 @@
+{
+  "masque": {
+    "sommets": 10582,
+    "pleins": 1316,
+    "nuls": 7749,
+    "rejets_de_carte": 0
+  },
+  "carte": {
+    "entrees": 2833
+  },
+  "poses": {
+    "neutral": {
+      "sommets_transferes": 2833,
+      "deplacement_max_hors_masque_mm": 0.0,
+      "delta_max_mm": 0.0
+    },
+    "blink_L_100": {
+      "sommets_transferes": 2833,
+      "deplacement_max_hors_masque_mm": 0.0,
+      "delta_max_mm": 9.2375
+    },
+    "blink_R_100": {
+      "sommets_transferes": 2833,
+      "deplacement_max_hors_masque_mm": 0.0,
+      "delta_max_mm": 5.3101
+    },
+    "lips_close_100": {
+      "sommets_transferes": 2833,
+      "deplacement_max_hors_masque_mm": 0.0,
+      "delta_max_mm": 1.6519
+    },
+    "jaw_20": {
+      "sommets_transferes": 2833,
+      "deplacement_max_hors_masque_mm": 0.0,
+      "delta_max_mm": 30.4506
+    },
+    "jaw_32": {
+      "sommets_transferes": 2833,
+      "deplacement_max_hors_masque_mm": 0.0,
+      "delta_max_mm": 47.1141
+    }
+  },
+  "registre": {
+    "registre": "build-body-transfer",
+    "total": 5,
+    "reussies": 5,
+    "echecs": 0,
+    "sautees": 0,
+    "sondes": [
+      {
+        "id": "transfert.masque_cou_nul",
+        "description": "le masque atteint zero avant le cou",
+        "configuration_connue": "anneau de cou mesure",
+        "expected": 0.0,
+        "measured": 0.0,
+        "status": "PASS"
+      },
+      {
+        "id": "transfert.masque_tronc_nul",
+        "description": "le tronc ne bouge pas",
+        "configuration_connue": "z bas",
+        "expected": 0.0,
+        "measured": 0.0,
+        "status": "PASS"
+      },
+      {
+        "id": "transfert.barycentriques",
+        "description": "les poids barycentriques somment a 1",
+        "configuration_connue": "toutes les entrees, apres normalisation",
+        "expected": 0.0,
+        "measured": 1e-12,
+        "status": "PASS"
+      },
+      {
+        "id": "transfert.point_dans_le_triangle",
+        "description": "l'ecart brut des trois aires prouve que le point est dans le triangle",
+        "configuration_connue": "avant normalisation",
+        "expected": "< 1e-3",
+        "measured": 0.000814794,
+        "status": "PASS",
+        "tolerance": 0.001
+      },
+      {
+        "id": "transfert.neutre_inchange",
+        "description": "le neutre du corps ne bouge pas",
+        "configuration_connue": "pose neutral",
+        "expected": 0.0,
+        "measured": 0.0,
+        "status": "PASS"
+      }
+    ]
+  }
+}

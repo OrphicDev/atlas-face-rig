@@ -1,0 +1,343 @@
+{
+  "preflight": {
+    "size_expected": 49420489,
+    "sha256_expected": "3c121505651140ceb4d69fd1d8923f7788ffadd81672f5be14845a5f2c75c137",
+    "paquet": "Human Base Meshes bundle v1.4.1",
+    "licence": "CC0",
+    "path_basename": "human_base_meshes_bundle.blend",
+    "size_measured": 49420489,
+    "sha256_measured": "3c121505651140ceb4d69fd1d8923f7788ffadd81672f5be14845a5f2c75c137",
+    "basename_conforme": true,
+    "status": "OK"
+  },
+  "landmarks": [
+    "oeil_L",
+    "oeil_R",
+    "nez",
+    "menton"
+  ],
+  "M_head_to_body": [
+    [
+      1.029231245,
+      0.051465273,
+      -0.077753196,
+      -3.703271368
+    ],
+    [
+      -0.046974191,
+      1.030611914,
+      0.060363041,
+      0.031850856
+    ],
+    [
+      0.080546007,
+      -0.056582656,
+      1.02874775,
+      0.65994259
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "echelle_uniforme": 1.033446268,
+  "ecart_a_1_pct": 3.344627,
+  "residu_mm": {
+    "p50": 3.437,
+    "p95": 4.0694,
+    "max": 4.0694,
+    "par_repere": {
+      "oeil_L": 2.5844,
+      "oeil_R": 4.0694,
+      "nez": 3.437,
+      "menton": 2.339
+    }
+  },
+  "sha_tete": "GEO-head_animation_realistic",
+  "sha_corps": "GEO-body_male_realistic",
+  "reperes": {
+    "tete": {
+      "saillie_du_nez_mm": 56.846,
+      "chute_du_menton_mm": 119.213,
+      "sommets_dans_la_boule": 2824,
+      "sommets_du_maillage": 3242,
+      "nom": "tete",
+      "objet": "GEO-head_animation_realistic",
+      "oeil_L": {
+        "centre": [
+          1.494858,
+          -0.12619,
+          0.766694
+        ],
+        "rayon_mm": 11.702,
+        "objet": "GEO-head_animation_realistic.sclera.L"
+      },
+      "oeil_R": {
+        "centre": [
+          1.43028,
+          -0.12619,
+          0.766694
+        ],
+        "rayon_mm": 11.702,
+        "objet": "GEO-head_animation_realistic.sclera.R"
+      },
+      "origine_interoculaire": [
+        1.462569,
+        -0.12619,
+        0.766694
+      ],
+      "distance_interoculaire_mm": 64.578,
+      "pointe_du_nez": [
+        1.462629,
+        -0.169033,
+        0.729331
+      ],
+      "menton": [
+        1.449454,
+        -0.086507,
+        0.643124
+      ],
+      "axe_lateral": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "axe_avant": [
+        0.0,
+        -0.753661,
+        -0.657264
+      ],
+      "axe_vertical": [
+        -0.0,
+        -0.657264,
+        0.753661
+      ],
+      "matrice_monde": [
+        [
+          0.9,
+          0.0,
+          0.0,
+          1.462572
+        ],
+        [
+          0.0,
+          0.9,
+          0.0,
+          -0.021928
+        ],
+        [
+          0.0,
+          0.0,
+          0.9,
+          0.487662
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sommets": 3242,
+      "faces": 3234,
+      "bbox_min": [
+        1.372378,
+        -0.169033,
+        0.641337
+      ],
+      "bbox_max": [
+        1.551422,
+        -0.003865,
+        0.879991
+      ]
+    },
+    "corps": {
+      "saillie_du_nez_mm": 54.36,
+      "chute_du_menton_mm": 124.881,
+      "sommets_dans_la_boule": 3247,
+      "sommets_du_maillage": 10582,
+      "nom": "corps",
+      "objet": "GEO-body_male_realistic",
+      "oeil_L": {
+        "centre": [
+          -2.231393,
+          -0.122171,
+          1.573702
+        ],
+        "rayon_mm": 11.692,
+        "objet": "GEO-body_male_realistic.eye.L"
+      },
+      "oeil_R": {
+        "centre": [
+          -2.297248,
+          -0.12217,
+          1.573702
+        ],
+        "rayon_mm": 11.692,
+        "objet": "GEO-body_male_realistic.eye.R"
+      },
+      "origine_interoculaire": [
+        -2.26432,
+        -0.12217,
+        1.573702
+      ],
+      "distance_interoculaire_mm": 65.855,
+      "pointe_du_nez": [
+        -2.264336,
+        -0.16416,
+        1.539178
+      ],
+      "menton": [
+        -2.264338,
+        -0.086358,
+        1.441473
+      ],
+      "axe_lateral": [
+        1.0,
+        -9e-06,
+        0.0
+      ],
+      "axe_avant": [
+        -7e-06,
+        -0.772429,
+        -0.635101
+      ],
+      "axe_vertical": [
+        -6e-06,
+        -0.635101,
+        0.772429
+      ],
+      "matrice_monde": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -2.264302
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sommets": 10582,
+      "faces": 10590,
+      "bbox_min": [
+        -2.355601,
+        -0.16416,
+        1.441473
+      ],
+      "bbox_max": [
+        -2.173251,
+        -0.00092,
+        1.683998
+      ]
+    }
+  },
+  "registre": {
+    "registre": "fit-head-to-body",
+    "total": 10,
+    "reussies": 10,
+    "echecs": 0,
+    "sautees": 0,
+    "sondes": [
+      {
+        "id": "reperes.tete.yeux_anterieurs",
+        "description": "les yeux sont devant le centre de la tete",
+        "configuration_connue": "boule de 140 mm autour du plan des yeux",
+        "expected": "> 0",
+        "measured": 16.327,
+        "status": "PASS"
+      },
+      {
+        "id": "reperes.tete.saillie_du_nez",
+        "description": "la pointe du nez est en avant du plan des yeux, de 20 a 90 mm",
+        "configuration_connue": "boule de 140 mm",
+        "expected": "20 a 90 mm",
+        "measured": 56.85,
+        "status": "PASS"
+      },
+      {
+        "id": "reperes.tete.chute_du_menton",
+        "description": "le menton est sous le plan des yeux, de 50 a 140 mm",
+        "configuration_connue": "boule de 140 mm",
+        "expected": "50 a 140 mm",
+        "measured": 119.21,
+        "status": "PASS"
+      },
+      {
+        "id": "reperes.tete.interoculaire_plausible",
+        "description": "distance interoculaire humaine, 50 a 80 mm",
+        "configuration_connue": "centres des deux globes",
+        "expected": "50 a 80 mm",
+        "measured": 64.578,
+        "status": "PASS"
+      },
+      {
+        "id": "reperes.corps.yeux_anterieurs",
+        "description": "les yeux sont devant le centre de la tete",
+        "configuration_connue": "boule de 140 mm autour du plan des yeux",
+        "expected": "> 0",
+        "measured": 18.233,
+        "status": "PASS"
+      },
+      {
+        "id": "reperes.corps.saillie_du_nez",
+        "description": "la pointe du nez est en avant du plan des yeux, de 20 a 90 mm",
+        "configuration_connue": "boule de 140 mm",
+        "expected": "20 a 90 mm",
+        "measured": 54.36,
+        "status": "PASS"
+      },
+      {
+        "id": "reperes.corps.chute_du_menton",
+        "description": "le menton est sous le plan des yeux, de 50 a 140 mm",
+        "configuration_connue": "boule de 140 mm",
+        "expected": "50 a 140 mm",
+        "measured": 124.88,
+        "status": "PASS"
+      },
+      {
+        "id": "reperes.corps.interoculaire_plausible",
+        "description": "distance interoculaire humaine, 50 a 80 mm",
+        "configuration_connue": "centres des deux globes",
+        "expected": "50 a 80 mm",
+        "measured": 65.855,
+        "status": "PASS"
+      },
+      {
+        "id": "fit.echelle_uniforme_xy",
+        "description": "echelle uniforme",
+        "configuration_connue": "similarite",
+        "expected": 0.0,
+        "measured": 0.0,
+        "status": "PASS",
+        "tolerance": 1e-06
+      },
+      {
+        "id": "fit.echelle_uniforme_yz",
+        "description": "echelle uniforme",
+        "configuration_connue": "similarite",
+        "expected": 0.0,
+        "measured": 0.0,
+        "status": "PASS",
+        "tolerance": 1e-06
+      }
+    ]
+  }
+}
