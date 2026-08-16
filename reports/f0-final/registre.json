@@ -1,0 +1,1542 @@
+{
+  "mode": "final",
+  "blender": "/Applications/Blender.app/Contents/MacOS/Blender",
+  "suites": {
+    "verrou_positif": {
+      "rapport": null,
+      "code": 0,
+      "verdict": "PASS",
+      "sondes": 0,
+      "reussies": 0,
+      "echecs": 0,
+      "sautees": 0
+    },
+    "verrou_negatif": {
+      "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/verrou-negatif.json",
+      "code": 0,
+      "verdict": "PASS",
+      "sondes": 0,
+      "reussies": 0,
+      "echecs": 0,
+      "sautees": 0
+    },
+    "multires": {
+      "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/multires-ab-v2.json",
+      "code": 2,
+      "verdict": "FAIL",
+      "sondes": 26,
+      "reussies": 21,
+      "echecs": 3,
+      "sautees": 2
+    },
+    "raccord": {
+      "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/raccord-corps.json",
+      "code": 2,
+      "verdict": "FAIL",
+      "sondes": 0,
+      "reussies": 0,
+      "echecs": 0,
+      "sautees": 0
+    },
+    "hygiene": {
+      "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/hygiene-blend-raw.json",
+      "code": 1,
+      "verdict": "FAIL",
+      "sondes": 11,
+      "reussies": 10,
+      "echecs": 1,
+      "sautees": 0
+    },
+    "anatomy_counts": {
+      "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/anatomy-counts.json",
+      "code": 0,
+      "verdict": "PASS",
+      "sondes": 10,
+      "reussies": 10,
+      "echecs": 0,
+      "sautees": 0
+    },
+    "contrat_de_sortie": {
+      "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/contract-check.json",
+      "code": 0,
+      "verdict": "PASS",
+      "sondes": 3,
+      "reussies": 3,
+      "echecs": 0,
+      "sautees": 0
+    },
+    "gltf_conformite": {
+      "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/validation-glb.json",
+      "code": 0,
+      "verdict": "FAIL",
+      "sondes": 16,
+      "reussies": 15,
+      "echecs": 0,
+      "sautees": 1
+    },
+    "gltf_conformite_negatif": {
+      "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/validation-glb-negatif.json",
+      "code": 0,
+      "verdict": "PASS",
+      "sondes": 15,
+      "reussies": 15,
+      "echecs": 0,
+      "sautees": 0
+    },
+    "gltf_aller_retour": {
+      "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/experiments/gltf-spike/roundtrip.json",
+      "code": 0,
+      "verdict": "PASS",
+      "sondes": 14,
+      "reussies": 14,
+      "echecs": 0,
+      "sautees": 0
+    },
+    "runtime_glb": {
+      "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/runtime-glb.json",
+      "code": 0,
+      "verdict": "PASS",
+      "sondes": 8,
+      "reussies": 8,
+      "echecs": 0,
+      "sautees": 0
+    },
+    "runtime_pivot_negatif": {
+      "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/runtime-pivot-negatif.json",
+      "code": 0,
+      "verdict": "PASS",
+      "sondes": 5,
+      "reussies": 5,
+      "echecs": 0,
+      "sautees": 0
+    },
+    "coupe_sagittale": {
+      "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/sagittal-render.json",
+      "code": 2,
+      "verdict": "FAIL",
+      "sondes": 14,
+      "reussies": 11,
+      "echecs": 3,
+      "sautees": 0
+    },
+    "wireframes": {
+      "rapport": "/Users/orphicagency/Projet de développement/atlas-face-rig/reports/f0-final/wireframes.json",
+      "code": 0,
+      "verdict": "PASS",
+      "sondes": 27,
+      "reussies": 27,
+      "echecs": 0,
+      "sautees": 0
+    }
+  },
+  "total_sondes": 149,
+  "reussies": 139,
+  "echecs": [
+    "multires/clignement.A_cage.gap_ferme_L",
+    "multires/clignement.A_cage.gap_ferme_R",
+    "multires/levres.A_cage.gap_max",
+    "hygiene/blend.aucun_chemin_personnel",
+    "coupe_sagittale/sagittal.image.median_bouche",
+    "coupe_sagittale/sagittal.image.median_cavite_orale",
+    "coupe_sagittale/sagittal.image.median_cou"
+  ],
+  "sautees": [
+    "multires/clignement.B_haute_resolution.gap",
+    "multires/levres.B_haute_resolution.gap",
+    "gltf_conformite/khronos.validator"
+  ],
+  "suites_en_echec": [
+    "multires",
+    "raccord",
+    "hygiene",
+    "gltf_conformite",
+    "coupe_sagittale"
+  ],
+  "status": "FAIL",
+  "sondes": [
+    {
+      "id": "sonde.sphere.rayon_connu",
+      "description": "ajustement sur une calotte de rayon connu",
+      "configuration_connue": "24 points sur une sphere de 11,7 mm",
+      "expected": 11.7,
+      "measured": 11.7,
+      "status": "PASS",
+      "tolerance": 1e-06,
+      "suite": "multires"
+    },
+    {
+      "id": "sonde.sphere.centre_connu",
+      "description": "centre retrouve",
+      "configuration_connue": "meme calotte",
+      "expected": [
+        1.5,
+        -0.2,
+        0.8
+      ],
+      "measured": [
+        1.5,
+        -0.2,
+        0.8
+      ],
+      "status": "PASS",
+      "suite": "multires"
+    },
+    {
+      "id": "sonde.appartenance.centre_dedans",
+      "description": "le centre du globe est interieur",
+      "configuration_connue": "maillage de la sclere gauche",
+      "expected": true,
+      "measured": true,
+      "status": "PASS",
+      "suite": "multires"
+    },
+    {
+      "id": "sonde.appartenance.loin_dehors",
+      "description": "un point a 300 mm est exterieur",
+      "configuration_connue": "maillage de la sclere gauche",
+      "expected": false,
+      "measured": false,
+      "status": "PASS",
+      "suite": "multires"
+    },
+    {
+      "id": "sonde.gap_ouverture.L",
+      "description": "la sonde retrouve EXACTEMENT la fente publiee en F0",
+      "configuration_connue": "cage NEUTRE, indices de bord de reports/f0",
+      "expected": 18.38,
+      "measured": 18.3834,
+      "status": "PASS",
+      "tolerance": 0.02,
+      "suite": "multires"
+    },
+    {
+      "id": "sonde.gap_ouverture.R",
+      "description": "la sonde retrouve EXACTEMENT la fente publiee en F0",
+      "configuration_connue": "cage NEUTRE, indices de bord de reports/f0",
+      "expected": 16.34,
+      "measured": 16.3367,
+      "status": "PASS",
+      "tolerance": 0.02,
+      "suite": "multires"
+    },
+    {
+      "id": "sonde.gap_levres.neutre_mesure",
+      "description": "la sonde rend une valeur finie au neutre",
+      "configuration_connue": "maillage NEUTRE",
+      "expected": "valeur finie",
+      "measured": 5.6915,
+      "status": "PASS",
+      "suite": "multires"
+    },
+    {
+      "id": "sonde.penetration.mesuree_au_neutre",
+      "description": "la sonde rend une valeur exploitable au neutre",
+      "configuration_connue": "maillage NEUTRE, test d'appartenance verifie",
+      "expected": "valeur finie",
+      "measured": {
+        "anterieures": 193,
+        "posterieures": 15,
+        "total": 208
+      },
+      "status": "PASS",
+      "suite": "multires"
+    },
+    {
+      "id": "clignement.A_cage.retour_neutre",
+      "description": "commande a 0 apres un geste a 100 %",
+      "configuration_connue": "prototype anatomique, intensite 1,0",
+      "expected": "<= 0,01 mm",
+      "measured": 0.0,
+      "status": "PASS",
+      "tolerance": 0.01,
+      "suite": "multires"
+    },
+    {
+      "id": "clignement.A_cage.uv_intacte",
+      "description": "SHA-256 des UV avant / apres shape key / apres evaluation",
+      "configuration_connue": "meme topologie",
+      "expected": "identiques",
+      "measured": true,
+      "status": "PASS",
+      "suite": "multires"
+    },
+    {
+      "id": "clignement.B_haute_resolution.retour_neutre",
+      "description": "commande a 0 apres un geste a 100 %",
+      "configuration_connue": "prototype anatomique, intensite 1,0",
+      "expected": "<= 0,01 mm",
+      "measured": 0.0,
+      "status": "PASS",
+      "tolerance": 0.01,
+      "suite": "multires"
+    },
+    {
+      "id": "clignement.B_haute_resolution.uv_intacte",
+      "description": "SHA-256 des UV avant / apres shape key / apres evaluation",
+      "configuration_connue": "meme topologie",
+      "expected": "identiques",
+      "measured": true,
+      "status": "PASS",
+      "suite": "multires"
+    },
+    {
+      "id": "fermeture_labiale.A_cage.retour_neutre",
+      "description": "commande a 0 apres un geste a 100 %",
+      "configuration_connue": "prototype anatomique, intensite 1,0",
+      "expected": "<= 0,01 mm",
+      "measured": 0.0,
+      "status": "PASS",
+      "tolerance": 0.01,
+      "suite": "multires"
+    },
+    {
+      "id": "fermeture_labiale.A_cage.uv_intacte",
+      "description": "SHA-256 des UV avant / apres shape key / apres evaluation",
+      "configuration_connue": "meme topologie",
+      "expected": "identiques",
+      "measured": true,
+      "status": "PASS",
+      "suite": "multires"
+    },
+    {
+      "id": "fermeture_labiale.B_haute_resolution.retour_neutre",
+      "description": "commande a 0 apres un geste a 100 %",
+      "configuration_connue": "prototype anatomique, intensite 1,0",
+      "expected": "<= 0,01 mm",
+      "measured": 0.0,
+      "status": "PASS",
+      "tolerance": 0.01,
+      "suite": "multires"
+    },
+    {
+      "id": "fermeture_labiale.B_haute_resolution.uv_intacte",
+      "description": "SHA-256 des UV avant / apres shape key / apres evaluation",
+      "configuration_connue": "meme topologie",
+      "expected": "identiques",
+      "measured": true,
+      "status": "PASS",
+      "suite": "multires"
+    },
+    {
+      "id": "clignement.A_cage.penetration_sans_aggravation",
+      "description": "le clignement n'ajoute aucune penetration anterieure",
+      "configuration_connue": "neutre a 193 penetrations anterieures",
+      "expected": "<= 193",
+      "measured": 64,
+      "status": "PASS",
+      "suite": "multires"
+    },
+    {
+      "id": "clignement.A_cage.gap_ferme_L",
+      "description": "le clignement referme l'ouverture publiee en F0",
+      "configuration_connue": "neutre a 17.519 mm",
+      "expected": "<= 0,20 mm",
+      "measured": 2.3937,
+      "status": "FAIL",
+      "tolerance": 0.2,
+      "suite": "multires"
+    },
+    {
+      "id": "clignement.A_cage.gap_ferme_R",
+      "description": "le clignement referme l'ouverture publiee en F0",
+      "configuration_connue": "neutre a 11.490 mm",
+      "expected": "<= 0,20 mm",
+      "measured": 4.0046,
+      "status": "FAIL",
+      "tolerance": 0.2,
+      "suite": "multires"
+    },
+    {
+      "id": "clignement.B_haute_resolution.penetration_sans_aggravation",
+      "description": "le clignement n'ajoute aucune penetration anterieure",
+      "configuration_connue": "neutre a 193 penetrations anterieures",
+      "expected": "<= 193",
+      "measured": 6,
+      "status": "PASS",
+      "suite": "multires"
+    },
+    {
+      "id": "clignement.B_haute_resolution.gap",
+      "description": "jour restant a 100 %",
+      "status": "SKIP",
+      "raison": "mesure definie sur la cage seulement",
+      "suite": "multires"
+    },
+    {
+      "id": "levres.A_cage.gap_reduit",
+      "description": "la fermeture reduit la fente mesuree au neutre",
+      "configuration_connue": "neutre a 5.691 mm",
+      "expected": "< 5.691 mm",
+      "measured": 0.9688,
+      "status": "PASS",
+      "suite": "multires"
+    },
+    {
+      "id": "levres.A_cage.gap_max",
+      "description": "pire jour le long du bord publie en F0",
+      "configuration_connue": "fermeture a 100 %",
+      "expected": "<= 0,30 mm",
+      "measured": 0.9688,
+      "status": "FAIL",
+      "tolerance": 0.3,
+      "suite": "multires"
+    },
+    {
+      "id": "levres.B_haute_resolution.gap",
+      "description": "jour labial restant",
+      "status": "SKIP",
+      "raison": "mesure definie sur la cage seulement",
+      "suite": "multires"
+    },
+    {
+      "id": "machoire.A_cage.zero_degre_est_le_neutre",
+      "description": "0 degre doit rendre exactement le neutre",
+      "configuration_connue": "mandibule a 0 degre",
+      "expected": "<= 0,01 mm",
+      "measured": 0.0,
+      "status": "PASS",
+      "tolerance": 0.01,
+      "suite": "multires"
+    },
+    {
+      "id": "machoire.B_haute_resolution.zero_degre_est_le_neutre",
+      "description": "0 degre doit rendre exactement le neutre",
+      "configuration_connue": "mandibule a 0 degre",
+      "expected": "<= 0,01 mm",
+      "measured": 0.0,
+      "status": "PASS",
+      "tolerance": 0.01,
+      "suite": "multires"
+    },
+    {
+      "id": "scanner.users_mac",
+      "description": "le scanner voit un chemin /Users",
+      "configuration_connue": "fichier temoin fabrique",
+      "expected": 1,
+      "measured": 1,
+      "status": "PASS",
+      "suite": "hygiene"
+    },
+    {
+      "id": "scanner.home_linux",
+      "description": "le scanner voit un chemin /home",
+      "configuration_connue": "fichier temoin fabrique",
+      "expected": 1,
+      "measured": 1,
+      "status": "PASS",
+      "suite": "hygiene"
+    },
+    {
+      "id": "scanner.asset_source",
+      "description": "le scanner voit le nom du paquet source",
+      "configuration_connue": "fichier temoin fabrique",
+      "expected": 1,
+      "measured": 1,
+      "status": "PASS",
+      "suite": "hygiene"
+    },
+    {
+      "id": "scanner.courriel",
+      "description": "le scanner voit une adresse de courriel",
+      "configuration_connue": "fichier temoin fabrique",
+      "expected": 1,
+      "measured": 1,
+      "status": "PASS",
+      "suite": "hygiene"
+    },
+    {
+      "id": "scanner.pas_de_faux_positif",
+      "description": "aucun motif sur un fichier neutre",
+      "configuration_connue": "fichier temoin neutre",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "hygiene"
+    },
+    {
+      "id": "blend.aucun_secret",
+      "description": "aucun jeton ni cle privee dans le fichier",
+      "configuration_connue": "fichier non compresse scanne",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "hygiene"
+    },
+    {
+      "id": "blend.aucun_courriel",
+      "description": "aucune adresse de courriel",
+      "configuration_connue": "fichier non compresse scanne",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "hygiene"
+    },
+    {
+      "id": "blend.aucune_bibliotheque_liee",
+      "description": "aucune bibliotheque externe liee",
+      "configuration_connue": "API Blender",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "hygiene"
+    },
+    {
+      "id": "blend.aucune_image_externe",
+      "description": "aucune image externe",
+      "configuration_connue": "API Blender",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "hygiene"
+    },
+    {
+      "id": "blend.aucun_texte_embarque",
+      "description": "aucun script embarque",
+      "configuration_connue": "API Blender",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "hygiene"
+    },
+    {
+      "id": "blend.aucun_chemin_personnel",
+      "description": "aucun chemin /Users dans le fichier",
+      "configuration_connue": "fichier non compresse scanne",
+      "expected": 0,
+      "measured": 1,
+      "status": "FAIL",
+      "suite": "hygiene"
+    },
+    {
+      "id": "anatomie.sha_marges",
+      "description": "les marges decrivent CETTE topologie",
+      "configuration_connue": "correspondances-marges.json",
+      "expected": "b65d7f10895f3077b8dbe8d10f8830e79eddf7f7c06c853119c027857c0b2a63",
+      "measured": "b65d7f10895f3077b8dbe8d10f8830e79eddf7f7c06c853119c027857c0b2a63",
+      "status": "PASS",
+      "suite": "anatomy_counts"
+    },
+    {
+      "id": "anatomie.regions_definies",
+      "description": "chaque region necessaire est definie",
+      "configuration_connue": "audit de topologie",
+      "expected": [],
+      "measured": [],
+      "status": "PASS",
+      "suite": "anatomy_counts"
+    },
+    {
+      "id": "anatomie.peau_exterieure",
+      "description": "le classement peau/muqueuse retrouve celui de l'audit",
+      "configuration_connue": "48 rayons, seuil 0.15",
+      "expected": 2458,
+      "measured": 2458,
+      "status": "PASS",
+      "suite": "anatomy_counts"
+    },
+    {
+      "id": "anatomie.boucles_palpebrales.L",
+      "description": "anneaux a <= 10 mm de la fente palpebrale",
+      "configuration_connue": "20 sommets de bord cote peau",
+      "expected": ">= 1",
+      "measured": 5,
+      "status": "PASS",
+      "suite": "anatomy_counts"
+    },
+    {
+      "id": "anatomie.boucles_palpebrales.R",
+      "description": "anneaux a <= 10 mm de la fente palpebrale",
+      "configuration_connue": "20 sommets de bord cote peau",
+      "expected": ">= 1",
+      "measured": 5,
+      "status": "PASS",
+      "suite": "anatomy_counts"
+    },
+    {
+      "id": "anatomie.boucles_labiales",
+      "description": "anneaux a <= 10 mm de la fente labiale",
+      "configuration_connue": "38 sommets de bord cote peau",
+      "expected": ">= 1",
+      "measured": 3,
+      "status": "PASS",
+      "suite": "anatomy_counts"
+    },
+    {
+      "id": "anatomie.profil_reproduit",
+      "description": "le profil recompute retrouve celui de l'audit",
+      "configuration_connue": "meme topologie, sonde a reponse connue",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "anatomy_counts"
+    },
+    {
+      "id": "anatomie.triangles_bouche",
+      "description": "triangles de la region bouche",
+      "configuration_connue": "18 triangles dans le maillage",
+      "expected": ">= 0",
+      "measured": 14,
+      "status": "PASS",
+      "suite": "anatomy_counts"
+    },
+    {
+      "id": "anatomie.bord_narine.L",
+      "description": "sommets de bord de narine",
+      "configuration_connue": "cote peau",
+      "expected": ">= 1",
+      "measured": 7,
+      "status": "PASS",
+      "suite": "anatomy_counts"
+    },
+    {
+      "id": "anatomie.bord_narine.R",
+      "description": "sommets de bord de narine",
+      "configuration_connue": "cote peau",
+      "expected": ">= 1",
+      "measured": 8,
+      "status": "PASS",
+      "suite": "anatomy_counts"
+    },
+    {
+      "id": "contrat.verification",
+      "description": "chaque artefact retrouve son SHA",
+      "configuration_connue": "12 artefacts declares",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "contrat_de_sortie"
+    },
+    {
+      "id": "contrat.refus_sha_modifie",
+      "description": "un artefact dont un chiffre change est refuse",
+      "configuration_connue": "copie temporaire de reports/f0-final/author-input.json",
+      "expected": "refus sur artifacts.author_input",
+      "measured": "refuse",
+      "status": "PASS",
+      "suite": "contrat_de_sortie"
+    },
+    {
+      "id": "contrat.artefact_intact",
+      "description": "l'artefact versionne n'a pas ete touche",
+      "configuration_connue": "reports/f0-final/author-input.json",
+      "expected": "33e7e352c226",
+      "measured": "33e7e352c226",
+      "status": "PASS",
+      "suite": "contrat_de_sortie"
+    },
+    {
+      "id": "glb.conteneur",
+      "description": "entete, longueurs et alignement des chunks",
+      "configuration_connue": "lecture octet par octet",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "gltf_conformite"
+    },
+    {
+      "id": "gltf.version",
+      "description": "asset.version vaut 2.0",
+      "configuration_connue": "chunk JSON",
+      "expected": "2.0",
+      "measured": "2.0",
+      "status": "PASS",
+      "suite": "gltf_conformite"
+    },
+    {
+      "id": "gltf.bufferviews",
+      "description": "chaque bufferView tient dans le BIN",
+      "configuration_connue": "28 bufferViews",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "gltf_conformite"
+    },
+    {
+      "id": "gltf.sparse",
+      "description": "blocs sparse : indices croissants et dans les bornes",
+      "configuration_connue": "6 accessor(s) sparse",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "gltf_conformite"
+    },
+    {
+      "id": "gltf.accessors",
+      "description": "type, alignement et bornes de chaque accessor",
+      "configuration_connue": "22 accessors",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "gltf_conformite"
+    },
+    {
+      "id": "gltf.min_max",
+      "description": "les min/max declares sont les vrais",
+      "configuration_connue": "recalcul sur les donnees",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "gltf_conformite"
+    },
+    {
+      "id": "gltf.indices",
+      "description": "indices dans les bornes, triangles complets",
+      "configuration_connue": "1 meshes",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "gltf_conformite"
+    },
+    {
+      "id": "gltf.normales",
+      "description": "normales unitaires a 1e-3",
+      "configuration_connue": "toutes les normales",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "gltf_conformite"
+    },
+    {
+      "id": "gltf.poids",
+      "description": "les poids de peau somment a 1 a 2e-3",
+      "configuration_connue": "tous les sommets peses",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "gltf_conformite"
+    },
+    {
+      "id": "gltf.joints",
+      "description": "chaque index d'os designe un joint du skin",
+      "configuration_connue": "2 joints",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "gltf_conformite"
+    },
+    {
+      "id": "gltf.morphs",
+      "description": "meme nombre de targets sur toutes les primitives",
+      "configuration_connue": "1 meshes",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "gltf_conformite"
+    },
+    {
+      "id": "gltf.hierarchie",
+      "description": "chaque noeud a au plus un parent, sans cycle",
+      "configuration_connue": "4 noeuds",
+      "expected": "0 double, 0 cycle",
+      "measured": "0 double(s), 0 cycle",
+      "status": "PASS",
+      "suite": "gltf_conformite"
+    },
+    {
+      "id": "gltf.animations",
+      "description": "echantillonneurs et canaux coherents",
+      "configuration_connue": "2 animation(s)",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "gltf_conformite"
+    },
+    {
+      "id": "gltf.quaternions",
+      "description": "quaternions unitaires a 2e-3",
+      "configuration_connue": "noeuds et animations",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "gltf_conformite"
+    },
+    {
+      "id": "gltf.skin",
+      "description": "une matrice de bind par joint",
+      "configuration_connue": "1 skin(s)",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "gltf_conformite"
+    },
+    {
+      "id": "khronos.validator",
+      "description": "le validateur officiel Khronos ne signale aucune erreur",
+      "status": "SKIP",
+      "raison": "validateur Khronos absent de la machine : ni `gltf-validator` dans le PATH ni --khronos fourni",
+      "suite": "gltf_conformite"
+    },
+    {
+      "id": "temoin.intact",
+      "description": "le fichier non mute passe le controleur",
+      "configuration_connue": "GLB d'origine",
+      "expected": 0,
+      "measured": 0,
+      "status": "PASS",
+      "suite": "gltf_conformite_negatif"
+    },
+    {
+      "id": "refus.conteneur.conteneur",
+      "description": "le controleur refuse : longueur totale declaree fausse",
+      "configuration_connue": "mutation ciblee",
+      "expected": "glb.conteneur en FAIL",
+      "measured": "glb.conteneur",
+      "status": "PASS",
+      "suite": "gltf_conformite_negatif"
+    },
+    {
+      "id": "refus.version.version",
+      "description": "le controleur refuse : asset.version = 1.0",
+      "configuration_connue": "mutation ciblee",
+      "expected": "gltf.version en FAIL",
+      "measured": "gltf.version",
+      "status": "PASS",
+      "suite": "gltf_conformite_negatif"
+    },
+    {
+      "id": "refus.bufferviews.bufferview",
+      "description": "le controleur refuse : un bufferView deborde le BIN",
+      "configuration_connue": "mutation ciblee",
+      "expected": "gltf.bufferviews en FAIL",
+      "measured": "gltf.bufferviews",
+      "status": "PASS",
+      "suite": "gltf_conformite_negatif"
+    },
+    {
+      "id": "refus.min_max.minmax",
+      "description": "le controleur refuse : un min declare plus bas que le vrai",
+      "configuration_connue": "mutation ciblee",
+      "expected": "gltf.min_max en FAIL",
+      "measured": "gltf.min_max",
+      "status": "PASS",
+      "suite": "gltf_conformite_negatif"
+    },
+    {
+      "id": "refus.indices.indices",
+      "description": "le controleur refuse : un indice depasse le nombre de sommets",
+      "configuration_connue": "mutation ciblee",
+      "expected": "gltf.indices en FAIL",
+      "measured": "gltf.indices",
+      "status": "PASS",
+      "suite": "gltf_conformite_negatif"
+    },
+    {
+      "id": "refus.normales.normale",
+      "description": "le controleur refuse : une normale de longueur 4",
+      "configuration_connue": "mutation ciblee",
+      "expected": "gltf.normales en FAIL",
+      "measured": "gltf.normales",
+      "status": "PASS",
+      "suite": "gltf_conformite_negatif"
+    },
+    {
+      "id": "refus.poids.poids",
+      "description": "le controleur refuse : des poids qui ne somment plus a 1",
+      "configuration_connue": "mutation ciblee",
+      "expected": "gltf.poids en FAIL",
+      "measured": "gltf.poids",
+      "status": "PASS",
+      "suite": "gltf_conformite_negatif"
+    },
+    {
+      "id": "refus.joints.joints",
+      "description": "le controleur refuse : un index d'os hors du skin",
+      "configuration_connue": "mutation ciblee",
+      "expected": "gltf.joints en FAIL",
+      "measured": "gltf.joints",
+      "status": "PASS",
+      "suite": "gltf_conformite_negatif"
+    },
+    {
+      "id": "refus.sparse.sparse",
+      "description": "le controleur refuse : indices sparse non croissants",
+      "configuration_connue": "mutation ciblee",
+      "expected": "gltf.sparse en FAIL",
+      "measured": "gltf.sparse",
+      "status": "PASS",
+      "suite": "gltf_conformite_negatif"
+    },
+    {
+      "id": "refus.morphs.morphs",
+      "description": "le controleur refuse : un poids de morph pour trois targets",
+      "configuration_connue": "mutation ciblee",
+      "expected": "gltf.morphs en FAIL",
+      "measured": "gltf.morphs",
+      "status": "PASS",
+      "suite": "gltf_conformite_negatif"
+    },
+    {
+      "id": "refus.hierarchie.hierarchie",
+      "description": "le controleur refuse : un noeud avec deux parents",
+      "configuration_connue": "mutation ciblee",
+      "expected": "gltf.hierarchie en FAIL",
+      "measured": "gltf.hierarchie",
+      "status": "PASS",
+      "suite": "gltf_conformite_negatif"
+    },
+    {
+      "id": "refus.animations.animation",
+      "description": "le controleur refuse : un canal vers un chemin inconnu",
+      "configuration_connue": "mutation ciblee",
+      "expected": "gltf.animations en FAIL",
+      "measured": "gltf.animations",
+      "status": "PASS",
+      "suite": "gltf_conformite_negatif"
+    },
+    {
+      "id": "refus.quaternions.quaternion",
+      "description": "le controleur refuse : un quaternion non unitaire",
+      "configuration_connue": "mutation ciblee",
+      "expected": "gltf.quaternions en FAIL",
+      "measured": "gltf.quaternions",
+      "status": "PASS",
+      "suite": "gltf_conformite_negatif"
+    },
+    {
+      "id": "refus.skin.skin",
+      "description": "le controleur refuse : un joint de plus que de matrices de bind",
+      "configuration_connue": "mutation ciblee",
+      "expected": "gltf.skin en FAIL",
+      "measured": "gltf.skin",
+      "status": "PASS",
+      "suite": "gltf_conformite_negatif"
+    },
+    {
+      "id": "glb.un_mesh",
+      "description": "le GLB contient un seul mesh",
+      "configuration_connue": "chunk JSON du fichier",
+      "expected": 1,
+      "measured": 1,
+      "status": "PASS",
+      "suite": "gltf_aller_retour"
+    },
+    {
+      "id": "glb.skin",
+      "description": "un skin dans le fichier",
+      "configuration_connue": "chunk JSON",
+      "expected": 1,
+      "measured": 1,
+      "status": "PASS",
+      "suite": "gltf_aller_retour"
+    },
+    {
+      "id": "glb.attributs",
+      "description": "positions, normales, UV, joints et poids",
+      "configuration_connue": "chunk JSON",
+      "expected": [
+        "JOINTS_0",
+        "NORMAL",
+        "POSITION",
+        "TEXCOORD_0",
+        "WEIGHTS_0"
+      ],
+      "measured": [
+        "JOINTS_0",
+        "NORMAL",
+        "POSITION",
+        "TEXCOORD_0",
+        "WEIGHTS_0"
+      ],
+      "status": "PASS",
+      "suite": "gltf_aller_retour"
+    },
+    {
+      "id": "glb.targets",
+      "description": "trois morph targets dans le fichier",
+      "configuration_connue": "chunk JSON",
+      "expected": 3,
+      "measured": 3,
+      "status": "PASS",
+      "suite": "gltf_aller_retour"
+    },
+    {
+      "id": "glb.une_armature",
+      "description": "une armature importee",
+      "configuration_connue": "GLB",
+      "expected": 1,
+      "measured": 1,
+      "status": "PASS",
+      "suite": "gltf_aller_retour"
+    },
+    {
+      "id": "glb.morphs",
+      "description": "les trois morph targets survivent",
+      "configuration_connue": "GLB",
+      "expected": 3,
+      "measured": 3,
+      "status": "PASS",
+      "suite": "gltf_aller_retour"
+    },
+    {
+      "id": "glb.joints",
+      "description": "les os de deformation survivent",
+      "configuration_connue": "GLB",
+      "expected": ">= 2",
+      "measured": 2,
+      "status": "PASS",
+      "suite": "gltf_aller_retour"
+    },
+    {
+      "id": "anim.presente",
+      "description": "le GLB porte au moins une animation",
+      "configuration_connue": "chunk JSON",
+      "expected": ">= 1",
+      "measured": 2,
+      "status": "PASS",
+      "suite": "gltf_aller_retour"
+    },
+    {
+      "id": "anim.actions_actives",
+      "description": "chaque animation du fichier est jouable",
+      "configuration_connue": "assignation depuis les pistes NLA",
+      "expected": "0 restee muette",
+      "measured": 0,
+      "status": "PASS",
+      "suite": "gltf_aller_retour"
+    },
+    {
+      "id": "anim.canaux",
+      "description": "os machoire ET morphs pilotes a l'import",
+      "configuration_connue": "scene reimportee",
+      "expected": "TMP_jaw + 3 morphs",
+      "measured": "TMP_jaw + 3 morphs",
+      "status": "PASS",
+      "suite": "gltf_aller_retour"
+    },
+    {
+      "id": "anim.machoire",
+      "description": "angle de machoire a chaque pose clef",
+      "configuration_connue": "9 poses",
+      "expected": "<= 0,05 deg",
+      "measured": 1.3e-05,
+      "status": "PASS",
+      "tolerance": 0.05,
+      "suite": "gltf_aller_retour"
+    },
+    {
+      "id": "anim.morphs_valeurs",
+      "description": "valeur de chaque morph a chaque pose clef",
+      "configuration_connue": "27 mesures",
+      "expected": "<= 0,002",
+      "measured": 0.0,
+      "status": "PASS",
+      "tolerance": 0.002,
+      "suite": "gltf_aller_retour"
+    },
+    {
+      "id": "glb.neutre_p95",
+      "description": "surface neutre apres aller-retour",
+      "configuration_connue": "plus proche point",
+      "expected": "<= 0,10 mm",
+      "measured": 6e-05,
+      "status": "PASS",
+      "tolerance": 0.1,
+      "suite": "gltf_aller_retour"
+    },
+    {
+      "id": "glb.neutre_max",
+      "description": "pire ecart du neutre",
+      "configuration_connue": "plus proche point",
+      "expected": "<= 0,50 mm",
+      "measured": 0.000137,
+      "status": "PASS",
+      "tolerance": 0.5,
+      "suite": "gltf_aller_retour"
+    },
+    {
+      "id": "runtime.pivot_machoire",
+      "description": "la machoire tourne autour du pivot du contrat",
+      "configuration_connue": "864 sommets du groupe TMP_jaw a poids >= 0,999, image 50",
+      "expected": "<= 0,05 mm de derive radiale",
+      "measured": 0.000112,
+      "status": "PASS",
+      "tolerance": 0.05,
+      "suite": "runtime_glb"
+    },
+    {
+      "id": "runtime.pivot_dans_la_boite",
+      "description": "le milieu des conduits auditifs est dans la tete",
+      "configuration_connue": "boite monde [[1.321, -0.174, 0.504] ; [1.605, 0.083, 0.885]]",
+      "expected": true,
+      "measured": true,
+      "status": "PASS",
+      "suite": "runtime_glb"
+    },
+    {
+      "id": "runtime.course_machoire",
+      "description": "la course de la machoire est celle d'une machoire",
+      "configuration_connue": "rotation de 32 deg, image 50",
+      "expected": "entre 20 et 90 mm",
+      "measured": 67.6269,
+      "status": "PASS",
+      "suite": "runtime_glb"
+    },
+    {
+      "id": "runtime.horloge",
+      "description": "image -> seconde retrouvee sur le fichier",
+      "configuration_connue": "clefs de 0.041667 a 3.333333 s, 24 im/s",
+      "expected": "<= 1e-4 s aux deux bouts",
+      "measured": 8e-08,
+      "status": "PASS",
+      "tolerance": 0.0001,
+      "suite": "runtime_glb"
+    },
+    {
+      "id": "runtime.ordre_sommets",
+      "description": "l'import conserve l'ordre des sommets du fichier",
+      "configuration_connue": "51791 positions",
+      "expected": "<= 0,05 mm au neutre",
+      "measured": 0.000171,
+      "status": "PASS",
+      "tolerance": 0.05,
+      "suite": "runtime_glb"
+    },
+    {
+      "id": "runtime.transport",
+      "description": "la deformation survit au GLB",
+      "configuration_connue": "9 poses, plus proche sommet d'auteur",
+      "expected": "<= 0,25 mm au p95",
+      "measured": 0.000121,
+      "status": "PASS",
+      "tolerance": 0.25,
+      "suite": "runtime_glb"
+    },
+    {
+      "id": "runtime.specification",
+      "description": "un runtime qui ne lit que la specification retrouve la pose",
+      "configuration_connue": "9 poses, sommet a sommet",
+      "expected": "<= 0,01 mm au pire",
+      "measured": 0.000268,
+      "status": "PASS",
+      "tolerance": 0.01,
+      "suite": "runtime_glb"
+    },
+    {
+      "id": "runtime.amplitude",
+      "description": "les poses ne sont pas toutes identiques",
+      "configuration_connue": "echantillon d'un sommet sur 97",
+      "expected": ">= 5 mm",
+      "measured": 67.2426,
+      "status": "PASS",
+      "suite": "runtime_glb"
+    },
+    {
+      "id": "temoin.pivot_dans_la_boite",
+      "description": "le pivot du contrat est dans la boite du maillage sain",
+      "configuration_connue": "boite monde du runtime",
+      "expected": true,
+      "measured": true,
+      "status": "PASS",
+      "suite": "runtime_pivot_negatif"
+    },
+    {
+      "id": "temoin.sain",
+      "description": "le montage corrige tourne autour du pivot",
+      "configuration_connue": "864 sommets pleinement machoire",
+      "expected": "<= 0.05 mm",
+      "measured": 0.000112,
+      "status": "PASS",
+      "tolerance": 0.05,
+      "suite": "runtime_pivot_negatif"
+    },
+    {
+      "id": "aveugle.pivot_ne_voit_pas",
+      "description": "la sonde de pivot est AVEUGLE au maillage decale, et c'est force",
+      "configuration_connue": "decalage introduit 1.5419 m",
+      "expected": "derive toujours <= 0.05 mm",
+      "measured": 8.5e-05,
+      "status": "PASS",
+      "suite": "runtime_pivot_negatif"
+    },
+    {
+      "id": "refus.course_absurde",
+      "description": "la course de machoire devient hors bornes anatomiques",
+      "configuration_connue": "meme decalage",
+      "expected": "hors de [20 ; 90] mm",
+      "measured": 251.9148,
+      "status": "PASS",
+      "suite": "runtime_pivot_negatif"
+    },
+    {
+      "id": "refus.pivot_hors_boite",
+      "description": "le pivot n'est plus dans la boite du maillage decale",
+      "configuration_connue": "decalage 1.5419 m",
+      "expected": "hors boite",
+      "measured": false,
+      "status": "PASS",
+      "suite": "runtime_pivot_negatif"
+    },
+    {
+      "id": "sagittal.median.section",
+      "description": "la section est capee, pas creuse",
+      "configuration_connue": "plan sagittal du contrat de miroir, decale de 1,0 mm pour ne pas suivre la couture de symetrie",
+      "expected": ">= 1 face",
+      "measured": 448,
+      "status": "PASS",
+      "suite": "coupe_sagittale"
+    },
+    {
+      "id": "sagittal.median.interieur",
+      "description": "l'interieur est peint distinctement de la peau",
+      "configuration_connue": "classement de l'audit",
+      "expected": ">= 1 face",
+      "measured": 1606,
+      "status": "PASS",
+      "suite": "coupe_sagittale"
+    },
+    {
+      "id": "sagittal.median.globes",
+      "description": "les globes sont presents en rouge",
+      "configuration_connue": "duplicatas oculaires",
+      "expected": 4,
+      "measured": 4,
+      "status": "PASS",
+      "suite": "coupe_sagittale"
+    },
+    {
+      "id": "sagittal.image.median_bouche",
+      "description": "l'image n'est pas un clay uniforme et montre la section",
+      "configuration_connue": "1000000 echantillons",
+      "expected": ">= 8 teintes, >= 20 px de section, >= 200 px de peau",
+      "measured": "128 teintes, 19 section, 8 muqueuse, 0 globe, 375044 peau",
+      "status": "FAIL",
+      "suite": "coupe_sagittale"
+    },
+    {
+      "id": "sagittal.image.median_orbite",
+      "description": "l'image n'est pas un clay uniforme et montre la section",
+      "configuration_connue": "1000000 echantillons",
+      "expected": ">= 8 teintes, >= 20 px de section, >= 200 px de peau",
+      "measured": "121 teintes, 322 section, 0 muqueuse, 14878 globe, 88794 peau",
+      "status": "PASS",
+      "suite": "coupe_sagittale"
+    },
+    {
+      "id": "sagittal.image.median_cavite_orale",
+      "description": "l'image n'est pas un clay uniforme et montre la section",
+      "configuration_connue": "1000000 echantillons",
+      "expected": ">= 8 teintes, >= 20 px de section, >= 200 px de peau",
+      "measured": "98 teintes, 0 section, 4 muqueuse, 0 globe, 348087 peau",
+      "status": "FAIL",
+      "suite": "coupe_sagittale"
+    },
+    {
+      "id": "sagittal.image.median_cou",
+      "description": "l'image n'est pas un clay uniforme et montre la section",
+      "configuration_connue": "1000000 echantillons",
+      "expected": ">= 8 teintes, >= 20 px de section, >= 200 px de peau",
+      "measured": "82 teintes, 0 section, 0 muqueuse, 0 globe, 563195 peau",
+      "status": "FAIL",
+      "suite": "coupe_sagittale"
+    },
+    {
+      "id": "sagittal.parasagittal_oeil_L.section",
+      "description": "la section est capee, pas creuse",
+      "configuration_connue": "plan par le centre du globe L",
+      "expected": ">= 1 face",
+      "measured": 628,
+      "status": "PASS",
+      "suite": "coupe_sagittale"
+    },
+    {
+      "id": "sagittal.parasagittal_oeil_L.interieur",
+      "description": "l'interieur est peint distinctement de la peau",
+      "configuration_connue": "classement de l'audit",
+      "expected": ">= 1 face",
+      "measured": 2709,
+      "status": "PASS",
+      "suite": "coupe_sagittale"
+    },
+    {
+      "id": "sagittal.parasagittal_oeil_L.globes",
+      "description": "les globes sont presents en rouge",
+      "configuration_connue": "duplicatas oculaires",
+      "expected": 4,
+      "measured": 4,
+      "status": "PASS",
+      "suite": "coupe_sagittale"
+    },
+    {
+      "id": "sagittal.image.parasagittal_oeil_L_bouche",
+      "description": "l'image n'est pas un clay uniforme et montre la section",
+      "configuration_connue": "1000000 echantillons",
+      "expected": ">= 8 teintes, >= 20 px de section, >= 200 px de peau",
+      "measured": "118 teintes, 5559 section, 76 muqueuse, 0 globe, 687779 peau",
+      "status": "PASS",
+      "suite": "coupe_sagittale"
+    },
+    {
+      "id": "sagittal.image.parasagittal_oeil_L_orbite",
+      "description": "l'image n'est pas un clay uniforme et montre la section",
+      "configuration_connue": "1000000 echantillons",
+      "expected": ">= 8 teintes, >= 20 px de section, >= 200 px de peau",
+      "measured": "150 teintes, 992 section, 0 muqueuse, 14811 globe, 286681 peau",
+      "status": "PASS",
+      "suite": "coupe_sagittale"
+    },
+    {
+      "id": "sagittal.image.parasagittal_oeil_L_cavite_orale",
+      "description": "l'image n'est pas un clay uniforme et montre la section",
+      "configuration_connue": "1000000 echantillons",
+      "expected": ">= 8 teintes, >= 20 px de section, >= 200 px de peau",
+      "measured": "133 teintes, 4640 section, 40 muqueuse, 0 globe, 612229 peau",
+      "status": "PASS",
+      "suite": "coupe_sagittale"
+    },
+    {
+      "id": "sagittal.image.parasagittal_oeil_L_cou",
+      "description": "l'image n'est pas un clay uniforme et montre la section",
+      "configuration_connue": "1000000 echantillons",
+      "expected": ">= 8 teintes, >= 20 px de section, >= 200 px de peau",
+      "measured": "129 teintes, 486 section, 0 muqueuse, 0 globe, 598111 peau",
+      "status": "PASS",
+      "suite": "coupe_sagittale"
+    },
+    {
+      "id": "wireframe.paupiere_L_neutre",
+      "description": "le fil est visible sans noyer l'image",
+      "configuration_connue": "1000000 px",
+      "expected": "entre 2 % et 45 % de fil",
+      "measured": "13.98 %",
+      "status": "PASS",
+      "suite": "wireframes"
+    },
+    {
+      "id": "wireframe.pose.paupiere_L_fermee",
+      "description": "la pose deplace reellement la surface",
+      "configuration_connue": "contre paupiere_L_neutre",
+      "expected": ">= 0,5 mm",
+      "measured": 8.4962,
+      "status": "PASS",
+      "suite": "wireframes"
+    },
+    {
+      "id": "wireframe.paupiere_L_fermee",
+      "description": "le fil est visible sans noyer l'image",
+      "configuration_connue": "1000000 px",
+      "expected": "entre 2 % et 45 % de fil",
+      "measured": "13.96 %",
+      "status": "PASS",
+      "suite": "wireframes"
+    },
+    {
+      "id": "wireframe.paupiere_R_neutre",
+      "description": "le fil est visible sans noyer l'image",
+      "configuration_connue": "1000000 px",
+      "expected": "entre 2 % et 45 % de fil",
+      "measured": "14.01 %",
+      "status": "PASS",
+      "suite": "wireframes"
+    },
+    {
+      "id": "wireframe.pose.paupiere_R_fermee",
+      "description": "la pose deplace reellement la surface",
+      "configuration_connue": "contre paupiere_R_neutre",
+      "expected": ">= 0,5 mm",
+      "measured": 8.4264,
+      "status": "PASS",
+      "suite": "wireframes"
+    },
+    {
+      "id": "wireframe.paupiere_R_fermee",
+      "description": "le fil est visible sans noyer l'image",
+      "configuration_connue": "1000000 px",
+      "expected": "entre 2 % et 45 % de fil",
+      "measured": "13.96 %",
+      "status": "PASS",
+      "suite": "wireframes"
+    },
+    {
+      "id": "wireframe.levres_neutre",
+      "description": "le fil est visible sans noyer l'image",
+      "configuration_connue": "1000000 px",
+      "expected": "entre 2 % et 45 % de fil",
+      "measured": "17.48 %",
+      "status": "PASS",
+      "suite": "wireframes"
+    },
+    {
+      "id": "wireframe.pose.levres_fermee",
+      "description": "la pose deplace reellement la surface",
+      "configuration_connue": "contre levres_neutre",
+      "expected": ">= 0,5 mm",
+      "measured": 1.8196,
+      "status": "PASS",
+      "suite": "wireframes"
+    },
+    {
+      "id": "wireframe.levres_fermee",
+      "description": "le fil est visible sans noyer l'image",
+      "configuration_connue": "1000000 px",
+      "expected": "entre 2 % et 45 % de fil",
+      "measured": "15.73 %",
+      "status": "PASS",
+      "suite": "wireframes"
+    },
+    {
+      "id": "wireframe.narine_L",
+      "description": "le fil est visible sans noyer l'image",
+      "configuration_connue": "1000000 px",
+      "expected": "entre 2 % et 45 % de fil",
+      "measured": "10.35 %",
+      "status": "PASS",
+      "suite": "wireframes"
+    },
+    {
+      "id": "wireframe.narine_R",
+      "description": "le fil est visible sans noyer l'image",
+      "configuration_connue": "1000000 px",
+      "expected": "entre 2 % et 45 % de fil",
+      "measured": "10.24 %",
+      "status": "PASS",
+      "suite": "wireframes"
+    },
+    {
+      "id": "wireframe.philtrum_levre_inferieure",
+      "description": "le fil est visible sans noyer l'image",
+      "configuration_connue": "1000000 px",
+      "expected": "entre 2 % et 45 % de fil",
+      "measured": "10.53 %",
+      "status": "PASS",
+      "suite": "wireframes"
+    },
+    {
+      "id": "wireframe.cou_et_raccord",
+      "description": "le fil est visible sans noyer l'image",
+      "configuration_connue": "1000000 px",
+      "expected": "entre 2 % et 45 % de fil",
+      "measured": "7.64 %",
+      "status": "PASS",
+      "suite": "wireframes"
+    },
+    {
+      "id": "wireframe.cage_seule",
+      "description": "le fil est visible sans noyer l'image",
+      "configuration_connue": "1000000 px",
+      "expected": "entre 2 % et 45 % de fil",
+      "measured": "16.62 %",
+      "status": "PASS",
+      "suite": "wireframes"
+    },
+    {
+      "id": "wireframe.surface_multires",
+      "description": "le fil est visible sans noyer l'image",
+      "configuration_connue": "1000000 px",
+      "expected": "entre 2 % et 45 % de fil",
+      "measured": "18.38 %",
+      "status": "PASS",
+      "suite": "wireframes"
+    },
+    {
+      "id": "wireframe.jaw_disponibles",
+      "description": "les cinq poses de machoire existent",
+      "configuration_connue": "experiments/f0-jaw/FACE_F0_JAW_PROTOTYPE.blend",
+      "expected": 5,
+      "measured": 5,
+      "status": "PASS",
+      "suite": "wireframes"
+    },
+    {
+      "id": "wireframe.jaw_00",
+      "description": "le fil est visible sans noyer l'image",
+      "configuration_connue": "1000000 px",
+      "expected": "entre 2 % et 45 % de fil",
+      "measured": "18.03 %",
+      "status": "PASS",
+      "suite": "wireframes"
+    },
+    {
+      "id": "wireframe.jaw_05",
+      "description": "le fil est visible sans noyer l'image",
+      "configuration_connue": "1000000 px",
+      "expected": "entre 2 % et 45 % de fil",
+      "measured": "10.94 %",
+      "status": "PASS",
+      "suite": "wireframes"
+    },
+    {
+      "id": "wireframe.jaw_10",
+      "description": "le fil est visible sans noyer l'image",
+      "configuration_connue": "1000000 px",
+      "expected": "entre 2 % et 45 % de fil",
+      "measured": "9.78 %",
+      "status": "PASS",
+      "suite": "wireframes"
+    },
+    {
+      "id": "wireframe.jaw_20",
+      "description": "le fil est visible sans noyer l'image",
+      "configuration_connue": "1000000 px",
+      "expected": "entre 2 % et 45 % de fil",
+      "measured": "10.47 %",
+      "status": "PASS",
+      "suite": "wireframes"
+    },
+    {
+      "id": "wireframe.jaw_32",
+      "description": "le fil est visible sans noyer l'image",
+      "configuration_connue": "1000000 px",
+      "expected": "entre 2 % et 45 % de fil",
+      "measured": "11.18 %",
+      "status": "PASS",
+      "suite": "wireframes"
+    },
+    {
+      "id": "wireframe.paire.paupiere_neutre",
+      "description": "les deux cameras sont images l'une de l'autre",
+      "configuration_connue": "plan sagittal x = 1.462572",
+      "expected": "<= 0,5 mm",
+      "measured": 0.0176,
+      "status": "PASS",
+      "tolerance": 0.5,
+      "suite": "wireframes"
+    },
+    {
+      "id": "wireframe.echelle.paupiere_neutre",
+      "description": "meme echelle et meme resolution des deux cotes",
+      "configuration_connue": "paupiere_L_neutre / paupiere_R_neutre",
+      "expected": 0.075,
+      "measured": 0.075,
+      "status": "PASS",
+      "suite": "wireframes"
+    },
+    {
+      "id": "wireframe.paire.paupiere_fermee",
+      "description": "les deux cameras sont images l'une de l'autre",
+      "configuration_connue": "plan sagittal x = 1.462572",
+      "expected": "<= 0,5 mm",
+      "measured": 0.0176,
+      "status": "PASS",
+      "tolerance": 0.5,
+      "suite": "wireframes"
+    },
+    {
+      "id": "wireframe.echelle.paupiere_fermee",
+      "description": "meme echelle et meme resolution des deux cotes",
+      "configuration_connue": "paupiere_L_fermee / paupiere_R_fermee",
+      "expected": 0.075,
+      "measured": 0.075,
+      "status": "PASS",
+      "suite": "wireframes"
+    },
+    {
+      "id": "wireframe.paire.narine",
+      "description": "les deux cameras sont images l'une de l'autre",
+      "configuration_connue": "plan sagittal x = 1.462572",
+      "expected": "<= 0,5 mm",
+      "measured": 0.249,
+      "status": "PASS",
+      "tolerance": 0.5,
+      "suite": "wireframes"
+    },
+    {
+      "id": "wireframe.echelle.narine",
+      "description": "meme echelle et meme resolution des deux cotes",
+      "configuration_connue": "narine_L / narine_R",
+      "expected": 0.055,
+      "measured": 0.055,
+      "status": "PASS",
+      "suite": "wireframes"
+    }
+  ]
+}

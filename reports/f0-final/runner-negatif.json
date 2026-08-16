@@ -1,0 +1,72 @@
+{
+  "seuil_serre": {
+    "code": 2,
+    "sondes_tombees": [
+      "clignement.A_cage.gap_ferme_L",
+      "clignement.A_cage.gap_ferme_R",
+      "levres.A_cage.gap_max"
+    ],
+    "stdout_fin": "8\n  [FAIL] levres.A_cage.gap_max              | attendu <= 0,30 mm | obtenu 0.9688\n  [SKIP] levres.B_haute_resolution.gap      | mesure definie sur la cage seulement\n  [PASS] machoire.A_cage.zero_degre_est_le_neutre | attendu <= 0,01 mm | obtenu 0.0\n  [PASS] machoire.B_haute_resolution.zero_degre_est_le_neutre | attendu <= 0,01 mm | obtenu 0.0\nREGISTRE f0-multires-v2 : 21/26 reussies, 3 echec(s), 2 sautee(s)\nBANC_V2 -> /var/folders/p8/x_wb5bgn7772x48qlx8kgfhw0000gn/T/tmpfebruxn5/serre.json | SEUILS NON SATISFAITS\nRESULTAT_FINAL ECHEC\nBlender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 01:30:33)\n"
+  },
+  "panne": {
+    "code": 1,
+    "trace": true
+  },
+  "registre": {
+    "registre": "runner-negatif",
+    "total": 6,
+    "reussies": 6,
+    "echecs": 0,
+    "sautees": 0,
+    "sondes": [
+      {
+        "id": "negatif.seuil_modifie",
+        "description": "le seuil a bien ete serre dans la COPIE",
+        "configuration_connue": "f0-multires-v2.py",
+        "expected": true,
+        "measured": true,
+        "status": "PASS"
+      },
+      {
+        "id": "negatif.seuil_serre_echoue",
+        "description": "un seuil a 0,00001 mm fait echouer la suite en ECHEC METIER",
+        "configuration_connue": "copie temporaire",
+        "expected": "code 2",
+        "measured": 2,
+        "status": "PASS"
+      },
+      {
+        "id": "negatif.seuil_serre_bonnes_sondes",
+        "description": "ce sont les sondes de clignement qui tombent",
+        "configuration_connue": "3 sondes en echec",
+        "expected": ">= 2 clignement",
+        "measured": 2,
+        "status": "PASS"
+      },
+      {
+        "id": "negatif.panne_technique",
+        "description": "une exception rend un code technique, pas un FAIL metier",
+        "configuration_connue": "script qui leve RuntimeError",
+        "expected": "code 1 et trace",
+        "measured": "code 1, trace oui",
+        "status": "PASS"
+      },
+      {
+        "id": "negatif.panne_sans_rapport",
+        "description": "une panne n'ecrit aucun rapport a interpreter",
+        "configuration_connue": "code 1",
+        "expected": true,
+        "measured": true,
+        "status": "PASS"
+      },
+      {
+        "id": "negatif.convention",
+        "description": "0 = succes, 2 = echec metier, 1 = faute technique",
+        "configuration_connue": "convention du depot",
+        "expected": "1 pour une exception",
+        "measured": 1,
+        "status": "PASS"
+      }
+    ]
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "fichier": "FACE_F0_FOUNDATION_FINAL.blend",
+  "octets_publies": 980034,
+  "scan_du_fichier_publie": {
+    "unix_absolu": {
+      "nombre": 0,
+      "exemples": []
+    },
+    "users_mac": {
+      "nombre": 0,
+      "exemples": []
+    },
+    "home_linux": {
+      "nombre": 0,
+      "exemples": []
+    },
+    "windows": {
+      "nombre": 0,
+      "exemples": []
+    },
+    "asset_source": {
+      "nombre": 0,
+      "exemples": []
+    },
+    "secret_apparent": {
+      "nombre": 0,
+      "exemples": []
+    },
+    "courriel": {
+      "nombre": 0,
+      "exemples": []
+    }
+  },
+  "octets_non_compresse": 2792315,
+  "scan_du_fichier_non_compresse": {
+    "unix_absolu": {
+      "nombre": 2,
+      "exemples": [
+        "/Users/orphicagency",
+        "/Users/orphicagency/Projet"
+      ]
+    },
+    "users_mac": {
+      "nombre": 1,
+      "exemples": [
+        "/Users/orphicagency"
+      ]
+    },
+    "home_linux": {
+      "nombre": 0,
+      "exemples": []
+    },
+    "windows": {
+      "nombre": 0,
+      "exemples": []
+    },
+    "asset_source": {
+      "nombre": 1,
+      "exemples": [
+        "human_base_meshes_bundle.blend"
+      ]
+    },
+    "secret_apparent": {
+      "nombre": 0,
+      "exemples": []
+    },
+    "courriel": {
+      "nombre": 0,
+      "exemples": []
+    }
+  },
+  "api": {
+    "chemin_du_fichier": "/Users/orphicagency/Projet de développement/atlas-face-rig/source/FACE_F0_FOUNDATION_FINAL.blend",
+    "bibliotheques_liees": [],
+    "images_externes": [],
+    "textes_embarques": [],
+    "caches": [],
+    "chemins_relatifs_d_objets": []
+  },
+  "chemins_personnels_restants": 1,
+  "registre": {
+    "registre": "f0-hygiene-blend",
+    "total": 11,
+    "reussies": 10,
+    "echecs": 1,
+    "sautees": 0,
+    "sondes": [
+      {
+        "id": "scanner.users_mac",
+        "description": "le scanner voit un chemin /Users",
+        "configuration_connue": "fichier temoin fabrique",
+        "expected": 1,
+        "measured": 1,
+        "status": "PASS"
+      },
+      {
+        "id": "scanner.home_linux",
+        "description": "le scanner voit un chemin /home",
+        "configuration_connue": "fichier temoin fabrique",
+        "expected": 1,
+        "measured": 1,
+        "status": "PASS"
+      },
+      {
+        "id": "scanner.asset_source",
+        "description": "le scanner voit le nom du paquet source",
+        "configuration_connue": "fichier temoin fabrique",
+        "expected": 1,
+        "measured": 1,
+        "status": "PASS"
+      },
+      {
+        "id": "scanner.courriel",
+        "description": "le scanner voit une adresse de courriel",
+        "configuration_connue": "fichier temoin fabrique",
+        "expected": 1,
+        "measured": 1,
+        "status": "PASS"
+      },
+      {
+        "id": "scanner.pas_de_faux_positif",
+        "description": "aucun motif sur un fichier neutre",
+        "configuration_connue": "fichier temoin neutre",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "blend.aucun_secret",
+        "description": "aucun jeton ni cle privee dans le fichier",
+        "configuration_connue": "fichier non compresse scanne",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "blend.aucun_courriel",
+        "description": "aucune adresse de courriel",
+        "configuration_connue": "fichier non compresse scanne",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "blend.aucune_bibliotheque_liee",
+        "description": "aucune bibliotheque externe liee",
+        "configuration_connue": "API Blender",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "blend.aucune_image_externe",
+        "description": "aucune image externe",
+        "configuration_connue": "API Blender",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "blend.aucun_texte_embarque",
+        "description": "aucun script embarque",
+        "configuration_connue": "API Blender",
+        "expected": 0,
+        "measured": 0,
+        "status": "PASS"
+      },
+      {
+        "id": "blend.aucun_chemin_personnel",
+        "description": "aucun chemin /Users dans le fichier",
+        "configuration_connue": "fichier non compresse scanne",
+        "expected": 0,
+        "measured": 1,
+        "status": "FAIL"
+      }
+    ]
+  },
+  "conclusion": "CHEMINS PERSONNELS PRESENTS — voir scan_du_fichier_non_compresse"
+}

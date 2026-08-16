@@ -58,6 +58,72 @@ def suites(mode, entree):
          base + ["--python", chemin("tests", "f0-hygiene-blend.py"), "--",
                  src, chemin(sortie, "hygiene-blend-raw.json")],
          chemin(sortie, "hygiene-blend-raw.json")),
+    ] + (suites_v3(src, sortie) if mode == "final" else [])
+
+
+def suites_v3(src, sortie):
+    """Les suites F0-B a F0-F. Elles font foi ; celles d'au-dessus sont la
+    provenance rejouee."""
+    base = [BLENDER, "--background", "--factory-startup", "--python-exit-code", "1"]
+    py = [sys.executable]
+    spike = chemin("experiments", "gltf-spike", "spike.blend")
+    glb = chemin("exports", "atlas-face-spike.glb")
+    return [
+        ("anatomy_counts",
+         [BLENDER, "--background", src, "--python-exit-code", "1",
+          "--python", chemin("tests", "measure-f0-anatomy-counts.py"), "--",
+          "--margins", "reports/f0-final/correspondances-marges.json",
+          "--audit", "reports/f0/audit-topologie.json",
+          "--output", chemin(sortie, "anatomy-counts.json")],
+         chemin(sortie, "anatomy-counts.json")),
+        ("contrat_de_sortie",
+         py + [chemin("tools", "check-f0-output-contract.py"), "--verify",
+               "--negatif", "--contract",
+               "source/FACE_F0_FOUNDATION_FINAL.output-contract.json",
+               "--report", chemin(sortie, "contract-check.json")],
+         chemin(sortie, "contract-check.json")),
+        ("gltf_conformite",
+         py + [chemin("tools", "validate_glb.py"), "--input", glb,
+               "--report", chemin(sortie, "validation-glb.json")],
+         chemin(sortie, "validation-glb.json")),
+        ("gltf_conformite_negatif",
+         py + [chemin("tests", "validate-glb-negatif.py"), "--input", glb,
+               "--report", chemin(sortie, "validation-glb-negatif.json")],
+         chemin(sortie, "validation-glb-negatif.json")),
+        ("gltf_aller_retour",
+         base + ["--python", chemin("experiments", "gltf-spike", "import_spike.py"),
+                 "--", "--input", glb, "--source", spike,
+                 "--report", chemin("experiments", "gltf-spike", "roundtrip.json"),
+                 "--animation-reference",
+                 chemin("experiments", "gltf-spike", "spike-reference.json")],
+         chemin("experiments", "gltf-spike", "roundtrip.json")),
+        ("runtime_glb",
+         base + ["--python", chemin("tests", "runtime-glb.py"), "--",
+                 "--input", glb, "--source", spike,
+                 "--animation-reference",
+                 chemin("experiments", "gltf-spike", "spike-reference.json"),
+                 "--report", chemin(sortie, "runtime-glb.json")],
+         chemin(sortie, "runtime-glb.json")),
+        ("runtime_pivot_negatif",
+         [BLENDER, "--background", spike, "--python-exit-code", "1",
+          "--python", chemin("tests", "runtime-pivot-negatif.py"), "--",
+          "--motion", "config/jaw-motion.json",
+          "--report", chemin(sortie, "runtime-pivot-negatif.json")],
+         chemin(sortie, "runtime-pivot-negatif.json")),
+        ("coupe_sagittale",
+         [BLENDER, "--background",
+          "source/FACE_F0_FOUNDATION_FINAL.blend",
+          "--python", chemin("tools", "render-f0-sagittal.py"), "--",
+          "--output-dir", "renders/f0-final/sagittal",
+          "--report", chemin(sortie, "sagittal-render.json")],
+         chemin(sortie, "sagittal-render.json")),
+        ("wireframes",
+         [BLENDER, "--background",
+          "source/FACE_F0_FOUNDATION_FINAL.blend",
+          "--python", chemin("tools", "render-f0-wireframes.py"), "--",
+          "--output-dir", "renders/f0-final/wireframes",
+          "--report", chemin(sortie, "wireframes.json")],
+         chemin(sortie, "wireframes.json")),
     ]
 
 
@@ -156,6 +222,47 @@ def main():
                   "skip_disparus", "champs_divergents"):
             if entree.get(k):
                 print("    %s : %s" % (k, entree[k]))
+
+    # `registre.json` : toutes les sondes de toutes les suites, en un seul
+    # endroit, avec des totaux CALCULES et jamais saisis.
+    sondes, par_suite = [], {}
+    for e in commandes:
+        R = lire_registre(e.get("rapport")) if e.get("rapport") else None
+        # Selon les rapports, `registre` est tantot le bilan complet, tantot
+        # juste son nom. Et certains portent `sondes` a la racine.
+        liste = []
+        if isinstance(R, dict):
+            b = R.get("registre")
+            if isinstance(b, dict):
+                liste = b.get("sondes", [])
+            elif isinstance(R.get("sondes"), list):
+                liste = R["sondes"]
+        liste = [x for x in liste if isinstance(x, dict)]
+        for x in liste:
+            y = dict(x); y["suite"] = e["suite"]; sondes.append(y)
+        par_suite[e["suite"]] = {
+            "rapport": e.get("rapport"), "code": e.get("code_brut"),
+            "verdict": e["verdict"], "sondes": len(liste),
+            "reussies": sum(1 for x in liste if x.get("status") == "PASS"),
+            "echecs": sum(1 for x in liste if x.get("status") == "FAIL"),
+            "sautees": sum(1 for x in liste if x.get("status") == "SKIP")}
+    agrege = {
+        "mode": o.mode, "blender": BLENDER,
+        "suites": par_suite,
+        "total_sondes": len(sondes),
+        "reussies": sum(1 for x in sondes if x.get("status") == "PASS"),
+        "echecs": [x["suite"] + "/" + x.get("id", "?") for x in sondes
+                   if x.get("status") == "FAIL"],
+        "sautees": [x["suite"] + "/" + x.get("id", "?") for x in sondes
+                    if x.get("status") == "SKIP"],
+        "suites_en_echec": [n for n, v in par_suite.items() if v["verdict"] != "PASS"],
+        "status": "PASS" if global_ok else "FAIL",
+        "sondes": sondes}
+    json.dump(agrege, open(os.path.join(dossier, "registre.json"), "w",
+                           encoding="utf-8"), ensure_ascii=False, indent=2)
+    print("REGISTRE AGREGE : %d sondes, %d reussies, %d echec(s), %d sautee(s)"
+          % (agrege["total_sondes"], agrege["reussies"], len(agrege["echecs"]),
+             len(agrege["sautees"])))
 
     out = os.path.join(dossier, "commandes.json")
     json.dump({"mode": o.mode, "blender": BLENDER, "racine": RACINE,
