@@ -1,0 +1,116 @@
+{
+  "fichier": "FACE_BASE_LOCKED.blend",
+  "blender": "5.1.2",
+  "neutre": {
+    "cage_sommets": 3242,
+    "evalue": {
+      "sommets": 12950,
+      "faces": 12948,
+      "loops": 51792
+    },
+    "sha_uv_evalue": "b5f212eb603b4e0fee5d3aed9c18d20726cd60244530b3b09a2bf9842e30dc7a",
+    "globes": {
+      "L": {
+        "centre": [
+          1.494856,
+          -0.125396,
+          0.766688
+        ],
+        "rayon_mm": 11.7449
+      },
+      "R": {
+        "centre": [
+          1.430278,
+          -0.125396,
+          0.766688
+        ],
+        "rayon_mm": 11.7449
+      },
+      "residus_ajustement_mm": {
+        "L": 0.6934,
+        "R": 0.6934
+      }
+    },
+    "gap_paupieres_mm": {
+      "L": 19.3563,
+      "R": 19.3264
+    },
+    "gap_levres_mm": {
+      "min": 0.269115,
+      "median": 1.934975,
+      "p95": 7.226944,
+      "max": 7.448435,
+      "moyenne": 2.967857
+    },
+    "penetrations_globe": 199
+  },
+  "registre": {
+    "registre": "f0-multires-v2",
+    "total": 6,
+    "reussies": 4,
+    "echecs": 2,
+    "sautees": 0,
+    "sondes": [
+      {
+        "id": "sonde.sphere.rayon_connu",
+        "description": "ajustement sur une calotte de rayon connu",
+        "configuration_connue": "24 points sur une sphere de 11,7 mm",
+        "expected": 11.7,
+        "measured": 11.7,
+        "status": "PASS",
+        "tolerance": 1e-06
+      },
+      {
+        "id": "sonde.sphere.centre_connu",
+        "description": "centre retrouve",
+        "configuration_connue": "meme calotte",
+        "expected": [
+          1.5,
+          -0.2,
+          0.8
+        ],
+        "measured": [
+          1.5,
+          -0.2,
+          0.8
+        ],
+        "status": "PASS"
+      },
+      {
+        "id": "sonde.gap_paupieres.L",
+        "description": "la sonde retrouve la fente mesuree en F0",
+        "configuration_connue": "maillage NEUTRE, fente publiee dans reports/f0",
+        "expected": 18.38,
+        "measured": 19.3563,
+        "status": "PASS",
+        "tolerance": 2.5
+      },
+      {
+        "id": "sonde.gap_paupieres.R",
+        "description": "la sonde retrouve la fente mesuree en F0",
+        "configuration_connue": "maillage NEUTRE, fente publiee dans reports/f0",
+        "expected": 16.34,
+        "measured": 19.3264,
+        "status": "FAIL",
+        "tolerance": 2.5
+      },
+      {
+        "id": "sonde.gap_levres.neutre_mesure",
+        "description": "la sonde rend une valeur finie au neutre",
+        "configuration_connue": "maillage NEUTRE",
+        "expected": "valeur finie",
+        "measured": 1.934975,
+        "status": "PASS"
+      },
+      {
+        "id": "sonde.penetration.neutre_nulle",
+        "description": "au neutre aucun sommet n'est dans le globe",
+        "configuration_connue": "maillage NEUTRE",
+        "expected": 0,
+        "measured": 199,
+        "status": "FAIL"
+      }
+    ]
+  },
+  "conclusion": "SONDES DE MESURE NON VERIFIEES — aucun verdict anatomique"
+}

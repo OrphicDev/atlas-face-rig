@@ -13,6 +13,8 @@ try: sys.stdout.reconfigure(line_buffering=True)
 except Exception: pass
 import bpy, bmesh
 from mathutils import Vector, kdtree
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from atlas_commun import exiger_asset
 from mathutils.bvhtree import BVHTree
 
 MM = 1000.0
@@ -400,7 +402,8 @@ def verifier(n_rayons, seuil):
 # ------------------------------------------------------------- audit ----
 
 def audit(n_rayons, seuil):
-    PAQUET = os.environ["ATLAS_BASE_MESH"]
+    # P1 : ce script refuse desormais lui-meme un asset de mauvais SHA.
+    PAQUET, _pf = exiger_asset()
     COL = "Head (Animation) - Realistic"
     bpy.ops.wm.read_factory_settings(use_empty=True)
     with bpy.data.libraries.load(PAQUET, link=False) as (src, dst):

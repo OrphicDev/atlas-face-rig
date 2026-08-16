@@ -4,7 +4,7 @@ STATUS: F0 INCOMPLET — le raccord corps ne passe pas les seuils
 | --- | --- |
 | **statut global** | **F0 INCOMPLET** — voir `reports/f0-correction/RAPPORT_F0_CORRECTION.md` |
 | dernière étape terminée | audit topologique, décision multires, décision de topologie, base verrouillée |
-| étape suivante | **finir la correction F0** : trancher le raccord corps, banc multires anatomique. **F1 ne commence pas.** |
+| étape suivante | **finir la correction F0** : repère du globe à corriger, raccord corps à trancher, export et preuves visuelles. **F1 ne commence pas.** |
 | branche active | `face/chat-3-caucasian-v1` |
 | commit de départ | `4c6a4dbfbaddc52fbf1222afd7e07b65de915b96` |
 | géométrie faciale | **verrouillée** : `source/FACE_BASE_LOCKED.blend` |

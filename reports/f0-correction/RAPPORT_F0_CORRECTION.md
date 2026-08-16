@@ -1,5 +1,8 @@
 # Correction F0 — réponse à l'audit de `f852c453…`
 
+**Statut : `F0 INCOMPLET`.** Suite dans [`RAPPORT_PASSE2.md`](RAPPORT_PASSE2.md) —
+banc multires anatomique et préflight câblé.
+
 **Statut : `F0 INCOMPLET`.** Le raccord tête–corps a été mesuré pour la première
 fois, et il **ne satisfait pas les seuils du cahier**. F1 ne commence pas.
 
